@@ -46,6 +46,8 @@
 <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Iconify — lightweight on-demand icons (Lucide, brand/simple-icons, logos & more) -->
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
 <style type="text/tailwindcss">
   @theme{
     --color-ink:#0a0a0a; --color-ink-soft:#4a463f; --color-accent:#fa5539;
@@ -153,7 +155,7 @@
 
 <style>
   :root{ --brand-font:"Bricolage Grotesque",system-ui,sans-serif; --accent:#fa5539; --ink:#0a0a0a; }
-  html,body{ background:#fff; color:var(--ink); font-family:var(--brand-font); }
+  html,body{ background:#fff; color:var(--ink); font-family:var(--brand-font); overflow-x:clip; }
   ::selection{ background:#fa5539; color:#fff; }
   .font-display{ font-family:var(--brand-font); font-weight:700; letter-spacing:-.03em; }
   .tt{ letter-spacing:-.03em; }
@@ -261,12 +263,10 @@
       </nav>
       <div class="flex items-center gap-2">
         <a href="#contact" class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" class="relative z-10 h-4 w-4 animate-flicker group-hover:animate-none drop-shadow-[0_0_3px_rgba(255,255,255,.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_4px_rgba(250,85,57,.9)]">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
-          </svg>
+          <iconify-icon icon="lucide:sparkles" class="relative z-10 text-base animate-flicker group-hover:animate-none drop-shadow-[0_0_3px_rgba(255,255,255,.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_4px_rgba(250,85,57,.9)]"></iconify-icon>
           <span class="relative z-10 sheen-text">Let's Build Together</span>
         </a>
-        <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+        <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:menu"></iconify-icon></button>
       </div>
     </div>
   </div>
@@ -277,18 +277,18 @@
   <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
     <div class="flex items-center justify-between">
       <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
-      <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
     </div>
     <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
-      <a href="#services" data-close class="py-3 border-b border-line flex items-center justify-between">Services <span class="text-accent">→</span></a>
-      <a href="#work" data-close class="py-3 border-b border-line flex items-center justify-between">Work <span class="text-accent">→</span></a>
-      <a href="#about" data-close class="py-3 border-b border-line flex items-center justify-between">About <span class="text-accent">→</span></a>
-      <a href="#industries" data-close class="py-3 border-b border-line flex items-center justify-between">Industries <span class="text-accent">→</span></a>
-      <a href="#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights <span class="text-accent">→</span></a>
+      <a href="#services" data-close class="py-3 border-b border-line flex items-center justify-between">Services <span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+      <a href="#work" data-close class="py-3 border-b border-line flex items-center justify-between">Work <span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+      <a href="#about" data-close class="py-3 border-b border-line flex items-center justify-between">About <span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+      <a href="#industries" data-close class="py-3 border-b border-line flex items-center justify-between">Industries <span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+      <a href="#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights <span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
     </nav>
     <a href="#contact" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
       <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
     </a>
   </div>
 </div>
@@ -314,10 +314,10 @@
         <div class="reveal flex flex-wrap items-center gap-3 mt-6" data-delay="2">
           <a href="#contact" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium">
             <span class="relative z-10 sheen-text">Free Strategy Call</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
           </a>
           <a href="#services" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 shrink-0 text-ink/70 transition-colors duration-300 group-hover:text-accent"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            <iconify-icon icon="lucide:eye" class="relative z-10 shrink-0 text-ink/70 transition-colors duration-300 group-hover:text-accent"></iconify-icon>
             <span class="relative z-10 sheen-text-dark">See what we do</span>
           </a>
         </div>
@@ -346,21 +346,21 @@
         </div>
         <!-- mini SERP -->
         <div class="lg:col-span-4 mock rounded-xl2 p-5 min-h-[260px]">
-          <div class="flex items-center gap-2 rounded-full border border-line px-3 py-2 text-sm text-ink-soft">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-            <span>branding agency in jaipur</span>
+          <div class="flex items-center gap-2 rounded-full border border-line px-3 py-2 text-sm text-ink-soft h-10">
+            <iconify-icon icon="lucide:search" class="text-sm"></iconify-icon>
+            <span id="serpType2"></span><span class="caret"></span>
           </div>
-          <div class="mt-4 rounded-xl border border-line p-3">
-            <div class="flex items-center gap-2 text-xs text-ink-soft"><span class="h-4 w-4 rounded bg-accent"></span> boostronixx.com</div>
-            <p class="font-display text-base tt mt-1 leading-snug">BoostronixX — Creative Branding Agency</p>
-            <div class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-accent">Rank #1 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></div>
+          <div id="serpCard2" class="mt-4 rounded-xl border border-line p-3 transition-opacity duration-500">
+            <div class="flex items-center gap-2 text-xs text-ink-soft"><span class="h-4 w-4 rounded overflow-hidden grid place-items-center bg-surface shrink-0"><img id="serpFav2" src="assets/img/souk-favicon.avif" alt="" class="h-full w-full object-contain"></span> <span id="serpDomain2">www.zouk.in</span></div>
+            <p id="serpTitle2" class="font-display text-base tt mt-1 leading-snug">Zouk — Proudly Indian, Vegan Bags</p>
+            <div id="serpRank2" class="inline-flex items-center gap-1 mt-2 rounded-full bg-accent/10 text-accent text-xs font-medium px-2 py-0.5">Rank #1 <iconify-icon icon="lucide:check"></iconify-icon></div>
           </div>
           <div class="flex items-end gap-1.5 h-12 mt-4">
-            <div class="bar" style="--h:30%;width:14%;transition-delay:.05s"></div>
-            <div class="bar" style="--h:50%;width:14%;transition-delay:.12s"></div>
-            <div class="bar" style="--h:68%;width:14%;transition-delay:.19s"></div>
-            <div class="bar" style="--h:85%;width:14%;transition-delay:.26s"></div>
-            <div class="bar" style="--h:100%;width:14%;transition-delay:.33s"></div>
+            <div class="bar" style="height:24%;width:14%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:30%;width:14%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:48%;width:14%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:76%;width:14%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:94%;width:14%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
           </div>
         </div>
         <!-- mini social -->
@@ -371,7 +371,7 @@
           </div>
           <div class="mt-3 rounded-xl bg-surface flex-1 grid place-items-center text-ink-soft text-xs">post</div>
           <div class="flex items-center gap-3 mt-3 text-sm">
-            <span class="heart inline-flex items-center gap-1 text-accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.5-9.5-9C1 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.3.8-1.1 2-2.3 4-2.3 3.5 0 5 3.5 3.5 6.5-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
+            <span class="heart inline-flex items-center gap-1 text-accent"><iconify-icon icon="mdi:heart" class="text-lg"></iconify-icon></span>
             <span class="text-ink-soft"><b class="count text-ink" data-to="2400">0</b> likes</span>
           </div>
         </div>
@@ -407,6 +407,10 @@
           <span class="rounded-full border border-line px-3 py-1.5">Positioning</span>
           <span class="rounded-full border border-line px-3 py-1.5">Visual Identity</span>
         </div>
+        <a href="https://www.boostronixx.com/services/brand-consulting/" class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text">Explore Brand Consulting</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: brand board -->
       <div class="reveal" data-delay="1">
@@ -437,28 +441,32 @@
           <span class="rounded-full border border-line bg-paper px-3 py-1.5">Keyword Strategy</span>
           <span class="rounded-full border border-line bg-paper px-3 py-1.5">Technical SEO</span>
         </div>
+        <a href="https://www.boostronixx.com/services/seo-services/" class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text">Explore SEO Services</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: SERP + ranking climb -->
       <div class="reveal lg:order-1" data-delay="1">
         <div class="mock rounded-xl2 p-6 sm:p-8">
-          <div class="flex items-center gap-2 rounded-full border border-line px-4 py-2.5 text-sm text-ink-soft">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <div class="flex items-center gap-2 rounded-full border border-line px-4 py-2.5 text-sm text-ink-soft h-11">
+            <iconify-icon icon="lucide:search" class="text-base"></iconify-icon>
             <span id="seoType"></span><span class="caret"></span>
           </div>
-          <div class="mt-4 rounded-2xl border border-line bg-paper p-4">
-            <div class="flex items-center gap-2 text-xs text-ink-soft"><span class="h-5 w-5 rounded bg-accent grid place-items-center text-paper text-[10px] font-display">B</span> www.boostronixx.com</div>
-            <p class="font-display text-lg tt mt-1.5">SEO Company in Jaipur | BoostronixX</p>
-            <p class="text-sm text-ink-soft mt-1">Result-driven SEO that ranks you higher, drives qualified traffic and generates consistent leads…</p>
-            <div class="inline-flex items-center gap-1 mt-3 rounded-full bg-accent/10 text-accent text-xs font-semibold px-2.5 py-1">Rank #1 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></div>
+          <div id="serpCard" class="mt-4 rounded-2xl border border-line bg-paper p-4 transition-opacity duration-500">
+            <div class="flex items-center gap-2 text-xs text-ink-soft"><span class="h-5 w-5 rounded overflow-hidden grid place-items-center bg-surface shrink-0"><img id="serpFav" src="assets/img/souk-favicon.avif" alt="" class="h-full w-full object-contain"></span> <span id="serpDomain">www.zouk.in</span></div>
+            <p id="serpTitle" class="font-display text-lg tt mt-1.5">Zouk — Proudly Indian, Vegan Bags</p>
+            <p id="serpSnippet" class="text-sm text-ink-soft mt-1">Vegan handbags, laptop bags &amp; wallets — proudly Indian, cruelty-free.</p>
+            <div id="serpRank" class="inline-flex items-center gap-1 mt-3 rounded-full bg-accent/10 text-accent text-xs font-semibold px-2.5 py-1">Rank #1 <iconify-icon icon="lucide:check"></iconify-icon></div>
           </div>
           <div class="flex items-end justify-between gap-2 h-24 mt-5">
-            <div class="bar dark" style="--h:24%;width:11%;transition-delay:.04s"></div>
-            <div class="bar dark" style="--h:38%;width:11%;transition-delay:.1s"></div>
-            <div class="bar dark" style="--h:30%;width:11%;transition-delay:.16s"></div>
-            <div class="bar dark" style="--h:55%;width:11%;transition-delay:.22s"></div>
-            <div class="bar dark" style="--h:64%;width:11%;transition-delay:.28s"></div>
-            <div class="bar" style="--h:82%;width:11%;transition-delay:.34s"></div>
-            <div class="bar" style="--h:100%;width:11%;transition-delay:.4s"></div>
+            <div class="bar" style="height:24%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:36%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:30%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:48%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:58%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:76%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
+            <div class="bar" style="height:94%;width:11%;transition:height 1.1s cubic-bezier(.2,.7,.2,1),background .5s ease"></div>
           </div>
           <p class="text-[11px] text-ink-soft mt-2">Organic rankings · last 7 months</p>
         </div>
@@ -478,6 +486,10 @@
           <span class="rounded-full border border-line px-3 py-1.5">Paid Social</span>
           <span class="rounded-full border border-line px-3 py-1.5">Community</span>
         </div>
+        <a href="https://www.boostronixx.com/services/social-media-marketing/" class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text">Explore Social Media</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: phone feed -->
       <div class="reveal flex justify-center" data-delay="1">
@@ -497,12 +509,12 @@
             </div>
             <div class="p-3">
               <div class="flex items-center gap-4">
-                <span class="heart text-accent"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.5-9.5-9C1 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.3.8-1.1 2-2.3 4-2.3 3.5 0 5 3.5 3.5 6.5-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
-                <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <span class="heart text-accent"><iconify-icon icon="mdi:heart" class="text-2xl"></iconify-icon></span>
+                <iconify-icon icon="lucide:message-circle" class="text-2xl"></iconify-icon>
+                <iconify-icon icon="lucide:send" class="text-2xl"></iconify-icon>
               </div>
               <p class="text-sm font-semibold mt-2"><span class="count" data-to="12480">0</span> likes</p>
-              <p class="text-sm mt-0.5"><span class="font-semibold">boostronixx</span> <span class="text-ink-soft">growth isn't luck — it's strategy ✦</span></p>
+              <p class="text-sm mt-0.5"><span class="font-semibold">boostronixx</span> <span class="text-ink-soft">growth isn't luck — it's strategy <iconify-icon icon="lucide:sparkles" class="align-middle"></iconify-icon></span></p>
             </div>
           </div>
         </div>
@@ -522,6 +534,10 @@
           <span class="rounded-full border border-paper/20 px-3 py-1.5">Google Ads</span>
           <span class="rounded-full border border-paper/20 px-3 py-1.5">Lead Gen</span>
         </div>
+        <a href="https://www.boostronixx.com/services/performance-marketing/" class="group btn-glow-light mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text-dark">Explore Performance Marketing</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: ROAS dashboard (dark) -->
       <div class="reveal lg:order-1" data-delay="1">
@@ -534,7 +550,7 @@
           <div class="grid grid-cols-3 gap-3 mt-6">
             <div class="rounded-xl bg-white/5 p-3"><p class="text-[11px] text-paper/50">CTR</p><p class="font-display text-xl tt"><span class="count" data-to="3">0</span>.2%</p></div>
             <div class="rounded-xl bg-white/5 p-3"><p class="text-[11px] text-paper/50">Leads</p><p class="font-display text-xl tt"><span class="count" data-to="1240">0</span></p></div>
-            <div class="rounded-xl bg-white/5 p-3"><p class="text-[11px] text-paper/50">CPL ↓</p><p class="font-display text-xl tt">₹<span class="count" data-to="38">0</span></p></div>
+            <div class="rounded-xl bg-white/5 p-3"><p class="inline-flex items-center gap-0.5 text-[11px] text-paper/50">CPL <iconify-icon icon="lucide:arrow-down"></iconify-icon></p><p class="font-display text-xl tt">₹<span class="count" data-to="38">0</span></p></div>
           </div>
           <div class="flex items-end gap-2 h-16 mt-6">
             <div class="bar" style="--h:40%;width:16%;transition-delay:.05s"></div>
@@ -560,11 +576,15 @@
           <span class="rounded-full border border-line px-3 py-1.5">Email</span>
           <span class="rounded-full border border-line px-3 py-1.5">Analytics</span>
         </div>
+        <a href="https://www.boostronixx.com/services/digital-marketing/" class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text">Explore Digital Marketing</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: analytics line chart -->
       <div class="reveal" data-delay="1">
         <div class="mock rounded-xl2 p-6 sm:p-8">
-          <div class="flex items-center justify-between mb-1"><span class="text-xs tracking-[.2em] uppercase text-ink-soft">Traffic</span><span class="inline-flex items-center gap-1 text-sm font-semibold text-accent">+<span class="count" data-to="128">0</span>% <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M3 17l7-7 4 4 7-7"/></svg></span></div>
+          <div class="flex items-center justify-between mb-1"><span class="text-xs tracking-[.2em] uppercase text-ink-soft">Traffic</span><span class="inline-flex items-center gap-1 text-sm font-semibold text-accent">+<span class="count" data-to="128">0</span>% <iconify-icon icon="lucide:trending-up" class="text-sm"></iconify-icon></span></div>
           <p class="font-display text-4xl tt"><span class="count" data-to="48">0</span>.2k <span class="text-base text-ink-soft font-normal">visits / mo</span></p>
           <svg viewBox="0 0 320 130" class="w-full mt-4" fill="none">
             <polyline class="area" points="0,120 0,90 50,96 100,70 150,78 200,46 260,40 320,16 320,120" fill="#fa5539" fill-opacity="0.08"/>
@@ -589,11 +609,15 @@
           <span class="rounded-full border border-line bg-paper px-3 py-1.5">Product Design</span>
           <span class="rounded-full border border-line bg-paper px-3 py-1.5">Prototyping</span>
         </div>
+        <a href="https://www.boostronixx.com/services/ui-ux-design/" class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text">Explore UI/UX Design</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: wireframe -> hi-fi -->
       <div class="reveal lg:order-1" data-delay="1">
         <div class="mock rounded-xl2 p-4 relative">
-          <span class="absolute top-6 right-6 z-10 text-[11px] font-medium rounded-full bg-ink text-paper px-3 py-1">wireframe → design</span>
+          <span class="absolute top-6 right-6 z-10 text-[11px] font-medium rounded-full bg-ink text-paper px-3 py-1 inline-flex items-center gap-1">wireframe <iconify-icon icon="lucide:arrow-right"></iconify-icon> design</span>
           <div class="relative h-[300px]">
             <!-- wireframe layer -->
             <div class="wf absolute inset-0 p-5">
@@ -628,6 +652,10 @@
           <span class="rounded-full border border-line px-3 py-1.5">E-Commerce</span>
           <span class="rounded-full border border-line px-3 py-1.5">Speed Optimised</span>
         </div>
+        <a href="https://www.boostronixx.com/services/website-design/" class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">
+          <span class="relative z-10 sheen-text">Explore Website Design</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
+        </a>
       </div>
       <!-- mock: browser -->
       <div class="reveal" data-delay="1">
@@ -685,17 +713,17 @@
       <div><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Selected work</p><h2 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight">Our latest projects</h2></div>
       <a href="https://www.boostronixx.com/portfolio/" class="reveal group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium" data-delay="1">
         <span class="relative z-10 sheen-text-dark">View all projects</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
       </a>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
       <a href="https://www.boostronixx.com/portfolio/edoovi-erp/" class="reveal group block">
         <figure class="imgph rounded-xl2 aspect-[16/11] !bg-[#161616]"><img src="assets/work-edoovi.webp" alt="Edoovi ERP SaaS dashboard UI designed by BoostronixX" width="1280" height="880" loading="lazy" onerror="this.remove()" /><figcaption class="lbl"><b style="color:#7d7d7d">Project · 1280×880</b><span style="color:#6a6a6a">Edoovi ERP — dashboard UI on device, dark set</span></figcaption></figure>
-        <div class="flex items-center justify-between mt-5"><div><h3 class="font-display text-2xl tt">Edoovi — ERP SaaS</h3><p class="text-sm text-paper/50 mt-1">Product design · Branding · Web</p></div><span class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+        <div class="flex items-center justify-between mt-5"><div><h3 class="font-display text-2xl tt">Edoovi — ERP SaaS</h3><p class="text-sm text-paper/50 mt-1">Product design · Branding · Web</p></div><span class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span></div>
       </a>
       <a href="https://www.boostronixx.com/portfolio/freshee/" class="reveal group block md:mt-16" data-delay="1">
         <figure class="imgph rounded-xl2 aspect-[16/11] !bg-[#161616]"><img src="assets/work-freshee.webp" alt="Freshee quick-commerce mobile app screens by BoostronixX" width="1280" height="880" loading="lazy" onerror="this.remove()" /><figcaption class="lbl"><b style="color:#7d7d7d">Project · 1280×880</b><span style="color:#6a6a6a">Freshee — quick-commerce app screens</span></figcaption></figure>
-        <div class="flex items-center justify-between mt-5"><div><h3 class="font-display text-2xl tt">Freshee — Quick Commerce</h3><p class="text-sm text-paper/50 mt-1">Mobile app · UI/UX · Brand</p></div><span class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span></div>
+        <div class="flex items-center justify-between mt-5"><div><h3 class="font-display text-2xl tt">Freshee — Quick Commerce</h3><p class="text-sm text-paper/50 mt-1">Mobile app · UI/UX · Brand</p></div><span class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span></div>
       </a>
     </div>
   </div>
@@ -707,9 +735,9 @@
     <div class="lg:col-span-5 reveal">
       <div class="relative">
         <figure class="imgph rounded-xl2 aspect-[4/5]"><img src="assets/about-studio.webp" alt="Inside the BoostronixX studio in Jaipur, Rajasthan" width="880" height="1100" loading="lazy" onerror="this.remove()" /><figcaption class="lbl"><b>About · 880×1100</b><span>Studio candid or curated flat-lay of deliverables. Bright, airy.</span></figcaption></figure>
-        <div class="absolute -right-4 -top-4 h-24 w-24 spin">
+        <div class="absolute right-2 top-2 sm:-right-4 sm:-top-4 h-24 w-24 spin">
           <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="cir" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><circle cx="50" cy="50" r="49" fill="#0a0a0a"/><text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2"><textPath href="#cir">BOOSTRONIXX · CREATIVE · GROWTH · </textPath></text></svg>
-          <span class="absolute inset-0 grid place-items-center text-accent text-xl">✦</span>
+          <span class="absolute inset-0 grid place-items-center text-accent text-lg"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
         </div>
       </div>
     </div>
@@ -731,7 +759,7 @@
       </dl>
       <a href="https://www.boostronixx.com/about-us/" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-9 font-medium" data-delay="2">
         <span class="relative z-10 sheen-text">About BoostronixX</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
       </a>
     </div>
   </div>
@@ -757,26 +785,26 @@
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
       <div><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Results clients trust</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Brands that grew with us</h2></div>
       <div class="reveal flex items-center gap-3" data-delay="1">
-        <button id="tPrev" type="button" aria-label="Previous" class="btn-glow-light grid place-items-center h-12 w-12 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-        <button id="tNext" type="button" aria-label="Next" class="btn-glow-light grid place-items-center h-12 w-12 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button id="tPrev" type="button" aria-label="Previous" class="btn-glow-light grid place-items-center h-12 w-12 rounded-full text-xl"><iconify-icon icon="lucide:arrow-left" class="relative z-10"></iconify-icon></button>
+        <button id="tNext" type="button" aria-label="Next" class="btn-glow-light grid place-items-center h-12 w-12 rounded-full text-xl"><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></button>
       </div>
     </div>
     <div id="tViewport"><div id="tTrack">
-      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="text-accent">★★★★★</div><blockquote class="mt-5 text-lg leading-relaxed">"Boostronixx completely transformed our brand identity. We saw a <span class="text-accent font-medium">40% increase in engagement</span> within the first three months."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Arjun Khanna</span><span class="block text-sm text-ink-soft">Founder, UrbanCraft</span></span></figcaption></figure></div>
-      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="text-accent">★★★★★</div><blockquote class="mt-5 text-lg leading-relaxed">"They became our growth partners — translated our vision into a powerful brand strategy. Our customer recall improved significantly."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Kavita Nair</span><span class="block text-sm text-ink-soft">Director, GreenLeaf Organics</span></span></figcaption></figure></div>
-      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="text-accent">★★★★★</div><blockquote class="mt-5 text-lg leading-relaxed">"Data-driven strategy with creative excellence. Our website traffic doubled and conversions improved by <span class="text-accent font-medium">35% in six months</span>."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Rajesh Menon</span><span class="block text-sm text-ink-soft">CEO, TechFlow Solutions</span></span></figcaption></figure></div>
-      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="text-accent">★★★★★</div><blockquote class="mt-5 text-lg leading-relaxed">"Online sales grew by <span class="text-accent font-medium">65% year-on-year</span>. From logo to website to social — everything was cohesive and on-brand."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Vikram Rathore</span><span class="block text-sm text-ink-soft">MD, Aurum Realty</span></span></figcaption></figure></div>
-      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="text-accent">★★★★★</div><blockquote class="mt-5 text-lg leading-relaxed">"We approached them with a vague idea and got a concrete brand identity — delivered ahead of schedule. CAC dropped <span class="text-accent font-medium">25%</span>."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Anjali Deshmukh</span><span class="block text-sm text-ink-soft">Founder, Silhouette Studio</span></span></figcaption></figure></div>
-      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="text-accent">★★★★★</div><blockquote class="mt-5 text-lg leading-relaxed">"They understood our budget but never compromised on quality. The branding helped us pitch investors — seed round closed in two months."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Suresh Iyer</span><span class="block text-sm text-ink-soft">Director, FinEdge Capital</span></span></figcaption></figure></div>
+      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars"><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon></div><blockquote class="mt-5 text-lg leading-relaxed">"Boostronixx completely transformed our brand identity. We saw a <span class="text-accent font-medium">40% increase in engagement</span> within the first three months."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Arjun Khanna</span><span class="block text-sm text-ink-soft">Founder, UrbanCraft</span></span></figcaption></figure></div>
+      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars"><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon></div><blockquote class="mt-5 text-lg leading-relaxed">"They became our growth partners — translated our vision into a powerful brand strategy. Our customer recall improved significantly."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Kavita Nair</span><span class="block text-sm text-ink-soft">Director, GreenLeaf Organics</span></span></figcaption></figure></div>
+      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars"><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon></div><blockquote class="mt-5 text-lg leading-relaxed">"Data-driven strategy with creative excellence. Our website traffic doubled and conversions improved by <span class="text-accent font-medium">35% in six months</span>."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Rajesh Menon</span><span class="block text-sm text-ink-soft">CEO, TechFlow Solutions</span></span></figcaption></figure></div>
+      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars"><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon></div><blockquote class="mt-5 text-lg leading-relaxed">"Online sales grew by <span class="text-accent font-medium">65% year-on-year</span>. From logo to website to social — everything was cohesive and on-brand."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Vikram Rathore</span><span class="block text-sm text-ink-soft">MD, Aurum Realty</span></span></figcaption></figure></div>
+      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars"><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon></div><blockquote class="mt-5 text-lg leading-relaxed">"We approached them with a vague idea and got a concrete brand identity — delivered ahead of schedule. CAC dropped <span class="text-accent font-medium">25%</span>."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Anjali Deshmukh</span><span class="block text-sm text-ink-soft">Founder, Silhouette Studio</span></span></figcaption></figure></div>
+      <div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars"><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon><iconify-icon icon="material-symbols:star-rounded"></iconify-icon></div><blockquote class="mt-5 text-lg leading-relaxed">"They understood our budget but never compromised on quality. The branding helped us pitch investors — seed round closed in two months."</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="imgph h-12 w-12 rounded-full"><span class="lbl"><b>96²</b></span></span><span><span class="block font-display">Suresh Iyer</span><span class="block text-sm text-ink-soft">Director, FinEdge Capital</span></span></figcaption></figure></div>
     </div></div>
-    <div class="flex items-center justify-between mt-7"><div id="tDots" class="flex items-center gap-2"></div><p class="text-xs text-ink-soft">Drag, swipe or use arrows →</p></div>
+    <div class="flex items-center justify-between mt-7"><div id="tDots" class="flex items-center gap-2"></div><p class="inline-flex items-center gap-1 text-xs text-ink-soft">Drag, swipe or use arrows <iconify-icon icon="lucide:arrow-right"></iconify-icon></p></div>
   </div>
 </section>
 
 <!-- ===================== INSIGHTS ===================== -->
 <section id="insights" class="py-20 sm:py-28 bg-surface">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"><div><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Insights</p><h2 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight">Ideas on branding & growth</h2></div><a href="https://www.boostronixx.com/blog/" class="reveal text-sm font-medium underline underline-offset-4 decoration-accent decoration-2" data-delay="1">Read the blog →</a></div>
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"><div><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Insights</p><h2 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight">Ideas on branding & growth</h2></div><a href="https://www.boostronixx.com/blog/" class="reveal text-sm font-medium underline underline-offset-4 decoration-accent decoration-2" data-delay="1">Read the blog <iconify-icon icon="lucide:arrow-right" class="align-middle"></iconify-icon></a></div>
     <div class="grid md:grid-cols-3 gap-6">
       <article class="reveal group"><a href="https://www.boostronixx.com/blog/" class="block"><figure class="imgph rounded-xl2 aspect-[4/3] mb-5"><img src="assets/blog-1.webp" alt="How to define your target audience for better brand communication" width="768" height="576" loading="lazy" onerror="this.remove()"><figcaption class="lbl"><b>Blog · 768×576</b><span>Editorial cover</span></figcaption></figure><div class="flex flex-wrap items-center gap-3 text-xs text-ink-soft"><span class="rounded-full bg-paper border border-line px-3 py-1 font-medium">Branding &amp; Strategy</span><time datetime="2026-05-16">May 16, 2026</time><span>· 6 min read</span></div><h3 class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors">How to Define Your Target Audience for Better Brand Communication</h3><p class="text-xs text-ink-soft mt-2">By <span class="font-medium text-ink">BoostronixX Editorial Team</span></p></a></article>
       <article class="reveal group" data-delay="1"><a href="https://www.boostronixx.com/blog/" class="block"><figure class="imgph rounded-xl2 aspect-[4/3] mb-5"><img src="assets/blog-2.webp" alt="Employer branding in India and company culture" width="768" height="576" loading="lazy" onerror="this.remove()"><figcaption class="lbl"><b>Blog · 768×576</b><span>Editorial cover</span></figcaption></figure><div class="flex flex-wrap items-center gap-3 text-xs text-ink-soft"><span class="rounded-full bg-paper border border-line px-3 py-1 font-medium">Branding &amp; Strategy</span><time datetime="2026-05-12">May 12, 2026</time><span>· 7 min read</span></div><h3 class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors">Employer Branding in India: Why Your Company Culture IS Your Brand</h3><p class="text-xs text-ink-soft mt-2">By <span class="font-medium text-ink">BoostronixX Editorial Team</span></p></a></article>
@@ -790,10 +818,10 @@
   <div class="mx-auto max-w-3xl px-4 sm:px-6">
     <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Questions, answered</h2></div>
     <div class="space-y-3">
-      <div class="faq border border-line rounded-2xl px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Which services does BoostronixX offer?<span class="plus text-accent text-2xl leading-none shrink-0">+</span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Brand consulting, digital marketing, SEO, social media marketing, performance marketing, UI/UX design and website design — strategy through execution, all in-house.</div></div></div>
-      <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Where is BoostronixX located?<span class="plus text-accent text-2xl leading-none shrink-0">+</span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Jaipur, Rajasthan, India — working with clients across India and internationally.</div></div></div>
-      <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Which industries do you specialise in?<span class="plus text-accent text-2xl leading-none shrink-0">+</span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Real estate, jewellery, EdTech, D2C brands and startups — our framework adapts to most growth-stage businesses.</div></div></div>
-      <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">How do we get started?<span class="plus text-accent text-2xl leading-none shrink-0">+</span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Book a free strategy call. We'll review your goals, share quick wins and propose a roadmap — no obligation.</div></div></div>
+      <div class="faq border border-line rounded-2xl px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Which services does BoostronixX offer?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Brand consulting, digital marketing, SEO, social media marketing, performance marketing, UI/UX design and website design — strategy through execution, all in-house.</div></div></div>
+      <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Where is BoostronixX located?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Jaipur, Rajasthan, India — working with clients across India and internationally.</div></div></div>
+      <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Which industries do you specialise in?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Real estate, jewellery, EdTech, D2C brands and startups — our framework adapts to most growth-stage businesses.</div></div></div>
+      <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">How do we get started?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Book a free strategy call. We'll review your goals, share quick wins and propose a roadmap — no obligation.</div></div></div>
     </div>
   </div>
 </section>
@@ -805,7 +833,7 @@
       <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
       <div class="absolute right-6 top-6 sm:right-12 sm:top-12 h-24 w-24 spin hidden sm:block">
         <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="cir2" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2"><textPath href="#cir2">BOOK A CALL · FREE AUDIT · </textPath></text></svg>
-        <span class="absolute inset-0 grid place-items-center text-accent text-xl">✦</span>
+        <span class="absolute inset-0 grid place-items-center text-accent text-lg"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
       </div>
       <div class="relative max-w-2xl">
         <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">Ready to build something great together?</h2>
@@ -813,9 +841,9 @@
         <div class="flex flex-wrap items-center gap-3 mt-9">
           <a href="https://www.boostronixx.com/contact/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium">
             <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <iconify-icon icon="lucide:arrow-right" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"></iconify-icon>
           </a>
-          <a href="tel:+918058212202" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 shrink-0 transition-colors duration-300 group-hover:text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="relative z-10">+91 80582 12202</span></a>
+          <a href="tel:+918058212202" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0 transition-colors duration-300 group-hover:text-accent"></iconify-icon><span class="relative z-10">+91 80582 12202</span></a>
         </div>
         <p class="text-paper/50 text-sm mt-5">Or email <a href="mailto:boostronixx@gmail.com" class="text-paper underline underline-offset-4 decoration-accent">boostronixx@gmail.com</a> · Mon–Fri, 9 AM–7 PM IST</p>
       </div>
@@ -833,10 +861,10 @@
         <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
         <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
         <div class="flex items-center gap-3 mt-6 text-xs font-medium">
-          <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line hover:bg-ink hover:text-paper transition">in</a>
-          <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line hover:bg-ink hover:text-paper transition">ig</a>
-          <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line hover:bg-ink hover:text-paper transition">yt</a>
-          <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line hover:bg-ink hover:text-paper transition">fb</a>
+          <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+          <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+          <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+          <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
         </div>
       </div>
       <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Company</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="https://www.boostronixx.com/about-us/" class="hover:text-accent">About Us</a></li><li><a href="https://www.boostronixx.com/portfolio/" class="hover:text-accent">Portfolio</a></li><li><a href="https://www.boostronixx.com/blog/" class="hover:text-accent">Blog</a></li><li><a href="https://www.boostronixx.com/contact/" class="hover:text-accent">Contact</a></li></ul></div>
@@ -857,10 +885,10 @@
 <!-- ===================== MOBILE APP BOTTOM NAV ===================== -->
 <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
   <div class="grid grid-cols-4 max-w-md mx-auto">
-    <a href="#top" class="active flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
-    <a href="#services" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Services <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
-    <a href="#work" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>Work <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
-    <a href="#contact" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H5.2L4 17.5z"/></svg>Contact <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
+    <a href="#top" class="active flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
+    <a href="#services" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
+    <a href="#work" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:briefcase" class="text-[22px]"></iconify-icon>Work <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
+    <a href="#contact" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact <span class="dot block h-1 w-1 rounded-full bg-accent"></span></a>
   </div>
 </nav>
 
@@ -914,12 +942,69 @@ document.addEventListener('DOMContentLoaded', function(){
   var hio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ var h=e.target; setTimeout(function(){h.classList.add('beat');},500); hio.unobserve(h); } });},{threshold:.6});
   [].forEach.call(document.querySelectorAll('.heart'),function(h){hio.observe(h);});
 
-  // SEO search typing
-  var seo=document.getElementById('seoType');
-  if(seo){ var q='branding agency in jaipur',i=0,typed=false;
-    var tio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting&&!typed){ typed=true; (function type(){ if(i<=q.length){ seo.textContent=q.slice(0,i); i++; setTimeout(type,70);} })(); tio.unobserve(e.target);} });},{threshold:.6});
-    tio.observe(seo);
-  }
+  // SEO search — looping brand SERP animation (drives both the hero mini-SERP and the service mock)
+  (function(){
+    var brands=[
+      {kw:'zouk vegan bags', domain:'www.zouk.in', title:'Zouk — Proudly Indian, Vegan Bags', snippet:'Vegan handbags, laptop bags & wallets — proudly Indian, cruelty-free.', fav:'assets/img/souk-favicon.avif', color:'#0fa3a3', bars:[24,36,30,48,58,76,94]},
+      {kw:'pearson online learning', domain:'www.pearson.com', title:'Pearson | Online Learning & Education', snippet:'Courses, eBooks and tools that help learners reach their goals.', fav:'assets/img/pearson-favicon.avif', color:'#7c3aed', bars:[30,26,44,38,56,72,100]},
+      {kw:'mokobara luggage', domain:'www.mokobara.com', title:'Mokobara — Premium Luggage & Travel Gear', snippet:'Smart suitcases, backpacks and travel essentials, beautifully built.', fav:'assets/img/mokobara-favicon.avif', color:'#c58b2b', bars:[18,32,42,52,62,82,96]},
+      {kw:'monrow essentials', domain:'www.monrow.com', title:'Monrow — Everyday Premium Essentials', snippet:'Soft, sustainable wardrobe staples designed for daily comfort.', fav:'assets/img/monrow-favicon.avif', color:'#d6457a', bars:[28,40,34,52,66,80,100]},
+      {kw:'unique dream builders', domain:'www.uniquedreambuilders.com', title:'Unique Dream Builders — Custom Homes', snippet:'Designing and building premium custom homes and dream spaces.', fav:'assets/img/unique-dream-builders-favicon.avif', color:'#2e7d5b', bars:[22,34,46,40,64,84,92]}
+    ];
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    function hexA(hex,a){var n=parseInt(hex.slice(1),16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+    function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+
+    function runSerp(typeEl){
+      if(!typeEl) return;
+      var mock=typeEl.closest('.mock'); if(!mock) return;
+      var card=mock.querySelector('[id^="serpCard"]');
+      var favEl=mock.querySelector('[id^="serpFav"]'), domEl=mock.querySelector('[id^="serpDomain"]');
+      var titleEl=mock.querySelector('[id^="serpTitle"]'), snipEl=mock.querySelector('[id^="serpSnippet"]'), rankEl=mock.querySelector('[id^="serpRank"]');
+      var bars=[].slice.call(mock.querySelectorAll('.bar'));
+      if(!card||!bars.length) return;
+      var n=bars.length, f=n>1?(brands[0].bars.length-1)/(n-1):0;
+      function paint(b){
+        if(favEl){favEl.src=b.fav; favEl.alt=b.title;}
+        if(domEl)domEl.textContent=b.domain;
+        if(titleEl)titleEl.textContent=b.title;
+        if(snipEl)snipEl.textContent=b.snippet;
+        if(rankEl){rankEl.style.color=b.color; rankEl.style.background=hexA(b.color,0.12);}
+        bars.forEach(function(bar,i){
+          bar.style.height=b.bars[Math.round(i*f)]+'%';
+          var a=0.35+0.65*(n>1?i/(n-1):1);
+          bar.style.background='linear-gradient(180deg,'+hexA(b.color,a)+',transparent)';
+        });
+      }
+      async function typeKw(kw){ for(var i=1;i<=kw.length;i++){ typeEl.textContent=kw.slice(0,i); await sleep(55);} }
+      async function eraseKw(){ var t=typeEl.textContent; for(var i=t.length;i>=0;i--){ typeEl.textContent=t.slice(0,i); await sleep(28);} }
+      async function loop(){
+        var idx=0;
+        while(true){
+          var b=brands[idx];
+          await typeKw(b.kw);
+          await sleep(350);
+          paint(b);
+          card.style.opacity='1';
+          await sleep(2300);
+          card.style.opacity='0';
+          await sleep(450);
+          await eraseKw();
+          await sleep(300);
+          idx=(idx+1)%brands.length;
+        }
+      }
+      function start(){
+        if(reduce){ paint(brands[0]); typeEl.textContent=brands[0].kw; card.style.opacity='1'; return; }
+        card.style.opacity='0'; typeEl.textContent=''; loop();
+      }
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); start(); } });},{threshold:.35});
+      io.observe(mock);
+    }
+
+    runSerp(document.getElementById('seoType'));
+    runSerp(document.getElementById('serpType2'));
+  })();
 
   // hero word rotator
   var rot=document.getElementById('rotator');
