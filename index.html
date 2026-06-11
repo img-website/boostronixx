@@ -221,6 +221,9 @@
           opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
           transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
       }
+      .reveal.from-right {
+        transform: translateX(28px);
+      }
       .reveal.in {
         opacity: 1;
         transform: none;
@@ -1750,7 +1753,7 @@
               </a>
             </div>
             <!-- mock: browser -->
-            <div class="reveal" data-delay="1">
+            <div class="reveal from-right" data-delay="1">
               <div class="mock rounded-xl2 overflow-hidden">
                 <div
                   class="flex items-center gap-2 px-4 py-3 border-b border-line bg-surface"
@@ -2169,7 +2172,7 @@
             >
               <figure class="imgph rounded-xl aspect-square mb-4">
                 <img
-                  src="assets/ind-realestate.webp"
+                  src="assets/img/real-estate-industry.avif"
                   alt="Real estate branding"
                   onerror="this.remove()"
                 />
@@ -2185,7 +2188,7 @@
             >
               <figure class="imgph rounded-xl aspect-square mb-4">
                 <img
-                  src="assets/ind-jewellery.webp"
+                  src="assets/img/jewellery-industry.avif"
                   alt="Jewellery branding"
                   onerror="this.remove()"
                 />
@@ -2201,7 +2204,7 @@
             >
               <figure class="imgph rounded-xl aspect-square mb-4">
                 <img
-                  src="assets/ind-edtech.webp"
+                  src="assets/img/ed-tech-industry.avif"
                   alt="EdTech branding"
                   onerror="this.remove()"
                 />
@@ -2217,7 +2220,7 @@
             >
               <figure class="imgph rounded-xl aspect-square mb-4">
                 <img
-                  src="assets/ind-d2c.webp"
+                  src="assets/img/d2c-brands-industry.avif"
                   alt="D2C brand marketing"
                   onerror="this.remove()"
                 />
@@ -2231,7 +2234,7 @@
             >
               <figure class="imgph rounded-xl aspect-square mb-4">
                 <img
-                  src="assets/ind-startups.webp"
+                  src="assets/img/startups-industry.avif"
                   alt="Startup branding"
                   onerror="this.remove()"
                 />
@@ -2292,7 +2295,7 @@
             <div id="tTrack">
               <div class="tslide pr-5">
                 <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7"
+                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
                 >
                   <div
                     class="flex gap-0.5 text-accent text-lg"
@@ -2315,7 +2318,7 @@
                       icon="material-symbols:star-rounded"
                     ></iconify-icon>
                   </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed">
+                  <blockquote class="mt-5 text-lg leading-relaxed grow">
                     "Boostronixx completely transformed our brand identity. We
                     saw a
                     <span class="text-accent font-medium"
@@ -2324,20 +2327,19 @@
                     within the first three months."
                   </blockquote>
                   <figcaption class="flex items-center gap-3 mt-7">
-                    <span class="imgph h-12 w-12 rounded-full"
-                      ><span class="lbl"><b>96²</b></span></span
-                    ><span
-                      ><span class="block font-display">Arjun Khanna</span
-                      ><span class="block text-sm text-ink-soft"
-                        >Founder, UrbanCraft</span
-                      ></span
-                    >
+                    <img src="assets/img/boy-avatar.avif" alt="Arjun Khanna" class="h-12 w-12 rounded-full object-cover" />
+                    <span>
+                      <span class="block font-display">Arjun Khanna</span>
+                      <span class="block text-sm text-ink-soft">
+                        Founder, UrbanCraft
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </div>
               <div class="tslide pr-5">
                 <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7"
+                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
                 >
                   <div
                     class="flex gap-0.5 text-accent text-lg"
@@ -2360,26 +2362,25 @@
                       icon="material-symbols:star-rounded"
                     ></iconify-icon>
                   </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed">
+                  <blockquote class="mt-5 text-lg leading-relaxed grow">
                     "They became our growth partners — translated our vision
                     into a powerful brand strategy. Our customer recall improved
                     significantly."
                   </blockquote>
                   <figcaption class="flex items-center gap-3 mt-7">
-                    <span class="imgph h-12 w-12 rounded-full"
-                      ><span class="lbl"><b>96²</b></span></span
-                    ><span
-                      ><span class="block font-display">Kavita Nair</span
-                      ><span class="block text-sm text-ink-soft"
-                        >Director, GreenLeaf Organics</span
-                      ></span
-                    >
+                    <img src="assets/img/girl-avatar.avif" alt="Kavita Nair" class="h-12 w-12 rounded-full object-cover" />
+                    <span>
+                      <span class="block font-display">Kavita Nair</span>
+                      <span class="block text-sm text-ink-soft">
+                        Director, GreenLeaf Organics
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </div>
               <div class="tslide pr-5">
                 <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7"
+                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
                 >
                   <div
                     class="flex gap-0.5 text-accent text-lg"
@@ -2402,7 +2403,7 @@
                       icon="material-symbols:star-rounded"
                     ></iconify-icon>
                   </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed">
+                  <blockquote class="mt-5 text-lg leading-relaxed grow">
                     "Data-driven strategy with creative excellence. Our website
                     traffic doubled and conversions improved by
                     <span class="text-accent font-medium"
@@ -2410,20 +2411,19 @@
                     >."
                   </blockquote>
                   <figcaption class="flex items-center gap-3 mt-7">
-                    <span class="imgph h-12 w-12 rounded-full"
-                      ><span class="lbl"><b>96²</b></span></span
-                    ><span
-                      ><span class="block font-display">Rajesh Menon</span
-                      ><span class="block text-sm text-ink-soft"
-                        >CEO, TechFlow Solutions</span
-                      ></span
-                    >
+                    <img src="assets/img/boy-avatar.avif" alt="Rajesh Menon" class="h-12 w-12 rounded-full object-cover" />
+                    <span>
+                      <span class="block font-display">Rajesh Menon</span>
+                      <span class="block text-sm text-ink-soft">
+                        CEO, TechFlow Solutions
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </div>
               <div class="tslide pr-5">
                 <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7"
+                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
                 >
                   <div
                     class="flex gap-0.5 text-accent text-lg"
@@ -2446,27 +2446,26 @@
                       icon="material-symbols:star-rounded"
                     ></iconify-icon>
                   </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed">
+                  <blockquote class="mt-5 text-lg leading-relaxed grow">
                     "Online sales grew by
                     <span class="text-accent font-medium">65% year-on-year</span
                     >. From logo to website to social — everything was cohesive
                     and on-brand."
                   </blockquote>
                   <figcaption class="flex items-center gap-3 mt-7">
-                    <span class="imgph h-12 w-12 rounded-full"
-                      ><span class="lbl"><b>96²</b></span></span
-                    ><span
-                      ><span class="block font-display">Vikram Rathore</span
-                      ><span class="block text-sm text-ink-soft"
-                        >MD, Aurum Realty</span
-                      ></span
-                    >
+                    <img src="assets/img/boy-avatar.avif" alt="Vikram Rathore" class="h-12 w-12 rounded-full object-cover" />
+                    <span>
+                      <span class="block font-display">Vikram Rathore</span>
+                      <span class="block text-sm text-ink-soft">
+                        MD, Aurum Realty
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </div>
               <div class="tslide pr-5">
                 <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7"
+                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
                 >
                   <div
                     class="flex gap-0.5 text-accent text-lg"
@@ -2489,26 +2488,25 @@
                       icon="material-symbols:star-rounded"
                     ></iconify-icon>
                   </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed">
+                  <blockquote class="mt-5 text-lg leading-relaxed grow">
                     "We approached them with a vague idea and got a concrete
                     brand identity — delivered ahead of schedule. CAC dropped
                     <span class="text-accent font-medium">25%</span>."
                   </blockquote>
                   <figcaption class="flex items-center gap-3 mt-7">
-                    <span class="imgph h-12 w-12 rounded-full"
-                      ><span class="lbl"><b>96²</b></span></span
-                    ><span
-                      ><span class="block font-display">Anjali Deshmukh</span
-                      ><span class="block text-sm text-ink-soft"
-                        >Founder, Silhouette Studio</span
-                      ></span
-                    >
+                    <img src="assets/img/girl-avatar.avif" alt="Anjali Deshmukh" class="h-12 w-12 rounded-full object-cover" />
+                    <span>
+                      <span class="block font-display">Anjali Deshmukh</span>
+                      <span class="block text-sm text-ink-soft">
+                        Founder, Silhouette Studio
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </div>
               <div class="tslide pr-5">
                 <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7"
+                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
                 >
                   <div
                     class="flex gap-0.5 text-accent text-lg"
@@ -2531,20 +2529,19 @@
                       icon="material-symbols:star-rounded"
                     ></iconify-icon>
                   </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed">
+                  <blockquote class="mt-5 text-lg leading-relaxed grow">
                     "They understood our budget but never compromised on
                     quality. The branding helped us pitch investors — seed round
                     closed in two months."
                   </blockquote>
                   <figcaption class="flex items-center gap-3 mt-7">
-                    <span class="imgph h-12 w-12 rounded-full"
-                      ><span class="lbl"><b>96²</b></span></span
-                    ><span
-                      ><span class="block font-display">Suresh Iyer</span
-                      ><span class="block text-sm text-ink-soft"
-                        >Director, FinEdge Capital</span
-                      ></span
-                    >
+                    <img src="assets/img/boy-avatar.avif" alt="Suresh Iyer" class="h-12 w-12 rounded-full object-cover" />
+                    <span>
+                      <span class="block font-display">Suresh Iyer</span>
+                      <span class="block text-sm text-ink-soft">
+                        Director, FinEdge Capital
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </div>
@@ -2832,47 +2829,56 @@
                 ><iconify-icon icon="lucide:sparkles"></iconify-icon
               ></span>
             </div>
-            <div class="relative max-w-2xl">
-              <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">
-                Ready to build something great together?
-              </h2>
-              <p class="text-paper/70 mt-6 text-lg max-w-xl">
-                Real estate, jewellery, education or a D2C brand ready to scale
-                — BoostronixX is your creative branding and growth partner. Book
-                a free strategy call today.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a
-                  href="https://www.boostronixx.com/contact/"
-                  class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
-                >
-                  <span class="relative z-10 sheen-text-light"
-                    >Book a Free Strategy Call</span
+            <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+              <div class="max-w-2xl">
+                <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">
+                  Ready to build something great together?
+                </h2>
+                <p class="text-paper/70 mt-6 text-lg max-w-xl">
+                  Real estate, jewellery, education or a D2C brand ready to scale
+                  — BoostronixX is your creative branding and growth partner. Book
+                  a free strategy call today.
+                </p>
+                <div class="flex flex-wrap items-center gap-3 mt-9">
+                  <a
+                    href="https://www.boostronixx.com/contact/"
+                    class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
                   >
-                  <iconify-icon
-                    icon="lucide:arrow-right"
-                    class="relative z-10"
-                  ></iconify-icon>
-                </a>
-                <a
-                  href="tel:+918058212202"
-                  class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
-                  ><iconify-icon
-                    icon="lucide:phone"
-                    class="relative z-10 shrink-0"
-                  ></iconify-icon
-                  ><span class="relative z-10">+91 80582 12202</span></a
-                >
+                    <span class="relative z-10 sheen-text-light"
+                      >Book a Free Strategy Call</span
+                    >
+                    <iconify-icon
+                      icon="lucide:arrow-right"
+                      class="relative z-10"
+                    ></iconify-icon>
+                  </a>
+                  <a
+                    href="tel:+918058212202"
+                    class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
+                    ><iconify-icon
+                      icon="lucide:phone"
+                      class="relative z-10 shrink-0"
+                    ></iconify-icon
+                    ><span class="relative z-10">+91 80582 12202</span></a
+                  >
+                </div>
+                <p class="text-paper/50 text-sm mt-5">
+                  Or email
+                  <a
+                    href="mailto:boostronixx@gmail.com"
+                    class="text-paper underline underline-offset-4 decoration-accent"
+                    >boostronixx@gmail.com</a
+                  >
+                  · Mon–Fri, 9 AM–7 PM IST
+                </p>
               </div>
-              <p class="text-paper/50 text-sm mt-5">
-                Or email
-                <a
-                  href="mailto:boostronixx@gmail.com"
-                  class="text-paper underline underline-offset-4 decoration-accent"
-                  >boostronixx@gmail.com</a
-                >
-                · Mon–Fri, 9 AM–7 PM IST
-              </p>
+              <div class="relative overflow-hidden">
+                <img
+                  src="assets/img/cta1.avif"
+                  alt="BoostronixX strategy call"
+                  class="md:h-full w-full object-contain object-center"
+                />
+              </div>
             </div>
           </div>
         </div>
