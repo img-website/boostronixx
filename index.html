@@ -51,6 +51,103 @@
     --color-ink:#0a0a0a; --color-ink-soft:#4a463f; --color-accent:#fa5539;
     --color-paper:#ffffff; --color-surface:#f6f4f1; --color-surface-2:#efece7; --color-line:#e6e1da;
     --font-display:var(--brand-font); --font-sans:var(--brand-font); --radius-xl2:1.75rem;
+
+    /* custom animations for premium CTA button (Tailwind theme config) */
+    --animate-flicker: flicker 2s linear infinite;
+    --animate-sheen: sheen 3.2s linear infinite;
+    @keyframes flicker{ 50%{ opacity:.35 } }
+    @keyframes sheen{ to{ background-position:-200% center } }
+  }
+
+  /* ===== Reusable premium CTA buttons (Tailwind utilities) ===== */
+  /* Dark glassy variant — for light backgrounds */
+  @utility btn-glow{
+    position:relative; overflow:hidden;
+    border:1px solid rgba(255,255,255,.10);
+    background-color:var(--color-ink); color:var(--color-paper);
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,.2),
+      inset 0 2px 2px rgba(255,255,255,.12),
+      inset 0 8px 10px rgba(255,255,255,.05),
+      0 -4px 8px rgba(0,0,0,.06);
+    transition:box-shadow .3s, border-color .3s, transform .15s, background-color .3s;
+    &::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+      background:linear-gradient(0deg,#fff,var(--color-accent),transparent 16%); opacity:0; transition:opacity .3s; }
+    &:hover{ border-color:rgba(250,85,57,.40);
+      box-shadow:
+        inset 0 -8px 8px -6px rgba(255,255,255,.7),
+        inset 0 -16px 16px -8px rgba(250,85,57,.35),
+        inset 0 1px 1px rgba(255,255,255,.25); }
+    &:hover::after{ opacity:.6; }
+    &:active{ transform:scale(.99); border-color:rgba(250,85,57,1);
+      box-shadow:
+        inset 0 -8px 12px -6px rgba(255,255,255,.8),
+        inset 0 -16px 16px -8px rgba(250,85,57,.85),
+        inset 0 1px 1px rgba(255,255,255,.3); }
+    &:active::after{ opacity:1; filter:brightness(1.5); }
+  }
+  /* Accent glassy variant — for dark backgrounds */
+  @utility btn-glow-accent{
+    position:relative; overflow:hidden;
+    border:1px solid rgba(255,255,255,.28);
+    background-color:var(--color-accent); color:var(--color-paper);
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,.45),
+      inset 0 6px 10px rgba(255,255,255,.12),
+      0 10px 28px -10px rgba(250,85,57,.7);
+    transition:box-shadow .3s, border-color .3s, transform .15s;
+    &::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+      background:linear-gradient(0deg,#fff,transparent 22%); opacity:0; transition:opacity .3s; }
+    &:hover{ border-color:rgba(255,255,255,.55);
+      box-shadow:
+        inset 0 -8px 10px -6px rgba(255,255,255,.6),
+        inset 0 1px 1px rgba(255,255,255,.5),
+        0 14px 34px -8px rgba(250,85,57,.9); }
+    &:hover::after{ opacity:.5; }
+    &:active{ transform:scale(.99); }
+    &:active::after{ opacity:.8; filter:brightness(1.3); }
+  }
+  /* White glassy variant — keeps button white, premium depth + accent glow */
+  @utility btn-glow-light{
+    position:relative; overflow:hidden;
+    border:1px solid var(--color-line);
+    background-color:var(--color-paper); color:var(--color-ink);
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,.9),
+      inset 0 -2px 4px rgba(10,10,10,.04),
+      0 6px 16px -8px rgba(10,10,10,.18);
+    transition:box-shadow .3s, border-color .3s, transform .15s;
+    &::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+      background:linear-gradient(0deg,var(--color-accent),transparent 18%); opacity:0; transition:opacity .3s; }
+    &:hover{ border-color:rgba(250,85,57,.5);
+      box-shadow:
+        inset 0 -8px 10px -6px rgba(250,85,57,.22),
+        inset 0 1px 1px rgba(255,255,255,.9),
+        0 10px 24px -10px rgba(250,85,57,.35); }
+    &:hover::after{ opacity:.16; }
+    &:active{ transform:scale(.99); border-color:var(--color-accent); }
+    &:active::after{ opacity:.28; }
+  }
+  /* Sweeping shimmer text (accent band on dark ink text) */
+  @utility sheen-text-dark{
+    background:linear-gradient(110deg,var(--color-ink) 35%,var(--color-accent) 50%,var(--color-ink) 65%);
+    background-size:200% auto;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:sheen 3.2s linear infinite;
+  }
+  /* Sweeping shimmer text (accent band on white) */
+  @utility sheen-text{
+    background:linear-gradient(110deg,#fff 35%,var(--color-accent) 50%,#fff 65%);
+    background-size:200% auto;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:sheen 3.2s linear infinite;
+  }
+  /* Sweeping shimmer text on accent bg (soft white band) */
+  @utility sheen-text-light{
+    background:linear-gradient(110deg,#fff 38%,rgba(255,255,255,.55) 50%,#fff 62%);
+    background-size:200% auto;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:sheen 3.2s linear infinite;
   }
 </style>
 
@@ -163,7 +260,12 @@
         <a href="#insights" class="nav-link" data-spy="insights">Insights</a>
       </nav>
       <div class="flex items-center gap-2">
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-5 py-2.5 btn-press hover:bg-accent">Let's Build Together</a>
+        <a href="#contact" class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" class="relative z-10 h-4 w-4 animate-flicker group-hover:animate-none drop-shadow-[0_0_3px_rgba(255,255,255,.6)] transition-all duration-300 group-hover:drop-shadow-[0_0_4px_rgba(250,85,57,.9)]">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+          </svg>
+          <span class="relative z-10 sheen-text">Let's Build Together</span>
+        </a>
         <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
       </div>
     </div>
@@ -184,7 +286,10 @@
       <a href="#industries" data-close class="py-3 border-b border-line flex items-center justify-between">Industries <span class="text-accent">→</span></a>
       <a href="#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights <span class="text-accent">→</span></a>
     </nav>
-    <a href="#contact" data-close class="mt-auto inline-flex justify-center items-center gap-2 rounded-full bg-accent text-paper font-medium px-6 py-4">Book a Free Strategy Call</a>
+    <a href="#contact" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
+      <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
   </div>
 </div>
 
@@ -207,8 +312,14 @@
       <div class="lg:col-span-4">
         <p class="reveal text-ink-soft leading-relaxed" data-delay="1">Branding, SEO, social media and performance marketing — one creative team turning ambitious businesses into brands people remember.</p>
         <div class="reveal flex flex-wrap items-center gap-3 mt-6" data-delay="2">
-          <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-ink text-paper font-medium px-6 py-3.5 btn-press hover:bg-accent">Free Strategy Call <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="#services" class="inline-flex items-center gap-2 rounded-full border border-ink/15 font-medium px-6 py-3.5 btn-press hover:border-ink">See what we do</a>
+          <a href="#contact" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium">
+            <span class="relative z-10 sheen-text">Free Strategy Call</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#services" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 shrink-0 text-ink/70 transition-colors duration-300 group-hover:text-accent"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="relative z-10 sheen-text-dark">See what we do</span>
+          </a>
         </div>
       </div>
     </div>
@@ -572,7 +683,10 @@
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
       <div><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Selected work</p><h2 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight">Our latest projects</h2></div>
-      <a href="https://www.boostronixx.com/portfolio/" class="reveal inline-flex items-center gap-2 rounded-full border border-paper/20 px-6 py-3.5 font-medium btn-press hover:bg-paper hover:text-ink" data-delay="1">View all projects</a>
+      <a href="https://www.boostronixx.com/portfolio/" class="reveal group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium" data-delay="1">
+        <span class="relative z-10 sheen-text-dark">View all projects</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
       <a href="https://www.boostronixx.com/portfolio/edoovi-erp/" class="reveal group block">
@@ -615,7 +729,10 @@
         <div class="bg-paper p-4"><dt class="text-xs text-ink-soft">Brands served</dt><dd class="font-display text-2xl tt mt-1">50+</dd></div>
         <div class="bg-paper p-4"><dt class="text-xs text-ink-soft">Avg. reply</dt><dd class="font-display text-2xl tt mt-1">&lt;24h</dd></div>
       </dl>
-      <a href="https://www.boostronixx.com/about-us/" class="reveal inline-flex items-center gap-2 rounded-full bg-ink text-paper font-medium px-6 py-3.5 mt-9 btn-press hover:bg-accent" data-delay="2">About BoostronixX <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="https://www.boostronixx.com/about-us/" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-9 font-medium" data-delay="2">
+        <span class="relative z-10 sheen-text">About BoostronixX</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -640,8 +757,8 @@
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
       <div><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Results clients trust</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Brands that grew with us</h2></div>
       <div class="reveal flex items-center gap-3" data-delay="1">
-        <button id="tPrev" type="button" aria-label="Previous" class="grid place-items-center h-12 w-12 rounded-full border border-line btn-press hover:bg-ink hover:text-paper"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-        <button id="tNext" type="button" aria-label="Next" class="grid place-items-center h-12 w-12 rounded-full border border-line btn-press hover:bg-ink hover:text-paper"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button id="tPrev" type="button" aria-label="Previous" class="btn-glow-light grid place-items-center h-12 w-12 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button id="tNext" type="button" aria-label="Next" class="btn-glow-light grid place-items-center h-12 w-12 rounded-full"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </div>
     <div id="tViewport"><div id="tTrack">
@@ -694,8 +811,11 @@
         <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">Ready to build something great together?</h2>
         <p class="text-paper/70 mt-6 text-lg max-w-xl">Real estate, jewellery, education or a D2C brand ready to scale — BoostronixX is your creative branding and growth partner. Book a free strategy call today.</p>
         <div class="flex flex-wrap items-center gap-3 mt-9">
-          <a href="https://www.boostronixx.com/contact/" class="inline-flex items-center gap-2 rounded-full bg-accent text-paper font-medium px-7 py-4 btn-press hover:bg-paper hover:text-ink">Book a Free Strategy Call <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="tel:+918058212202" class="inline-flex items-center gap-2 rounded-full border border-paper/25 font-medium px-7 py-4 btn-press hover:bg-paper/10"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 80582 12202</a>
+          <a href="https://www.boostronixx.com/contact/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium">
+            <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="tel:+918058212202" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="relative z-10 shrink-0 transition-colors duration-300 group-hover:text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="relative z-10">+91 80582 12202</span></a>
         </div>
         <p class="text-paper/50 text-sm mt-5">Or email <a href="mailto:boostronixx@gmail.com" class="text-paper underline underline-offset-4 decoration-accent">boostronixx@gmail.com</a> · Mon–Fri, 9 AM–7 PM IST</p>
       </div>
