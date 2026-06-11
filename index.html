@@ -128,6 +128,9 @@
 
   /* generic mock card */
   .mock{ background:#fff; border:1px solid var(--color-line,#e6e1da); border-radius:1.75rem; box-shadow:0 40px 80px -50px rgba(10,10,10,.45); }
+  .phone-frame{ background:linear-gradient(180deg,#fdfaf7,#f7f4ef); border:1px solid rgba(10,10,10,.08); box-shadow:0 36px 100px -58px rgba(10,10,10,.35); position:relative; }
+  .phone-frame::before{ content:''; position:absolute; top:.9rem; left:50%; transform:translateX(-50%); width:3.6rem; height:.35rem; border-radius:999px; background:rgba(10,10,10,.12); }
+  .phone-frame::after{ content:''; position:absolute; top:.95rem; right:1rem; width:.45rem; height:.45rem; border-radius:50%; background:rgba(10,10,10,.18); }
 
   /* bars (SEO / perf) grow on reveal */
   .bar{ background:linear-gradient( 180deg, var(--accent), transparent); border-radius:7px 7px 2px 2px; height:8%; transition:height 1.1s cubic-bezier(.2,.7,.2,1); }
@@ -453,30 +456,35 @@
       </div>
       <!-- mock: phone feed -->
       <div class="reveal flex justify-center" data-delay="1">
-        <div class="mock rounded-[2.2rem] p-3 w-[290px]">
-          <div class="rounded-[1.7rem] border border-line overflow-hidden">
-            <div class="flex items-center gap-2 p-3 border-b border-line">
-              <span class="h-9 w-9 rounded-full bg-ink text-paper grid place-items-center text-xs font-display">B</span>
-              <div class="leading-tight flex-1"><p class="text-sm font-semibold">boostronixx</p><p class="text-[11px] text-ink-soft">Jaipur, India</p></div>
+        <div id="igCardSocial" class="phone-frame rounded-[3rem] p-4 w-[306px]">
+          <div class="flex justify-center">
+            <span class="h-1.5 w-16 rounded-full bg-ink/10"></span>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center gap-2.5">
+              <span class="h-9 w-9 rounded-full p-[1.5px] bg-gradient-to-tr from-accent via-[#ff8a5c] to-[#ffd0a8] shrink-0">
+                <img id="igAvatarSocial" src="assets/img/veeba-favicon.avif" alt="BoostronixX" class="h-full w-full rounded-full object-cover bg-paper">
+              </span>
+              <div class="leading-tight flex-1 min-w-0">
+                <p id="igNameSocial" class="text-sm font-semibold truncate">BoostronixX</p>
+                <p class="text-[11px] text-ink-soft">Sponsored</p>
+              </div>
               <span class="rounded-full bg-accent text-paper text-[11px] font-medium px-3 py-1">Follow</span>
             </div>
-            <div class="aspect-square bg-surface grid place-items-center relative">
-              <span class="font-display text-2xl tt text-ink/30">your brand, scrolling</span>
-              <span class="absolute top-3 left-3 flex gap-1.5">
-                <span class="h-7 w-7 rounded-full ring-2 ring-accent ring-offset-2 bg-surface-2"></span>
-                <span class="h-7 w-7 rounded-full ring-2 ring-accent ring-offset-2 bg-surface-2"></span>
-              </span>
-            </div>
-            <div class="p-3">
-              <div class="flex items-center gap-4">
-                <span class="heart text-accent"><iconify-icon icon="mdi:heart" class="text-2xl"></iconify-icon></span>
-                <iconify-icon icon="lucide:message-circle" class="text-2xl"></iconify-icon>
-                <iconify-icon icon="lucide:send" class="text-2xl"></iconify-icon>
-              </div>
-              <p class="text-sm font-semibold mt-2"><span class="count" data-to="12480">0</span> likes</p>
-              <p class="text-sm mt-0.5"><span class="font-semibold">boostronixx</span> <span class="text-ink-soft">growth isn't luck — it's strategy <iconify-icon icon="lucide:sparkles" class="align-middle"></iconify-icon></span></p>
-            </div>
+          <div class="relative mt-3 rounded-xl overflow-hidden bg-surface aspect-square">
+            <img id="igPostASocial" src="assets/img/veeba-carousel-1.avif" alt="BoostronixX social feed" class="absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500">
+            <img id="igPostBSocial" src="" alt="BoostronixX social feed" class="absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-500">
+            <span id="igCountSocial" class="absolute top-2 right-2 rounded-full bg-ink/70 text-paper text-[10px] font-medium px-2 py-0.5">1/8</span>
           </div>
+          <div id="igDotsSocial" class="flex justify-center items-center gap-1.5 mt-2.5"></div>
+          <div class="flex items-center gap-3 mt-2 text-xl">
+            <span class="heart text-accent inline-flex"><iconify-icon icon="mdi:heart"></iconify-icon></span>
+            <iconify-icon icon="lucide:message-circle"></iconify-icon>
+            <iconify-icon icon="lucide:send"></iconify-icon>
+            <span class="ml-auto inline-flex"><iconify-icon icon="lucide:bookmark"></iconify-icon></span>
+          </div>
+          <p class="text-sm font-semibold mt-3"><span id="igLikesSocial">12,480</span> likes</p>
+          <p id="igCaptionSocial" class="text-sm mt-1 text-ink-soft">Every frame built to stop the scroll, spark trust and drive action.</p>
         </div>
       </div>
     </div>
@@ -696,7 +704,8 @@
   <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
     <div class="lg:col-span-5 reveal">
       <div class="relative">
-        <figure class="imgph rounded-xl2 aspect-[4/5]"><img src="assets/about-studio.webp" alt="Inside the BoostronixX studio in Jaipur, Rajasthan" width="880" height="1100" loading="lazy" onerror="this.remove()" /><figcaption class="lbl"><b>About · 880×1100</b><span>Studio candid or curated flat-lay of deliverables. Bright, airy.</span></figcaption></figure>
+        <figure class="imgph rounded-xl2 aspect-[4/5]"><img src="assets/img/about-studio.avif" alt="Inside the BoostronixX studio in Jaipur, Rajasthan" width="880" height="1100" loading="lazy" onerror="this.remove()" />
+          <figcaption class="lbl"><b>About · 880×1100</b><span>Studio candid or curated flat-lay of deliverables. Bright, airy.</span></figcaption></figure>
         <div class="absolute right-2 top-2 sm:-right-4 sm:-top-4 h-24 w-24 spin">
           <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="cir" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><circle cx="50" cy="50" r="49" fill="#0a0a0a"/><text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2"><textPath href="#cir">BOOSTRONIXX · CREATIVE · GROWTH · </textPath></text></svg>
           <span class="absolute inset-0 grid place-items-center text-accent text-lg"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
@@ -897,7 +906,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var cio=new IntersectionObserver(function(es){es.forEach(function(e){
     if(!e.isIntersecting)return; var el=e.target,to=+el.dataset.to,c=0,s=Math.max(1,Math.round(to/45));
     var t=setInterval(function(){c+=s;if(c>=to){c=to;clearInterval(t);}el.textContent=(to>=1000?c.toLocaleString('en-IN'):c);},20); cio.unobserve(el);
-  });},{threshold:.6});
+  });},{threshold:.2,rootMargin:'0px 0px -10% 0px'});
   [].forEach.call(document.querySelectorAll('.count'),function(c){cio.observe(c);});
 
   // heart beat when in view
@@ -968,47 +977,71 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // hero — auto-playing Instagram-style post carousel
   (function(){
-    var card=document.getElementById('igCard'); if(!card) return;
-    var imgA=document.getElementById('igPostA'), imgB=document.getElementById('igPostB');
-    var avatar=document.getElementById('igAvatar'), nameEl=document.getElementById('igName');
-    var countEl=document.getElementById('igCount'), dotsBox=document.getElementById('igDots'), heart=card.querySelector('.heart');
     var P='assets/img/';
-    var slides=[
-      {name:'Ashiana Housing',  fav:P+'ashiana-favicon.avif',          post:P+'ashiana-post.avif',          likes:3240,  views:'28.6k'},
-      {name:'Duolingo',         fav:P+'duolingo-favicon.avif',         post:P+'duolingo-post.avif',         likes:18920, views:'1.4M'},
-      {name:'The Souled Store', fav:P+'the-souled-store-favicon.avif', post:P+'the-souled-store-post.avif', likes:6470,  views:'84.2k'},
-      {name:'Wakefit',          fav:P+'wakefit-favicon.avif',          post:P+'wakefit-post.avif',          likes:4180,  views:'52.9k'},
-      {name:'Simplilearn',      fav:P+'simpli-learn-favicon.avif',     post:P+'simpli-learn-post.avif',     likes:2910,  views:'33.5k'}
-    ];
-    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-    function fmt(n){return n.toLocaleString('en-IN');}
-    var dotBase='h-1.5 rounded-full transition-all duration-300 ';
-    slides.forEach(function(_,i){var d=document.createElement('span');d.className=dotBase+(i===0?'w-3 bg-accent':'w-1.5 bg-ink/20');dotsBox.appendChild(d);});
-    var dots=[].slice.call(dotsBox.children);
-    function setMeta(s,i){
-      avatar.src=s.fav; nameEl.textContent=s.name;
-      countEl.textContent=(i+1)+'/'+slides.length;
-      dots.forEach(function(d,di){ d.className=dotBase+(di===i?'w-3 bg-accent':'w-1.5 bg-ink/20'); });
-    }
-    function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
-    var front=imgA, back=imgB, idx=0;
-    function pulseHeart(){ if(!heart)return; heart.classList.remove('beat'); void heart.offsetWidth; heart.classList.add('beat'); }
-    async function loop(){
-      while(true){
-        await sleep(2600);
-        var ni=(idx+1)%slides.length, s=slides[ni];
-        back.src=s.post;
-        await new Promise(function(r){ if(back.complete&&back.naturalWidth) return r(); back.onload=r; back.onerror=r; });
-        back.style.opacity='1'; front.style.opacity='0';
-        setMeta(s,ni); pulseHeart();
-        await sleep(520);
-        var t=front; front=back; back=t;
-        idx=ni;
+    function initIgCarousel(config){
+      var card=document.getElementById(config.cardId); if(!card) return;
+      var imgA=document.getElementById(config.imgAId), imgB=document.getElementById(config.imgBId);
+      var avatar=document.getElementById(config.avatarId), nameEl=document.getElementById(config.nameId);
+      var countEl=document.getElementById(config.countId), dotsBox=document.getElementById(config.dotsId);
+      var likesEl=document.getElementById(config.likesId), captionEl=document.getElementById(config.captionId);
+      var heart=card.querySelector('.heart');
+      var slides=config.slides;
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      function fmt(n){return n.toLocaleString('en-IN');}
+      var dotBase='h-1.5 rounded-full transition-all duration-300 ';
+      slides.forEach(function(_,i){var d=document.createElement('span');d.className=dotBase+(i===0?'w-3 bg-accent':'w-1.5 bg-ink/20');dotsBox.appendChild(d);});
+      function setMeta(s,i){
+        avatar.src=s.fav; nameEl.textContent=s.name;
+        countEl.textContent=(i+1)+'/'+slides.length;
+        if(likesEl) likesEl.textContent = fmt(s.likes);
+        if(captionEl) captionEl.textContent = s.caption || '';
+        [].slice.call(dotsBox.children).forEach(function(d,di){ d.className=dotBase+(di===i?'w-3 bg-accent':'w-1.5 bg-ink/20'); });
       }
+      function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+      var front=imgA, back=imgB, idx=0;
+      function pulseHeart(){ if(!heart)return; heart.classList.remove('beat'); void heart.offsetWidth; heart.classList.add('beat'); }
+      async function loop(){
+        while(true){
+          await sleep(2600);
+          var ni=(idx+1)%slides.length, s=slides[ni];
+          back.src=s.post;
+          await new Promise(function(r){ if(back.complete&&back.naturalWidth) return r(); back.onload=r; back.onerror=r; });
+          back.style.opacity='1'; front.style.opacity='0';
+          setMeta(s,ni); pulseHeart();
+          await sleep(520);
+          var t=front; front=back; back=t;
+          idx=ni;
+        }
+      }
+      setMeta(slides[0],0);
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); if(!reduce) loop(); } });},{threshold:.35});
+      io.observe(card);
     }
-    setMeta(slides[0],0);
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); if(!reduce) loop(); } });},{threshold:.35});
-    io.observe(card);
+
+    initIgCarousel({
+      cardId:'igCard', imgAId:'igPostA', imgBId:'igPostB', avatarId:'igAvatar', nameId:'igName', countId:'igCount', dotsId:'igDots', likesId:null, captionId:null,
+      slides:[
+        {name:'Ashiana Housing',  fav:P+'ashiana-favicon.avif',          post:P+'ashiana-post.avif',          likes:3240, caption:'Campaign visuals that feel premium and local.'},
+        {name:'Duolingo',         fav:P+'duolingo-favicon.avif',         post:P+'duolingo-post.avif',         likes:18920, caption:'Friendly, high-energy social content.'},
+        {name:'The Souled Store', fav:P+'the-souled-store-favicon.avif', post:P+'the-souled-store-post.avif', likes:6470, caption:'Bold brand styling with a retail edge.'},
+        {name:'Wakefit',          fav:P+'wakefit-favicon.avif',          post:P+'wakefit-post.avif',          likes:4180, caption:'Clean product storytelling for trust.'},
+        {name:'Simplilearn',      fav:P+'simpli-learn-favicon.avif',     post:P+'simpli-learn-post.avif',     likes:2910, caption:'Learning content that feels modern and expert.'}
+      ]
+    });
+
+    initIgCarousel({
+      cardId:'igCardSocial', imgAId:'igPostASocial', imgBId:'igPostBSocial', avatarId:'igAvatarSocial', nameId:'igNameSocial', countId:'igCountSocial', dotsId:'igDotsSocial', likesId:'igLikesSocial', captionId:'igCaptionSocial',
+      slides:[
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-1.avif', likes:12480, caption:'Creative feed design that stops the scroll.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-2.avif', likes:15230, caption:'Swipe-worthy visuals with crisp brand storytelling.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-3.avif', likes:13890, caption:'Social content built to convert interest into action.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-4.avif', likes:16640, caption:'Every post designed for engagement and shareability.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-5.avif', likes:14350, caption:'Modern social layouts that feel premium and bold.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-6.avif', likes:15720, caption:'Scroll-stopping frames with a strong brand voice.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-7.avif', likes:12980, caption:'Strategic content that sparks trust and DMs.'},
+        {name:'BoostronixX', fav:P+'veeba-favicon.avif', post:P+'veeba-carousel-8.avif', likes:17840, caption:'Campaign-ready creatives for Instagram and beyond.'}
+      ]
+    });
   })();
 
   // brand board — periodic "regenerate" animation (tile pop + hex scramble + light sweep)
