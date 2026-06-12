@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Terms & Conditions | BoostronixX</title>
+    <meta
+      name="description"
+      content="The terms that govern your use of the BoostronixX website and services — scope, payments, intellectual property, liability and more."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://www.boostronixx.com/terms-and-conditions/" />
+    <link
+      rel="icon"
+      href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      id="brandFont"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a;
+        --color-ink-soft: #4a463f;
+        --color-accent: #fa5539;
+        --color-paper: #ffffff;
+        --color-surface: #f6f4f1;
+        --color-surface-2: #efece7;
+        --color-line: #e6e1da;
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow {
+        background-color: var(--color-ink);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease, color 0.25s ease;
+        &:hover {
+          background-color: var(--color-accent);
+          color: var(--color-paper);
+        }
+      }
+      @utility btn-glow-accent {
+        background-color: var(--color-accent);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease;
+      }
+      @utility btn-glow-light {
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        border: 1px solid var(--color-line);
+        transition: background-color 0.25s ease, color 0.25s ease,
+          border-color 0.25s ease;
+        &:hover {
+          background-color: var(--color-accent);
+          color: var(--color-paper);
+          border-color: var(--color-accent);
+        }
+      }
+      @utility sheen-text {
+        color: inherit;
+      }
+      @utility sheen-text-dark {
+        color: inherit;
+      }
+      @utility sheen-text-light {
+        color: inherit;
+      }
+    </style>
+
+    <style>
+      :root {
+        --brand-font: "Bricolage Grotesque", system-ui, sans-serif;
+        --accent: #fa5539;
+        --ink: #0a0a0a;
+      }
+      html,
+      body {
+        background: #fff;
+        color: var(--ink);
+        font-family: var(--brand-font);
+        overflow-x: clip;
+      }
+      ::selection {
+        background: #fa5539;
+        color: #fff;
+      }
+      .font-display {
+        font-family: var(--brand-font);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .tt {
+        letter-spacing: -0.03em;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--brand-font);
+      }
+      .grid-lines {
+        background-image: linear-gradient(
+            to right,
+            rgba(10, 10, 10, 0.045) 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
+        background-size: 72px 72px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+          transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      [data-delay="1"] {
+        transition-delay: 0.08s;
+      }
+      [data-delay="2"] {
+        transition-delay: 0.16s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 0;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      /* reading progress bar */
+      #progressWrap {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 3px;
+        z-index: 55;
+        background: transparent;
+      }
+      #progressBar {
+        height: 100%;
+        width: 0%;
+        background: var(--accent);
+        transition: width 0.1s linear;
+      }
+      /* numbered term block */
+      .term-no {
+        font-family: var(--brand-font);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke: 1.5px var(--accent);
+      }
+      .term p,
+      .term li {
+        color: var(--color-ink-soft, #4a463f);
+        line-height: 1.75;
+      }
+      .term p {
+        margin-top: 0.9rem;
+      }
+      .term ul {
+        margin-top: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .term li {
+        position: relative;
+        padding-left: 1.4rem;
+      }
+      .term li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65rem;
+        height: 6px;
+        width: 6px;
+        border-radius: 99px;
+        background: var(--accent);
+      }
+      .term a {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: var(--accent);
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <div id="progressWrap"><div id="progressBar"></div></div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div
+          id="hdrbar"
+          class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300"
+        >
+          <a href="index.html" class="flex items-center gap-2 shrink-0"
+            ><img
+              src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
+              alt="BoostronixX"
+              class="h-7 sm:h-8 w-auto"
+          /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+            <a href="index.html#services" class="nav-link">Services</a>
+            <a href="index.html#work" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
+              <iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon>
+              <span class="relative z-10 sheen-text">Let's Build Together</span>
+            </a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl">
+              <iconify-icon icon="lucide:menu"></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a href="index.html#services" data-close class="py-3 border-b border-line flex items-center justify-between">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#work" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
+          <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+        </a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative pt-28 sm:pt-36 pb-10 overflow-hidden">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a>
+            <iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">Terms &amp; Conditions</span>
+          </nav>
+          <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5">
+            <iconify-icon icon="lucide:scroll-text" class="text-accent text-sm"></iconify-icon> The agreement
+          </div>
+          <h1 class="reveal font-display text-4xl sm:text-6xl tt leading-[0.98]">
+            Terms &amp; Conditions
+          </h1>
+          <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">
+            Please read these terms carefully. They set out the rules for using the
+            BoostronixX website and engaging our services.
+          </p>
+          <p class="reveal text-xs text-ink-soft mt-5" data-delay="2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1.5"><iconify-icon icon="lucide:calendar" class="text-sm"></iconify-icon> Effective: June 10, 2026</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== AGREEMENT BANNER ===================== -->
+      <section class="pb-14">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="reveal relative rounded-xl2 bg-ink text-paper p-7 sm:p-9 overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
+            <div class="relative flex items-start gap-4">
+              <span class="inline-grid place-items-center h-12 w-12 shrink-0 rounded-2xl bg-accent text-paper text-2xl">
+                <iconify-icon icon="lucide:check"></iconify-icon>
+              </span>
+              <div>
+                <h2 class="font-display text-xl sm:text-2xl tt">By using this site, you agree</h2>
+                <p class="text-paper/70 mt-2 text-sm leading-relaxed">
+                  Accessing boostronixx.com or working with us means you accept
+                  these Terms &amp; Conditions in full. If you don't agree with any
+                  part, please don't use the website or our services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TERMS BLOCKS ===================== -->
+      <section class="pb-16 sm:pb-24" data-track>
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 divide-y divide-line">
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">01</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Use of our website</h2>
+              <p>You may use this website for lawful purposes only. You agree not to use it in any way that breaches applicable laws, infringes the rights of others, or disrupts the site's normal operation or security.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">02</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Services & scope</h2>
+              <p>The specific deliverables, timelines and fees for any engagement are defined in a separate proposal or agreement. These Terms apply alongside that document; where they conflict, the signed proposal prevails.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">03</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Quotes & proposals</h2>
+              <p>Quotes are valid for 30 days unless stated otherwise. Estimates are based on the scope shared with us; significant changes to requirements may affect timelines and pricing, which we'll communicate before proceeding.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">04</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Payments</h2>
+              <ul>
+                <li>Fees, schedules and any advance amounts are set out in your proposal.</li>
+                <li>Invoices are payable within the period stated on the invoice.</li>
+                <li>Work may be paused if payments are overdue.</li>
+                <li>Third-party costs (ad spend, fonts, stock, hosting, plugins) are billed separately or paid directly by you.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">05</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Client responsibilities</h2>
+              <p>To deliver our best work, we rely on you to provide accurate information, timely feedback, necessary access and approvals. Delays in these may affect agreed timelines.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">06</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Intellectual property</h2>
+              <p>Until full payment is received, all work product remains the property of BoostronixX. On final payment, ownership of the agreed final deliverables transfers to you. We may showcase non-confidential work in our portfolio and marketing unless agreed otherwise in writing.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">07</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Revisions & approvals</h2>
+              <p>Each engagement includes a defined number of revision rounds as set out in your proposal. Additional revisions or scope beyond that may be quoted separately. Approved deliverables are considered final.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">08</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Third-party services</h2>
+              <p>Our work may rely on third-party platforms and tools (e.g. ad networks, analytics, hosting). We are not responsible for the performance, policies, outages or pricing changes of services we don't control.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">09</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Limitation of liability</h2>
+              <p>We work hard to deliver results, but marketing outcomes can depend on factors outside our control. To the maximum extent permitted by law, BoostronixX is not liable for indirect or consequential losses, and our total liability is limited to the fees paid for the relevant engagement.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">10</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Termination</h2>
+              <p>Either party may end an engagement with written notice as set out in the proposal. You remain responsible for fees for work completed up to the termination date. Provisions on payment, IP and liability survive termination.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">11</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Governing law</h2>
+              <p>These Terms are governed by the laws of India. Any disputes are subject to the exclusive jurisdiction of the courts of Jaipur, Rajasthan.</p>
+            </div>
+          </article>
+
+          <article class="term reveal grid grid-cols-[auto_1fr] gap-5 sm:gap-7 py-10">
+            <span class="term-no text-4xl sm:text-6xl">12</span>
+            <div>
+              <h2 class="font-display text-xl sm:text-2xl tt">Changes & contact</h2>
+              <p>We may update these Terms from time to time; the effective date above reflects the latest version. Questions? Email <a href="mailto:boostronixx@gmail.com">boostronixx@gmail.com</a> or call <a href="tel:+918058212202">+91 80582 12202</a>.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== CTA ===================== -->
+      <section class="pb-20 sm:pb-28">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="reveal rounded-xl2 border border-line bg-surface p-8 sm:p-10 text-center">
+            <h2 class="font-display text-2xl sm:text-3xl tt">Ready to work together?</h2>
+            <p class="text-ink-soft mt-3 max-w-md mx-auto">Got the terms — now let's get to the good part. Book a free, no-obligation strategy call.</p>
+            <a href="contact-us.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-7 py-4 mt-7 font-medium">
+              <span class="relative z-10 sheen-text">Book a Free Strategy Call</span>
+              <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">
+              A creative branding & digital marketing agency in Jaipur, India —
+              helping ambitious businesses build brands that grow.
+            </p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Company</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="about-us.html" class="hover:text-accent">About Us</a></li>
+              <li><a href="faq.html" class="hover:text-accent">FAQ</a></li>
+              <li><a href="https://www.boostronixx.com/blog/" class="hover:text-accent">Blog</a></li>
+              <li><a href="contact-us.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="privacy-policy.html" class="hover:text-accent">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html" class="hover:text-accent">Terms &amp; Conditions</a></li>
+              <li><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3">
+            <h4 class="font-display text-sm mb-4">Get in touch</h4>
+            <address class="not-italic space-y-3 text-sm text-ink-soft">
+              <p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p>
+              <p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p>
+              <p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p>
+              <p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p>
+            </address>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5">
+            <a href="privacy-policy.html" class="hover:text-accent">Privacy</a>
+            <a href="terms-and-conditions.html" class="hover:text-accent">Terms</a>
+            <a href="disclaimer.html" class="hover:text-accent">Disclaimer</a>
+            <a href="sitemap.html" class="hover:text-accent">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== MOBILE BOTTOM NAV ===================== -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="index.html#services" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services</a>
+        <a href="faq.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:help-circle" class="text-[22px]"></iconify-icon>FAQ</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        var progress = document.getElementById("progressBar");
+        var track = document.querySelector("[data-track]");
+        function onScroll() {
+          if (bar)
+            bar.classList.toggle(
+              "shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]",
+              window.scrollY > 20
+            );
+          if (progress && track) {
+            var rect = track.getBoundingClientRect();
+            var total = rect.height - window.innerHeight + rect.top;
+            var scrolled = window.scrollY - (rect.top + window.scrollY) + window.innerHeight;
+            var start = track.offsetTop - window.innerHeight;
+            var end = track.offsetTop + track.offsetHeight;
+            var p = ((window.scrollY - start) / (end - start)) * 100;
+            progress.style.width = Math.max(0, Math.min(100, p)) + "%";
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        var mm = document.getElementById("mobileMenu"),
+          panel = document.getElementById("menuPanel"),
+          menuBtn = document.getElementById("menuBtn");
+        function openMenu() {
+          mm.classList.remove("hidden");
+          requestAnimationFrame(function () {
+            panel.classList.remove("translate-x-full");
+          });
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          panel.classList.add("translate-x-full");
+          document.body.style.overflow = "";
+          setTimeout(function () {
+            mm.classList.add("hidden");
+          }, 300);
+        }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm)
+          [].forEach.call(mm.querySelectorAll("[data-close]"), function (e) {
+            e.addEventListener("click", closeMenu);
+          });
+
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        [].forEach.call(document.querySelectorAll(".reveal"), function (e) {
+          io.observe(e);
+        });
+      });
+    </script>
+  </body>
+</html>

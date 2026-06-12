@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Disclaimer | BoostronixX</title>
+    <meta
+      name="description"
+      content="Important disclaimers about the information, results, links and content on the BoostronixX website. Please read before relying on anything here."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://www.boostronixx.com/disclaimer/" />
+    <link
+      rel="icon"
+      href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      id="brandFont"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a;
+        --color-ink-soft: #4a463f;
+        --color-accent: #fa5539;
+        --color-paper: #ffffff;
+        --color-surface: #f6f4f1;
+        --color-surface-2: #efece7;
+        --color-line: #e6e1da;
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow {
+        background-color: var(--color-ink);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease, color 0.25s ease;
+        &:hover {
+          background-color: var(--color-accent);
+          color: var(--color-paper);
+        }
+      }
+      @utility btn-glow-accent {
+        background-color: var(--color-accent);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease;
+      }
+      @utility btn-glow-light {
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        border: 1px solid var(--color-line);
+        transition: background-color 0.25s ease, color 0.25s ease,
+          border-color 0.25s ease;
+        &:hover {
+          background-color: var(--color-accent);
+          color: var(--color-paper);
+          border-color: var(--color-accent);
+        }
+      }
+      @utility sheen-text {
+        color: inherit;
+      }
+      @utility sheen-text-light {
+        color: inherit;
+      }
+    </style>
+
+    <style>
+      :root {
+        --brand-font: "Bricolage Grotesque", system-ui, sans-serif;
+        --accent: #fa5539;
+        --ink: #0a0a0a;
+      }
+      html,
+      body {
+        background: #fff;
+        color: var(--ink);
+        font-family: var(--brand-font);
+        overflow-x: clip;
+      }
+      ::selection {
+        background: #fa5539;
+        color: #fff;
+      }
+      .font-display {
+        font-family: var(--brand-font);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .tt {
+        letter-spacing: -0.03em;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--brand-font);
+      }
+      .grid-lines {
+        background-image: linear-gradient(
+            to right,
+            rgba(10, 10, 10, 0.045) 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
+        background-size: 72px 72px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+          transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      [data-delay="1"] {
+        transition-delay: 0.08s;
+      }
+      [data-delay="2"] {
+        transition-delay: 0.16s;
+      }
+      [data-delay="3"] {
+        transition-delay: 0.24s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 0;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .notice p {
+        color: var(--color-ink-soft, #4a463f);
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+      .notice a {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: var(--accent);
+      }
+      /* subtle pulse on hero badge */
+      @keyframes softpulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(250, 85, 57, 0.35);
+        }
+        50% {
+          box-shadow: 0 0 0 14px rgba(250, 85, 57, 0);
+        }
+      }
+      .pulse {
+        animation: softpulse 2.4s ease-in-out infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pulse {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div
+          id="hdrbar"
+          class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300"
+        >
+          <a href="index.html" class="flex items-center gap-2 shrink-0"
+            ><img
+              src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
+              alt="BoostronixX"
+              class="h-7 sm:h-8 w-auto"
+          /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+            <a href="index.html#services" class="nav-link">Services</a>
+            <a href="index.html#work" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
+              <iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon>
+              <span class="relative z-10 sheen-text">Let's Build Together</span>
+            </a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl">
+              <iconify-icon icon="lucide:menu"></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a href="index.html#services" data-close class="py-3 border-b border-line flex items-center justify-between">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#work" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
+          <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+        </a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 text-center">
+          <nav class="reveal flex items-center justify-center gap-2 text-xs text-ink-soft mb-7" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a>
+            <iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">Disclaimer</span>
+          </nav>
+          <div class="reveal flex justify-center">
+            <span class="pulse inline-grid place-items-center h-16 w-16 rounded-2xl bg-accent text-paper text-3xl">
+              <iconify-icon icon="lucide:triangle-alert"></iconify-icon>
+            </span>
+          </div>
+          <h1 class="reveal font-display text-4xl sm:text-6xl tt leading-[0.98] mt-7">
+            Disclaimer
+          </h1>
+          <p class="reveal text-ink-soft mt-5 max-w-lg mx-auto leading-relaxed" data-delay="1">
+            The information on this website is shared in good faith and for general
+            guidance only. Please read these notices before relying on anything
+            you find here.
+          </p>
+          <p class="reveal text-xs text-ink-soft mt-6" data-delay="2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1.5"><iconify-icon icon="lucide:calendar" class="text-sm"></iconify-icon> Last updated: June 10, 2026</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== NOTICE CARDS ===================== -->
+      <section class="py-12 sm:py-16">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 space-y-4">
+          <div class="notice reveal flex items-start gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-7">
+            <span class="inline-grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-paper border border-line text-accent text-xl"><iconify-icon icon="lucide:info"></iconify-icon></span>
+            <div>
+              <h2 class="font-display text-lg tt">General information only</h2>
+              <p class="mt-1.5">All content on boostronixx.com is provided for general informational purposes. It is not professional, legal, financial or business advice, and should not be treated as a substitute for tailored guidance for your specific situation.</p>
+            </div>
+          </div>
+
+          <div class="notice reveal flex items-start gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-7" data-delay="1">
+            <span class="inline-grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-paper border border-line text-accent text-xl"><iconify-icon icon="lucide:trending-up"></iconify-icon></span>
+            <div>
+              <h2 class="font-display text-lg tt">No guarantee of results</h2>
+              <p class="mt-1.5">Marketing, SEO and advertising outcomes depend on many factors beyond our control — your market, budget, competition and platform algorithms. Any examples, case studies or figures shown are illustrative and not a promise of similar results for your business.</p>
+            </div>
+          </div>
+
+          <div class="notice reveal flex items-start gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-7" data-delay="2">
+            <span class="inline-grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-paper border border-line text-accent text-xl"><iconify-icon icon="lucide:external-link"></iconify-icon></span>
+            <div>
+              <h2 class="font-display text-lg tt">External links</h2>
+              <p class="mt-1.5">Our site may link to third-party websites for convenience. We don't control and aren't responsible for their content, accuracy, policies or practices. A link is not an endorsement, and you visit external sites at your own risk.</p>
+            </div>
+          </div>
+
+          <div class="notice reveal flex items-start gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-7" data-delay="3">
+            <span class="inline-grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-paper border border-line text-accent text-xl"><iconify-icon icon="lucide:copyright"></iconify-icon></span>
+            <div>
+              <h2 class="font-display text-lg tt">Brands & trademarks</h2>
+              <p class="mt-1.5">Third-party names, logos and brands shown on this site belong to their respective owners and are used only for identification or illustrative purposes. Their use does not imply any affiliation, partnership or endorsement unless explicitly stated.</p>
+            </div>
+          </div>
+
+          <div class="notice reveal flex items-start gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-7">
+            <span class="inline-grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-paper border border-line text-accent text-xl"><iconify-icon icon="lucide:shield-off"></iconify-icon></span>
+            <div>
+              <h2 class="font-display text-lg tt">Limitation of liability</h2>
+              <p class="mt-1.5">To the fullest extent permitted by law, BoostronixX is not liable for any loss or damage arising from the use of, or reliance on, information on this website. You use the site and its content at your own discretion and risk.</p>
+            </div>
+          </div>
+
+          <div class="notice reveal flex items-start gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-7" data-delay="1">
+            <span class="inline-grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-paper border border-line text-accent text-xl"><iconify-icon icon="lucide:refresh-cw"></iconify-icon></span>
+            <div>
+              <h2 class="font-display text-lg tt">Accuracy & updates</h2>
+              <p class="mt-1.5">We try to keep content current and correct, but we make no warranties about its completeness, accuracy or reliability. Information may change without notice, and we're not obliged to update it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== AGREEMENT + CONTACT ===================== -->
+      <section class="pb-20 sm:pb-28">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="reveal relative rounded-xl2 bg-ink text-paper p-8 sm:p-12 overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
+            <div class="relative">
+              <span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-accent text-paper text-2xl mb-5"><iconify-icon icon="lucide:check-check"></iconify-icon></span>
+              <h2 class="font-display text-2xl sm:text-3xl tt">By using this website, you accept this disclaimer</h2>
+              <p class="text-paper/70 mt-3 max-w-xl leading-relaxed">
+                If you do not agree with any part of it, please discontinue use of
+                the site. Have a question about anything here? We're happy to help.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 mt-7">
+                <a href="mailto:boostronixx@gmail.com" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium">
+                  <iconify-icon icon="lucide:mail" class="relative z-10 shrink-0"></iconify-icon>
+                  <span class="relative z-10 sheen-text-light">boostronixx@gmail.com</span>
+                </a>
+                <a href="tel:+918058212202" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium">
+                  <iconify-icon icon="lucide:phone" class="relative z-10 shrink-0"></iconify-icon>
+                  <span class="relative z-10">+91 80582 12202</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">
+              A creative branding & digital marketing agency in Jaipur, India —
+              helping ambitious businesses build brands that grow.
+            </p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Company</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="about-us.html" class="hover:text-accent">About Us</a></li>
+              <li><a href="faq.html" class="hover:text-accent">FAQ</a></li>
+              <li><a href="https://www.boostronixx.com/blog/" class="hover:text-accent">Blog</a></li>
+              <li><a href="contact-us.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="privacy-policy.html" class="hover:text-accent">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html" class="hover:text-accent">Terms &amp; Conditions</a></li>
+              <li><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3">
+            <h4 class="font-display text-sm mb-4">Get in touch</h4>
+            <address class="not-italic space-y-3 text-sm text-ink-soft">
+              <p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p>
+              <p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p>
+              <p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p>
+              <p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p>
+            </address>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5">
+            <a href="privacy-policy.html" class="hover:text-accent">Privacy</a>
+            <a href="terms-and-conditions.html" class="hover:text-accent">Terms</a>
+            <a href="disclaimer.html" class="hover:text-accent">Disclaimer</a>
+            <a href="sitemap.html" class="hover:text-accent">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== MOBILE BOTTOM NAV ===================== -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="index.html#services" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services</a>
+        <a href="faq.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:help-circle" class="text-[22px]"></iconify-icon>FAQ</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        window.addEventListener("scroll", function () {
+          if (bar)
+            bar.classList.toggle(
+              "shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]",
+              window.scrollY > 20
+            );
+        });
+        var mm = document.getElementById("mobileMenu"),
+          panel = document.getElementById("menuPanel"),
+          menuBtn = document.getElementById("menuBtn");
+        function openMenu() {
+          mm.classList.remove("hidden");
+          requestAnimationFrame(function () {
+            panel.classList.remove("translate-x-full");
+          });
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          panel.classList.add("translate-x-full");
+          document.body.style.overflow = "";
+          setTimeout(function () {
+            mm.classList.add("hidden");
+          }, 300);
+        }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm)
+          [].forEach.call(mm.querySelectorAll("[data-close]"), function (e) {
+            e.addEventListener("click", closeMenu);
+          });
+
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        [].forEach.call(document.querySelectorAll(".reveal"), function (e) {
+          io.observe(e);
+        });
+      });
+    </script>
+  </body>
+</html>

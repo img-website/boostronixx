@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Page Not Found (404) | BoostronixX</title>
+    <meta name="description" content="The page you're looking for can't be found. Let's get you back on track — explore our services, work or get in touch." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a;
+        --color-ink-soft: #4a463f;
+        --color-accent: #fa5539;
+        --color-paper: #ffffff;
+        --color-surface: #f6f4f1;
+        --color-surface-2: #efece7;
+        --color-line: #e6e1da;
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow {
+        background-color: var(--color-ink);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease, color 0.25s ease;
+        &:hover { background-color: var(--color-accent); color: var(--color-paper); }
+      }
+      @utility btn-glow-light {
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        border: 1px solid var(--color-line);
+        transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+        &:hover { background-color: var(--color-accent); color: var(--color-paper); border-color: var(--color-accent); }
+      }
+      @utility sheen-text { color: inherit; }
+      @utility sheen-text-dark { color: inherit; }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; --ink: #0a0a0a; }
+      html, body { background: #fff; color: var(--ink); font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; }
+      h1, h2 { font-family: var(--brand-font); }
+      .grid-lines {
+        background-image: linear-gradient(to right, rgba(10, 10, 10, 0.045) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
+        background-size: 72px 72px;
+      }
+
+      /* ===== glitch 404 ===== */
+      .glitch { position: relative; display: inline-block; line-height: 0.8; }
+      .glitch .layer { position: absolute; inset: 0; }
+      .glitch .l1 { color: var(--accent); animation: glitch1 2.6s infinite steps(2, end); clip-path: inset(0 0 55% 0); }
+      .glitch .l2 { color: #6ad0d0; animation: glitch2 3.1s infinite steps(2, end); clip-path: inset(55% 0 0 0); }
+      @keyframes glitch1 {
+        0%, 92%, 100% { transform: translate(0, 0); opacity: 0; }
+        93% { transform: translate(-4px, -2px); opacity: 0.9; }
+        96% { transform: translate(4px, 2px); opacity: 0.9; }
+      }
+      @keyframes glitch2 {
+        0%, 90%, 100% { transform: translate(0, 0); opacity: 0; }
+        91% { transform: translate(4px, 2px); opacity: 0.85; }
+        95% { transform: translate(-4px, -2px); opacity: 0.85; }
+      }
+
+      /* orbiting bits */
+      .orbit { animation: rot 16s linear infinite; transform-origin: center; }
+      .orbit-rev { animation: rot 22s linear infinite reverse; transform-origin: center; }
+      @keyframes rot { to { transform: rotate(360deg); } }
+      @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+      .bob { animation: bob 4s ease-in-out infinite; }
+
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+      .rise { opacity: 0; animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+      .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.22s; } .d3 { animation-delay: 0.34s; }
+      .d4 { animation-delay: 0.46s; } .d5 { animation-delay: 0.58s; }
+
+      .lcard { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+      .lcard:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 24px 50px -40px rgba(10, 10, 10, 0.4); }
+      .lcard:hover .larr { transform: translateX(4px); color: var(--accent); }
+      .larr { transition: 0.25s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .l1, .l2, .orbit, .orbit-rev, .bob, .rise { animation: none; }
+        .rise { opacity: 1; }
+        .l1, .l2 { opacity: 0; }
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- minimal top bar -->
+    <header class="absolute top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="mt-5 flex items-center justify-between">
+          <a href="index.html" class="flex items-center gap-2"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+          <a href="contact-us.html" class="text-sm font-medium text-ink-soft hover:text-accent inline-flex items-center gap-1.5">Need help? <iconify-icon icon="lucide:life-buoy"></iconify-icon></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative min-h-screen grid-lines flex items-center justify-center px-4 py-28 overflow-hidden">
+      <div class="w-full max-w-2xl text-center">
+        <!-- 404 with orbit -->
+        <div class="rise d1 relative mx-auto w-fit">
+          <!-- orbit decorations -->
+          <svg viewBox="0 0 400 240" class="absolute -inset-8 w-[calc(100%+4rem)] h-[calc(100%+4rem)] pointer-events-none" aria-hidden="true">
+            <g class="orbit" style="transform-origin: 200px 120px">
+              <circle cx="200" cy="22" r="6" fill="#fa5539" />
+            </g>
+            <g class="orbit-rev" style="transform-origin: 200px 120px">
+              <rect x="356" y="112" width="12" height="12" rx="3" fill="#0a0a0a" />
+            </g>
+            <ellipse cx="200" cy="120" rx="186" ry="104" fill="none" stroke="#e6e1da" stroke-width="2" stroke-dasharray="2 8" />
+          </svg>
+
+          <p class="glitch font-display text-[7rem] sm:text-[11rem] tt select-none" aria-label="404">
+            <span class="relative z-10">404</span>
+            <span class="layer l1" aria-hidden="true">404</span>
+            <span class="layer l2" aria-hidden="true">404</span>
+          </p>
+        </div>
+
+        <p class="rise d2 text-xs font-medium tracking-[.25em] uppercase text-accent mt-2">Lost in space</p>
+        <h1 class="rise d3 font-display text-3xl sm:text-5xl tt leading-tight mt-3">
+          This page drifted off the map
+        </h1>
+        <p class="rise d3 text-ink-soft mt-4 max-w-md mx-auto leading-relaxed">
+          The link may be broken or the page may have moved. Let's get you back to
+          something useful.
+        </p>
+
+        <!-- search -->
+        <form id="searchForm" class="rise d4 mt-8 relative max-w-md mx-auto">
+          <iconify-icon icon="lucide:search" class="absolute left-5 top-1/2 -translate-y-1/2 text-xl text-ink-soft"></iconify-icon>
+          <input id="q" type="text" placeholder="Search the site…" class="w-full rounded-full border border-line bg-paper py-4 pr-28 text-base outline-none focus:border-accent transition" style="padding-left: 3.25rem" />
+          <button type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 rounded-full bg-ink text-paper px-5 text-sm font-medium hover:bg-accent transition">Search</button>
+        </form>
+
+        <!-- quick links -->
+        <div class="rise d5 grid sm:grid-cols-3 gap-3 mt-8 text-left">
+          <a href="index.html" class="lcard rounded-2xl border border-line bg-paper p-4 flex items-center gap-3">
+            <span class="grid place-items-center h-10 w-10 rounded-xl bg-surface text-accent text-lg shrink-0"><iconify-icon icon="lucide:house"></iconify-icon></span>
+            <span class="flex-1"><span class="font-display tt block">Home</span><span class="text-xs text-ink-soft">Start over</span></span>
+            <iconify-icon icon="lucide:arrow-right" class="larr text-ink-soft"></iconify-icon>
+          </a>
+          <a href="index.html#services" class="lcard rounded-2xl border border-line bg-paper p-4 flex items-center gap-3">
+            <span class="grid place-items-center h-10 w-10 rounded-xl bg-surface text-accent text-lg shrink-0"><iconify-icon icon="lucide:layout-grid"></iconify-icon></span>
+            <span class="flex-1"><span class="font-display tt block">Services</span><span class="text-xs text-ink-soft">What we do</span></span>
+            <iconify-icon icon="lucide:arrow-right" class="larr text-ink-soft"></iconify-icon>
+          </a>
+          <a href="contact-us.html" class="lcard rounded-2xl border border-line bg-paper p-4 flex items-center gap-3">
+            <span class="grid place-items-center h-10 w-10 rounded-xl bg-surface text-accent text-lg shrink-0"><iconify-icon icon="lucide:message-square"></iconify-icon></span>
+            <span class="flex-1"><span class="font-display tt block">Contact</span><span class="text-xs text-ink-soft">Talk to us</span></span>
+            <iconify-icon icon="lucide:arrow-right" class="larr text-ink-soft"></iconify-icon>
+          </a>
+        </div>
+
+        <div class="rise d5 mt-8">
+          <a href="index.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-medium">
+            <iconify-icon icon="lucide:arrow-left" class="relative z-10"></iconify-icon>
+            <span class="relative z-10 sheen-text">Back to homepage</span>
+          </a>
+          <p class="text-xs text-ink-soft mt-5">
+            Or browse the full <a href="sitemap.html" class="underline underline-offset-2 decoration-accent hover:text-accent">sitemap</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("searchForm");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var q = document.getElementById("q").value.trim();
+          // route searches to the home page (or your search results page)
+          window.location.href = q
+            ? "index.html?s=" + encodeURIComponent(q)
+            : "index.html";
+        });
+      });
+    </script>
+  </body>
+</html>

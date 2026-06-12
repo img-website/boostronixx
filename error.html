@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Something Went Wrong (500) | BoostronixX</title>
+    <meta name="description" content="An unexpected error occurred on our end. Our team has been notified — please try again in a moment." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-accent: #fa5539;
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; }
+      html, body { background: #0a0a0a; color: #fff; font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; }
+      h1, h2 { font-family: var(--brand-font); }
+
+      .grid-lines-d {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+
+      /* glow behind 500 */
+      .glow500 { filter: blur(70px); background: radial-gradient(circle, rgba(250, 85, 57, 0.45), transparent 65%); }
+
+      /* shaky 500 */
+      @keyframes shake {
+        0%, 88%, 100% { transform: translate(0, 0) rotate(0); }
+        90% { transform: translate(-3px, 1px) rotate(-0.6deg); }
+        92% { transform: translate(3px, -1px) rotate(0.6deg); }
+        94% { transform: translate(-2px, 0) rotate(-0.3deg); }
+        96% { transform: translate(2px, 1px) rotate(0.3deg); }
+      }
+      .shake { animation: shake 4s ease-in-out infinite; }
+
+      /* flatlining signal */
+      .sig {
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: trace 3s linear infinite;
+      }
+      @keyframes trace { to { stroke-dashoffset: -600; } }
+
+      /* spark blips */
+      @keyframes blip { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .blip { animation: blip 1.1s ease-in-out infinite; }
+      .blip2 { animation: blip 1.1s ease-in-out 0.4s infinite; }
+      .blip3 { animation: blip 1.1s ease-in-out 0.8s infinite; }
+
+      /* terminal cursor */
+      .caret { display: inline-block; width: 8px; height: 1.05em; background: var(--accent); margin-left: 3px; vertical-align: -2px; animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+      .rise { opacity: 0; animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+      .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.24s; } .d3 { animation-delay: 0.38s; }
+      .d4 { animation-delay: 0.52s; } .d5 { animation-delay: 0.66s; }
+
+      @keyframes spinq { to { transform: rotate(360deg); } }
+      .spinner { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.35); border-top-color: #fff; animation: spinq 0.7s linear infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .shake, .sig, .blip, .blip2, .blip3, .caret, .rise { animation: none; }
+        .rise { opacity: 1; }
+        .sig { stroke-dashoffset: 0; }
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <header class="absolute top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="mt-5 flex items-center justify-between">
+          <a href="index.html" class="flex items-center gap-2"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto brightness-0 invert" onerror="this.style.display='none'" /></a>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/8 border border-white/12 px-3 py-1.5 text-[11px] font-medium text-white/70"><span class="blip h-1.5 w-1.5 rounded-full bg-accent"></span> System status: degraded</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative min-h-screen grid-lines-d flex items-center justify-center px-4 py-28 overflow-hidden">
+      <div class="w-full max-w-2xl text-center">
+        <!-- 500 with signal -->
+        <div class="rise d1 relative mx-auto w-fit">
+          <span class="glow500 absolute inset-0 -z-10"></span>
+          <p class="shake font-display text-[6rem] sm:text-[10rem] tt leading-[0.8] select-none">5<span class="text-accent">0</span>0</p>
+          <!-- flatlining signal under the number -->
+          <svg viewBox="0 0 320 60" class="w-full h-12 mt-2" fill="none" aria-hidden="true">
+            <path class="sig" d="M0,30 L80,30 L96,30 L104,8 L116,52 L128,18 L138,30 L210,30 L226,30 L234,12 L246,48 L258,30 L320,30"
+              stroke="#fa5539" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <p class="rise d2 text-xs font-medium tracking-[.25em] uppercase text-accent">Internal server error</p>
+        <h1 class="rise d3 font-display text-3xl sm:text-5xl tt leading-tight mt-3">
+          Something broke on our end
+        </h1>
+        <p class="rise d3 text-white/60 mt-4 max-w-md mx-auto leading-relaxed">
+          This one's on us, not you. Our team has been automatically notified and is
+          on it. Give it a moment and try again.
+        </p>
+
+        <!-- mini diagnostic console -->
+        <div class="rise d4 mt-8 mx-auto max-w-md text-left rounded-2xl border border-white/12 bg-white/[0.04] backdrop-blur p-5 font-mono text-[13px]">
+          <div class="flex items-center gap-1.5 mb-3">
+            <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
+            <span class="ml-2 text-white/40 text-[11px]">diagnostics</span>
+          </div>
+          <p class="text-white/50">&gt; request failed <span class="text-accent">[500]</span></p>
+          <p class="text-white/50">&gt; team notified <span class="blip2 text-emerald-400">✓</span></p>
+          <p class="text-white/50">&gt; retrying connection<span class="caret"></span></p>
+        </div>
+
+        <div class="rise d5 flex flex-wrap items-center justify-center gap-3 mt-8">
+          <button id="retryBtn" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-7 py-3.5 font-medium hover:bg-white hover:text-ink transition min-w-[150px]">
+            <span id="retryLabel" class="inline-flex items-center gap-2">Try again <iconify-icon icon="lucide:rotate-cw"></iconify-icon></span>
+            <span id="retrySpinner" class="spinner hidden"></span>
+          </button>
+          <a href="index.html" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3.5 font-medium hover:bg-white hover:text-ink transition">
+            <iconify-icon icon="lucide:house"></iconify-icon> Go home
+          </a>
+        </div>
+
+        <p class="rise d5 text-xs text-white/40 mt-7">
+          Still stuck? <a href="mailto:boostronixx@gmail.com?subject=Error%20500%20report" class="underline underline-offset-2 decoration-accent hover:text-accent">Report this issue</a> and we'll dig in.
+        </p>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var btn = document.getElementById("retryBtn"),
+          label = document.getElementById("retryLabel"),
+          spin = document.getElementById("retrySpinner");
+        btn.addEventListener("click", function () {
+          label.classList.add("hidden");
+          spin.classList.remove("hidden");
+          btn.disabled = true;
+          btn.style.opacity = "0.85";
+          setTimeout(function () { window.location.reload(); }, 900);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us — Creative Branding & Growth Studio in Jaipur | BoostronixX</title>
+    <meta
+      name="description"
+      content="Meet BoostronixX — a creative branding & digital marketing studio in Jaipur. Our story, mission, values, process and the team building brands that get noticed."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://www.boostronixx.com/about-us/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BoostronixX" />
+    <meta property="og:title" content="About BoostronixX — Creative Branding & Growth Studio" />
+    <meta
+      property="og:description"
+      content="A creative studio that thinks like a growth team. Our story, values and the people behind the brands."
+    />
+    <meta property="og:url" content="https://www.boostronixx.com/about-us/" />
+    <link
+      rel="icon"
+      href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      id="brandFont"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a;
+        --color-ink-soft: #4a463f;
+        --color-accent: #fa5539;
+        --color-paper: #ffffff;
+        --color-surface: #f6f4f1;
+        --color-surface-2: #efece7;
+        --color-line: #e6e1da;
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow {
+        background-color: var(--color-ink);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease, color 0.25s ease;
+        &:hover {
+          background-color: var(--color-accent);
+          color: var(--color-paper);
+        }
+      }
+      @utility btn-glow-accent {
+        background-color: var(--color-accent);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease;
+      }
+      @utility btn-glow-light {
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        border: 1px solid var(--color-line);
+        transition: background-color 0.25s ease, color 0.25s ease,
+          border-color 0.25s ease;
+        &:hover {
+          background-color: var(--color-accent);
+          color: var(--color-paper);
+          border-color: var(--color-accent);
+        }
+      }
+      @utility sheen-text {
+        color: inherit;
+      }
+      @utility sheen-text-dark {
+        color: inherit;
+      }
+      @utility sheen-text-light {
+        color: inherit;
+      }
+    </style>
+
+    <style>
+      :root {
+        --brand-font: "Bricolage Grotesque", system-ui, sans-serif;
+        --accent: #fa5539;
+        --ink: #0a0a0a;
+      }
+      html,
+      body {
+        background: #fff;
+        color: var(--ink);
+        font-family: var(--brand-font);
+        overflow-x: clip;
+      }
+      ::selection {
+        background: #fa5539;
+        color: #fff;
+      }
+      .font-display {
+        font-family: var(--brand-font);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .tt {
+        letter-spacing: -0.03em;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--brand-font);
+      }
+      .grid-lines {
+        background-image: linear-gradient(
+            to right,
+            rgba(10, 10, 10, 0.045) 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
+        background-size: 72px 72px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+          transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      [data-delay="1"] {
+        transition-delay: 0.08s;
+      }
+      [data-delay="2"] {
+        transition-delay: 0.16s;
+      }
+      [data-delay="3"] {
+        transition-delay: 0.24s;
+      }
+      [data-delay="4"] {
+        transition-delay: 0.32s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 0;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .btn-press {
+        transition: transform 0.15s ease, box-shadow 0.25s ease,
+          background-color 0.25s ease, color 0.2s ease, border-color 0.2s;
+      }
+      .btn-press:active {
+        transform: translateY(1px) scale(0.99);
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .spin {
+        animation: spin 16s linear infinite;
+      }
+      .mock {
+        background: #fff;
+        border: 1px solid var(--color-line, #e6e1da);
+        border-radius: 1.75rem;
+        box-shadow: 0 40px 80px -50px rgba(10, 10, 10, 0.45);
+      }
+      .imgph {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        isolation: isolate;
+      }
+      .imgph > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+      }
+      .imgph .lbl {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 1rem;
+        max-width: 90%;
+      }
+      .imgph .lbl b {
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #7a7268;
+        font-weight: 700;
+      }
+      /* value card hover lift */
+      .vcard {
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .vcard:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 30px 60px -40px rgba(10, 10, 10, 0.4);
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div
+          id="hdrbar"
+          class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300"
+        >
+          <a href="index.html" class="flex items-center gap-2 shrink-0"
+            ><img
+              src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
+              alt="BoostronixX — creative branding and digital marketing agency"
+              class="h-7 sm:h-8 w-auto"
+          /></a>
+          <nav
+            class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft"
+          >
+            <a href="index.html#services" class="nav-link">Services</a>
+            <a href="index.html#work" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link active text-ink">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a
+              href="contact-us.html"
+              class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium"
+            >
+              <iconify-icon
+                icon="lucide:sparkles"
+                class="relative z-10 text-base"
+              ></iconify-icon>
+              <span class="relative z-10 sheen-text">Let's Build Together</span>
+            </a>
+            <button
+              id="menuBtn"
+              aria-label="Open menu"
+              class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"
+            >
+              <iconify-icon icon="lucide:menu"></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div
+        id="menuPanel"
+        class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300"
+      >
+        <div class="flex items-center justify-between">
+          <img
+            src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
+            alt="BoostronixX"
+            class="h-7"
+          />
+          <button
+            data-close
+            aria-label="Close menu"
+            class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"
+          >
+            <iconify-icon icon="lucide:x"></iconify-icon>
+          </button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a
+            href="index.html#services"
+            data-close
+            class="py-3 border-b border-line flex items-center justify-between"
+            >Services<span class="text-accent"
+              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
+          ></a>
+          <a
+            href="index.html#work"
+            data-close
+            class="py-3 border-b border-line flex items-center justify-between"
+            >Work<span class="text-accent"
+              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
+          ></a>
+          <a
+            href="about-us.html"
+            data-close
+            class="py-3 border-b border-line flex items-center justify-between text-accent"
+            >About<span class="text-accent"
+              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
+          ></a>
+          <a
+            href="faq.html"
+            data-close
+            class="py-3 border-b border-line flex items-center justify-between"
+            >FAQ<span class="text-accent"
+              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
+          ></a>
+          <a
+            href="index.html#insights"
+            data-close
+            class="py-3 border-b border-line flex items-center justify-between"
+            >Insights<span class="text-accent"
+              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
+          ></a>
+        </nav>
+        <a
+          href="contact-us.html"
+          data-close
+          class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium"
+        >
+          <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+        </a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative pt-28 sm:pt-36 pb-16 grid-lines overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <nav
+            class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6"
+            aria-label="Breadcrumb"
+          >
+            <a href="index.html" class="hover:text-accent">Home</a>
+            <iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">About Us</span>
+          </nav>
+          <div class="grid lg:grid-cols-12 gap-8 items-end">
+            <div class="lg:col-span-8">
+              <div
+                class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"
+              >
+                <span class="h-2 w-2 rounded-full bg-accent"></span> Creative
+                branding & growth studio · since 2021
+              </div>
+              <h1
+                class="reveal font-display text-[2.7rem] leading-[0.97] sm:text-7xl lg:text-[5rem] tt"
+              >
+                We're the team behind<br class="hidden sm:block" />
+                brands that <span class="text-accent">get noticed</span>.
+              </h1>
+            </div>
+            <div class="lg:col-span-4">
+              <p class="reveal text-ink-soft leading-relaxed" data-delay="1">
+                BoostronixX is a creative studio that thinks like a growth team.
+                Strategy, design and performance under one roof — turning
+                ambitious businesses into brands people remember.
+              </p>
+              <div class="reveal flex flex-wrap items-center gap-3 mt-6" data-delay="2">
+                <a
+                  href="contact-us.html"
+                  class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"
+                >
+                  <span class="relative z-10 sheen-text">Work With Us</span>
+                  <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+                </a>
+                <a
+                  href="index.html#work"
+                  class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"
+                >
+                  <iconify-icon icon="lucide:eye" class="relative z-10 shrink-0"></iconify-icon>
+                  <span class="relative z-10 sheen-text-dark">See our work</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== STAT BAND ===================== -->
+      <section class="border-y border-line bg-surface">
+        <div
+          class="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-2 lg:grid-cols-4 gap-px bg-line"
+        >
+          <div class="reveal bg-surface p-6 sm:p-8">
+            <p class="font-display text-4xl sm:text-5xl tt">
+              <span class="count" data-to="50">0</span>+
+            </p>
+            <p class="text-ink-soft text-sm mt-1">Brands grown</p>
+          </div>
+          <div class="reveal bg-surface p-6 sm:p-8" data-delay="1">
+            <p class="font-display text-4xl sm:text-5xl tt">
+              <span class="count" data-to="5">0</span>+
+            </p>
+            <p class="text-ink-soft text-sm mt-1">Years in the game</p>
+          </div>
+          <div class="reveal bg-surface p-6 sm:p-8" data-delay="2">
+            <p class="font-display text-4xl sm:text-5xl tt">
+              <span class="count" data-to="4">0</span>.9
+            </p>
+            <p class="text-ink-soft text-sm mt-1">Average client rating</p>
+          </div>
+          <div class="reveal bg-surface p-6 sm:p-8" data-delay="3">
+            <p class="font-display text-4xl sm:text-5xl tt">
+              &lt;<span class="count" data-to="24">0</span>h
+            </p>
+            <p class="text-ink-soft text-sm mt-1">Average reply time</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== OUR STORY ===================== -->
+      <section class="py-20 sm:py-28">
+        <div
+          class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center"
+        >
+          <div class="lg:col-span-5 reveal">
+            <div class="relative">
+              <figure class="imgph rounded-xl2 aspect-[4/5] bg-surface-2">
+                <img
+                  src="assets/img/about-studio.avif"
+                  alt="Inside the BoostronixX studio in Jaipur"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+                <figcaption class="lbl"><b>Inside the studio</b></figcaption>
+              </figure>
+              <div class="absolute right-2 top-2 sm:-right-5 sm:-top-5 h-24 w-24 spin">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <defs>
+                    <path id="cir" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" />
+                  </defs>
+                  <circle cx="50" cy="50" r="49" fill="#0a0a0a" />
+                  <text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2">
+                    <textPath href="#cir">EST · 2021 · JAIPUR · INDIA ·</textPath>
+                  </text>
+                </svg>
+                <span class="absolute inset-0 grid place-items-center text-accent text-lg"
+                  ><iconify-icon icon="lucide:sparkles"></iconify-icon
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">
+              Our story
+            </p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight max-w-xl">
+              It started with a simple frustration
+            </h2>
+            <div class="reveal space-y-4 text-ink-soft mt-6 max-w-xl leading-relaxed" data-delay="1">
+              <p>
+                Too many good businesses were invisible — great products, terrible
+                reach. Agencies sold either pretty design with no results, or
+                results with no soul. We thought there had to be a better way.
+              </p>
+              <p>
+                So in 2021, BoostronixX started in Jaipur with one belief:
+                <span class="text-ink font-medium"
+                  >creativity and performance aren't opposites — they're partners</span
+                >. A logo that converts. A campaign that's also art. A funnel that
+                feels like a brand.
+              </p>
+              <p>
+                Five years and 50+ brands later, that belief still runs everything
+                we do — across real estate, jewellery, education and D2C.
+              </p>
+            </div>
+            <div class="reveal flex flex-wrap gap-2 mt-7 text-sm" data-delay="2">
+              <span class="rounded-full border border-line px-3 py-1.5">Strategy-first</span>
+              <span class="rounded-full border border-line px-3 py-1.5">Creative-led</span>
+              <span class="rounded-full border border-line px-3 py-1.5">In-house team</span>
+              <span class="rounded-full border border-line px-3 py-1.5">Tracked ROI</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== MISSION & VISION ===================== -->
+      <section class="pb-4">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 gap-4">
+          <div class="reveal rounded-xl2 bg-ink text-paper p-8 sm:p-10 relative overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
+            <div class="relative">
+              <span
+                class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-accent text-paper text-2xl"
+                ><iconify-icon icon="lucide:target"></iconify-icon
+              ></span>
+              <h3 class="font-display text-2xl sm:text-3xl tt mt-6">Our mission</h3>
+              <p class="text-paper/70 mt-3 leading-relaxed">
+                To help ambitious businesses become brands people remember — by
+                pairing sharp strategy with creative that actually performs, and
+                proving every rupee of it.
+              </p>
+            </div>
+          </div>
+          <div class="reveal rounded-xl2 border border-line bg-surface p-8 sm:p-10" data-delay="1">
+            <span
+              class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-ink text-paper text-2xl"
+              ><iconify-icon icon="lucide:eye"></iconify-icon
+            ></span>
+            <h3 class="font-display text-2xl sm:text-3xl tt mt-6">Our vision</h3>
+            <p class="text-ink-soft mt-3 leading-relaxed">
+              A world where great businesses are never held back by being unseen —
+              where brilliant brands from anywhere, including a studio in Jaipur,
+              can compete and win anywhere.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== VALUES ===================== -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">
+              What we stand for
+            </p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">
+              Six things we never compromise on
+            </h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="reveal vcard rounded-xl2 border border-line p-7">
+              <span class="text-accent text-3xl"
+                ><iconify-icon icon="lucide:compass"></iconify-icon
+              ></span>
+              <h3 class="font-display text-xl tt mt-4">Strategy before pixels</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                We never design in the dark. Research and positioning come first —
+                everything beautiful is also intentional.
+              </p>
+            </div>
+            <div class="reveal vcard rounded-xl2 border border-line p-7" data-delay="1">
+              <span class="text-accent text-3xl"
+                ><iconify-icon icon="lucide:line-chart"></iconify-icon
+              ></span>
+              <h3 class="font-display text-xl tt mt-4">Results you can measure</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                Dashboards, not vanity metrics. If we can't tie work to growth,
+                we'd rather not do it.
+              </p>
+            </div>
+            <div class="reveal vcard rounded-xl2 border border-line p-7" data-delay="2">
+              <span class="text-accent text-3xl"
+                ><iconify-icon icon="lucide:eye-off"></iconify-icon
+              ></span>
+              <h3 class="font-display text-xl tt mt-4">Radical transparency</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                Clear scopes, honest timelines, no jargon walls. You always know
+                what we're doing and why.
+              </p>
+            </div>
+            <div class="reveal vcard rounded-xl2 border border-line p-7">
+              <span class="text-accent text-3xl"
+                ><iconify-icon icon="lucide:sparkles"></iconify-icon
+              ></span>
+              <h3 class="font-display text-xl tt mt-4">Craft as standard</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                Good enough isn't. Every frame, headline and pixel earns its
+                place before it ships.
+              </p>
+            </div>
+            <div class="reveal vcard rounded-xl2 border border-line p-7" data-delay="1">
+              <span class="text-accent text-3xl"
+                ><iconify-icon icon="lucide:handshake"></iconify-icon
+              ></span>
+              <h3 class="font-display text-xl tt mt-4">Partners, not vendors</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                Your goals become ours. We win when you grow — that's the only
+                scoreboard that counts.
+              </p>
+            </div>
+            <div class="reveal vcard rounded-xl2 border border-line p-7" data-delay="2">
+              <span class="text-accent text-3xl"
+                ><iconify-icon icon="lucide:rocket"></iconify-icon
+              ></span>
+              <h3 class="font-display text-xl tt mt-4">Curious & always learning</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                AI, new platforms, fresh formats — we test early so your brand
+                stays a step ahead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== HOW WE WORK ===================== -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-14">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">
+              How we work
+            </p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">
+              A simple, four-step way of working
+            </h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="reveal rounded-xl2 bg-paper border border-line p-7">
+              <span class="font-display text-5xl tt text-accent/25">01</span>
+              <h3 class="font-display text-xl tt mt-3">Discover</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                We dig into your business, audience and competition to find the
+                real opportunity.
+              </p>
+            </div>
+            <div class="reveal rounded-xl2 bg-paper border border-line p-7" data-delay="1">
+              <span class="font-display text-5xl tt text-accent/25">02</span>
+              <h3 class="font-display text-xl tt mt-3">Strategise</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                A clear roadmap — positioning, channels and KPIs — agreed before a
+                single thing is designed.
+              </p>
+            </div>
+            <div class="reveal rounded-xl2 bg-paper border border-line p-7" data-delay="2">
+              <span class="font-display text-5xl tt text-accent/25">03</span>
+              <h3 class="font-display text-xl tt mt-3">Create & launch</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                Design, build and ship — brand, content and campaigns that look
+                sharp and work hard.
+              </p>
+            </div>
+            <div class="reveal rounded-xl2 bg-paper border border-line p-7" data-delay="3">
+              <span class="font-display text-5xl tt text-accent/25">04</span>
+              <h3 class="font-display text-xl tt mt-3">Optimise</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">
+                We read the data, double down on what works and keep compounding
+                the results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TEAM ===================== -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">
+              The people
+            </p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">
+              A small team that punches above its weight
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="reveal text-center">
+              <div class="imgph rounded-xl2 aspect-square bg-surface-2 mb-4">
+                <img src="assets/img/girl-avatar.avif" alt="Strategy lead" loading="lazy" onerror="this.remove()" />
+                <span class="lbl"><b>Strategy</b></span>
+              </div>
+              <p class="font-display text-lg tt">Brand & Strategy</p>
+              <p class="text-ink-soft text-sm">Positioning · Research</p>
+            </div>
+            <div class="reveal text-center" data-delay="1">
+              <div class="imgph rounded-xl2 aspect-square bg-surface-2 mb-4">
+                <img src="assets/img/boy-avatar.avif" alt="Creative lead" loading="lazy" onerror="this.remove()" />
+                <span class="lbl"><b>Creative</b></span>
+              </div>
+              <p class="font-display text-lg tt">Design & Creative</p>
+              <p class="text-ink-soft text-sm">Identity · Content</p>
+            </div>
+            <div class="reveal text-center" data-delay="2">
+              <div class="imgph rounded-xl2 aspect-square bg-surface-2 mb-4">
+                <img src="assets/img/girl-avatar.avif" alt="Growth lead" loading="lazy" onerror="this.remove()" />
+                <span class="lbl"><b>Growth</b></span>
+              </div>
+              <p class="font-display text-lg tt">Performance & SEO</p>
+              <p class="text-ink-soft text-sm">Ads · Rankings</p>
+            </div>
+            <div class="reveal text-center" data-delay="3">
+              <div class="imgph rounded-xl2 aspect-square bg-surface-2 mb-4">
+                <img src="assets/img/boy-avatar.avif" alt="Web lead" loading="lazy" onerror="this.remove()" />
+                <span class="lbl"><b>Build</b></span>
+              </div>
+              <p class="font-display text-lg tt">Web & Development</p>
+              <p class="text-ink-soft text-sm">UI/UX · Sites</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CTA ===================== -->
+      <section class="pb-20 sm:pb-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div
+            class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden"
+          >
+            <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
+            <div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">
+                Like how we think? Let's build together.
+              </h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl">
+                Tell us where you want to grow. We'll bring the strategy, the
+                creative and the receipts.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 mt-8">
+                <a
+                  href="contact-us.html"
+                  class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
+                >
+                  <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+                  <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+                </a>
+                <a
+                  href="tel:+918058212202"
+                  class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
+                  ><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0"></iconify-icon
+                  ><span class="relative z-10">+91 80582 12202</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img
+              src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
+              alt="BoostronixX"
+              class="h-8"
+            />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">
+              A creative branding & digital marketing agency in Jaipur, India —
+              helping ambitious businesses build brands that grow.
+            </p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Company</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="about-us.html" class="hover:text-accent">About Us</a></li>
+              <li><a href="faq.html" class="hover:text-accent">FAQ</a></li>
+              <li><a href="https://www.boostronixx.com/blog/" class="hover:text-accent">Blog</a></li>
+              <li><a href="contact-us.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="privacy-policy.html" class="hover:text-accent">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html" class="hover:text-accent">Terms &amp; Conditions</a></li>
+              <li><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3">
+            <h4 class="font-display text-sm mb-4">Get in touch</h4>
+            <address class="not-italic space-y-3 text-sm text-ink-soft">
+              <p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p>
+              <p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p>
+              <p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p>
+              <p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p>
+            </address>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5">
+            <a href="privacy-policy.html" class="hover:text-accent">Privacy</a>
+            <a href="terms-and-conditions.html" class="hover:text-accent">Terms</a>
+            <a href="disclaimer.html" class="hover:text-accent">Disclaimer</a>
+            <a href="sitemap.html" class="hover:text-accent">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== MOBILE BOTTOM NAV ===================== -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="index.html#services" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services</a>
+        <a href="about-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-accent"><iconify-icon icon="lucide:users" class="text-[22px]"></iconify-icon>About</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        window.addEventListener("scroll", function () {
+          if (bar)
+            bar.classList.toggle(
+              "shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]",
+              window.scrollY > 20
+            );
+        });
+        var mm = document.getElementById("mobileMenu"),
+          panel = document.getElementById("menuPanel"),
+          menuBtn = document.getElementById("menuBtn");
+        function openMenu() {
+          mm.classList.remove("hidden");
+          requestAnimationFrame(function () {
+            panel.classList.remove("translate-x-full");
+          });
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          panel.classList.add("translate-x-full");
+          document.body.style.overflow = "";
+          setTimeout(function () {
+            mm.classList.add("hidden");
+          }, 300);
+        }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm)
+          [].forEach.call(mm.querySelectorAll("[data-close]"), function (e) {
+            e.addEventListener("click", closeMenu);
+          });
+
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        [].forEach.call(document.querySelectorAll(".reveal"), function (e) {
+          io.observe(e);
+        });
+
+        var cio = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var el = e.target,
+                to = +el.dataset.to,
+                c = 0,
+                s = Math.max(1, Math.round(to / 45));
+              var t = setInterval(function () {
+                c += s;
+                if (c >= to) {
+                  c = to;
+                  clearInterval(t);
+                }
+                el.textContent = to >= 1000 ? c.toLocaleString("en-IN") : c;
+              }, 20);
+              cio.unobserve(el);
+            });
+          },
+          { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+        );
+        [].forEach.call(document.querySelectorAll(".count"), function (c) {
+          cio.observe(c);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>We'll Be Right Back — Scheduled Maintenance | BoostronixX</title>
+    <meta name="description" content="BoostronixX is undergoing scheduled maintenance and will be back shortly. Thanks for your patience." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a;
+        --color-ink-soft: #a39a8e;
+        --color-accent: #fa5539;
+        --color-paper: #ffffff;
+        --color-line: rgba(255, 255, 255, 0.12);
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; }
+      html, body { background: #0a0a0a; color: #fff; font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; }
+      h1, h2 { font-family: var(--brand-font); }
+
+      .grid-lines-d {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+
+      /* gears */
+      @keyframes spinCW { to { transform: rotate(360deg); } }
+      @keyframes spinCCW { to { transform: rotate(-360deg); } }
+      .gear-a { animation: spinCW 8s linear infinite; transform-origin: center; }
+      .gear-b { animation: spinCCW 6s linear infinite; transform-origin: center; }
+      .gear-c { animation: spinCW 10s linear infinite; transform-origin: center; }
+
+      /* indeterminate progress */
+      .bar-track { background: rgba(255, 255, 255, 0.1); overflow: hidden; }
+      .bar-fill {
+        width: 40%;
+        background: linear-gradient(90deg, transparent, var(--accent), #ff8a5c, transparent);
+        animation: slide 1.8s ease-in-out infinite;
+      }
+      @keyframes slide {
+        0% { transform: translateX(-110%); }
+        100% { transform: translateX(310%); }
+      }
+
+      /* floating particles */
+      .pt { position: absolute; border-radius: 50%; background: rgba(250, 85, 57, 0.6); animation: floaty linear infinite; }
+      @keyframes floaty {
+        0% { transform: translateY(0) translateX(0); opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { transform: translateY(-120vh) translateX(20px); opacity: 0; }
+      }
+
+      /* rise */
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+      .rise { opacity: 0; animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+      .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.22s; } .d3 { animation-delay: 0.34s; }
+      .d4 { animation-delay: 0.46s; } .d5 { animation-delay: 0.58s; } .d6 { animation-delay: 0.7s; }
+
+      @keyframes blink { 50% { opacity: 0.3; } }
+      .live { animation: blink 1.4s steps(2, start) infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .gear-a, .gear-b, .gear-c, .bar-fill, .pt, .rise, .live { animation: none; }
+        .rise { opacity: 1; }
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></div>
+
+    <main class="relative min-h-screen grid-lines-d flex flex-col items-center justify-center text-center px-4 py-16 overflow-hidden">
+      <!-- logo -->
+      <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="rise d1 h-8 sm:h-9 w-auto mb-10 brightness-0 invert" onerror="this.style.display='none'" />
+
+      <!-- gears -->
+      <div class="rise d2 relative h-40 w-40 sm:h-48 sm:w-48 mb-9">
+        <svg viewBox="0 0 200 200" class="absolute inset-0 h-full w-full">
+          <!-- big gear -->
+          <g class="gear-a" style="transform-origin: 70px 78px">
+            <path fill="#fa5539" d="M70 38c4 0 7 .5 7 .5l2 9a32 32 0 0 1 9 4l8-5 10 10-5 8a32 32 0 0 1 4 9l9 2v14l-9 2a32 32 0 0 1-4 9l5 8-10 10-8-5a32 32 0 0 1-9 4l-2 9H63l-2-9a32 32 0 0 1-9-4l-8 5-10-10 5-8a32 32 0 0 1-4-9l-9-2v-14l9-2a32 32 0 0 1 4-9l-5-8 10-10 8 5a32 32 0 0 1 9-4l2-9s3-.5 7-.5z" />
+            <circle cx="70" cy="78" r="17" fill="#0a0a0a" />
+            <circle cx="70" cy="78" r="8" fill="#fa5539" />
+          </g>
+          <!-- small gear -->
+          <g class="gear-b" style="transform-origin: 138px 130px">
+            <path fill="#ffffff" d="M138 104c3 0 5 .4 5 .4l1.4 6.5a24 24 0 0 1 6.6 2.8l5.7-3.6 7 7-3.6 5.7a24 24 0 0 1 2.8 6.6l6.5 1.4v10l-6.5 1.4a24 24 0 0 1-2.8 6.6l3.6 5.7-7 7-5.7-3.6a24 24 0 0 1-6.6 2.8l-1.4 6.5h-10l-1.4-6.5a24 24 0 0 1-6.6-2.8l-5.7 3.6-7-7 3.6-5.7a24 24 0 0 1-2.8-6.6l-6.5-1.4v-10l6.5-1.4a24 24 0 0 1 2.8-6.6l-3.6-5.7 7-7 5.7 3.6a24 24 0 0 1 6.6-2.8l1.4-6.5s2-.4 5-.4z" />
+            <circle cx="138" cy="130" r="12" fill="#0a0a0a" />
+            <circle cx="138" cy="130" r="5" fill="#ffffff" />
+          </g>
+        </svg>
+        <span class="absolute -right-1 top-1 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-medium backdrop-blur"><span class="live h-1.5 w-1.5 rounded-full bg-accent"></span> working on it</span>
+      </div>
+
+      <p class="rise d3 text-xs font-medium tracking-[.25em] uppercase text-accent">Scheduled maintenance</p>
+      <h1 class="rise d4 font-display text-4xl sm:text-6xl lg:text-7xl tt leading-[0.98] mt-3 max-w-3xl">
+        We're tuning things up
+      </h1>
+      <p class="rise d5 text-white/60 mt-5 max-w-md leading-relaxed">
+        Our site is getting a quick upgrade to serve you better. We'll be back
+        online shortly — thanks for your patience.
+      </p>
+
+      <!-- progress -->
+      <div class="rise d5 w-full max-w-sm mt-9">
+        <div class="bar-track h-2 w-full rounded-full"><div class="bar-fill h-full rounded-full"></div></div>
+        <div class="flex justify-between text-[11px] text-white/40 mt-2">
+          <span>Upgrading systems…</span><span>Almost there</span>
+        </div>
+      </div>
+
+      <!-- notify -->
+      <form id="notifyForm" class="rise d6 mt-9 w-full max-w-md">
+        <p class="text-sm text-white/70 mb-3">Want a ping when we're back?</p>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <div class="relative flex-1">
+            <iconify-icon icon="lucide:mail" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/40"></iconify-icon>
+            <input id="notifyEmail" type="email" required placeholder="you@email.com" class="w-full rounded-full bg-white/5 border border-white/15 pl-11 pr-4 py-3.5 text-sm text-white placeholder-white/35 outline-none focus:border-accent focus:bg-white/10 transition" />
+          </div>
+          <button type="submit" class="rounded-full bg-accent text-white px-6 py-3.5 text-sm font-medium hover:bg-white hover:text-ink transition inline-flex items-center justify-center gap-2">
+            <span id="notifyLabel">Notify me</span>
+            <iconify-icon icon="lucide:bell" id="notifyIcon"></iconify-icon>
+          </button>
+        </div>
+        <p id="notifyOk" class="hidden text-sm text-accent mt-3 items-center justify-center gap-1.5"><iconify-icon icon="lucide:check-circle"></iconify-icon> You're on the list — we'll let you know.</p>
+      </form>
+
+      <!-- meta + social -->
+      <div class="rise d6 mt-10 flex flex-col items-center gap-4">
+        <p class="text-xs text-white/40 inline-flex items-center gap-2"><iconify-icon icon="lucide:clock"></iconify-icon> Estimated downtime: under 2 hours</p>
+        <div class="flex items-center gap-2">
+          <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-white/15 hover:bg-accent hover:border-accent transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+          <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-white/15 hover:bg-accent hover:border-accent transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+          <a href="mailto:boostronixx@gmail.com" aria-label="Email" class="grid place-items-center h-10 w-10 rounded-full border border-white/15 hover:bg-accent hover:border-accent transition"><iconify-icon icon="lucide:mail"></iconify-icon></a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+        if (!reduce) {
+          var box = document.getElementById("particles");
+          for (var i = 0; i < 24; i++) {
+            var p = document.createElement("span");
+            p.className = "pt";
+            var s = 3 + Math.random() * 7;
+            p.style.width = s + "px";
+            p.style.height = s + "px";
+            p.style.left = Math.random() * 100 + "vw";
+            p.style.bottom = "-20px";
+            p.style.opacity = 0.2 + Math.random() * 0.5;
+            p.style.animationDuration = 9 + Math.random() * 10 + "s";
+            p.style.animationDelay = Math.random() * 8 + "s";
+            box.appendChild(p);
+          }
+        }
+        var form = document.getElementById("notifyForm");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          document.getElementById("notifyEmail").disabled = true;
+          document.getElementById("notifyLabel").textContent = "Done";
+          document.getElementById("notifyIcon").setAttribute("icon", "lucide:check");
+          var ok = document.getElementById("notifyOk");
+          ok.classList.remove("hidden");
+          ok.classList.add("flex");
+        });
+      });
+    </script>
+  </body>
+</html>
