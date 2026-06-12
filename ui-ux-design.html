@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>UI/UX Design Services in Jaipur — Product & Interface Design | BoostronixX</title>
+    <meta name="description" content="Research-led UI/UX design — wireframes to polished, accessible interfaces and scalable design systems. BoostronixX designs products people love to use." />
+    <meta name="keywords" content="UI UX design Jaipur, product design, interface design, design systems, wireframing, prototyping, user experience design" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="BoostronixX" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="geo.region" content="IN-RJ" />
+    <link rel="canonical" href="https://www.boostronixx.com/services/ui-ux-design/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BoostronixX" />
+    <meta property="og:title" content="UI/UX Design Services — Product & Interface Design | BoostronixX" />
+    <meta property="og:url" content="https://www.boostronixx.com/services/ui-ux-design/" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a; --color-ink-soft: #4a463f; --color-accent: #fa5539;
+        --color-paper: #ffffff; --color-surface: #f6f4f1; --color-surface-2: #efece7; --color-line: #e6e1da;
+        --font-display: var(--brand-font); --font-sans: var(--brand-font); --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow { background-color: var(--color-ink); color: var(--color-paper); transition: background-color .25s ease, color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); } }
+      @utility btn-glow-accent { background-color: var(--color-accent); color: var(--color-paper); transition: background-color .25s ease; }
+      @utility btn-glow-light { background-color: var(--color-paper); color: var(--color-ink); border: 1px solid var(--color-line); transition: background-color .25s ease, color .25s ease, border-color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); border-color: var(--color-accent); } }
+      @utility sheen-text { color: inherit; } @utility sheen-text-dark { color: inherit; } @utility sheen-text-light { color: inherit; }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; --ink: #0a0a0a; }
+      html, body { background: #fff; color: var(--ink); font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; } h1,h2,h3 { font-family: var(--brand-font); }
+      .grid-lines { background-image: linear-gradient(to right, rgba(10,10,10,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,10,.045) 1px, transparent 1px); background-size: 72px 72px; }
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+      .reveal.in { opacity: 1; transform: none; }
+      [data-delay="1"]{transition-delay:.08s}[data-delay="2"]{transition-delay:.16s}[data-delay="3"]{transition-delay:.24s}
+      @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} }
+      .nav-link { position: relative; }
+      .nav-link::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--accent); transition:width .3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width:100%; }
+      .mock { background:#fff; border:1px solid var(--color-line); border-radius:1.75rem; box-shadow:0 40px 80px -50px rgba(10,10,10,.45); }
+      .imgph { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; isolation:isolate; }
+      .imgph > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+      .imgph .lbl { position:relative; z-index:1; text-align:center; padding:1rem; max-width:92%; }
+      .imgph .lbl b { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#7a7268; font-weight:700; }
+      .imgph .lbl span { display:block; margin-top:.3rem; font-size:.7rem; color:#a39a8e; line-height:1.45; }
+      .faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease; } .faq.open .faq-body { grid-template-rows:1fr; }
+      .faq-body > div { overflow:hidden; } .faq .plus { transition: transform .3s ease; } .faq.open .plus { transform: rotate(45deg); } .faq.open { border-color: var(--accent); }
+
+      /* ===== wireframe -> hifi toggle ===== */
+      .wf, .hf { transition: opacity .7s ease; }
+      .reveal.in .wf { opacity: 0; transition-delay: .5s; }
+      .hf { opacity: 0; }
+      .reveal.in .hf { opacity: 1; transition-delay: .5s; }
+      .stage { cursor: pointer; }
+      .stage.show-wf .wf { opacity: 1 !important; } .stage.show-wf .hf { opacity: 0 !important; }
+      /* component hover */
+      .cmp { transition: transform .25s ease, border-color .25s ease; } .cmp:hover { transform: translateY(-4px); border-color: var(--accent); }
+      /* cursor blink */
+      @keyframes cursorMove { 0%,100%{ transform: translate(0,0); } 50%{ transform: translate(40px,18px); } }
+      .uicursor { animation: cursorMove 3.5s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce){ .uicursor{animation:none} }
+      .token { transition: transform .2s ease; } .token:hover { transform: scale(1.06); }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
+          <a href="index.html" class="flex items-center gap-2 shrink-0"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+            <a href="services.html" class="nav-link active text-ink">Services</a>
+            <a href="portfolio.html" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow-accent hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium"><iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon><span class="relative z-10 sheen-text-light">Let's Build Together</span></a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:menu"></iconify-icon></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a href="services.html" data-close class="py-3 border-b border-line flex items-center justify-between text-accent">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="portfolio.html" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium"><span class="relative z-10 sheen-text-light">Design My Product</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- HERO: wireframe -> hifi -->
+      <section class="relative pt-28 sm:pt-36 pb-14 grid-lines overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <a href="services.html" class="hover:text-accent">Services</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">UI/UX Design</span>
+          </nav>
+          <div class="grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6">
+              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:figma" class="text-accent text-sm"></iconify-icon> Research-led product &amp; interface design</div>
+              <h1 class="reveal font-display text-[2.5rem] leading-[1.0] sm:text-6xl tt">Interfaces people <span class="text-accent">love</span> to use</h1>
+              <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">From wireframes to polished, accessible UI and scalable design systems — we design products that feel obvious, look beautiful and convert.</p>
+              <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
+                <a href="contact-us.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Design my product</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="#process" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:route" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">Our design process</span></a>
+              </div>
+              <p class="reveal text-xs text-ink-soft mt-5" data-delay="3"><iconify-icon icon="lucide:hand-pointer" class="text-accent"></iconify-icon> Tip: tap the mockup to toggle wireframe ↔ final UI.</p>
+            </div>
+            <!-- STAGE: wf/hf -->
+            <div class="lg:col-span-6 reveal" data-delay="1">
+              <div id="stage" class="stage mock rounded-xl2 p-5 sm:p-7 relative select-none">
+                <div class="flex items-center justify-between mb-4"><span class="text-xs tracking-[.2em] uppercase text-ink-soft">Checkout screen</span><span class="text-xs text-ink-soft inline-flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-accent"></span> <span id="stageLabel">Final UI</span></span></div>
+                <div class="relative h-[300px]">
+                  <!-- wireframe -->
+                  <div class="wf absolute inset-0">
+                    <div class="space-y-3">
+                      <div class="h-8 w-2/3 rounded bg-surface-2 border border-dashed border-line"></div>
+                      <div class="grid grid-cols-2 gap-3"><div class="h-20 rounded bg-surface-2 border border-dashed border-line"></div><div class="h-20 rounded bg-surface-2 border border-dashed border-line"></div></div>
+                      <div class="h-4 w-1/2 rounded bg-surface-2 border border-dashed border-line"></div>
+                      <div class="h-4 w-3/4 rounded bg-surface-2 border border-dashed border-line"></div>
+                      <div class="h-11 w-full rounded bg-surface-2 border border-dashed border-line grid place-items-center text-xs text-ink-soft">[ button ]</div>
+                    </div>
+                  </div>
+                  <!-- hi-fi -->
+                  <div class="hf absolute inset-0">
+                    <div class="space-y-3">
+                      <p class="font-display text-2xl tt">Complete your order</p>
+                      <div class="grid grid-cols-2 gap-3">
+                        <div class="rounded-xl border border-line p-3"><div class="h-10 rounded-lg bg-gradient-to-br from-accent/30 to-accent/10"></div><p class="text-xs mt-2 font-medium">Premium plan</p><p class="text-[11px] text-ink-soft">₹2,499 / mo</p></div>
+                        <div class="rounded-xl border border-accent bg-accent/5 p-3"><div class="h-10 rounded-lg bg-gradient-to-br from-ink/80 to-ink/40"></div><p class="text-xs mt-2 font-medium">Annual <span class="text-accent">−20%</span></p><p class="text-[11px] text-ink-soft">₹1,999 / mo</p></div>
+                      </div>
+                      <div class="flex items-center justify-between text-sm"><span class="text-ink-soft">Total</span><span class="font-display tt text-lg">₹23,988</span></div>
+                      <div class="rounded-full bg-ink text-paper text-center text-sm font-medium py-3">Pay securely</div>
+                      <p class="text-[11px] text-ink-soft text-center inline-flex items-center justify-center gap-1 w-full"><iconify-icon icon="lucide:lock" class="text-accent"></iconify-icon> 256-bit encrypted</p>
+                    </div>
+                  </div>
+                  <span class="uicursor absolute bottom-6 right-10 text-ink text-xl pointer-events-none"><iconify-icon icon="lucide:mouse-pointer-2"></iconify-icon></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE DESIGN -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">What we design</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">From first idea to shippable UI</h2></div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="reveal cmp rounded-xl2 border border-line p-7"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:search-check"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">UX Research</h3><p class="text-ink-soft text-sm mt-2">Interviews, flows and journey mapping that ground design in reality.</p></div>
+            <div class="reveal cmp rounded-xl2 border border-line p-7" data-delay="1"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:layout-template"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Wireframing</h3><p class="text-ink-soft text-sm mt-2">Low-fi structure to nail flow before a single pixel is polished.</p></div>
+            <div class="reveal cmp rounded-xl2 border border-line p-7" data-delay="2"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:palette"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">UI Design</h3><p class="text-ink-soft text-sm mt-2">Beautiful, on-brand, pixel-perfect interfaces for web &amp; mobile.</p></div>
+            <div class="reveal cmp rounded-xl2 border border-line p-7"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:mouse-pointer-click"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Prototyping</h3><p class="text-ink-soft text-sm mt-2">Clickable prototypes to test and feel the experience early.</p></div>
+            <div class="reveal cmp rounded-xl2 border border-line p-7" data-delay="1"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:component"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Design Systems</h3><p class="text-ink-soft text-sm mt-2">Reusable components and tokens that keep teams fast &amp; consistent.</p></div>
+            <div class="reveal cmp rounded-xl2 border border-line p-7" data-delay="2"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:accessibility"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Accessibility</h3><p class="text-ink-soft text-sm mt-2">WCAG-minded contrast, focus states and inclusive patterns.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN SYSTEM SHOWCASE -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">A system, not just screens</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Tokens, components, consistency</h2></div>
+          <div class="grid lg:grid-cols-3 gap-5">
+            <!-- color tokens -->
+            <div class="reveal rounded-xl2 bg-paper border border-line p-6">
+              <p class="text-xs tracking-[.2em] uppercase text-ink-soft mb-4">Colour tokens</p>
+              <div class="grid grid-cols-4 gap-2">
+                <div class="token rounded-xl aspect-square" style="background:#fa5539"></div>
+                <div class="token rounded-xl aspect-square" style="background:#0a0a0a"></div>
+                <div class="token rounded-xl aspect-square" style="background:#4a463f"></div>
+                <div class="token rounded-xl aspect-square border border-line" style="background:#f6f4f1"></div>
+                <div class="token rounded-xl aspect-square" style="background:#2e7d5b"></div>
+                <div class="token rounded-xl aspect-square" style="background:#e6e1da"></div>
+                <div class="token rounded-xl aspect-square" style="background:#ffb38a"></div>
+                <div class="token rounded-xl aspect-square border border-line" style="background:#ffffff"></div>
+              </div>
+            </div>
+            <!-- type scale -->
+            <div class="reveal rounded-xl2 bg-paper border border-line p-6" data-delay="1">
+              <p class="text-xs tracking-[.2em] uppercase text-ink-soft mb-4">Type scale</p>
+              <div class="space-y-1.5">
+                <p class="font-display text-3xl tt leading-none">Display</p>
+                <p class="font-display text-xl tt">Heading</p>
+                <p class="text-base">Body text for clarity</p>
+                <p class="text-xs tracking-[.2em] uppercase text-ink-soft">Caption / label</p>
+              </div>
+            </div>
+            <!-- components -->
+            <div class="reveal rounded-xl2 bg-paper border border-line p-6" data-delay="2">
+              <p class="text-xs tracking-[.2em] uppercase text-ink-soft mb-4">Components</p>
+              <div class="space-y-3">
+                <div class="flex gap-2"><span class="rounded-full bg-ink text-paper text-xs px-3 py-1.5">Primary</span><span class="rounded-full border border-line text-xs px-3 py-1.5">Secondary</span></div>
+                <div class="rounded-lg border border-line px-3 py-2 text-xs text-ink-soft flex items-center gap-2"><iconify-icon icon="lucide:mail"></iconify-icon> input field</div>
+                <div class="flex items-center gap-2"><span class="h-5 w-9 rounded-full bg-accent relative"><span class="absolute right-0.5 top-0.5 h-4 w-4 rounded-full bg-white"></span></span><span class="text-xs text-ink-soft">toggle</span></div>
+                <div class="flex gap-1.5"><span class="rounded-md bg-accent/10 text-accent text-[10px] px-2 py-1">badge</span><span class="rounded-md bg-surface text-[10px] px-2 py-1 border border-line">chip</span></div>
+              </div>
+            </div>
+          </div>
+          <!-- IMAGE PLACEHOLDER -->
+          <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 border border-line mt-5 reveal">
+            <img src="assets/img/ui-screens.avif" alt="A set of polished BoostronixX UI/UX product screens and components" loading="lazy" onerror="this.remove()" />
+            <figcaption class="lbl"><b>UI screens · 1600×700</b><span>Mockup of real product screens / a Figma design-system board — showing components, app screens and prototypes.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="process" class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-14"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">How we design</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Five steps to a product that works</h2></div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="reveal rounded-xl2 border border-line p-6"><span class="font-display text-4xl tt text-accent/25">01</span><h3 class="font-display text-lg tt mt-2">Research</h3><p class="text-ink-soft text-sm mt-1.5">Users, goals, flows.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-6" data-delay="1"><span class="font-display text-4xl tt text-accent/25">02</span><h3 class="font-display text-lg tt mt-2">Wireframe</h3><p class="text-ink-soft text-sm mt-1.5">Structure &amp; flow.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-6" data-delay="2"><span class="font-display text-4xl tt text-accent/25">03</span><h3 class="font-display text-lg tt mt-2">UI design</h3><p class="text-ink-soft text-sm mt-1.5">Polished visuals.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-6" data-delay="3"><span class="font-display text-4xl tt text-accent/25">04</span><h3 class="font-display text-lg tt mt-2">Prototype</h3><p class="text-ink-soft text-sm mt-1.5">Test &amp; refine.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-6"><span class="font-display text-4xl tt text-accent/25">05</span><h3 class="font-display text-lg tt mt-2">Handoff</h3><p class="text-ink-soft text-sm mt-1.5">Dev-ready specs.</p></div>
+          </div>
+          <div class="reveal mt-8 rounded-2xl border border-line bg-surface p-6 flex flex-col sm:flex-row sm:items-center gap-5" data-delay="1">
+            <span class="grid place-items-center h-14 w-14 rounded-full bg-ink text-paper shrink-0"><iconify-icon icon="lucide:badge-check" class="text-2xl text-accent"></iconify-icon></span>
+            <div class="flex-1"><p class="font-display tt text-lg">Designed by the BoostronixX product team</p><p class="text-ink-soft text-sm mt-1">5+ years designing interfaces across SaaS, EdTech and D2C — accessibility-minded, developer-friendly handoff every time.</p></div>
+            <a href="edoovi-erp.html" class="text-sm font-medium text-ink hover:text-accent inline-flex items-center gap-1.5 shrink-0">See the Edoovi case study <iconify-icon icon="lucide:arrow-up-right"></iconify-icon></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-20 sm:py-28 bg-ink text-paper">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Design questions</h2></div>
+          <div class="space-y-3">
+            <div class="faq border border-white/12 rounded-2xl px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Do you design in Figma?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-paper/60 text-sm leading-relaxed">Yes — we design in Figma, so you get a live, organised file with components, prototypes and dev-ready specs you fully own.</div></div></div>
+            <div class="faq border border-white/12 rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Can you work with our developers?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-paper/60 text-sm leading-relaxed">Absolutely. We deliver developer-friendly handoff — specs, tokens and assets — and can collaborate directly with your engineering team, or build it ourselves.</div></div></div>
+            <div class="faq border border-white/12 rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Do you also build the front-end?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-paper/60 text-sm leading-relaxed">Yes — our website &amp; development service can take designs all the way to a fast, responsive live build.</div></div></div>
+            <div class="faq border border-white/12 rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">What about accessibility?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-paper/60 text-sm leading-relaxed">We design with WCAG in mind — sufficient colour contrast, clear focus states, sensible tap targets and inclusive patterns — so your product works for everyone.</div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED + CTA -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Pairs well with</p>
+          <div class="grid sm:grid-cols-3 gap-4 mb-12">
+            <a href="website-design.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Website Design</span><span class="text-xs text-ink-soft">Design, built live</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <a href="brand-consulting.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:palette"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Brand Consulting</span><span class="text-xs text-ink-soft">Identity first</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <a href="services.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:layout-grid"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">All Services</span><span class="text-xs text-ink-soft">The full stack</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+          </div>
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
+            <div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's design something people love</h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl">Show us your product or idea — we'll map the experience and a path to a beautiful, usable design.</p>
+              <div class="flex flex-wrap items-center gap-3 mt-9">
+                <a href="contact-us.html" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Start a design project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="portfolio.html" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See product work</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Services</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="seo-services.html" class="hover:text-accent">SEO Services</a></li><li><a href="services.html" class="hover:text-accent">All Services</a></li><li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li><li><a href="contact-us.html" class="hover:text-accent">Get a Quote</a></li></ul></div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Company</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="about-us.html" class="hover:text-accent">About Us</a></li><li><a href="faq.html" class="hover:text-accent">FAQ</a></li><li><a href="sitemap.html" class="hover:text-accent">Sitemap</a></li><li><a href="contact-us.html" class="hover:text-accent">Contact</a></li></ul></div>
+          <div class="lg:col-span-3"><h4 class="font-display text-sm mb-4">Get in touch</h4><address class="not-italic space-y-3 text-sm text-ink-soft"><p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p><p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p><p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p><p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p></address></div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5"><a href="privacy-policy.html" class="hover:text-accent">Privacy</a><a href="terms-and-conditions.html" class="hover:text-accent">Terms</a><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a><a href="sitemap.html" class="hover:text-accent">Sitemap</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="services.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-accent"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services</a>
+        <a href="portfolio.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:briefcase" class="text-[22px]"></iconify-icon>Work</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@graph": [
+        { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.boostronixx.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.boostronixx.com/services/" },
+          { "@type": "ListItem", "position": 3, "name": "UI/UX Design", "item": "https://www.boostronixx.com/services/ui-ux-design/" } ] },
+        { "@type": "Service", "serviceType": "UI/UX & Product Design", "name": "UI/UX Design", "description": "Research-led UI/UX design — wireframes, polished interfaces, prototyping and scalable design systems for web and mobile.", "provider": { "@type": "Organization", "name": "BoostronixX", "url": "https://www.boostronixx.com/" }, "areaServed": [ { "@type": "City", "name": "Jaipur" }, { "@type": "Country", "name": "India" } ], "url": "https://www.boostronixx.com/services/ui-ux-design/" },
+        { "@type": "FAQPage", "mainEntity": [
+          { "@type": "Question", "name": "Do you design in Figma?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we design in Figma, so you get a live, organised file with components, prototypes and dev-ready specs you fully own." } },
+          { "@type": "Question", "name": "Can you work with our developers?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We deliver developer-friendly handoff — specs, tokens and assets — and can collaborate with your engineers or build it ourselves." } },
+          { "@type": "Question", "name": "Do you also build the front-end?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — our website & development service takes designs all the way to a fast, responsive live build." } },
+          { "@type": "Question", "name": "What about accessibility?", "acceptedAnswer": { "@type": "Answer", "text": "We design with WCAG in mind — colour contrast, focus states, tap targets and inclusive patterns — so your product works for everyone." } } ] } ] }
+    </script>
+
+    <!-- SCRIPTS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        window.addEventListener("scroll", function () { if (bar) bar.classList.toggle("shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]", window.scrollY > 20); });
+        var mm = document.getElementById("mobileMenu"), panel = document.getElementById("menuPanel"), menuBtn = document.getElementById("menuBtn");
+        function openMenu(){ mm.classList.remove("hidden"); requestAnimationFrame(function(){ panel.classList.remove("translate-x-full"); }); document.body.style.overflow="hidden"; }
+        function closeMenu(){ panel.classList.add("translate-x-full"); document.body.style.overflow=""; setTimeout(function(){ mm.classList.add("hidden"); },300); }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm) [].forEach.call(mm.querySelectorAll("[data-close]"), function(e){ e.addEventListener("click", closeMenu); });
+        var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+        [].forEach.call(document.querySelectorAll(".reveal"), function(e){ io.observe(e); });
+        [].forEach.call(document.querySelectorAll(".faq-head"), function(b){ b.addEventListener("click", function(){ var i=b.closest(".faq"); [].forEach.call(document.querySelectorAll(".faq"), function(f){ if(f!==i) f.classList.remove("open"); }); i.classList.toggle("open"); }); });
+        // wireframe/hifi toggle
+        var stage = document.getElementById("stage"), label = document.getElementById("stageLabel");
+        if (stage) stage.addEventListener("click", function(){ var wf = stage.classList.toggle("show-wf"); label.textContent = wf ? "Wireframe" : "Final UI"; });
+      });
+    </script>
+  </body>
+</html>

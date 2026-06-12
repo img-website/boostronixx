@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Website Design & Development in Jaipur — Fast, SEO-Ready Sites | BoostronixX</title>
+    <meta name="description" content="Fast, responsive, SEO-ready website design & development. From marketing sites to product front-ends — engineered for Core Web Vitals, conversions and easy management." />
+    <meta name="keywords" content="website design Jaipur, web development, responsive websites, Core Web Vitals, landing pages, ecommerce website, WordPress" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="BoostronixX" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="geo.region" content="IN-RJ" />
+    <link rel="canonical" href="https://www.boostronixx.com/services/website-design/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BoostronixX" />
+    <meta property="og:title" content="Website Design & Development — Fast, SEO-Ready Sites | BoostronixX" />
+    <meta property="og:url" content="https://www.boostronixx.com/services/website-design/" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a; --color-ink-soft: #4a463f; --color-accent: #fa5539;
+        --color-paper: #ffffff; --color-surface: #f6f4f1; --color-surface-2: #efece7; --color-line: #e6e1da;
+        --font-display: var(--brand-font); --font-sans: var(--brand-font); --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow { background-color: var(--color-ink); color: var(--color-paper); transition: background-color .25s ease, color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); } }
+      @utility btn-glow-accent { background-color: var(--color-accent); color: var(--color-paper); transition: background-color .25s ease; }
+      @utility btn-glow-light { background-color: var(--color-paper); color: var(--color-ink); border: 1px solid var(--color-line); transition: background-color .25s ease, color .25s ease, border-color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); border-color: var(--color-accent); } }
+      @utility sheen-text { color: inherit; } @utility sheen-text-dark { color: inherit; } @utility sheen-text-light { color: inherit; }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; --ink: #0a0a0a; }
+      html, body { background: #fff; color: var(--ink); font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; } h1,h2,h3 { font-family: var(--brand-font); }
+      .grid-lines { background-image: linear-gradient(to right, rgba(10,10,10,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,10,.045) 1px, transparent 1px); background-size: 72px 72px; }
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+      .reveal.in { opacity: 1; transform: none; }
+      [data-delay="1"]{transition-delay:.08s}[data-delay="2"]{transition-delay:.16s}[data-delay="3"]{transition-delay:.24s}
+      @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} }
+      .nav-link { position: relative; }
+      .nav-link::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--accent); transition:width .3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width:100%; }
+      .mock { background:#fff; border:1px solid var(--color-line); border-radius:1.25rem; box-shadow:0 40px 80px -50px rgba(10,10,10,.45); }
+      .imgph { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; isolation:isolate; }
+      .imgph > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+      .imgph .lbl { position:relative; z-index:1; text-align:center; padding:1rem; max-width:92%; }
+      .imgph .lbl b { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#7a7268; font-weight:700; }
+      .imgph .lbl span { display:block; margin-top:.3rem; font-size:.7rem; color:#a39a8e; line-height:1.45; }
+      .faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease; } .faq.open .faq-body { grid-template-rows:1fr; }
+      .faq-body > div { overflow:hidden; } .faq .plus { transition: transform .3s ease; } .faq.open .plus { transform: rotate(45deg); } .faq.open { border-color: var(--accent); }
+
+      /* browser blocks load in */
+      .blk { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+      .reveal.in .blk { opacity: 1; transform: none; }
+      .reveal.in .blk.b1 { transition-delay: .2s; } .reveal.in .blk.b2 { transition-delay: .35s; }
+      .reveal.in .blk.b3 { transition-delay: .5s; } .reveal.in .blk.b4 { transition-delay: .65s; }
+      /* gauge ring */
+      .ring-fg { stroke-dashoffset: var(--c); }
+      .reveal.in .ring-fg { stroke-dashoffset: var(--o); transition: stroke-dashoffset 1.7s cubic-bezier(.2,.7,.2,1) .3s; }
+      /* device switch */
+      .device-btn { transition: .2s; } .device-btn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+      #viewport { transition: max-width .5s cubic-bezier(.2,.7,.2,1); }
+      .card { transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; } .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 30px 60px -45px rgba(10,10,10,.4); }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
+          <a href="index.html" class="flex items-center gap-2 shrink-0"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+            <a href="services.html" class="nav-link active text-ink">Services</a>
+            <a href="portfolio.html" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow-accent hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium"><iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon><span class="relative z-10 sheen-text-light">Let's Build Together</span></a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:menu"></iconify-icon></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a href="services.html" data-close class="py-3 border-b border-line flex items-center justify-between text-accent">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="portfolio.html" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium"><span class="relative z-10 sheen-text-light">Build My Website</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- HERO: browser building in -->
+      <section class="relative pt-28 sm:pt-36 pb-14 grid-lines overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <a href="services.html" class="hover:text-accent">Services</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">Website Design</span>
+          </nav>
+          <div class="text-center max-w-3xl mx-auto">
+            <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:gauge" class="text-accent text-sm"></iconify-icon> Fast · Responsive · SEO-ready</div>
+            <h1 class="reveal font-display text-[2.6rem] leading-[0.98] sm:text-7xl tt">Websites that load fast<br class="hidden sm:block" /> &amp; <span class="text-accent">convert faster</span></h1>
+            <p class="reveal text-ink-soft mt-5 max-w-xl mx-auto leading-relaxed" data-delay="1">From marketing sites to product front-ends — engineered for Core Web Vitals, built to convert, and easy for your team to manage.</p>
+            <div class="reveal flex flex-wrap items-center justify-center gap-3 mt-7" data-delay="2">
+              <a href="contact-us.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Build my website</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+              <a href="#perf" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:zap" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See performance</span></a>
+            </div>
+          </div>
+
+          <!-- BROWSER MOCK -->
+          <div class="reveal mt-12 max-w-4xl mx-auto" data-delay="2">
+            <div class="mock overflow-hidden">
+              <div class="flex items-center gap-2 px-4 py-3 border-b border-line bg-surface">
+                <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span><span class="h-3 w-3 rounded-full bg-[#febc2e]"></span><span class="h-3 w-3 rounded-full bg-[#28c840]"></span>
+                <span class="ml-3 flex-1 rounded-full bg-paper border border-line px-3 py-1 text-xs text-ink-soft inline-flex items-center gap-2"><iconify-icon icon="lucide:lock" class="text-[11px] text-accent"></iconify-icon> www.yourbrand.com</span>
+                <iconify-icon icon="lucide:refresh-cw" class="text-ink-soft text-sm"></iconify-icon>
+              </div>
+              <div class="p-5 sm:p-7">
+                <div class="blk b1 flex items-center justify-between mb-5"><span class="font-display tt text-lg">YourBrand</span><div class="hidden sm:flex gap-4 text-xs text-ink-soft"><span>Home</span><span>Work</span><span>About</span><span class="rounded-full bg-ink text-paper px-3 py-1.5">Contact</span></div></div>
+                <div class="blk b2 grid sm:grid-cols-2 gap-5 items-center">
+                  <div><div class="h-9 w-3/4 rounded bg-surface-2 mb-2"></div><div class="h-9 w-1/2 rounded bg-accent/20 mb-3"></div><div class="h-3 w-full rounded bg-surface-2 mb-1.5"></div><div class="h-3 w-2/3 rounded bg-surface-2 mb-4"></div><div class="h-9 w-32 rounded-full bg-ink"></div></div>
+                  <div class="rounded-xl bg-gradient-to-br from-accent/30 to-accent/5 aspect-[4/3] grid place-items-center"><iconify-icon icon="lucide:image" class="text-3xl text-accent/50"></iconify-icon></div>
+                </div>
+                <div class="blk b3 grid grid-cols-3 gap-3 mt-5">
+                  <div class="rounded-xl border border-line p-3"><div class="h-7 w-7 rounded-lg bg-accent/20 mb-2"></div><div class="h-2.5 w-full rounded bg-surface-2"></div></div>
+                  <div class="rounded-xl border border-line p-3"><div class="h-7 w-7 rounded-lg bg-accent/20 mb-2"></div><div class="h-2.5 w-full rounded bg-surface-2"></div></div>
+                  <div class="rounded-xl border border-line p-3"><div class="h-7 w-7 rounded-lg bg-accent/20 mb-2"></div><div class="h-2.5 w-full rounded bg-surface-2"></div></div>
+                </div>
+                <div class="blk b4 mt-5 rounded-xl bg-ink text-paper p-4 flex items-center justify-between"><span class="font-display tt">Ready to grow?</span><span class="rounded-full bg-accent text-paper text-xs px-3 py-1.5">Get started</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESPONSIVE SWITCHER -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 text-center">
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Looks right everywhere</p>
+          <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Pixel-perfect on every screen</h2>
+          <div class="reveal flex items-center justify-center gap-2 mt-8" data-delay="1">
+            <button class="device-btn active rounded-full border border-line px-4 py-2 text-sm font-medium inline-flex items-center gap-2" data-w="100%"><iconify-icon icon="lucide:monitor"></iconify-icon> Desktop</button>
+            <button class="device-btn rounded-full border border-line px-4 py-2 text-sm font-medium inline-flex items-center gap-2" data-w="640px"><iconify-icon icon="lucide:tablet"></iconify-icon> Tablet</button>
+            <button class="device-btn rounded-full border border-line px-4 py-2 text-sm font-medium inline-flex items-center gap-2" data-w="360px"><iconify-icon icon="lucide:smartphone"></iconify-icon> Mobile</button>
+          </div>
+          <div class="reveal mt-8 flex justify-center" data-delay="1">
+            <div id="viewport" class="mock overflow-hidden mx-auto w-full" style="max-width:100%">
+              <div class="flex items-center gap-2 px-4 py-2.5 border-b border-line bg-surface"><span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span><span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span><span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span></div>
+              <div class="p-5">
+                <div class="flex items-center justify-between mb-4"><span class="font-display tt">YourBrand</span><span class="rounded-full bg-ink text-paper text-[11px] px-3 py-1.5">Menu</span></div>
+                <div class="rounded-xl bg-gradient-to-br from-accent/25 to-accent/5 h-28 grid place-items-center mb-3"><span class="font-display tt text-xl">Hero section</span></div>
+                <div class="grid grid-cols-2 gap-3"><div class="rounded-lg border border-line h-16"></div><div class="rounded-lg border border-line h-16"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERFORMANCE GAUGES -->
+      <section id="perf" class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Built for speed</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Performance you can measure</h2><p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">We engineer for Core Web Vitals from day one — because fast sites rank better, convert better and feel better.</p></div>
+          <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4" data-delay="1">
+            <div class="rounded-xl2 border border-line p-6 text-center">
+              <svg viewBox="0 0 120 120" class="w-28 h-28 mx-auto -rotate-90"><circle cx="60" cy="60" r="50" fill="none" stroke="#e6e1da" stroke-width="10" /><circle class="ring-fg" cx="60" cy="60" r="50" fill="none" stroke="#2e7d5b" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" style="--c:314;--o:24" /></svg>
+              <p class="font-display text-2xl tt -mt-20">98</p>
+              <p class="text-sm text-ink-soft mt-14">Performance</p>
+            </div>
+            <div class="rounded-xl2 border border-line p-6 text-center">
+              <svg viewBox="0 0 120 120" class="w-28 h-28 mx-auto -rotate-90"><circle cx="60" cy="60" r="50" fill="none" stroke="#e6e1da" stroke-width="10" /><circle class="ring-fg" cx="60" cy="60" r="50" fill="none" stroke="#2e7d5b" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" style="--c:314;--o:18" /></svg>
+              <p class="font-display text-2xl tt -mt-20">100</p>
+              <p class="text-sm text-ink-soft mt-14">Accessibility</p>
+            </div>
+            <div class="rounded-xl2 border border-line p-6 text-center">
+              <svg viewBox="0 0 120 120" class="w-28 h-28 mx-auto -rotate-90"><circle cx="60" cy="60" r="50" fill="none" stroke="#e6e1da" stroke-width="10" /><circle class="ring-fg" cx="60" cy="60" r="50" fill="none" stroke="#fa5539" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" style="--c:314;--o:28" /></svg>
+              <p class="font-display text-2xl tt -mt-20">95</p>
+              <p class="text-sm text-ink-soft mt-14">Best Practices</p>
+            </div>
+            <div class="rounded-xl2 border border-line p-6 text-center">
+              <svg viewBox="0 0 120 120" class="w-28 h-28 mx-auto -rotate-90"><circle cx="60" cy="60" r="50" fill="none" stroke="#e6e1da" stroke-width="10" /><circle class="ring-fg" cx="60" cy="60" r="50" fill="none" stroke="#2e7d5b" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" style="--c:314;--o:20" /></svg>
+              <p class="font-display text-2xl tt -mt-20">99</p>
+              <p class="text-sm text-ink-soft mt-14">SEO</p>
+            </div>
+          </div>
+          <p class="reveal text-xs text-ink-soft mt-5" data-delay="2">Illustrative Lighthouse scores — we target 90+ across the board on every build.</p>
+        </div>
+      </section>
+
+      <!-- WHAT WE BUILD -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">What we build</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">The right site for the job</h2></div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="reveal card rounded-xl2 bg-paper border border-line p-7"><span class="text-accent text-2xl"><iconify-icon icon="lucide:globe"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Marketing sites</h3><p class="text-ink-soft text-sm mt-1.5">Brand-led sites that tell your story and convert.</p></div>
+            <div class="reveal card rounded-xl2 bg-paper border border-line p-7" data-delay="1"><span class="text-accent text-2xl"><iconify-icon icon="lucide:mouse-pointer-click"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Landing pages</h3><p class="text-ink-soft text-sm mt-1.5">Focused, fast pages built for campaigns &amp; ads.</p></div>
+            <div class="reveal card rounded-xl2 bg-paper border border-line p-7" data-delay="2"><span class="text-accent text-2xl"><iconify-icon icon="lucide:shopping-bag"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">E-commerce</h3><p class="text-ink-soft text-sm mt-1.5">Stores that are easy to shop and easy to run.</p></div>
+            <div class="reveal card rounded-xl2 bg-paper border border-line p-7" data-delay="3"><span class="text-accent text-2xl"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Web apps &amp; front-ends</h3><p class="text-ink-soft text-sm mt-1.5">Product UIs built from your designs.</p></div>
+          </div>
+          <!-- IMAGE PLACEHOLDER -->
+          <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 border border-line mt-6 reveal">
+            <img src="assets/img/website-showcase.avif" alt="Responsive BoostronixX website shown across desktop, tablet and mobile devices" loading="lazy" onerror="this.remove()" />
+            <figcaption class="lbl"><b>Device showcase · 1600×700</b><span>A real client website displayed across desktop, tablet and phone frames — proves responsive, polished delivery.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-14"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">How we build</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Design. Build. Test. Launch.</h2></div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="reveal card rounded-xl2 border border-line p-7"><span class="font-display text-5xl tt text-accent/25">01</span><h3 class="font-display text-xl tt mt-3">Design</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">UX and UI mapped to your brand and conversion goals.</p></div>
+            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="1"><span class="font-display text-5xl tt text-accent/25">02</span><h3 class="font-display text-xl tt mt-3">Build</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Clean, responsive code with an easy-to-edit CMS.</p></div>
+            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="2"><span class="font-display text-5xl tt text-accent/25">03</span><h3 class="font-display text-xl tt mt-3">Test</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Speed, cross-device, SEO and accessibility checks.</p></div>
+            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="3"><span class="font-display text-5xl tt text-accent/25">04</span><h3 class="font-display text-xl tt mt-3">Launch</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Go live with analytics, training and ongoing support.</p></div>
+          </div>
+          <div class="reveal mt-8 rounded-2xl border border-line bg-surface p-6 flex items-center gap-4" data-delay="1">
+            <span class="grid place-items-center h-12 w-12 rounded-full bg-ink text-paper shrink-0"><iconify-icon icon="lucide:badge-check" class="text-xl text-accent"></iconify-icon></span>
+            <p class="text-sm text-ink-soft">Built by the BoostronixX web team — SEO-ready markup, Core Web Vitals tuned, and a CMS your team can actually use.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Website questions</h2></div>
+          <div class="space-y-3">
+            <div class="faq border border-line rounded-2xl bg-paper px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">How long does a website take?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Most marketing websites take 4–8 weeks depending on the number of pages, content readiness and complexity. We'll share a clear timeline and milestones in your proposal.</div></div></div>
+            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Can I update the site myself?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. We build on an easy-to-manage CMS and include training, so your team can edit content, add pages and publish without touching code.</div></div></div>
+            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Is the website SEO-ready?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Always. Clean markup, fast load times, proper headings, schema and mobile-first design come standard — and our SEO team can take it further from there.</div></div></div>
+            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Do you offer maintenance after launch?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes — we offer ongoing care plans for updates, backups, security and improvements, so your site stays fast and secure.</div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED + CTA -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Pairs well with</p>
+          <div class="grid sm:grid-cols-3 gap-4 mb-12">
+            <a href="ui-ux-design.html" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:figma"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">UI/UX Design</span><span class="text-xs text-ink-soft">Design the experience</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <a href="seo-services.html" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">SEO Services</span><span class="text-xs text-ink-soft">Get it ranking</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <a href="brand-consulting.html" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:palette"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Brand Consulting</span><span class="text-xs text-ink-soft">Look the part</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+          </div>
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
+            <div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's build a site that works as hard as you do</h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us about your project — we'll scope a fast, beautiful, SEO-ready website around your goals.</p>
+              <div class="flex flex-wrap items-center gap-3 mt-9">
+                <a href="contact-us.html" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Get a website quote</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="portfolio.html" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:briefcase" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See sites we've built</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Services</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="seo-services.html" class="hover:text-accent">SEO Services</a></li><li><a href="services.html" class="hover:text-accent">All Services</a></li><li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li><li><a href="contact-us.html" class="hover:text-accent">Get a Quote</a></li></ul></div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Company</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="about-us.html" class="hover:text-accent">About Us</a></li><li><a href="faq.html" class="hover:text-accent">FAQ</a></li><li><a href="sitemap.html" class="hover:text-accent">Sitemap</a></li><li><a href="contact-us.html" class="hover:text-accent">Contact</a></li></ul></div>
+          <div class="lg:col-span-3"><h4 class="font-display text-sm mb-4">Get in touch</h4><address class="not-italic space-y-3 text-sm text-ink-soft"><p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p><p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p><p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p><p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p></address></div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5"><a href="privacy-policy.html" class="hover:text-accent">Privacy</a><a href="terms-and-conditions.html" class="hover:text-accent">Terms</a><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a><a href="sitemap.html" class="hover:text-accent">Sitemap</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="services.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-accent"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services</a>
+        <a href="portfolio.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:briefcase" class="text-[22px]"></iconify-icon>Work</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@graph": [
+        { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.boostronixx.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.boostronixx.com/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Website Design", "item": "https://www.boostronixx.com/services/website-design/" } ] },
+        { "@type": "Service", "serviceType": "Website Design & Development", "name": "Website Design & Development", "description": "Fast, responsive, SEO-ready websites — marketing sites, landing pages, e-commerce and product front-ends engineered for Core Web Vitals and conversions.", "provider": { "@type": "Organization", "name": "BoostronixX", "url": "https://www.boostronixx.com/" }, "areaServed": [ { "@type": "City", "name": "Jaipur" }, { "@type": "Country", "name": "India" } ], "url": "https://www.boostronixx.com/services/website-design/" },
+        { "@type": "FAQPage", "mainEntity": [
+          { "@type": "Question", "name": "How long does a website take?", "acceptedAnswer": { "@type": "Answer", "text": "Most marketing websites take 4–8 weeks depending on pages, content readiness and complexity. We share a clear timeline and milestones in your proposal." } },
+          { "@type": "Question", "name": "Can I update the site myself?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build on an easy-to-manage CMS and include training, so your team can edit content and publish without touching code." } },
+          { "@type": "Question", "name": "Is the website SEO-ready?", "acceptedAnswer": { "@type": "Answer", "text": "Always — clean markup, fast load times, proper headings, schema and mobile-first design come standard, and our SEO team can take it further." } },
+          { "@type": "Question", "name": "Do you offer maintenance after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — ongoing care plans cover updates, backups, security and improvements so your site stays fast and secure." } } ] } ] }
+    </script>
+
+    <!-- SCRIPTS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        window.addEventListener("scroll", function () { if (bar) bar.classList.toggle("shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]", window.scrollY > 20); });
+        var mm = document.getElementById("mobileMenu"), panel = document.getElementById("menuPanel"), menuBtn = document.getElementById("menuBtn");
+        function openMenu(){ mm.classList.remove("hidden"); requestAnimationFrame(function(){ panel.classList.remove("translate-x-full"); }); document.body.style.overflow="hidden"; }
+        function closeMenu(){ panel.classList.add("translate-x-full"); document.body.style.overflow=""; setTimeout(function(){ mm.classList.add("hidden"); },300); }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm) [].forEach.call(mm.querySelectorAll("[data-close]"), function(e){ e.addEventListener("click", closeMenu); });
+        var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+        [].forEach.call(document.querySelectorAll(".reveal"), function(e){ io.observe(e); });
+        [].forEach.call(document.querySelectorAll(".faq-head"), function(b){ b.addEventListener("click", function(){ var i=b.closest(".faq"); [].forEach.call(document.querySelectorAll(".faq"), function(f){ if(f!==i) f.classList.remove("open"); }); i.classList.toggle("open"); }); });
+        // device switcher
+        var vp = document.getElementById("viewport"), btns = [].slice.call(document.querySelectorAll(".device-btn"));
+        btns.forEach(function(b){ b.addEventListener("click", function(){ btns.forEach(function(x){ x.classList.remove("active"); }); b.classList.add("active"); vp.style.maxWidth = b.dataset.w; }); });
+      });
+    </script>
+  </body>
+</html>

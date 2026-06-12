@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Brand Consulting & Identity Design in Jaipur | BoostronixX</title>
+    <meta name="description" content="Brand consulting that goes beyond a logo — positioning, strategy, naming, visual identity and brand guidelines. BoostronixX builds brands people instantly recognise." />
+    <meta name="keywords" content="brand consulting Jaipur, branding agency, brand identity design, logo design, brand strategy, visual identity, brand guidelines" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="BoostronixX" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="geo.region" content="IN-RJ" />
+    <link rel="canonical" href="https://www.boostronixx.com/services/brand-consulting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BoostronixX" />
+    <meta property="og:title" content="Brand Consulting & Identity Design | BoostronixX" />
+    <meta property="og:url" content="https://www.boostronixx.com/services/brand-consulting/" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a; --color-ink-soft: #4a463f; --color-accent: #fa5539;
+        --color-paper: #ffffff; --color-surface: #f6f4f1; --color-surface-2: #efece7; --color-line: #e6e1da;
+        --font-display: var(--brand-font); --font-sans: var(--brand-font); --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow { background-color: var(--color-ink); color: var(--color-paper); transition: background-color .25s ease, color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); } }
+      @utility btn-glow-accent { background-color: var(--color-accent); color: var(--color-paper); transition: background-color .25s ease; }
+      @utility btn-glow-light { background-color: var(--color-paper); color: var(--color-ink); border: 1px solid var(--color-line); transition: background-color .25s ease, color .25s ease, border-color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); border-color: var(--color-accent); } }
+      @utility sheen-text { color: inherit; } @utility sheen-text-dark { color: inherit; } @utility sheen-text-light { color: inherit; }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; --ink: #0a0a0a; }
+      html, body { background: #fff; color: var(--ink); font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; } h1,h2,h3 { font-family: var(--brand-font); }
+      .grid-lines { background-image: linear-gradient(to right, rgba(10,10,10,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,10,.045) 1px, transparent 1px); background-size: 72px 72px; }
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+      .reveal.in { opacity: 1; transform: none; }
+      [data-delay="1"]{transition-delay:.08s}[data-delay="2"]{transition-delay:.16s}[data-delay="3"]{transition-delay:.24s}
+      @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} }
+      .nav-link { position: relative; }
+      .nav-link::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--accent); transition:width .3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width:100%; }
+      @keyframes spin { to { transform: rotate(360deg); } } .spin { animation: spin 16s linear infinite; }
+      .mock { background:#fff; border:1px solid var(--color-line); border-radius:1.75rem; box-shadow:0 40px 80px -50px rgba(10,10,10,.45); }
+      .imgph { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; isolation:isolate; }
+      .imgph > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+      .imgph .lbl { position:relative; z-index:1; text-align:center; padding:1rem; max-width:92%; }
+      .imgph .lbl b { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#7a7268; font-weight:700; }
+      .imgph .lbl span { display:block; margin-top:.3rem; font-size:.7rem; color:#a39a8e; line-height:1.45; }
+      .faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease; } .faq.open .faq-body { grid-template-rows:1fr; }
+      .faq-body > div { overflow:hidden; } .faq .plus { transition: transform .3s ease; } .faq.open .plus { transform: rotate(45deg); } .faq.open { border-color: var(--accent); }
+
+      /* ===== brand-board specific ===== */
+      .bb-tile { opacity: 0; transform: scale(.92); }
+      .reveal.in .bb-tile { animation: bbpop .55s cubic-bezier(.2,.7,.2,1) forwards; }
+      .reveal.in .bb-tile:nth-child(1){animation-delay:.06s}.reveal.in .bb-tile:nth-child(2){animation-delay:.14s}
+      .reveal.in .bb-tile:nth-child(3){animation-delay:.22s}.reveal.in .bb-tile:nth-child(4){animation-delay:.3s}
+      .reveal.in .bb-tile:nth-child(5){animation-delay:.38s}.reveal.in .bb-tile:nth-child(6){animation-delay:.46s}
+      @keyframes bbpop { to { opacity: 1; transform: none; } }
+      @keyframes glow { 0%,100%{box-shadow:0 0 0 0 rgba(250,85,57,0)} 50%{box-shadow:0 0 22px 1px rgba(250,85,57,.45)} }
+      .bb-accent { animation: glow 2.8s ease-in-out infinite; }
+      /* swatch hover */
+      .swatch { transition: transform .25s ease, border-radius .25s ease; cursor: default; }
+      .swatch:hover { transform: translateY(-6px) scale(1.04); border-radius: 1.25rem; }
+      /* vertical timeline */
+      .vstep { position: relative; }
+      .vrail { position:absolute; left:19px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,var(--accent),var(--color-line)); }
+      @media (prefers-reduced-motion: reduce){ .bb-accent{animation:none} }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
+          <a href="index.html" class="flex items-center gap-2 shrink-0"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+            <a href="services.html" class="nav-link active text-ink">Services</a>
+            <a href="portfolio.html" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow-accent hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium"><iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon><span class="relative z-10 sheen-text-light">Let's Build Together</span></a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:menu"></iconify-icon></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a href="services.html" data-close class="py-3 border-b border-line flex items-center justify-between text-accent">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="portfolio.html" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium"><span class="relative z-10 sheen-text-light">Book a Brand Discovery Call</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="relative pt-28 sm:pt-36 pb-14 grid-lines overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <a href="services.html" class="hover:text-accent">Services</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">Brand Consulting</span>
+          </nav>
+          <div class="grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6">
+              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:palette" class="text-accent text-sm"></iconify-icon> Brand strategy &amp; identity</div>
+              <h1 class="reveal font-display text-[2.5rem] leading-[1.0] sm:text-6xl tt">A brand people <span class="text-accent">instantly recognise</span></h1>
+              <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">Positioning, strategy, naming, logo and a complete visual system — built from research and designed to convert. We make sure you look like the leader you're becoming.</p>
+              <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
+                <a href="contact-us.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Start your brand</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="#blocks" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:layers" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">What's included</span></a>
+              </div>
+            </div>
+            <!-- BRAND BOARD MOCK -->
+            <div class="lg:col-span-6 reveal" data-delay="1">
+              <div class="mock rounded-xl2 p-6 sm:p-8">
+                <div class="flex items-center justify-between mb-5"><span class="text-xs tracking-[.2em] uppercase text-ink-soft">Brand Board</span><span class="text-xs text-ink-soft">v1.0</span></div>
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="bb-tile col-span-2 rounded-2xl bg-ink text-paper p-5 flex items-end min-h-[120px]"><span class="font-display text-3xl tt">Lumen<span class="text-accent">.</span></span></div>
+                  <div class="bb-tile bb-accent rounded-2xl bg-accent grid place-items-center min-h-[120px]"><iconify-icon icon="lucide:sparkles" class="text-paper text-3xl"></iconify-icon></div>
+                  <div class="bb-tile swatch rounded-xl h-14" style="background:#fa5539"></div>
+                  <div class="bb-tile swatch rounded-xl h-14" style="background:#0a0a0a"></div>
+                  <div class="bb-tile swatch rounded-xl h-14 border border-line" style="background:#f3ead2"></div>
+                  <div class="bb-tile col-span-3 rounded-2xl bg-surface border border-line p-4"><p class="font-display tt text-xl">Aa Bb Cc — Bricolage Grotesque</p><p class="text-xs text-ink-soft mt-1">Confident, modern, human. 0123456789</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATEMENT BAND -->
+      <section class="py-16 sm:py-20 bg-ink text-paper">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 text-center">
+          <p class="reveal font-display text-2xl sm:text-4xl lg:text-5xl tt leading-[1.15]">A brand isn't your logo. It's the <span class="text-accent">feeling</span> people get — and the <span class="text-accent">reason</span> they choose you over everyone else.</p>
+        </div>
+      </section>
+
+      <!-- BUILDING BLOCKS -->
+      <section id="blocks" class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The building blocks</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Everything that makes a brand whole</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="reveal rounded-xl2 border border-line p-7 hover:border-accent transition"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:compass"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Brand Strategy</h3><p class="text-ink-soft text-sm mt-2">Research, audience and the core idea everything builds on.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-7 hover:border-accent transition" data-delay="1"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:crosshair"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Positioning</h3><p class="text-ink-soft text-sm mt-2">A sharp, ownable space in your customer's mind.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-7 hover:border-accent transition" data-delay="2"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:type"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Naming &amp; Voice</h3><p class="text-ink-soft text-sm mt-2">A name and tone that sound unmistakably you.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-7 hover:border-accent transition"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:pen-tool"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Logo &amp; Identity</h3><p class="text-ink-soft text-sm mt-2">A flexible logo system and signature visual marks.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-7 hover:border-accent transition" data-delay="1"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:swatch-book"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Visual System</h3><p class="text-ink-soft text-sm mt-2">Colour, type, imagery and layout that scale anywhere.</p></div>
+            <div class="reveal rounded-xl2 border border-line p-7 hover:border-accent transition" data-delay="2"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl"><iconify-icon icon="lucide:book-marked"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Brand Guidelines</h3><p class="text-ink-soft text-sm mt-2">A clear rulebook so your brand stays consistent.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PALETTE + TYPE SHOWCASE -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Crafted, not generated</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Colour and type with intent</h2>
+            <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1">Every palette and typeface is chosen for meaning and legibility — tested across screens, print and the real world before it ships.</p>
+            <!-- IMAGE PLACEHOLDER -->
+            <figure class="imgph rounded-xl2 aspect-[16/10] bg-surface-2 border border-line mt-8 reveal" data-delay="1">
+              <img src="assets/img/brand-moodboard.avif" alt="BoostronixX brand identity moodboard and collateral mockups" loading="lazy" onerror="this.remove()" />
+              <figcaption class="lbl"><b>Moodboard · 1280×800</b><span>Flat-lay of brand collateral — business cards, packaging, signage — or a moodboard grid. Shows identity applied in the real world.</span></figcaption>
+            </figure>
+          </div>
+          <div class="reveal" data-delay="1">
+            <div class="grid grid-cols-5 gap-2 mb-4">
+              <div class="swatch rounded-xl aspect-square" style="background:#fa5539"></div>
+              <div class="swatch rounded-xl aspect-square" style="background:#0a0a0a"></div>
+              <div class="swatch rounded-xl aspect-square" style="background:#f3ead2"></div>
+              <div class="swatch rounded-xl aspect-square" style="background:#2e7d5b"></div>
+              <div class="swatch rounded-xl aspect-square border border-line" style="background:#ffffff"></div>
+            </div>
+            <div class="rounded-xl2 bg-paper border border-line p-7">
+              <p class="font-display text-6xl tt leading-none">Aa</p>
+              <p class="text-ink-soft text-sm mt-3">Bricolage Grotesque · Display / Body</p>
+              <div class="mt-4 space-y-1.5">
+                <p class="font-display text-2xl tt">Bold headlines that lead.</p>
+                <p class="text-base">Readable body text that builds trust and tells your story clearly.</p>
+                <p class="text-xs tracking-[.25em] uppercase text-ink-soft">Captions &amp; labels</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS (vertical timeline) -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">How we build it</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">From blank page to brand book</h2>
+          </div>
+          <div class="vstep relative pl-14 space-y-8">
+            <span class="vrail"></span>
+            <div class="reveal relative"><span class="absolute -left-14 top-0 grid place-items-center h-10 w-10 rounded-full bg-accent text-paper font-display tt">1</span><h3 class="font-display text-xl tt">Discovery</h3><p class="text-ink-soft text-sm mt-1.5 leading-relaxed">Workshops and research to understand your business, audience and competitors.</p></div>
+            <div class="reveal relative" data-delay="1"><span class="absolute -left-14 top-0 grid place-items-center h-10 w-10 rounded-full bg-ink text-paper font-display tt">2</span><h3 class="font-display text-xl tt">Strategy</h3><p class="text-ink-soft text-sm mt-1.5 leading-relaxed">Positioning, messaging and the core idea your brand will stand for.</p></div>
+            <div class="reveal relative" data-delay="1"><span class="absolute -left-14 top-0 grid place-items-center h-10 w-10 rounded-full bg-ink text-paper font-display tt">3</span><h3 class="font-display text-xl tt">Identity design</h3><p class="text-ink-soft text-sm mt-1.5 leading-relaxed">Logo, colour, type and visual language — explored, refined and chosen with you.</p></div>
+            <div class="reveal relative" data-delay="2"><span class="absolute -left-14 top-0 grid place-items-center h-10 w-10 rounded-full bg-ink text-paper font-display tt">4</span><h3 class="font-display text-xl tt">System &amp; assets</h3><p class="text-ink-soft text-sm mt-1.5 leading-relaxed">Templates, collateral and ready-to-use files across every touchpoint.</p></div>
+            <div class="reveal relative" data-delay="2"><span class="absolute -left-14 top-0 grid place-items-center h-10 w-10 rounded-full bg-ink text-paper font-display tt">5</span><h3 class="font-display text-xl tt">Guidelines &amp; handoff</h3><p class="text-ink-soft text-sm mt-1.5 leading-relaxed">A complete brand book so anyone can use your brand correctly.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DELIVERABLES + WHY US -->
+      <section class="py-20 sm:py-28 bg-ink text-paper">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12">
+          <div>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">What's in your brand book</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Tangible deliverables, not just ideas</h2>
+            <div class="grid sm:grid-cols-2 gap-3 mt-8">
+              <div class="reveal flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4"><iconify-icon icon="lucide:check" class="text-accent"></iconify-icon><span class="text-sm">Logo suite &amp; lockups</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4" data-delay="1"><iconify-icon icon="lucide:check" class="text-accent"></iconify-icon><span class="text-sm">Colour &amp; type system</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4"><iconify-icon icon="lucide:check" class="text-accent"></iconify-icon><span class="text-sm">Brand voice &amp; messaging</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4" data-delay="1"><iconify-icon icon="lucide:check" class="text-accent"></iconify-icon><span class="text-sm">Templates &amp; collateral</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4"><iconify-icon icon="lucide:check" class="text-accent"></iconify-icon><span class="text-sm">Social &amp; ad kit</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4" data-delay="1"><iconify-icon icon="lucide:check" class="text-accent"></iconify-icon><span class="text-sm">Full guidelines PDF</span></div>
+            </div>
+          </div>
+          <div class="lg:pl-8">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Why BoostronixX</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Strategy-led, research-backed</h2>
+            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1">Since 2021 we've built 50+ brands across real estate, jewellery, EdTech and D2C. We don't decorate — we make decisions that hold up commercially and look beautiful doing it.</p>
+            <div class="reveal mt-7 rounded-2xl bg-white/5 border border-white/10 p-6 flex items-center gap-4" data-delay="1">
+              <span class="grid place-items-center h-12 w-12 rounded-full bg-accent text-paper shrink-0"><iconify-icon icon="lucide:badge-check" class="text-xl"></iconify-icon></span>
+              <p class="text-sm text-paper/70">Designed &amp; reviewed by the BoostronixX brand team — strategy, design and copy under one roof.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Branding questions</h2></div>
+          <div class="space-y-3">
+            <div class="faq border border-line rounded-2xl px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">How long does a brand identity take?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Most brand identities take 3–5 weeks depending on scope and the number of review rounds. A full strategy-plus-identity engagement can run a little longer — we'll share a clear timeline in your proposal.</div></div></div>
+            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Do I own the logo and files?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. On final payment, full rights to your logo, identity and source files transfer to you, along with editable files where applicable.</div></div></div>
+            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Can you rebrand an existing business?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Absolutely. We handle full rebrands and refreshes — carrying forward the equity worth keeping while modernising everything that's holding you back.</div></div></div>
+            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Do you build the website too?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes — branding, UI/UX and website design are all in-house, so your new identity rolls out seamlessly across every channel.</div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED + CTA -->
+      <section class="pb-20 sm:pb-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Pairs well with</p>
+          <div class="grid sm:grid-cols-3 gap-4 mb-12">
+            <a href="ui-ux-design.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:figma"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">UI/UX Design</span><span class="text-xs text-ink-soft">Identity in product</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <a href="website-design.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Website Design</span><span class="text-xs text-ink-soft">Brand, live</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <a href="social-media-marketing.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Social Media</span><span class="text-xs text-ink-soft">Brand in the feed</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+          </div>
+          <div class="relative rounded-xl2 bg-accent text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.12]"></div>
+            <div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's build a brand worth remembering</h2>
+              <p class="text-paper/90 mt-5 text-lg max-w-xl">Book a brand discovery call — we'll explore your positioning and show you what's possible.</p>
+              <div class="flex flex-wrap items-center gap-3 mt-9">
+                <a href="contact-us.html" class="inline-flex items-center gap-2 rounded-full bg-ink text-paper px-7 py-4 font-medium hover:bg-paper hover:text-ink transition">Book a discovery call <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                <a href="portfolio.html" class="inline-flex items-center gap-2 rounded-full bg-paper/15 border border-paper/30 px-7 py-4 font-medium hover:bg-paper hover:text-ink transition"><iconify-icon icon="lucide:briefcase"></iconify-icon> See brands we've built</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Services</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="seo-services.html" class="hover:text-accent">SEO Services</a></li><li><a href="services.html" class="hover:text-accent">All Services</a></li><li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li><li><a href="contact-us.html" class="hover:text-accent">Get a Quote</a></li></ul></div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Company</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="about-us.html" class="hover:text-accent">About Us</a></li><li><a href="faq.html" class="hover:text-accent">FAQ</a></li><li><a href="sitemap.html" class="hover:text-accent">Sitemap</a></li><li><a href="contact-us.html" class="hover:text-accent">Contact</a></li></ul></div>
+          <div class="lg:col-span-3"><h4 class="font-display text-sm mb-4">Get in touch</h4><address class="not-italic space-y-3 text-sm text-ink-soft"><p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p><p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p><p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p><p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p></address></div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5"><a href="privacy-policy.html" class="hover:text-accent">Privacy</a><a href="terms-and-conditions.html" class="hover:text-accent">Terms</a><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a><a href="sitemap.html" class="hover:text-accent">Sitemap</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="services.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-accent"><iconify-icon icon="lucide:layout-grid" class="text-[22px]"></iconify-icon>Services</a>
+        <a href="portfolio.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:briefcase" class="text-[22px]"></iconify-icon>Work</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@graph": [
+        { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.boostronixx.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.boostronixx.com/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Brand Consulting", "item": "https://www.boostronixx.com/services/brand-consulting/" } ] },
+        { "@type": "Service", "serviceType": "Brand Consulting & Identity Design", "name": "Brand Consulting", "description": "Brand strategy, positioning, naming, logo, visual identity and brand guidelines for ambitious businesses.", "provider": { "@type": "Organization", "name": "BoostronixX", "url": "https://www.boostronixx.com/" }, "areaServed": [ { "@type": "City", "name": "Jaipur" }, { "@type": "Country", "name": "India" } ], "url": "https://www.boostronixx.com/services/brand-consulting/" },
+        { "@type": "FAQPage", "mainEntity": [
+          { "@type": "Question", "name": "How long does a brand identity take?", "acceptedAnswer": { "@type": "Answer", "text": "Most brand identities take 3–5 weeks depending on scope and review rounds; full strategy-plus-identity engagements can run longer. We share a clear timeline in your proposal." } },
+          { "@type": "Question", "name": "Do I own the logo and files?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On final payment, full rights to your logo, identity and source files transfer to you, with editable files where applicable." } },
+          { "@type": "Question", "name": "Can you rebrand an existing business?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We handle full rebrands and refreshes — keeping the equity worth keeping while modernising what's holding you back." } },
+          { "@type": "Question", "name": "Do you build the website too?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — branding, UI/UX and website design are in-house, so your identity rolls out seamlessly across channels." } } ] } ] }
+    </script>
+
+    <!-- SCRIPTS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        window.addEventListener("scroll", function () { if (bar) bar.classList.toggle("shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]", window.scrollY > 20); });
+        var mm = document.getElementById("mobileMenu"), panel = document.getElementById("menuPanel"), menuBtn = document.getElementById("menuBtn");
+        function openMenu(){ mm.classList.remove("hidden"); requestAnimationFrame(function(){ panel.classList.remove("translate-x-full"); }); document.body.style.overflow="hidden"; }
+        function closeMenu(){ panel.classList.add("translate-x-full"); document.body.style.overflow=""; setTimeout(function(){ mm.classList.add("hidden"); },300); }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm) [].forEach.call(mm.querySelectorAll("[data-close]"), function(e){ e.addEventListener("click", closeMenu); });
+        var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+        [].forEach.call(document.querySelectorAll(".reveal"), function(e){ io.observe(e); });
+        [].forEach.call(document.querySelectorAll(".faq-head"), function(b){ b.addEventListener("click", function(){ var i=b.closest(".faq"); [].forEach.call(document.querySelectorAll(".faq"), function(f){ if(f!==i) f.classList.remove("open"); }); i.classList.toggle("open"); }); });
+      });
+    </script>
+  </body>
+</html>

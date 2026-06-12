@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Edoovi — Smart ERP SaaS for Schools · Case Study | BoostronixX</title>
+    <meta
+      name="description"
+      content="How BoostronixX designed Edoovi — an AI-powered ERP and mobile-app ecosystem that connects administration, teachers, parents and students on one platform. UI/UX design & consulting case study."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://www.boostronixx.com/portfolio/edoovi-erp/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="BoostronixX" />
+    <meta property="og:title" content="Edoovi — Smart ERP SaaS for Schools · Case Study" />
+    <meta property="og:url" content="https://www.boostronixx.com/portfolio/edoovi-erp/" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a;
+        --color-ink-soft: #4a463f;
+        --color-accent: #fa5539;
+        --color-paper: #ffffff;
+        --color-surface: #f6f4f1;
+        --color-surface-2: #efece7;
+        --color-line: #e6e1da;
+        --font-display: var(--brand-font);
+        --font-sans: var(--brand-font);
+        --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow {
+        background-color: var(--color-ink);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease, color 0.25s ease;
+        &:hover { background-color: var(--color-accent); color: var(--color-paper); }
+      }
+      @utility btn-glow-accent {
+        background-color: var(--color-accent);
+        color: var(--color-paper);
+        transition: background-color 0.25s ease;
+      }
+      @utility btn-glow-light {
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        border: 1px solid var(--color-line);
+        transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+        &:hover { background-color: var(--color-accent); color: var(--color-paper); border-color: var(--color-accent); }
+      }
+      @utility sheen-text { color: inherit; }
+      @utility sheen-text-dark { color: inherit; }
+      @utility sheen-text-light { color: inherit; }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; --ink: #0a0a0a; }
+      html, body { background: #fff; color: var(--ink); font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; }
+      h1, h2, h3 { font-family: var(--brand-font); }
+      .grid-lines {
+        background-image: linear-gradient(to right, rgba(10, 10, 10, 0.045) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
+        background-size: 72px 72px;
+      }
+      .grid-lines-d {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+      .reveal.in { opacity: 1; transform: none; }
+      [data-delay="1"] { transition-delay: 0.08s; }
+      [data-delay="2"] { transition-delay: 0.16s; }
+      [data-delay="3"] { transition-delay: 0.24s; }
+      [data-delay="4"] { transition-delay: 0.32s; }
+      @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+      .nav-link { position: relative; }
+      .nav-link::after { content: ""; position: absolute; left: 0; bottom: -5px; height: 2px; width: 0; background: var(--accent); transition: width 0.3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .spin { animation: spin 16s linear infinite; }
+      .orb { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.4; pointer-events: none; z-index: 0; }
+      @keyframes floatA { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(26px,-32px) scale(1.1); } }
+      .orb-a { animation: floatA 13s ease-in-out infinite; }
+
+      /* reading progress */
+      #progressWrap { position: fixed; left: 0; right: 0; top: 0; height: 3px; z-index: 55; }
+      #progressBar { height: 100%; width: 0%; background: var(--accent); transition: width 0.1s linear; }
+
+      /* animated bars / draw / pop */
+      .bar { height: 8%; border-radius: 6px 6px 2px 2px; transition: height 1.1s cubic-bezier(0.2,0.7,0.2,1); }
+      .reveal.in .bar { height: var(--h); }
+      .pop { opacity: 0; transform: scale(0.94); }
+      .reveal.in .pop { animation: popin 0.55s cubic-bezier(0.2,0.7,0.2,1) forwards; }
+      .reveal.in .pop.p1 { animation-delay: 0.08s; } .reveal.in .pop.p2 { animation-delay: 0.16s; }
+      .reveal.in .pop.p3 { animation-delay: 0.24s; } .reveal.in .pop.p4 { animation-delay: 0.32s; }
+      .reveal.in .pop.p5 { animation-delay: 0.4s; } .reveal.in .pop.p6 { animation-delay: 0.48s; }
+      @keyframes popin { to { opacity: 1; transform: none; } }
+      @keyframes ping2 { 0%{transform:scale(1);opacity:.6} 80%,100%{transform:scale(2.3);opacity:0} }
+      .live { position: relative; }
+      .live::after { content:""; position:absolute; inset:0; border-radius:50%; background:var(--accent); animation: ping2 1.8s cubic-bezier(0,0,.2,1) infinite; }
+      .caret { display:inline-block; width:2px; height:1em; background:var(--accent); margin-left:2px; vertical-align:-2px; animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50%{opacity:0} }
+
+      /* challenge/feature card hover */
+      .lift { transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+      .lift:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 30px 60px -45px rgba(10,10,10,0.4); }
+
+      /* stakeholder chip */
+      .stake { transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+      .stake:hover { transform: translateY(-2px); background: var(--ink); color: #fff; border-color: var(--ink); }
+      .stake:hover .stake-i { color: var(--accent); }
+
+      @media (prefers-reduced-motion: reduce) { .orb-a, .live::after, .caret, .progressBar { animation: none; } .pop { opacity: 1; transform: none; } }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <div id="progressWrap"><div id="progressBar"></div></div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
+          <a href="index.html" class="flex items-center gap-2 shrink-0"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="portfolio.html" class="nav-link active text-ink">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="index.html#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow-accent hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
+              <iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon>
+              <span class="relative z-10 sheen-text-light">Let's Build Together</span>
+            </a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:menu"></iconify-icon></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
+          <a href="services.html" data-close class="py-3 border-b border-line flex items-center justify-between">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="portfolio.html" data-close class="py-3 border-b border-line flex items-center justify-between text-accent">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="index.html#insights" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
+          <span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span>
+          <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
+        </a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+        <span class="orb orb-a" style="width:300px;height:300px;background:#fa5539;top:0;right:-40px"></span>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a>
+            <iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <a href="portfolio.html" class="hover:text-accent">Portfolio</a>
+            <iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
+            <span class="text-ink font-medium">Edoovi ERP</span>
+          </nav>
+
+          <div class="grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6">
+              <div class="reveal flex flex-wrap items-center gap-2 text-xs mb-5">
+                <span class="rounded-full bg-accent/10 text-accent font-medium px-3 py-1.5">SaaS Software</span>
+                <span class="rounded-full border border-line px-3 py-1.5">EdTech</span>
+                <span class="rounded-full border border-line px-3 py-1.5">2025</span>
+              </div>
+              <h1 class="reveal font-display text-[2.4rem] leading-[1.0] sm:text-6xl tt">
+                Edoovi — smart ERP for <span class="text-accent">modern schools</span>
+              </h1>
+              <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">
+                Streamline operations, connect every stakeholder and scale faster —
+                an all-in-one, AI-powered ERP and mobile-app ecosystem, designed end
+                to end by BoostronixX.
+              </p>
+              <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
+                <a href="#overview" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Explore the case study</span><iconify-icon icon="lucide:arrow-down" class="relative z-10"></iconify-icon></a>
+                <a href="contact-us.html" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:rocket" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">Build something like this</span></a>
+              </div>
+            </div>
+
+            <!-- hero dashboard mock -->
+            <div class="lg:col-span-6 reveal" data-delay="1">
+              <div class="rounded-xl2 bg-[#0e0e0e] border border-white/10 p-5 sm:p-7 overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center gap-2 text-paper"><span class="grid place-items-center h-7 w-7 rounded-lg bg-accent text-xs font-bold">E</span><span class="font-display tt text-sm">Edoovi · Admin</span></div>
+                  <span class="inline-flex items-center gap-1.5 rounded-full bg-white/8 px-2.5 py-1 text-[10px] text-paper/60"><span class="live inline-block h-1.5 w-1.5 rounded-full bg-accent"></span> live</span>
+                </div>
+                <div class="grid grid-cols-[70px_1fr] gap-3">
+                  <div class="rounded-xl bg-white/5 p-2 space-y-2">
+                    <span class="pop p1 grid place-items-center h-9 rounded-lg bg-accent/80 text-paper text-sm"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon></span>
+                    <span class="pop p2 grid place-items-center h-9 rounded-lg bg-white/10 text-paper/60 text-sm"><iconify-icon icon="lucide:users"></iconify-icon></span>
+                    <span class="pop p3 grid place-items-center h-9 rounded-lg bg-white/10 text-paper/60 text-sm"><iconify-icon icon="lucide:calendar-check"></iconify-icon></span>
+                    <span class="pop p4 grid place-items-center h-9 rounded-lg bg-white/10 text-paper/60 text-sm"><iconify-icon icon="lucide:bus"></iconify-icon></span>
+                    <span class="pop p5 grid place-items-center h-9 rounded-lg bg-white/10 text-paper/60 text-sm"><iconify-icon icon="lucide:wallet"></iconify-icon></span>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-3 gap-2">
+                      <div class="pop p1 rounded-xl bg-white/5 p-2.5"><p class="text-[9px] text-paper/40">Students</p><p class="font-display tt text-paper text-lg"><span class="count" data-to="2480">0</span></p></div>
+                      <div class="pop p2 rounded-xl bg-white/5 p-2.5"><p class="text-[9px] text-paper/40">Attendance</p><p class="font-display tt text-accent text-lg"><span class="count" data-to="96">0</span>%</p></div>
+                      <div class="pop p3 rounded-xl bg-white/5 p-2.5"><p class="text-[9px] text-paper/40">On route</p><p class="font-display tt text-paper text-lg"><span class="count" data-to="32">0</span></p></div>
+                    </div>
+                    <div class="rounded-xl bg-white/5 p-3">
+                      <div class="flex items-center justify-between mb-2"><span class="text-[10px] text-paper/40">Fee collection · this term</span><span class="text-[10px] text-accent">+<span class="count" data-to="18">0</span>%</span></div>
+                      <div class="flex items-end gap-1.5 h-20">
+                        <div class="bar" style="--h:40%;width:11%;background:linear-gradient(180deg,#ffffff,transparent);opacity:.3"></div>
+                        <div class="bar" style="--h:55%;width:11%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
+                        <div class="bar" style="--h:48%;width:11%;background:linear-gradient(180deg,#ffffff,transparent);opacity:.3"></div>
+                        <div class="bar" style="--h:70%;width:11%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
+                        <div class="bar" style="--h:60%;width:11%;background:linear-gradient(180deg,#ffffff,transparent);opacity:.3"></div>
+                        <div class="bar" style="--h:84%;width:11%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
+                        <div class="bar" style="--h:96%;width:11%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
+                      </div>
+                    </div>
+                    <div class="pop p4 rounded-xl bg-white/5 p-2.5 flex items-center gap-2 text-paper/70 text-[11px]"><iconify-icon icon="lucide:sparkles" class="text-accent"></iconify-icon> AI insight: 3 classes need attendance follow-up<span class="caret"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== OVERVIEW FACTS ===================== -->
+      <section id="overview" class="border-y border-line bg-surface">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-2 lg:grid-cols-4 gap-px bg-line">
+          <div class="reveal bg-surface p-6"><p class="text-xs text-ink-soft">Client</p><p class="font-display text-xl tt mt-1">Edoovi ERP</p></div>
+          <div class="reveal bg-surface p-6" data-delay="1"><p class="text-xs text-ink-soft">Category</p><p class="font-display text-xl tt mt-1">SaaS Software</p></div>
+          <div class="reveal bg-surface p-6" data-delay="2"><p class="text-xs text-ink-soft">Engagement</p><p class="font-display text-xl tt mt-1">UI/UX &amp; Consulting</p></div>
+          <div class="reveal bg-surface p-6" data-delay="3"><p class="text-xs text-ink-soft">Started</p><p class="font-display text-xl tt mt-1">Jan 2025</p></div>
+        </div>
+      </section>
+
+      <!-- ===================== CHALLENGE ===================== -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-4">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The challenge</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Schools were running on fragmented, manual systems</h2>
+            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">Institutions juggled disconnected tools, paperwork and phone calls — slowing everyone down and leaving leaders without a real-time view.</p>
+          </div>
+          <div class="lg:col-span-8 grid sm:grid-cols-2 gap-4">
+            <div class="reveal lift rounded-2xl border border-line p-6"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:unplug"></iconify-icon></span><h3 class="font-display text-lg tt mt-4">Fragmented communication</h3><p class="text-ink-soft text-sm mt-1.5">Stakeholders scattered across WhatsApp, calls and registers.</p></div>
+            <div class="reveal lift rounded-2xl border border-line p-6" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:file-clock"></iconify-icon></span><h3 class="font-display text-lg tt mt-4">Manual, error-prone work</h3><p class="text-ink-soft text-sm mt-1.5">Paperwork causing delays, mistakes and duplicated effort.</p></div>
+            <div class="reveal lift rounded-2xl border border-line p-6" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:eye-off"></iconify-icon></span><h3 class="font-display text-lg tt mt-4">No real-time tracking</h3><p class="text-ink-soft text-sm mt-1.5">Academic and operational data was always a step behind.</p></div>
+            <div class="reveal lift rounded-2xl border border-line p-6" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:puzzle"></iconify-icon></span><h3 class="font-display text-lg tt mt-4">Poor integration</h3><p class="text-ink-soft text-sm mt-1.5">Departments worked in silos with no shared source of truth.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SOLUTION ===================== -->
+      <section class="py-20 sm:py-28 bg-ink text-paper relative overflow-hidden">
+        <div class="absolute inset-0 grid-lines-d opacity-60"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The solution</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">One AI-powered platform for the whole school</h2>
+            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1">We designed an ERP and mobile-app ecosystem that streamlines operations and connects every stakeholder — from the front office to the parent's pocket.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6"><span class="grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon></span><h3 class="font-display tt mt-4">Centralised dashboard</h3><p class="text-paper/55 text-sm mt-1.5">A single control room for the whole institution.</p></div>
+            <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl"><iconify-icon icon="lucide:smartphone"></iconify-icon></span><h3 class="font-display tt mt-4">Role-based apps</h3><p class="text-paper/55 text-sm mt-1.5">Tailored views for every kind of user.</p></div>
+            <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl"><iconify-icon icon="lucide:users-round"></iconify-icon></span><h3 class="font-display tt mt-4">Parent &amp; student apps</h3><p class="text-paper/55 text-sm mt-1.5">Everyone stays in the loop, in real time.</p></div>
+            <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6" data-delay="3"><span class="grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl"><iconify-icon icon="lucide:settings-2"></iconify-icon></span><h3 class="font-display tt mt-4">Automated admin</h3><p class="text-paper/55 text-sm mt-1.5">Routine tasks handled without the busywork.</p></div>
+            <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6" data-delay="4"><span class="grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl"><iconify-icon icon="lucide:radio"></iconify-icon></span><h3 class="font-display tt mt-4">Real-time comms</h3><p class="text-paper/55 text-sm mt-1.5">Instant updates across every stakeholder.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== STAKEHOLDERS ===================== -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-10">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Built for everyone</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Every stakeholder, one ecosystem</h2>
+            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">We mapped ten distinct roles and designed the right experience for each — so the whole school moves together.</p>
+          </div>
+          <div class="reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3" data-delay="1">
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:briefcase"></iconify-icon></span><span class="font-medium text-sm">Director</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:graduation-cap"></iconify-icon></span><span class="font-medium text-sm">Principal</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:clipboard-list"></iconify-icon></span><span class="font-medium text-sm">Admin</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:phone-call"></iconify-icon></span><span class="font-medium text-sm">Receptionist</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:presentation"></iconify-icon></span><span class="font-medium text-sm">Teacher</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:library"></iconify-icon></span><span class="font-medium text-sm">Librarian</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:bus-front"></iconify-icon></span><span class="font-medium text-sm">Driver</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:shield"></iconify-icon></span><span class="font-medium text-sm">Security</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:users"></iconify-icon></span><span class="font-medium text-sm">Parent</span></div>
+            <div class="stake rounded-2xl border border-line p-4 flex flex-col items-center text-center gap-2"><span class="stake-i text-accent text-2xl"><iconify-icon icon="lucide:backpack"></iconify-icon></span><span class="font-medium text-sm">Student</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FEATURES + SHOWCASE ===================== -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Key features</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">A cloud system that runs the whole day</h2>
+            <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1">From morning attendance to evening fee reports — academics, transport, communication and finance, integrated with real-time access and automation.</p>
+            <div class="grid sm:grid-cols-2 gap-3 mt-8">
+              <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4"><span class="text-accent text-xl"><iconify-icon icon="lucide:book-open"></iconify-icon></span><span class="font-medium text-sm">Academics</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:calendar-check"></iconify-icon></span><span class="font-medium text-sm">Attendance</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4"><span class="text-accent text-xl"><iconify-icon icon="lucide:message-square"></iconify-icon></span><span class="font-medium text-sm">Communication</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:bus"></iconify-icon></span><span class="font-medium text-sm">Transport</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4"><span class="text-accent text-xl"><iconify-icon icon="lucide:wallet"></iconify-icon></span><span class="font-medium text-sm">Finance &amp; fees</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:cloud"></iconify-icon></span><span class="font-medium text-sm">Cloud &amp; automation</span></div>
+            </div>
+          </div>
+          <!-- parent app showcase -->
+          <div class="reveal flex justify-center" data-delay="1">
+            <div class="w-[290px] rounded-[2.4rem] bg-[#0e0e0e] border border-white/12 p-4 shadow-[0_50px_100px_-50px_rgba(10,10,10,.6)]">
+              <div class="flex justify-center"><span class="h-1.5 w-14 rounded-full bg-white/15"></span></div>
+              <div class="mt-4 flex items-center justify-between text-paper">
+                <div class="flex items-center gap-2"><span class="grid place-items-center h-8 w-8 rounded-lg bg-accent text-xs font-bold">E</span><div class="leading-tight"><p class="text-sm font-semibold">Hi, Meera</p><p class="text-[10px] text-paper/40">Parent · Class 6-B</p></div></div>
+                <span class="relative grid place-items-center h-8 w-8 rounded-full bg-white/8 text-paper"><iconify-icon icon="lucide:bell"></iconify-icon><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-accent"></span></span>
+              </div>
+              <div class="grid grid-cols-2 gap-2.5 mt-4">
+                <div class="pop p1 rounded-2xl bg-white/5 p-3.5"><iconify-icon icon="lucide:calendar-check" class="text-accent text-xl"></iconify-icon><p class="text-[10px] text-paper/45 mt-2">Attendance</p><p class="font-display tt text-paper">Present</p></div>
+                <div class="pop p2 rounded-2xl bg-white/5 p-3.5"><iconify-icon icon="lucide:book-open" class="text-accent text-xl"></iconify-icon><p class="text-[10px] text-paper/45 mt-2">Homework</p><p class="font-display tt text-paper"><span class="count" data-to="3">0</span> new</p></div>
+                <div class="pop p3 rounded-2xl bg-white/5 p-3.5"><iconify-icon icon="lucide:bus" class="text-accent text-xl"></iconify-icon><p class="text-[10px] text-paper/45 mt-2">Bus arriving</p><p class="font-display tt text-paper"><span class="count" data-to="5">0</span> min</p></div>
+                <div class="pop p4 rounded-2xl bg-white/5 p-3.5"><iconify-icon icon="lucide:wallet" class="text-accent text-xl"></iconify-icon><p class="text-[10px] text-paper/45 mt-2">Term fees</p><p class="font-display tt text-accent">Paid</p></div>
+              </div>
+              <div class="mt-3 rounded-2xl bg-white/5 p-3 flex items-center gap-2 text-paper/70 text-[11px]"><iconify-icon icon="lucide:message-circle" class="text-accent"></iconify-icon> Ms. Rao: "Great progress in maths!"</div>
+              <div class="mt-3 rounded-full bg-accent text-paper text-center text-xs font-medium py-2.5">Open report card</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== OUTCOMES ===================== -->
+      <section class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The outcome</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">From scattered to seamless</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="reveal rounded-2xl border border-line p-6"><span class="text-accent text-2xl"><iconify-icon icon="lucide:layers"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">One source of truth</h3><p class="text-ink-soft text-sm mt-1.5">Every department working from the same live data.</p></div>
+            <div class="reveal rounded-2xl border border-line p-6" data-delay="1"><span class="text-accent text-2xl"><iconify-icon icon="lucide:zap"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Less manual work</h3><p class="text-ink-soft text-sm mt-1.5">Routine admin automated, freeing up staff time.</p></div>
+            <div class="reveal rounded-2xl border border-line p-6" data-delay="2"><span class="text-accent text-2xl"><iconify-icon icon="lucide:radar"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Real-time visibility</h3><p class="text-ink-soft text-sm mt-1.5">Leaders see academics and operations as they happen.</p></div>
+            <div class="reveal rounded-2xl border border-line p-6" data-delay="3"><span class="text-accent text-2xl"><iconify-icon icon="lucide:heart-handshake"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Connected community</h3><p class="text-ink-soft text-sm mt-1.5">Parents, students and staff aligned on one platform.</p></div>
+          </div>
+
+          <!-- pull quote -->
+          <div class="reveal mt-12 rounded-xl2 bg-surface border border-line p-8 sm:p-12 relative overflow-hidden">
+            <iconify-icon icon="lucide:quote" class="absolute right-6 top-6 text-6xl text-accent/10"></iconify-icon>
+            <p class="font-display text-2xl sm:text-3xl tt leading-snug max-w-3xl relative">"We set out to replace a tangle of manual processes with one calm, connected system — and design every screen so it just makes sense, for a principal or a parent."</p>
+            <p class="text-ink-soft text-sm mt-5">— BoostronixX · Product &amp; Design team</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== NEXT / CTA ===================== -->
+      <section class="pb-20 sm:pb-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-5">
+          <!-- next project -->
+          <a href="portfolio.html" class="reveal group rounded-xl2 border border-line p-8 flex items-center justify-between hover:border-accent transition">
+            <div>
+              <p class="text-xs text-ink-soft mb-2">Back to</p>
+              <h3 class="font-display text-2xl sm:text-3xl tt">All projects</h3>
+              <p class="text-ink-soft text-sm mt-1">See the rest of our work</p>
+            </div>
+            <span class="grid place-items-center h-12 w-12 rounded-full border border-line group-hover:bg-accent group-hover:border-accent group-hover:text-paper transition"><iconify-icon icon="lucide:layout-grid" class="text-xl"></iconify-icon></span>
+          </a>
+          <!-- cta -->
+          <div class="reveal rounded-xl2 bg-ink text-paper p-8 relative overflow-hidden" data-delay="1">
+            <div class="absolute inset-0 grid-lines-d opacity-60"></div>
+            <div class="relative">
+              <h3 class="font-display text-2xl sm:text-3xl tt">Have a product in mind?</h3>
+              <p class="text-paper/60 mt-2 max-w-sm">Let's design it end to end — strategy, UI/UX and a system that scales.</p>
+              <a href="contact-us.html" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-6 font-medium"><span class="relative z-10 sheen-text-light">Start your project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Company</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="about-us.html" class="hover:text-accent">About Us</a></li>
+              <li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li>
+              <li><a href="faq.html" class="hover:text-accent">FAQ</a></li>
+              <li><a href="contact-us.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="privacy-policy.html" class="hover:text-accent">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html" class="hover:text-accent">Terms &amp; Conditions</a></li>
+              <li><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3">
+            <h4 class="font-display text-sm mb-4">Get in touch</h4>
+            <address class="not-italic space-y-3 text-sm text-ink-soft">
+              <p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p>
+              <p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p>
+              <p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p>
+              <p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p>
+            </address>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5">
+            <a href="privacy-policy.html" class="hover:text-accent">Privacy</a>
+            <a href="terms-and-conditions.html" class="hover:text-accent">Terms</a>
+            <a href="disclaimer.html" class="hover:text-accent">Disclaimer</a>
+            <a href="sitemap.html" class="hover:text-accent">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== MOBILE BOTTOM NAV ===================== -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon>Home</a>
+        <a href="portfolio.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-accent"><iconify-icon icon="lucide:briefcase" class="text-[22px]"></iconify-icon>Work</a>
+        <a href="faq.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:help-circle" class="text-[22px]"></iconify-icon>FAQ</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        var progress = document.getElementById("progressBar");
+        function onScroll() {
+          if (bar) bar.classList.toggle("shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]", window.scrollY > 20);
+          if (progress) {
+            var h = document.documentElement;
+            var max = h.scrollHeight - h.clientHeight;
+            progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        var mm = document.getElementById("mobileMenu"), panel = document.getElementById("menuPanel"), menuBtn = document.getElementById("menuBtn");
+        function openMenu() { mm.classList.remove("hidden"); requestAnimationFrame(function () { panel.classList.remove("translate-x-full"); }); document.body.style.overflow = "hidden"; }
+        function closeMenu() { panel.classList.add("translate-x-full"); document.body.style.overflow = ""; setTimeout(function () { mm.classList.add("hidden"); }, 300); }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm) [].forEach.call(mm.querySelectorAll("[data-close]"), function (e) { e.addEventListener("click", closeMenu); });
+
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        [].forEach.call(document.querySelectorAll(".reveal"), function (e) { io.observe(e); });
+
+        var cio = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var el = e.target, to = +el.dataset.to, c = 0, s = Math.max(1, Math.round(to / 45));
+            var t = setInterval(function () { c += s; if (c >= to) { c = to; clearInterval(t); } el.textContent = to >= 1000 ? c.toLocaleString("en-IN") : c; }, 20);
+            cio.unobserve(el);
+          });
+        }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+        [].forEach.call(document.querySelectorAll(".count"), function (c) { cio.observe(c); });
+      });
+    </script>
+  </body>
+</html>
