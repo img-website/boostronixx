@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blog — Branding, SEO & Growth Insights | BoostronixX</title>
+    <meta name="description" content="Practical insights on branding, SEO, social media, performance marketing and design from the BoostronixX team in Jaipur. Ideas you can actually use to grow." />
+    <meta name="keywords" content="branding blog, SEO tips, digital marketing blog, social media marketing, growth marketing, Jaipur agency blog" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="BoostronixX" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="geo.region" content="IN-RJ" />
+    <link rel="canonical" href="https://www.boostronixx.com/blog/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BoostronixX" />
+    <meta property="og:title" content="Blog — Branding, SEO & Growth Insights | BoostronixX" />
+    <meta property="og:description" content="Ideas you can actually use to grow — branding, SEO, social, ads and design." />
+    <meta property="og:url" content="https://www.boostronixx.com/blog/" />
+    <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="brandFont" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0a0a0a; --color-ink-soft: #4a463f; --color-accent: #fa5539;
+        --color-paper: #ffffff; --color-surface: #f6f4f1; --color-surface-2: #efece7; --color-line: #e6e1da;
+        --font-display: var(--brand-font); --font-sans: var(--brand-font); --radius-xl2: 1.75rem;
+      }
+      @utility btn-glow { background-color: var(--color-ink); color: var(--color-paper); transition: background-color .25s ease, color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); } }
+      @utility btn-glow-accent { background-color: var(--color-accent); color: var(--color-paper); transition: background-color .25s ease; }
+      @utility btn-glow-light { background-color: var(--color-paper); color: var(--color-ink); border: 1px solid var(--color-line); transition: background-color .25s ease, color .25s ease, border-color .25s ease; &:hover { background-color: var(--color-accent); color: var(--color-paper); border-color: var(--color-accent); } }
+      @utility sheen-text { color: inherit; } @utility sheen-text-light { color: inherit; }
+    </style>
+
+    <style>
+      :root { --brand-font: "Bricolage Grotesque", system-ui, sans-serif; --accent: #fa5539; --ink: #0a0a0a; }
+      html, body { background: #fff; color: var(--ink); font-family: var(--brand-font); overflow-x: clip; }
+      ::selection { background: #fa5539; color: #fff; }
+      .font-display { font-family: var(--brand-font); font-weight: 700; letter-spacing: -0.03em; }
+      .tt { letter-spacing: -0.03em; } h1,h2,h3 { font-family: var(--brand-font); }
+      /* visible keyboard focus for a11y */
+      a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+      .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink); color: #fff; padding: .75rem 1.25rem; border-radius: 0 0 .75rem 0; font-weight: 600; }
+      .skip-link:focus { left: 0; }
+      .grid-lines { background-image: linear-gradient(to right, rgba(10,10,10,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,10,.045) 1px, transparent 1px); background-size: 72px 72px; }
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+      .reveal.in { opacity: 1; transform: none; }
+      [data-delay="1"]{transition-delay:.07s}[data-delay="2"]{transition-delay:.14s}[data-delay="3"]{transition-delay:.2s}
+      @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} }
+      .nav-link { position: relative; }
+      .nav-link::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--accent); transition:width .3s ease; }
+      .nav-link:hover::after, .nav-link.active::after { width:100%; }
+      .imgph { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; isolation:isolate; background:#efece7; }
+      .imgph > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+      .imgph .lbl { position:relative; z-index:1; text-align:center; padding:1rem; max-width:92%; }
+      .imgph .lbl b { font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:#7a7268; font-weight:700; }
+      .imgph .lbl span { display:block; margin-top:.25rem; font-size:.65rem; color:#a39a8e; line-height:1.4; }
+      /* post card */
+      .post { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+      .post:hover { transform: translateY(-5px); }
+      .post .thumb img, .post .thumb .ph-zoom { transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+      .post:hover .thumb img, .post:hover .thumb .ph-zoom { transform: scale(1.05); }
+      .post:hover h3 { color: var(--accent); }
+      .post h3 { transition: color .2s ease; }
+      .post.hide { display: none; }
+      /* chips */
+      .chip { transition: background-color .2s, color .2s, border-color .2s; }
+      .chip.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+      mark { background: rgba(250,85,57,.18); color: inherit; border-radius:3px; padding:0 2px; }
+      .gradient-thumb { background-size: cover; }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
+          <a href="index.html" class="flex items-center gap-2 shrink-0" aria-label="BoostronixX home"><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft" aria-label="Primary">
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="portfolio.html" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="blog.html" class="nav-link active text-ink" aria-current="page">Blog</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="group btn-glow-accent hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium"><iconify-icon icon="lucide:sparkles" class="relative z-10 text-base" aria-hidden="true"></iconify-icon><span class="relative z-10 sheen-text-light">Let's Build Together</span></a>
+            <button id="menuBtn" aria-label="Open menu" class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:menu" aria-hidden="true"></iconify-icon></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
+      <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-7" />
+          <button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl"><iconify-icon icon="lucide:x" aria-hidden="true"></iconify-icon></button>
+        </div>
+        <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt" aria-label="Mobile">
+          <a href="services.html" data-close class="py-3 border-b border-line flex items-center justify-between">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span></a>
+          <a href="portfolio.html" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span></a>
+          <a href="faq.html" data-close class="py-3 border-b border-line flex items-center justify-between">FAQ<span class="text-accent"><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span></a>
+          <a href="blog.html" data-close class="py-3 border-b border-line flex items-center justify-between text-accent">Blog<span class="text-accent"><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span></a>
+        </nav>
+        <a href="contact-us.html" data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium"><span class="relative z-10 sheen-text-light">Book a Free Strategy Call</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="relative pt-28 sm:pt-36 pb-10 grid-lines overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-accent">Home</a>
+            <iconify-icon icon="lucide:chevron-right" class="text-sm" aria-hidden="true"></iconify-icon>
+            <span class="text-ink font-medium" aria-current="page">Blog</span>
+          </nav>
+          <div class="grid lg:grid-cols-12 gap-8 items-end">
+            <div class="lg:col-span-8">
+              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><span class="h-2 w-2 rounded-full bg-accent" aria-hidden="true"></span> Insights from the studio</div>
+              <h1 class="reveal font-display text-[2.7rem] leading-[0.96] sm:text-7xl tt">Ideas worth<br class="hidden sm:block" /> your <span class="text-accent">time</span></h1>
+            </div>
+            <div class="lg:col-span-4">
+              <p class="reveal text-ink-soft leading-relaxed" data-delay="1">Practical thinking on branding, SEO, social, ads and design — written by the people who do the work, for people who want to grow.</p>
+            </div>
+          </div>
+          <!-- search -->
+          <div class="reveal mt-9 max-w-xl" data-delay="2">
+            <label for="blogSearch" class="sr-only">Search articles</label>
+            <div class="relative">
+              <iconify-icon icon="lucide:search" class="absolute left-5 top-1/2 -translate-y-1/2 text-xl text-ink-soft" aria-hidden="true"></iconify-icon>
+              <input id="blogSearch" type="text" placeholder="Search articles…" class="w-full rounded-full border border-line bg-paper py-4 pr-5 text-base outline-none focus:border-accent transition" style="padding-left:3.25rem" autocomplete="off" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED -->
+      <section class="py-10" aria-label="Featured article">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Featured</p>
+          <a href="blog-post.html" class="post reveal group grid lg:grid-cols-12 gap-6 lg:gap-10 items-center rounded-xl2 border border-line p-4 sm:p-6 hover:border-accent transition">
+            <div class="lg:col-span-5">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]">
+                <div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#fa5539,#ff8a5c)" aria-hidden="true"></div>
+                <img src="assets/img/blog-branding-vs-marketing.avif" alt="Illustration contrasting branding and marketing for a business" loading="lazy" onerror="this.remove()" />
+                <span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Editorial cover illustration for the featured article.</span></span>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="flex flex-wrap items-center gap-3 text-xs">
+                <span class="rounded-full bg-accent/10 text-accent font-medium px-3 py-1">Branding</span>
+                <span class="text-ink-soft inline-flex items-center gap-1.5"><iconify-icon icon="lucide:calendar" aria-hidden="true"></iconify-icon> <time datetime="2026-06-02">Jun 2, 2026</time></span>
+                <span class="text-ink-soft inline-flex items-center gap-1.5"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 8 min read</span>
+              </div>
+              <h2 class="mt-4"><span class="font-display text-3xl sm:text-5xl tt leading-[1.04] group-hover:text-accent transition">Branding vs. Marketing: what your business actually needs first</span></h2>
+              <p class="text-ink-soft mt-4 max-w-xl leading-relaxed">Everyone says you need both — but order matters. Here's a simple way to know whether to invest in your brand or your marketing right now, with a 2-minute self-test.</p>
+              <div class="flex items-center gap-3 mt-6">
+                <span class="grid place-items-center h-10 w-10 rounded-full bg-ink text-paper font-display" aria-hidden="true">A</span>
+                <div class="text-sm"><p class="font-medium">Aarav Sharma</p><p class="text-ink-soft text-xs">Brand Strategy Lead</p></div>
+                <span class="ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-ink group-hover:text-accent transition">Read article <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- FILTER + GRID -->
+      <section class="py-10 sm:py-14" aria-label="All articles">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5 mb-10">
+            <h2 class="reveal font-display text-2xl sm:text-3xl tt">Latest articles</h2>
+            <div id="chips" class="reveal flex flex-wrap gap-2" role="group" aria-label="Filter by category" data-delay="1">
+              <button class="chip active rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="all" aria-pressed="true">All</button>
+              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="branding" aria-pressed="false">Branding</button>
+              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="seo" aria-pressed="false">SEO</button>
+              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="social" aria-pressed="false">Social</button>
+              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="performance" aria-pressed="false">Ads</button>
+              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="design" aria-pressed="false">Design</button>
+            </div>
+          </div>
+
+          <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+            <!-- card template repeated -->
+            <a href="blog-post.html" class="post group block" data-cat="seo" data-title="local seo jaipur businesses playbook">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#0a0a0a,#3a3a3a)" aria-hidden="true"></div><img src="assets/img/blog-local-seo.avif" alt="Map pin over a city skyline representing local SEO" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Local SEO cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">SEO</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 7 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">Local SEO for Jaipur businesses: the 2026 playbook</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Show up when nearby customers search. A step-by-step local SEO guide.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-05-28">May 28, 2026</time> · Neha Verma</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="branding" data-title="7 signs your brand needs a refresh rebrand">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#fa5539,#2e1c16)" aria-hidden="true"></div><img src="assets/img/blog-brand-refresh.avif" alt="Before and after of a brand identity refresh" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Rebrand cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">Branding</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 6 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">7 signs your brand is overdue for a refresh</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">If these feel familiar, it's time to modernise your identity.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-05-20">May 20, 2026</time> · Aarav Sharma</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="social" data-title="instagram feed that sells social funnel">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#7c3aed,#fa5539)" aria-hidden="true"></div><img src="assets/img/blog-instagram.avif" alt="Phone showing a polished Instagram feed grid" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Instagram cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">Social</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 5 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">How to build an Instagram feed that actually sells</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Turn scrollers into customers with a feed built on intent.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-05-14">May 14, 2026</time> · Priya Nair</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="performance" data-title="roas framework ad spend waste meta google ads">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#0a0a0a,#fa5539)" aria-hidden="true"></div><img src="assets/img/blog-roas.avif" alt="Dashboard chart showing return on ad spend" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>ROAS cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">Ads</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 6 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">Stop wasting ad spend: a simple ROAS framework</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">A clear way to decide what to scale, pause or test next.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-05-08">May 8, 2026</time> · Rohit Mehta</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="design" data-title="high converting landing page anatomy">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#2e7d5b,#0a0a0a)" aria-hidden="true"></div><img src="assets/img/blog-landing.avif" alt="Wireframe of a high-converting landing page" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Landing page cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">Design</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 7 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">The anatomy of a high-converting landing page</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Every section that earns the click — in the right order.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-05-02">May 2, 2026</time> · Sana Kapoor</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="seo" data-title="content compounds seo beats ads long term">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#fa5539,#0a0a0a)" aria-hidden="true"></div><img src="assets/img/blog-content.avif" alt="Compounding growth chart for content marketing" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Content cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">SEO</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 8 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">Content that compounds: why SEO beats ads long-term</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Ads stop when you stop paying. Content keeps working.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-04-25">Apr 25, 2026</time> · Neha Verma</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="branding design" data-title="color psychology branding palette">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#d6457a,#fa5539)" aria-hidden="true"></div><img src="assets/img/blog-color.avif" alt="Colour palette swatches for brand identity" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Colour cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">Branding</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 5 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">Colour psychology in branding: choosing your palette</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">What your colours say before a single word is read.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-04-18">Apr 18, 2026</time> · Aarav Sharma</p></div>
+            </a>
+
+            <a href="blog-post.html" class="post group block" data-cat="social" data-title="followers to customers social funnel">
+              <div class="thumb imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#0fa3a3,#0a0a0a)" aria-hidden="true"></div><img src="assets/img/blog-funnel.avif" alt="Funnel turning followers into customers" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4 · 900×1200</b><span>Funnel cover</span></span></div>
+              <div class="mt-4"><div class="flex items-center gap-2 text-xs"><span class="rounded-full bg-surface px-2.5 py-1 font-medium">Social</span><span class="text-ink-soft inline-flex items-center gap-1"><iconify-icon icon="lucide:clock" aria-hidden="true"></iconify-icon> 6 min</span></div><h3 class="ttl font-display text-xl tt mt-3 leading-snug">From followers to customers: the social funnel</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Likes are nice. Here's how to turn them into revenue.</p><p class="text-xs text-ink-soft mt-4"><time datetime="2026-04-10">Apr 10, 2026</time> · Priya Nair</p></div>
+            </a>
+          </div>
+
+          <!-- empty -->
+          <div id="blogEmpty" class="hidden text-center py-16" role="status">
+            <span class="text-4xl text-ink-soft" aria-hidden="true"><iconify-icon icon="lucide:search-x"></iconify-icon></span>
+            <p class="font-display text-xl tt mt-4">No articles match</p>
+            <p class="text-ink-soft text-sm mt-1">Try a different keyword or category.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="py-16 sm:py-24" aria-label="Newsletter">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-12 py-12 sm:py-16 overflow-hidden">
+            <div class="absolute inset-0 grid-lines opacity-[0.06]" aria-hidden="true"></div>
+            <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 class="font-display text-3xl sm:text-4xl tt leading-tight">Get one useful idea, every week</h2>
+                <p class="text-paper/70 mt-4 max-w-md">No spam, no fluff — just practical branding and growth tips you can actually use. Unsubscribe anytime.</p>
+              </div>
+              <form id="newsForm" class="lg:justify-self-end w-full max-w-md">
+                <label for="newsEmail" class="sr-only">Email address</label>
+                <div class="flex flex-col sm:flex-row gap-2">
+                  <div class="relative flex-1">
+                    <iconify-icon icon="lucide:mail" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" aria-hidden="true"></iconify-icon>
+                    <input id="newsEmail" type="email" required placeholder="you@email.com" class="w-full rounded-full bg-white/5 border border-white/15 pl-11 pr-4 py-3.5 text-sm text-white placeholder-white/35 outline-none focus:border-accent transition" />
+                  </div>
+                  <button type="submit" class="rounded-full bg-accent text-white px-6 py-3.5 text-sm font-medium hover:bg-white hover:text-ink transition">Subscribe</button>
+                </div>
+                <p id="newsOk" class="hidden text-sm text-accent mt-3 items-center gap-1.5"><iconify-icon icon="lucide:check-circle" aria-hidden="true"></iconify-icon> You're in — check your inbox to confirm.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5">
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
+            <div class="flex items-center gap-3 mt-6 text-xs font-medium">
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="BoostronixX on LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin" aria-hidden="true"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="BoostronixX on Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram" aria-hidden="true"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="BoostronixX on YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube" aria-hidden="true"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="BoostronixX on Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Services</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="seo-services.html" class="hover:text-accent">SEO Services</a></li><li><a href="services.html" class="hover:text-accent">All Services</a></li><li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li><li><a href="contact-us.html" class="hover:text-accent">Get a Quote</a></li></ul></div>
+          <div class="lg:col-span-2"><h4 class="font-display text-sm mb-4">Company</h4><ul class="space-y-3 text-sm text-ink-soft"><li><a href="about-us.html" class="hover:text-accent">About Us</a></li><li><a href="blog.html" class="hover:text-accent">Blog</a></li><li><a href="faq.html" class="hover:text-accent">FAQ</a></li><li><a href="sitemap.html" class="hover:text-accent">Sitemap</a></li></ul></div>
+          <div class="lg:col-span-3"><h4 class="font-display text-sm mb-4">Get in touch</h4><address class="not-italic space-y-3 text-sm text-ink-soft"><p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p><p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p><p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p><p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p></address></div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved.</p>
+          <div class="flex flex-wrap gap-5"><a href="privacy-policy.html" class="hover:text-accent">Privacy</a><a href="terms-and-conditions.html" class="hover:text-accent">Terms</a><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a><a href="sitemap.html" class="hover:text-accent">Sitemap</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line" aria-label="Quick">
+      <div class="grid grid-cols-4 max-w-md mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]" aria-hidden="true"></iconify-icon>Home</a>
+        <a href="services.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:layout-grid" class="text-[22px]" aria-hidden="true"></iconify-icon>Services</a>
+        <a href="blog.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-accent" aria-current="page"><iconify-icon icon="lucide:book-open" class="text-[22px]" aria-hidden="true"></iconify-icon>Blog</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]" aria-hidden="true"></iconify-icon>Contact</a>
+      </div>
+    </nav>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@graph": [
+        { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.boostronixx.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.boostronixx.com/blog/" } ] },
+        { "@type": "Blog", "@id": "https://www.boostronixx.com/blog/", "name": "BoostronixX Blog", "description": "Insights on branding, SEO, social media, performance marketing and design.", "publisher": { "@type": "Organization", "name": "BoostronixX", "url": "https://www.boostronixx.com/" } } ] }
+    </script>
+
+    <!-- SCRIPTS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bar = document.getElementById("hdrbar");
+        window.addEventListener("scroll", function () { if (bar) bar.classList.toggle("shadow-[0_8px_30px_-12px_rgba(0,0,0,.18)]", window.scrollY > 20); });
+        var mm = document.getElementById("mobileMenu"), panel = document.getElementById("menuPanel"), menuBtn = document.getElementById("menuBtn");
+        function openMenu(){ mm.classList.remove("hidden"); requestAnimationFrame(function(){ panel.classList.remove("translate-x-full"); }); document.body.style.overflow="hidden"; }
+        function closeMenu(){ panel.classList.add("translate-x-full"); document.body.style.overflow=""; setTimeout(function(){ mm.classList.add("hidden"); },300); }
+        if (menuBtn) menuBtn.addEventListener("click", openMenu);
+        if (mm) [].forEach.call(mm.querySelectorAll("[data-close]"), function(e){ e.addEventListener("click", closeMenu); });
+        document.addEventListener("keydown", function(e){ if (e.key === "Escape" && mm && !mm.classList.contains("hidden")) closeMenu(); });
+
+        var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+        [].forEach.call(document.querySelectorAll(".reveal"), function(e){ io.observe(e); });
+
+        // newsletter
+        var nf = document.getElementById("newsForm");
+        if (nf) nf.addEventListener("submit", function(e){ e.preventDefault(); if(!nf.checkValidity()){ nf.reportValidity(); return; } document.getElementById("newsEmail").disabled = true; var ok=document.getElementById("newsOk"); ok.classList.remove("hidden"); ok.classList.add("flex"); });
+
+        // filter + search
+        var chips = [].slice.call(document.querySelectorAll(".chip"));
+        var posts = [].slice.call(document.querySelectorAll("#grid .post"));
+        var search = document.getElementById("blogSearch");
+        var empty = document.getElementById("blogEmpty");
+        var activeCat = "all";
+        function apply(){
+          var term = (search.value||"").trim().toLowerCase();
+          var shown = 0;
+          posts.forEach(function(p){
+            var catOk = activeCat === "all" || (p.dataset.cat||"").split(" ").indexOf(activeCat) !== -1;
+            var hay = ((p.dataset.title||"") + " " + (p.querySelector(".ttl")?p.querySelector(".ttl").textContent:"")).toLowerCase();
+            var textOk = !term || hay.indexOf(term) !== -1;
+            var vis = catOk && textOk;
+            p.classList.toggle("hide", !vis);
+            var t = p.querySelector(".ttl");
+            if (t){ t.innerHTML = t.textContent; if (vis && term){ var s=t.textContent, i=s.toLowerCase().indexOf(term); if(i!==-1) t.innerHTML = s.slice(0,i)+"<mark>"+s.slice(i,i+term.length)+"</mark>"+s.slice(i+term.length); } }
+            if (vis) shown++;
+          });
+          empty.classList.toggle("hidden", shown !== 0);
+        }
+        chips.forEach(function(c){ c.addEventListener("click", function(){ chips.forEach(function(x){ x.classList.remove("active"); x.setAttribute("aria-pressed","false"); }); c.classList.add("active"); c.setAttribute("aria-pressed","true"); activeCat = c.dataset.cat; apply(); }); });
+        if (search) search.addEventListener("input", apply);
+      });
+    </script>
+  </body>
+</html>
