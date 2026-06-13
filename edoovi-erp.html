@@ -16,6 +16,14 @@
     <meta property="og:site_name" content="BoostronixX" />
     <meta property="og:title" content="Edoovi — Smart ERP SaaS for Schools · Case Study" />
     <meta property="og:url" content="https://www.boostronixx.com/portfolio/edoovi-erp/" />
+    <meta property="og:image" content="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/og-image-home-creative-branding-agency-for-ambitious-businesses-boostronixx.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BoostronixX — creative branding and digital marketing agency in Jaipur" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edoovi — Smart ERP SaaS for Schools · Case Study | BoostronixX" />
+    <meta name="twitter:description" content="How BoostronixX designed Edoovi — an AI-powered ERP and mobile-app ecosystem that connects administration, teachers, parents and students on one platform. UI/UX design & consulting case study." />
+    <meta name="twitter:image" content="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/og-image-home-creative-branding-agency-for-ambitious-businesses-boostronixx.jpg" />
     <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -124,9 +132,15 @@
 
       @media (prefers-reduced-motion: reduce) { .orb-a, .live::after, .caret, .progressBar { animation: none; } .pop { opacity: 1; transform: none; } }
     </style>
+      <style>
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent, #fa5539); outline-offset: 2px; border-radius: 4px; }
+      .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink, #0a0a0a); color: #fff; padding: 0.75rem 1.25rem; border-radius: 0 0 0.75rem 0; font-weight: 600; }
+      .skip-link:focus { left: 0; }
+    </style>
   </head>
 
   <body class="antialiased">
+    <a href="#top" class="skip-link">Skip to content</a>
     <div id="progressWrap"><div id="progressBar"></div></div>
 
     <!-- ===================== HEADER ===================== -->
@@ -505,5 +519,61 @@
         [].forEach.call(document.querySelectorAll(".count"), function (c) { cio.observe(c); });
       });
     </script>
-  </body>
+      <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.boostronixx.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Portfolio",
+                "item": "https://www.boostronixx.com/portfolio/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Edoovi ERP",
+                "item": "https://www.boostronixx.com/portfolio/edoovi-erp/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "@id": "https://www.boostronixx.com/portfolio/edoovi-erp/#case-study",
+            "headline": "Edoovi — Smart ERP SaaS for Schools: a UI/UX Case Study",
+            "description": "How BoostronixX designed an AI-powered ERP and mobile-app ecosystem connecting administration, teachers, parents and students on one platform.",
+            "author": {
+              "@type": "Organization",
+              "name": "BoostronixX"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BoostronixX",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
+              }
+            },
+            "datePublished": "2025-01-22",
+            "inLanguage": "en-IN",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.boostronixx.com/portfolio/edoovi-erp/"
+            }
+          }
+        ]
+      }
+    </script>
+
+</body>
 </html>

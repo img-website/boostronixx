@@ -621,9 +621,15 @@
         }
       }
     </style>
+      <style>
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent, #fa5539); outline-offset: 2px; border-radius: 4px; }
+      .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink, #0a0a0a); color: #fff; padding: 0.75rem 1.25rem; border-radius: 0 0 0.75rem 0; font-weight: 600; }
+      .skip-link:focus { left: 0; }
+    </style>
   </head>
 
   <body class="antialiased">
+    <a href="#top" class="skip-link">Skip to content</a>
     <!-- ===================== HEADER ===================== -->
     <header class="fixed top-0 inset-x-0 z-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
@@ -1143,11 +1149,13 @@
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
               >
-                Rank where your customers are searching
+                Rank on Google — and get cited by AI
               </h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 On-page, technical and local SEO that climbs you to page one —
-                and keeps you there with content that earns links.
+                plus <strong class="text-ink">AEO &amp; GEO</strong>, so answer
+                engines and AI search like ChatGPT, Perplexity and Google AI
+                Overviews recommend your brand by name.
               </p>
               <div class="flex flex-wrap gap-2 mt-6 text-sm">
                 <span
@@ -1156,11 +1164,23 @@
                 >
                 <span
                   class="rounded-full border border-line bg-paper px-3 py-1.5"
-                  >Keyword Strategy</span
+                  >Technical SEO</span
                 >
                 <span
-                  class="rounded-full border border-line bg-paper px-3 py-1.5"
-                  >Technical SEO</span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent font-medium px-3 py-1.5"
+                  ><iconify-icon
+                    icon="lucide:message-square-quote"
+                    class="text-sm"
+                  ></iconify-icon
+                  >AEO · Answer Engines</span
+                >
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent font-medium px-3 py-1.5"
+                  ><iconify-icon
+                    icon="lucide:sparkles"
+                    class="text-sm"
+                  ></iconify-icon
+                  >GEO · AI Search</span
                 >
               </div>
               <a
@@ -1188,9 +1208,37 @@
                   ></iconify-icon>
                   <span id="seoType"></span><span class="caret"></span>
                 </div>
+                <!-- AI Overview strip (AEO/GEO) -->
+                <div
+                  class="mt-4 rounded-2xl border border-accent/30 bg-accent/5 p-4"
+                >
+                  <div
+                    class="flex items-center gap-2 text-xs font-semibold text-accent"
+                  >
+                    <iconify-icon icon="lucide:sparkles"></iconify-icon> AI
+                    Overview
+                    <span
+                      class="ml-auto inline-flex items-center gap-1 rounded-full bg-accent text-paper font-medium px-2 py-0.5 text-[10px]"
+                      >Your brand · cited
+                      <iconify-icon icon="lucide:check"></iconify-icon
+                    ></span>
+                  </div>
+                  <div class="mt-2.5 space-y-1.5" aria-hidden="true">
+                    <span class="block h-2 w-full rounded bg-ink/10"></span>
+                    <span class="block h-2 w-4/5 rounded bg-ink/10"></span>
+                    <span
+                      class="inline-flex items-center gap-1 mt-1 rounded-full border border-line bg-paper px-2 py-0.5 text-[10px] text-ink-soft not-italic"
+                      ><iconify-icon
+                        icon="lucide:link"
+                        class="text-accent text-[10px]"
+                      ></iconify-icon>
+                      sourced from your site</span
+                    >
+                  </div>
+                </div>
                 <div
                   id="serpCard"
-                  class="mt-4 rounded-2xl border border-line bg-paper p-4 transition-opacity duration-500"
+                  class="mt-3 rounded-2xl border border-line bg-paper p-4 transition-opacity duration-500"
                 >
                   <div class="flex items-center gap-2 text-xs text-ink-soft">
                     <span

@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>SEO Company in Jaipur — Result-Driven SEO Services | BoostronixX</title>
+    <title>SEO Company in Jaipur — SEO, AEO & GEO Services | BoostronixX</title>
     <meta
       name="description"
-      content="BoostronixX is a leading SEO company in Jaipur offering result-driven, white-hat SEO services — on-page, technical, local SEO, content & link building — to rank higher on Google and generate consistent leads."
+      content="BoostronixX is a leading SEO company in Jaipur offering result-driven, white-hat SEO — on-page, technical, local SEO, link building — plus AEO & GEO so AI search like ChatGPT and Google AI Overviews cite your brand."
     />
-    <meta name="keywords" content="SEO company in Jaipur, SEO services Jaipur, local SEO Jaipur, on-page SEO, technical SEO, link building, Google My Business optimisation" />
+    <meta name="keywords" content="SEO company in Jaipur, SEO services Jaipur, local SEO Jaipur, AEO answer engine optimization, GEO generative engine optimization, AI search optimization, technical SEO, link building" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="BoostronixX SEO Team" />
     <meta name="theme-color" content="#0a0a0a" />
@@ -18,9 +18,17 @@
     <link rel="canonical" href="https://www.boostronixx.com/services/seo-services/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="BoostronixX" />
-    <meta property="og:title" content="SEO Company in Jaipur — Result-Driven SEO Services | BoostronixX" />
-    <meta property="og:description" content="White-hat SEO that ranks Jaipur businesses on page one and generates consistent organic leads." />
+    <meta property="og:title" content="SEO Company in Jaipur — SEO, AEO & GEO Services | BoostronixX" />
+    <meta property="og:description" content="White-hat SEO that ranks Jaipur businesses on page one — plus AEO & GEO so AI search cites your brand." />
     <meta property="og:url" content="https://www.boostronixx.com/services/seo-services/" />
+    <meta property="og:image" content="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/og-image-home-creative-branding-agency-for-ambitious-businesses-boostronixx.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BoostronixX — creative branding and digital marketing agency in Jaipur" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SEO Company in Jaipur — SEO, AEO & GEO Services | BoostronixX" />
+    <meta name="twitter:description" content="BoostronixX is a leading SEO company in Jaipur offering result-driven, white-hat SEO — on-page, technical, local SEO, link building — plus AEO & GEO so AI search like ChatGPT and Google AI Overviews cite your brand." />
+    <meta name="twitter:image" content="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/og-image-home-creative-branding-agency-for-ambitious-businesses-boostronixx.jpg" />
     <link rel="icon" href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,11 +108,24 @@
       .faq.open .plus { transform: rotate(45deg); }
       .faq.open { border-color: var(--accent); }
 
-      @media (prefers-reduced-motion: reduce){ .orb-a,.caret{animation:none} }
+      /* AEO/GEO chat mock */
+      .bubble { opacity:0; transform: translateY(10px) scale(.97); }
+      .reveal.in .bubble { animation: bpop .5s cubic-bezier(.2,.7,.2,1) forwards; }
+      .reveal.in .bubble.bu1 { animation-delay:.15s } .reveal.in .bubble.bu2 { animation-delay:.55s } .reveal.in .bubble.bu3 { animation-delay:1.15s }
+      @keyframes bpop { to { opacity:1; transform:none } }
+      @keyframes aiglow { 0%,100%{ box-shadow:0 0 0 0 rgba(250,85,57,0)} 50%{ box-shadow:0 0 22px 2px rgba(250,85,57,.4)} }
+      .aiavatar { animation: aiglow 2.6s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce){ .orb-a,.caret,.aiavatar{animation:none} .bubble{opacity:1;transform:none;animation:none} }
+    </style>
+      <style>
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent, #fa5539); outline-offset: 2px; border-radius: 4px; }
+      .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink, #0a0a0a); color: #fff; padding: 0.75rem 1.25rem; border-radius: 0 0 0.75rem 0; font-weight: 600; }
+      .skip-link:focus { left: 0; }
     </style>
   </head>
 
   <body class="antialiased">
+    <a href="#top" class="skip-link">Skip to content</a>
     <div id="progressWrap"><div id="progressBar"></div></div>
 
     <!-- ===================== HEADER ===================== -->
@@ -186,6 +207,7 @@
                 <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:check-circle" class="text-accent"></iconify-icon> White-hat only</span>
                 <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:check-circle" class="text-accent"></iconify-icon> Monthly reporting</span>
                 <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:check-circle" class="text-accent"></iconify-icon> No lock-in tricks</span>
+                <a href="#aeo-geo" class="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent font-medium px-3 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:sparkles"></iconify-icon> AEO &amp; GEO included</a>
               </div>
             </div>
 
@@ -238,6 +260,8 @@
               <div class="reveal flex items-center gap-3 rounded-xl border border-line p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:building-2"></iconify-icon></span><span class="font-medium text-sm">Google Business Profile</span></div>
               <div class="reveal flex items-center gap-3 rounded-xl border border-line p-4"><span class="text-accent text-xl"><iconify-icon icon="lucide:mail"></iconify-icon></span><span class="font-medium text-sm">Email Marketing</span></div>
               <div class="reveal flex items-center gap-3 rounded-xl border border-line p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:bar-chart-3"></iconify-icon></span><span class="font-medium text-sm">Monthly SEO Reporting</span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4"><span class="text-accent text-xl"><iconify-icon icon="lucide:message-square-quote"></iconify-icon></span><span class="font-medium text-sm">AEO — Answer Engine Optimization <span class="ml-1 rounded-full bg-accent text-paper text-[10px] font-semibold px-2 py-0.5 align-middle">New</span></span></div>
+              <div class="reveal flex items-center gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:sparkles"></iconify-icon></span><span class="font-medium text-sm">GEO — AI Search Visibility <span class="ml-1 rounded-full bg-accent text-paper text-[10px] font-semibold px-2 py-0.5 align-middle">New</span></span></div>
             </div>
           </div>
         </div>
@@ -305,6 +329,78 @@
               <img src="assets/img/local-seo-map.avif" alt="Google local map pack showing BoostronixX ranking for SEO company in Jaipur" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b>Map pack · 1080×810</b><span>Screenshot of the Google local 3-pack / Maps result for a Jaipur search, or a Google Business Profile with reviews. Shows local ranking proof.</span></figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== AEO & GEO (AI SEARCH) ===================== -->
+      <section id="aeo-geo" class="py-20 sm:py-28 bg-ink text-paper relative overflow-hidden" aria-labelledby="aeoGeoHeading">
+        <div class="absolute inset-0 grid-lines opacity-[0.06]" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
+          <!-- copy -->
+          <div class="lg:col-span-6">
+            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:trending-up" aria-hidden="true"></iconify-icon> Trending now · AI search</p>
+            <h2 id="aeoGeoHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Don't just rank.<br />Be the <span class="text-accent">answer</span>.</h2>
+            <p class="reveal text-paper/60 mt-5 max-w-lg leading-relaxed" data-delay="1">Search has changed. People now ask ChatGPT, Perplexity and Google AI Overviews — and those engines answer with <em>one</em> recommendation, not ten blue links. AEO and GEO make sure that recommendation is you.</p>
+            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+              <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6" data-delay="1">
+                <span class="inline-grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl" aria-hidden="true"><iconify-icon icon="lucide:message-square-quote"></iconify-icon></span>
+                <h3 class="font-display text-lg tt mt-4">AEO — Answer Engine Optimization</h3>
+                <p class="text-paper/55 text-sm mt-1.5 leading-relaxed">Structuring your content so search engines lift it as the direct answer — featured snippets, People Also Ask, voice search and FAQ rich results.</p>
+              </div>
+              <div class="reveal rounded-2xl bg-white/5 border border-white/10 p-6" data-delay="2">
+                <span class="inline-grid place-items-center h-11 w-11 rounded-xl bg-accent text-paper text-xl" aria-hidden="true"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
+                <h3 class="font-display text-lg tt mt-4">GEO — Generative Engine Optimization</h3>
+                <p class="text-paper/55 text-sm mt-1.5 leading-relaxed">Making your brand citable by AI — entity building, schema, llms.txt, brand mentions and content AI models trust enough to quote and recommend.</p>
+              </div>
+            </div>
+            <ul class="reveal flex flex-wrap gap-2 mt-6 text-sm" data-delay="2">
+              <li class="rounded-full border border-white/15 px-3 py-1.5">Schema &amp; entities</li>
+              <li class="rounded-full border border-white/15 px-3 py-1.5">llms.txt</li>
+              <li class="rounded-full border border-white/15 px-3 py-1.5">Citable content</li>
+              <li class="rounded-full border border-white/15 px-3 py-1.5">Brand mentions</li>
+              <li class="rounded-full border border-white/15 px-3 py-1.5">AI visibility tracking</li>
+            </ul>
+          </div>
+
+          <!-- AI chat mock -->
+          <div class="lg:col-span-6 reveal" data-delay="1">
+            <div class="rounded-xl2 bg-[#141414] border border-white/10 p-5 sm:p-7">
+              <div class="flex items-center gap-2 pb-4 border-b border-white/10">
+                <span class="aiavatar grid place-items-center h-8 w-8 rounded-full bg-accent text-paper" aria-hidden="true"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
+                <p class="text-sm font-medium text-paper">AI Assistant</p>
+                <span class="ml-auto inline-flex items-center gap-1.5 rounded-full bg-white/8 px-2.5 py-1 text-[10px] text-paper/60"><span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true"></span> answering</span>
+              </div>
+              <div class="mt-5 space-y-4">
+                <!-- user bubble -->
+                <div class="bubble bu1 flex justify-end">
+                  <p class="max-w-[80%] rounded-2xl rounded-br-md bg-white/10 text-paper text-sm px-4 py-3">Who's the best SEO company in Jaipur?</p>
+                </div>
+                <!-- ai bubble -->
+                <div class="bubble bu2 flex gap-2.5">
+                  <span class="grid place-items-center h-7 w-7 rounded-full bg-accent text-paper text-xs shrink-0" aria-hidden="true"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
+                  <div class="max-w-[85%] rounded-2xl rounded-tl-md bg-white/5 border border-white/10 px-4 py-3">
+                    <p class="text-sm text-paper/85 leading-relaxed">Based on results and reviews, <strong class="text-accent">BoostronixX</strong> is a leading choice — a Jaipur studio known for white-hat SEO, transparent reporting and strong local rankings<span class="caret" aria-hidden="true"></span></p>
+                    <a href="index.html" class="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:link" class="text-[11px]" aria-hidden="true"></iconify-icon> boostronixx.com <span class="text-[10px] opacity-70">[1]</span></a>
+                  </div>
+                </div>
+                <!-- cited badge -->
+                <div class="bubble bu3 flex justify-center">
+                  <span class="inline-flex items-center gap-1.5 rounded-full bg-accent text-paper text-xs font-semibold px-3 py-1.5"><iconify-icon icon="lucide:badge-check" aria-hidden="true"></iconify-icon> Your brand, cited as the answer</span>
+                </div>
+              </div>
+              <!-- platforms -->
+              <div class="mt-6 pt-4 border-t border-white/10">
+                <p class="text-[11px] text-paper/40 mb-2.5">We optimise your visibility across</p>
+                <ul class="flex flex-wrap gap-2 text-xs text-paper/70">
+                  <li class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-2.5 py-1"><iconify-icon icon="simple-icons:google" class="text-accent" aria-hidden="true"></iconify-icon> AI Overviews</li>
+                  <li class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-2.5 py-1"><iconify-icon icon="simple-icons:openai" class="text-accent" aria-hidden="true"></iconify-icon> ChatGPT</li>
+                  <li class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-2.5 py-1"><iconify-icon icon="simple-icons:perplexity" class="text-accent" aria-hidden="true"></iconify-icon> Perplexity</li>
+                  <li class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-2.5 py-1"><iconify-icon icon="simple-icons:googlegemini" class="text-accent" aria-hidden="true"></iconify-icon> Gemini</li>
+                  <li class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-2.5 py-1"><iconify-icon icon="lucide:bot" class="text-accent" aria-hidden="true"></iconify-icon> Copilot</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -381,6 +477,10 @@
             <div class="faq border border-line rounded-2xl bg-paper px-6 group">
               <button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Why choose BoostronixX for SEO?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button>
               <div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Deep local market knowledge, data-driven SEO expertise and a relentless focus on real business outcomes — backed by transparent reporting and specialisation in Jaipur's competitive sectors.</div></div>
+            </div>
+            <div class="faq border border-line rounded-2xl bg-paper px-6 group">
+              <button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">What are AEO and GEO — and do I need them?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button>
+              <div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">AEO (Answer Engine Optimization) structures your content so search engines lift it as the direct answer — featured snippets, People Also Ask and voice search. GEO (Generative Engine Optimization) makes your brand citable by AI tools like ChatGPT, Perplexity, Gemini and Google AI Overviews through schema, entity building, llms.txt and authoritative content. As more buyers ask AI instead of scrolling results, both are fast becoming essential — and they build on the same white-hat foundation as classic SEO.</div></div>
             </div>
           </div>
         </div>
@@ -490,9 +590,9 @@
           },
           {
             "@type": "Service",
-            "serviceType": "Search Engine Optimization (SEO)",
-            "name": "SEO Services in Jaipur",
-            "description": "Result-driven, white-hat SEO services — on-page, technical, local SEO, content and link building — to rank higher on Google and generate consistent organic leads.",
+            "serviceType": "Search Engine Optimization (SEO), Answer Engine Optimization (AEO) & Generative Engine Optimization (GEO)",
+            "name": "SEO, AEO & GEO Services in Jaipur",
+            "description": "Result-driven, white-hat SEO — on-page, technical, local SEO, content and link building — plus AEO and GEO so answer engines and AI search (ChatGPT, Perplexity, Google AI Overviews) cite and recommend your brand.",
             "provider": {
               "@type": "Organization",
               "name": "BoostronixX",
@@ -520,7 +620,8 @@
               { "@type": "Question", "name": "How long does SEO take to show results?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 3 to 6 months for noticeable improvements and 6 to 12 months for highly competitive keywords. Local SEO usually moves faster — often within 4 to 8 weeks." } },
               { "@type": "Question", "name": "What is local SEO and do I need it?", "acceptedAnswer": { "@type": "Answer", "text": "Local SEO helps you rank for location-based searches like 'SEO company in Jaipur' or 'near me'. It includes Google Business Profile optimisation, local citations and reviews, so you appear in the local map pack." } },
               { "@type": "Question", "name": "What SEO services does BoostronixX offer?", "acceptedAnswer": { "@type": "Answer", "text": "Technical audits, on-page optimisation, keyword research, content marketing, link building, local SEO, e-commerce SEO and transparent monthly reporting — all using white-hat methods." } },
-              { "@type": "Question", "name": "Why choose BoostronixX for SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Deep local market knowledge, data-driven SEO expertise and a focus on real business outcomes — backed by transparent reporting and specialisation in Jaipur's competitive sectors." } }
+              { "@type": "Question", "name": "Why choose BoostronixX for SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Deep local market knowledge, data-driven SEO expertise and a focus on real business outcomes — backed by transparent reporting and specialisation in Jaipur's competitive sectors." } },
+              { "@type": "Question", "name": "What are AEO and GEO — and do I need them?", "acceptedAnswer": { "@type": "Answer", "text": "AEO (Answer Engine Optimization) structures your content so search engines lift it as the direct answer — featured snippets, People Also Ask and voice search. GEO (Generative Engine Optimization) makes your brand citable by AI tools like ChatGPT, Perplexity, Gemini and Google AI Overviews through schema, entity building, llms.txt and authoritative content. As more buyers ask AI instead of scrolling results, both are fast becoming essential." } }
             ]
           }
         ]

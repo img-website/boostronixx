@@ -20,6 +20,14 @@
       content="A creative studio that thinks like a growth team. Our story, values and the people behind the brands."
     />
     <meta property="og:url" content="https://www.boostronixx.com/about-us/" />
+    <meta property="og:image" content="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/og-image-home-creative-branding-agency-for-ambitious-businesses-boostronixx.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BoostronixX — creative branding and digital marketing agency in Jaipur" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us — Creative Branding & Growth Studio in Jaipur | BoostronixX" />
+    <meta name="twitter:description" content="Meet BoostronixX — a creative branding & digital marketing studio in Jaipur. Our story, mission, values, process and the team building brands that get noticed." />
+    <meta name="twitter:image" content="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/og-image-home-creative-branding-agency-for-ambitious-businesses-boostronixx.jpg" />
     <link
       rel="icon"
       href="https://www.boostronixx.com/wp-content/uploads/2026/03/boostronixxFavicon-300x300.webp"
@@ -233,9 +241,15 @@
         box-shadow: 0 30px 60px -40px rgba(10, 10, 10, 0.4);
       }
     </style>
+      <style>
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent, #fa5539); outline-offset: 2px; border-radius: 4px; }
+      .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink, #0a0a0a); color: #fff; padding: 0.75rem 1.25rem; border-radius: 0 0 0.75rem 0; font-weight: 600; }
+      .skip-link:focus { left: 0; }
+    </style>
   </head>
 
   <body class="antialiased">
+    <a href="#top" class="skip-link">Skip to content</a>
     <!-- ===================== HEADER ===================== -->
     <header class="fixed top-0 inset-x-0 z-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
@@ -889,5 +903,52 @@
         });
       });
     </script>
-  </body>
+      <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.boostronixx.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About Us",
+                "item": "https://www.boostronixx.com/about-us/"
+              }
+            ]
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "https://www.boostronixx.com/about-us/",
+            "name": "About BoostronixX",
+            "description": "The story, mission, values and team behind BoostronixX — a creative branding and digital marketing studio in Jaipur, founded in 2021.",
+            "about": {
+              "@type": "Organization",
+              "name": "BoostronixX",
+              "url": "https://www.boostronixx.com/",
+              "foundingDate": "2021",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "880, Rani Sati Nagar, Gautam Marg, Nirman Nagar",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan",
+                "postalCode": "302019",
+                "addressCountry": "IN"
+              }
+            },
+            "inLanguage": "en-IN"
+          }
+        ]
+      }
+    </script>
+
+</body>
 </html>
