@@ -151,7 +151,7 @@
         <div class="flex flex-col sm:flex-row gap-2">
           <div class="relative flex-1">
             <iconify-icon icon="lucide:mail" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/40"></iconify-icon>
-            <input id="notifyEmail" type="email" required placeholder="you@email.com" class="w-full rounded-full bg-white/5 border border-white/15 pl-11 pr-4 py-3.5 text-sm text-white placeholder-white/35 outline-none focus:border-accent focus:bg-white/10 transition" />
+            <input id="notifyEmail" type="email" required aria-label="Email address" placeholder="you@email.com" class="w-full rounded-full bg-white/5 border border-white/15 pl-11 pr-4 py-3.5 text-sm text-white placeholder-white/35 outline-none focus:border-accent focus:bg-white/10 transition" />
           </div>
           <button type="submit" class="rounded-full bg-accent text-white px-6 py-3.5 text-sm font-medium hover:bg-white hover:text-ink transition inline-flex items-center justify-center gap-2">
             <span id="notifyLabel">Notify me</span>
@@ -203,6 +203,19 @@
           ok.classList.add("flex");
         });
       });
+    </script>
+      <script>
+      // bottom-nav: highlight the item matching the current page (works for .html and clean URLs)
+      (function () {
+        var segs = location.pathname.split("/").filter(Boolean);
+        var p = ((segs[segs.length - 1] || "index").replace(/\.html$/, "")) + ".html";
+        var svc = ["services.html","digital-marketing.html","seo-services.html","performance-marketing.html","social-media-marketing.html","brand-consulting.html","website-design.html","ui-ux-design.html"];
+        var work = ["portfolio.html","edoovi-erp.html"];
+        var k = p === "index.html" ? "index.html" : (p === "contact-us.html" ? "contact-us.html" : (svc.indexOf(p) >= 0 ? "services.html" : (work.indexOf(p) >= 0 ? "portfolio.html" : "")));
+        if (!k) return;
+        var a = document.querySelector('.appnav a[href="' + k + '"]');
+        if (a) { a.classList.remove("text-ink-soft", "text-white/55"); a.classList.add("text-accent"); }
+      })();
     </script>
   </body>
 </html>

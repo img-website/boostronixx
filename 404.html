@@ -160,7 +160,7 @@
         <!-- search -->
         <form id="searchForm" class="rise d4 mt-8 relative max-w-md mx-auto">
           <iconify-icon icon="lucide:search" class="absolute left-5 top-1/2 -translate-y-1/2 text-xl text-ink-soft"></iconify-icon>
-          <input id="q" type="text" placeholder="Search the site…" class="w-full rounded-full border border-line bg-paper py-4 pr-28 text-base outline-none focus:border-accent transition" style="padding-left: 3.25rem" />
+          <input id="q" type="text" aria-label="Search the site" placeholder="Search the site…" class="w-full rounded-full border border-line bg-paper py-4 pr-28 text-base outline-none focus:border-accent transition" style="padding-left: 3.25rem" />
           <button type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 rounded-full bg-ink text-paper px-5 text-sm font-medium hover:bg-accent transition">Search</button>
         </form>
 
@@ -207,6 +207,19 @@
             : "index.html";
         });
       });
+    </script>
+      <script>
+      // bottom-nav: highlight the item matching the current page (works for .html and clean URLs)
+      (function () {
+        var segs = location.pathname.split("/").filter(Boolean);
+        var p = ((segs[segs.length - 1] || "index").replace(/\.html$/, "")) + ".html";
+        var svc = ["services.html","digital-marketing.html","seo-services.html","performance-marketing.html","social-media-marketing.html","brand-consulting.html","website-design.html","ui-ux-design.html"];
+        var work = ["portfolio.html","edoovi-erp.html"];
+        var k = p === "index.html" ? "index.html" : (p === "contact-us.html" ? "contact-us.html" : (svc.indexOf(p) >= 0 ? "services.html" : (work.indexOf(p) >= 0 ? "portfolio.html" : "")));
+        if (!k) return;
+        var a = document.querySelector('.appnav a[href="' + k + '"]');
+        if (a) { a.classList.remove("text-ink-soft", "text-white/55"); a.classList.add("text-accent"); }
+      })();
     </script>
   </body>
 </html>

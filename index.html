@@ -679,17 +679,11 @@
           <nav
             class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft"
           >
-            <a href="#services" class="nav-link" data-spy="services"
-              >Services</a
-            >
-            <a href="#work" class="nav-link" data-spy="work">Work</a>
-            <a href="about-us.html" class="nav-link" data-spy="about">About</a>
-            <a href="#industries" class="nav-link" data-spy="industries"
-              >Industries</a
-            >
-            <a href="#insights" class="nav-link" data-spy="insights"
-              >Insights</a
-            >
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="portfolio.html" class="nav-link">Work</a>
+            <a href="about-us.html" class="nav-link">About</a>
+            <a href="industries.html" class="nav-link">Industries</a>
+            <a href="blog.html" class="nav-link">Insights</a>
           </nav>
           <div class="flex items-center gap-2">
             <a
@@ -705,6 +699,8 @@
             <button
               id="menuBtn"
               aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
               class="lg:hidden grid place-items-center h-10 w-10 rounded-full border border-line text-xl"
             >
               <iconify-icon icon="lucide:menu"></iconify-icon>
@@ -735,46 +731,11 @@
           </button>
         </div>
         <nav class="mt-10 flex flex-col gap-1 text-2xl font-display tt">
-          <a
-            href="#services"
-            data-close
-            class="py-3 border-b border-line flex items-center justify-between"
-            >Services
-            <span class="text-accent"
-              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
-          ></a>
-          <a
-            href="#work"
-            data-close
-            class="py-3 border-b border-line flex items-center justify-between"
-            >Work
-            <span class="text-accent"
-              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
-          ></a>
-          <a
-            href="about-us.html"
-            data-close
-            class="py-3 border-b border-line flex items-center justify-between"
-            >About
-            <span class="text-accent"
-              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
-          ></a>
-          <a
-            href="#industries"
-            data-close
-            class="py-3 border-b border-line flex items-center justify-between"
-            >Industries
-            <span class="text-accent"
-              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
-          ></a>
-          <a
-            href="#insights"
-            data-close
-            class="py-3 border-b border-line flex items-center justify-between"
-            >Insights
-            <span class="text-accent"
-              ><iconify-icon icon="lucide:arrow-right"></iconify-icon></span
-          ></a>
+          <a href="services.html" data-close class="py-3 border-b border-line flex items-center justify-between">Services<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="portfolio.html" data-close class="py-3 border-b border-line flex items-center justify-between">Work<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="about-us.html" data-close class="py-3 border-b border-line flex items-center justify-between">About<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="industries.html" data-close class="py-3 border-b border-line flex items-center justify-between">Industries<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+          <a href="blog.html" data-close class="py-3 border-b border-line flex items-center justify-between">Insights<span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
         </nav>
         <a
           href="#contact"
@@ -2985,169 +2946,69 @@
     </main>
 
     <!-- ===================== FOOTER ===================== -->
-    <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
+        <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
           <div class="lg:col-span-5">
-            <img
-              src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp"
-              alt="BoostronixX"
-              class="h-8"
-            />
-            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">
-              A creative branding & digital marketing agency in Jaipur, India —
-              helping ambitious businesses build brands that grow.
-            </p>
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/04/boostronixx-full-logo.webp" alt="BoostronixX" class="h-8" />
+            <p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed">A creative branding &amp; digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.</p>
             <div class="flex items-center gap-3 mt-6 text-xs font-medium">
-              <a
-                href="https://www.linkedin.com/company/boostronixx"
-                aria-label="LinkedIn"
-                class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"
-                ><iconify-icon icon="simple-icons:linkedin"></iconify-icon
-              ></a>
-              <a
-                href="https://www.instagram.com/boostronixx/"
-                aria-label="Instagram"
-                class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"
-                ><iconify-icon icon="simple-icons:instagram"></iconify-icon
-              ></a>
-              <a
-                href="https://www.youtube.com/@boostronixx"
-                aria-label="YouTube"
-                class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"
-                ><iconify-icon icon="simple-icons:youtube"></iconify-icon
-              ></a>
-              <a
-                href="https://www.facebook.com/boostronixx"
-                aria-label="Facebook"
-                class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"
-                ><iconify-icon icon="simple-icons:facebook"></iconify-icon
-              ></a>
+              <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin" aria-hidden="true"></iconify-icon></a>
+              <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram" aria-hidden="true"></iconify-icon></a>
+              <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube" aria-hidden="true"></iconify-icon></a>
+              <a href="https://www.facebook.com/boostronixx" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full border border-line text-base hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:facebook" aria-hidden="true"></iconify-icon></a>
             </div>
-          </div>
-          <div class="lg:col-span-2">
-            <h4 class="font-display text-sm mb-4">Company</h4>
-            <ul class="space-y-3 text-sm text-ink-soft">
-              <li>
-                <a href="about-us.html" class="hover:text-accent">About Us</a>
-              </li>
-              <li>
-                <a href="faq.html" class="hover:text-accent">FAQ</a>
-              </li>
-              <li>
-                <a href="portfolio.html" class="hover:text-accent">Portfolio</a>
-              </li>
-              <li>
-                <a href="blog.html" class="hover:text-accent">Blog</a>
-              </li>
-              <li>
-                <a href="contact-us.html" class="hover:text-accent">Contact</a>
-              </li>
-            </ul>
           </div>
           <div class="lg:col-span-2">
             <h4 class="font-display text-sm mb-4">Services</h4>
             <ul class="space-y-3 text-sm text-ink-soft">
               <li><a href="services.html" class="hover:text-accent">All Services</a></li>
               <li><a href="seo-services.html" class="hover:text-accent">SEO Services</a></li>
-              <li>
-                <a
-                  href="performance-marketing.html"
-                  class="hover:text-accent"
-                  >Performance Marketing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="website-design.html"
-                  class="hover:text-accent"
-                  >Website Design</a
-                >
-              </li>
+              <li><a href="social-media-marketing.html" class="hover:text-accent">Social Media</a></li>
+              <li><a href="performance-marketing.html" class="hover:text-accent">Performance Marketing</a></li>
+              <li><a href="website-design.html" class="hover:text-accent">Website Design</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2">
+            <h4 class="font-display text-sm mb-4">Company</h4>
+            <ul class="space-y-3 text-sm text-ink-soft">
+              <li><a href="about-us.html" class="hover:text-accent">About Us</a></li>
+              <li><a href="industries.html" class="hover:text-accent">Industries</a></li>
+              <li><a href="portfolio.html" class="hover:text-accent">Work</a></li>
+              <li><a href="blog.html" class="hover:text-accent">Insights</a></li>
+              <li><a href="faq.html" class="hover:text-accent">FAQ</a></li>
+              <li><a href="contact-us.html" class="hover:text-accent">Contact</a></li>
             </ul>
           </div>
           <div class="lg:col-span-3">
             <h4 class="font-display text-sm mb-4">Get in touch</h4>
             <address class="not-italic space-y-3 text-sm text-ink-soft">
-              <p>
-                <a
-                  href="tel:+918058212202"
-                  class="hover:text-accent font-medium text-ink"
-                  >+91 80582 12202</a
-                >
-              </p>
-              <p>
-                <a href="mailto:boostronixx@gmail.com" class="hover:text-accent"
-                  >boostronixx@gmail.com</a
-                >
-              </p>
-              <p>
-                880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur,
-                Rajasthan 302019, India
-              </p>
+              <p><a href="tel:+918058212202" class="hover:text-accent font-medium text-ink">+91 80582 12202</a></p>
+              <p><a href="mailto:boostronixx@gmail.com" class="hover:text-accent">boostronixx@gmail.com</a></p>
+              <p>880, Rani Sati Nagar, Gautam Marg,<br />Nirman Nagar, Jaipur, Rajasthan 302019, India</p>
               <p class="text-xs">Mon–Fri · 9 AM–7 PM IST</p>
             </address>
           </div>
         </div>
-        <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft"
-        >
-          <p>
-            © 2026 BoostronixX. All rights reserved.
-            <span class="text-ink-soft/70"
-              >· Updated <time datetime="2026-06-10">Jun 10, 2026</time></span
-            >
-          </p>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-14 pt-6 border-t border-line text-xs text-ink-soft">
+          <p>© 2026 BoostronixX. All rights reserved. <span class="opacity-70">&middot; Updated <time datetime="2026-06-23">Jun 23, 2026</time></span></p>
           <div class="flex flex-wrap gap-5">
-            <a href="privacy-policy.html" class="hover:text-accent">Privacy</a
-            ><a href="terms-and-conditions.html" class="hover:text-accent"
-              >Terms</a
-            ><a href="disclaimer.html" class="hover:text-accent">Disclaimer</a
-            ><a href="sitemap.html" class="hover:text-accent">Sitemap</a>
+            <a href="privacy-policy.html" class="hover:text-accent">Privacy</a>
+            <a href="terms-and-conditions.html" class="hover:text-accent">Terms</a>
+            <a href="disclaimer.html" class="hover:text-accent">Disclaimer</a>
+            <a href="sitemap.html" class="hover:text-accent">Sitemap</a>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- ===================== MOBILE APP BOTTOM NAV ===================== -->
-    <nav
-      class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line"
-    >
+        <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line" aria-label="Quick navigation">
       <div class="grid grid-cols-4 max-w-md mx-auto">
-        <a
-          href="#top"
-          class="active flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium"
-          ><iconify-icon icon="lucide:house" class="text-[22px]"></iconify-icon
-          >Home <span class="dot block h-1 w-1 rounded-full bg-accent"></span
-        ></a>
-        <a
-          href="#services"
-          class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"
-          ><iconify-icon
-            icon="lucide:layout-grid"
-            class="text-[22px]"
-          ></iconify-icon
-          >Services
-          <span class="dot block h-1 w-1 rounded-full bg-accent"></span
-        ></a>
-        <a
-          href="#work"
-          class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"
-          ><iconify-icon
-            icon="lucide:briefcase"
-            class="text-[22px]"
-          ></iconify-icon
-          >Work <span class="dot block h-1 w-1 rounded-full bg-accent"></span
-        ></a>
-        <a
-          href="#contact"
-          class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"
-          ><iconify-icon
-            icon="lucide:message-square"
-            class="text-[22px]"
-          ></iconify-icon
-          >Contact <span class="dot block h-1 w-1 rounded-full bg-accent"></span
-        ></a>
+        <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]" aria-hidden="true"></iconify-icon>Home</a>
+        <a href="services.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:layout-grid" class="text-[22px]" aria-hidden="true"></iconify-icon>Services</a>
+        <a href="portfolio.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:briefcase" class="text-[22px]" aria-hidden="true"></iconify-icon>Work</a>
+        <a href="contact-us.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:message-square" class="text-[22px]" aria-hidden="true"></iconify-icon>Contact</a>
       </div>
     </nav>
 
@@ -3227,13 +3088,6 @@
               "https://www.youtube.com/@boostronixx",
               "https://www.facebook.com/boostronixx"
             ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "50",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Branding & Digital Marketing Services",
@@ -3350,45 +3204,6 @@
             ]
           },
           {
-            "@type": "Review",
-            "itemReviewed": {
-              "@id": "https://www.boostronixx.com/#organization"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            },
-            "author": { "@type": "Person", "name": "Arjun Khanna" },
-            "reviewBody": "BoostronixX completely transformed our brand identity. We saw a 40% increase in engagement within the first three months."
-          },
-          {
-            "@type": "Review",
-            "itemReviewed": {
-              "@id": "https://www.boostronixx.com/#organization"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            },
-            "author": { "@type": "Person", "name": "Rajesh Menon" },
-            "reviewBody": "Data-driven strategy with creative excellence. Our website traffic doubled and conversions improved by 35% in six months."
-          },
-          {
-            "@type": "Review",
-            "itemReviewed": {
-              "@id": "https://www.boostronixx.com/#organization"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            },
-            "author": { "@type": "Person", "name": "Vikram Rathore" },
-            "reviewBody": "Online sales grew by 65% year-on-year. From logo to website to social — everything was cohesive and on-brand."
-          },
-          {
             "@type": "FAQPage",
             "@id": "https://www.boostronixx.com/#faq",
             "mainEntity": [
@@ -3446,6 +3261,7 @@
           panel = document.getElementById("menuPanel"),
           menuBtn = document.getElementById("menuBtn");
         function openMenu() {
+          if (menuBtn) menuBtn.setAttribute("aria-expanded", "true");
           mm.classList.remove("hidden");
           requestAnimationFrame(function () {
             panel.classList.remove("translate-x-full");
@@ -3453,6 +3269,7 @@
           document.body.style.overflow = "hidden";
         }
         function closeMenu() {
+          if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
           panel.classList.add("translate-x-full");
           document.body.style.overflow = "";
           setTimeout(function () {
@@ -3605,7 +3422,20 @@
 
           function runSerp(typeEl) {
             if (!typeEl) return;
-            var mock = typeEl.closest(".mock");
+            var mock =
+              typeEl.closest(".mock") ||
+              (function () {
+                var el = typeEl;
+                while (el && el !== document.body) {
+                  if (
+                    el.querySelector('[id^="serpCard"]') &&
+                    el.querySelector(".bar")
+                  )
+                    return el;
+                  el = el.parentElement;
+                }
+                return null;
+              })();
             if (!mock) return;
             var card = mock.querySelector('[id^="serpCard"]');
             var favEl = mock.querySelector('[id^="serpFav"]'),
@@ -4003,38 +3833,7 @@
           });
         });
 
-        // section spy
-        var spy = document.querySelectorAll("[data-spy]"),
-          appLinks = document.querySelectorAll(".appnav a");
-        var sio = new IntersectionObserver(
-          function (es) {
-            es.forEach(function (e) {
-              if (!e.isIntersecting) return;
-              var id = e.target.id;
-              [].forEach.call(spy, function (a) {
-                a.classList.toggle("active", a.dataset.spy === id);
-              });
-              [].forEach.call(appLinks, function (a) {
-                var m = a.getAttribute("href") === "#" + id;
-                a.classList.toggle("active", m);
-                a.classList.toggle("text-ink-soft", !m);
-              });
-            });
-          },
-          { threshold: 0.5 },
-        );
-        [
-          "top",
-          "services",
-          "work",
-          "about",
-          "industries",
-          "insights",
-          "contact",
-        ].forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el) sio.observe(el);
-        });
+        // (section scroll-spy removed — header & bottom nav now use direct page links)
 
         // ===== TESTIMONIAL SLIDER =====
         var vp = document.getElementById("tViewport"),
@@ -4181,6 +3980,19 @@
           play();
         }
       });
+    </script>
+      <script>
+      // bottom-nav: highlight the item matching the current page (works for .html and clean URLs)
+      (function () {
+        var segs = location.pathname.split("/").filter(Boolean);
+        var p = ((segs[segs.length - 1] || "index").replace(/\.html$/, "")) + ".html";
+        var svc = ["services.html","digital-marketing.html","seo-services.html","performance-marketing.html","social-media-marketing.html","brand-consulting.html","website-design.html","ui-ux-design.html"];
+        var work = ["portfolio.html","edoovi-erp.html"];
+        var k = p === "index.html" ? "index.html" : (p === "contact-us.html" ? "contact-us.html" : (svc.indexOf(p) >= 0 ? "services.html" : (work.indexOf(p) >= 0 ? "portfolio.html" : "")));
+        if (!k) return;
+        var a = document.querySelector('.appnav a[href="' + k + '"]');
+        if (a) { a.classList.remove("text-ink-soft", "text-white/55"); a.classList.add("text-accent"); }
+      })();
     </script>
   </body>
 </html>

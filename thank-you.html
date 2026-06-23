@@ -196,7 +196,7 @@
         </div>
 
         <div class="rise d5 flex flex-wrap items-center justify-center gap-3 mt-9">
-          <a href="index.html#work" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium">
+          <a href="portfolio.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium">
             <span class="relative z-10 sheen-text">Explore our work</span>
             <iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
           </a>
@@ -267,6 +267,19 @@
             stopBtn.closest("p").style.display = "none";
           });
       });
+    </script>
+      <script>
+      // bottom-nav: highlight the item matching the current page (works for .html and clean URLs)
+      (function () {
+        var segs = location.pathname.split("/").filter(Boolean);
+        var p = ((segs[segs.length - 1] || "index").replace(/\.html$/, "")) + ".html";
+        var svc = ["services.html","digital-marketing.html","seo-services.html","performance-marketing.html","social-media-marketing.html","brand-consulting.html","website-design.html","ui-ux-design.html"];
+        var work = ["portfolio.html","edoovi-erp.html"];
+        var k = p === "index.html" ? "index.html" : (p === "contact-us.html" ? "contact-us.html" : (svc.indexOf(p) >= 0 ? "services.html" : (work.indexOf(p) >= 0 ? "portfolio.html" : "")));
+        if (!k) return;
+        var a = document.querySelector('.appnav a[href="' + k + '"]');
+        if (a) { a.classList.remove("text-ink-soft", "text-white/55"); a.classList.add("text-accent"); }
+      })();
     </script>
   </body>
 </html>
