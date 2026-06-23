@@ -1,0 +1,9 @@
+# robots.txt — boostronixx.com
+# Allow all crawlers full access. Utility pages (404, error, maintenance,
+# thank-you) are kept crawlable on purpose so search engines can read their
+# noindex meta tag — do NOT Disallow them here.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.boostronixx.com/sitemap.xml
