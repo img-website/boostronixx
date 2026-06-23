@@ -61,6 +61,8 @@
       .skip-link:focus { left: 0; }
       .grid-lines { background-image: linear-gradient(to right, rgba(10,10,10,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,10,.045) 1px, transparent 1px); background-size: 72px 72px; }
       .grid-lines-d { background-image: linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 64px 64px; }
+      /* blueprint texture for the real-estate context */
+      .blueprint { background-color: #0c1b2a; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 26px 26px; }
       .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
       .reveal.in { opacity: 1; transform: none; }
       [data-delay="1"]{transition-delay:.08s}[data-delay="2"]{transition-delay:.16s}[data-delay="3"]{transition-delay:.24s}[data-delay="4"]{transition-delay:.32s}
@@ -68,29 +70,49 @@
       .nav-link { position: relative; }
       .nav-link::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--accent); transition:width .3s ease; }
       .nav-link:hover::after, .nav-link.active::after { width:100%; }
-      .mock { background:#fff; border:1px solid var(--color-line); border-radius:1.75rem; box-shadow:0 40px 80px -50px rgba(10,10,10,.45); }
       #progressWrap { position:fixed; left:0; right:0; top:0; height:3px; z-index:55; } #progressBar { height:100%; width:0%; background:var(--accent); transition:width .1s linear; }
-      .lift { transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; } .lift:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 30px 60px -45px rgba(10,10,10,.4); }
       .faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease; } .faq.open .faq-body { grid-template-rows:1fr; }
       .faq-body > div { overflow:hidden; } .faq .plus { transition: transform .3s ease; } .faq.open .plus { transform: rotate(45deg); } .faq.open { border-color: var(--accent); }
-      /* visuals */
-      .bar2 { height:8%; border-radius:5px 5px 1px 1px; transition: height 1.1s cubic-bezier(.2,.7,.2,1); } .reveal.in .bar2 { height: var(--h); }
-      .fstage { transform: scaleX(.45); opacity:0; transform-origin:center; } .reveal.in .fstage { animation: fgrow .6s cubic-bezier(.2,.7,.2,1) forwards; }
-      .reveal.in .fstage.f1{animation-delay:.1s}.reveal.in .fstage.f2{animation-delay:.25s}.reveal.in .fstage.f3{animation-delay:.4s}.reveal.in .fstage.f4{animation-delay:.55s}.reveal.in .fstage.f5{animation-delay:.7s}
-      @keyframes fgrow { to { transform:none; opacity:1 } }
-      .ring2 { stroke-dashoffset: var(--c); } .reveal.in .ring2 { stroke-dashoffset: var(--o); transition: stroke-dashoffset 1.5s cubic-bezier(.2,.7,.2,1) .35s; }
-      .pop2 { opacity:0; transform: scale(.92); } .reveal.in .pop2 { animation: pop2 .5s cubic-bezier(.2,.7,.2,1) forwards; }
-      .reveal.in .pop2.s1{animation-delay:.12s}.reveal.in .pop2.s2{animation-delay:.24s}.reveal.in .pop2.s3{animation-delay:.36s}
-      @keyframes pop2 { to { opacity:1; transform:none } }
-      .bubble { opacity:0; transform: translateY(10px) scale(.97); } .reveal.in .bubble { animation: bpop .5s cubic-bezier(.2,.7,.2,1) forwards; }
-      .reveal.in .bubble.bu1{animation-delay:.15s}.reveal.in .bubble.bu2{animation-delay:.55s}.reveal.in .bubble.bu3{animation-delay:1.15s}
-      @keyframes bpop { to { opacity:1; transform:none } }
-      .caret { display:inline-block; width:2px; height:1em; background:var(--accent); margin-left:2px; vertical-align:-2px; animation: blink 1s steps(1) infinite; }
-      @keyframes blink { 50%{opacity:0} }
+
+      /* ===== REAL-ESTATE-only bespoke kit ===== */
       @keyframes ping2 { 0%{transform:scale(1);opacity:.6} 80%,100%{transform:scale(2.3);opacity:0} }
       .live { position:relative; } .live::after { content:""; position:absolute; inset:0; border-radius:50%; background:var(--accent); animation: ping2 1.8s cubic-bezier(0,0,.2,1) infinite; }
-      .aiglow { animation: aiglow 2.6s ease-in-out infinite; } @keyframes aiglow { 0%,100%{box-shadow:0 0 0 0 rgba(250,85,57,0)} 50%{box-shadow:0 0 22px 2px rgba(250,85,57,.4)} }
-      @media (prefers-reduced-motion: reduce){ .caret,.live::after,.aiglow{animation:none} .bubble,.pop2{opacity:1;transform:none;animation:none} }
+      /* hero skyline rising */
+      .sky-b { transform: scaleY(.06); transform-origin: bottom; } .reveal.in .sky-b { animation: skyrise 1s cubic-bezier(.2,.8,.3,1) forwards; }
+      .reveal.in .sky-b.s1{animation-delay:.15s}.reveal.in .sky-b.s2{animation-delay:.3s}.reveal.in .sky-b.s3{animation-delay:.45s}.reveal.in .sky-b.s4{animation-delay:.6s}.reveal.in .sky-b.s5{animation-delay:.75s}
+      @keyframes skyrise { to { transform: scaleY(1) } }
+      /* path-to-possession: map pins drop onto the route to the home */
+      .pindrop { opacity:0; transform: translateY(-30px); }
+      .reveal.in .pindrop { animation: pindrop .6s cubic-bezier(.3,1.4,.5,1) forwards; }
+      .reveal.in .pindrop.p1{animation-delay:.3s}.reveal.in .pindrop.p2{animation-delay:.65s}.reveal.in .pindrop.p3{animation-delay:1s}.reveal.in .pindrop.p4{animation-delay:1.35s}.reveal.in .pindrop.p5{animation-delay:1.75s}
+      @keyframes pindrop { 0%{opacity:0;transform:translateY(-30px)} 65%{opacity:1;transform:translateY(5px)} 100%{opacity:1;transform:translateY(0)} }
+      .home-glow { animation: homeglow 2.6s ease-in-out infinite; }
+      @keyframes homeglow { 0%,100%{box-shadow:0 0 0 0 rgba(250,85,57,0)} 50%{box-shadow:0 0 0 12px rgba(250,85,57,.16)} }
+      /* building floor-directory: floors construct from the ground up */
+      .floor { opacity:0; transform: translateY(22px); } .reveal.in .floor { animation: floorup .55s cubic-bezier(.2,.7,.2,1) forwards; }
+      .reveal.in .floor.f1{animation-delay:.2s}.reveal.in .floor.f2{animation-delay:.38s}.reveal.in .floor.f3{animation-delay:.56s}.reveal.in .floor.f4{animation-delay:.74s}.reveal.in .floor.f5{animation-delay:.92s}.reveal.in .floor.f6{animation-delay:1.1s}
+      @keyframes floorup { to { opacity:1; transform:none } }
+      .floor:hover { background: var(--color-surface); }
+      .floor:hover .floor-arr { color: var(--accent); transform: translateX(3px); }
+      .floor-arr { transition: .2s; }
+      .crane { animation: sway 5s ease-in-out infinite; transform-origin: bottom left; }
+      @keyframes sway { 0%,100%{transform:rotate(0)} 50%{transform:rotate(1.6deg)} }
+      /* property type card */
+      .ptype { transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+      .ptype:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 30px 60px -45px rgba(10,10,10,.4); }
+      .ptype:hover .ptype-roof { background: var(--accent); }
+      .ptype-roof { transition: background-color .3s ease; }
+      /* availability units fill */
+      .unit { transition: background-color .5s ease, border-color .5s ease; }
+      .reveal.in .unit.sold { background: var(--accent); border-color: var(--accent); }
+      .ring2 { stroke-dashoffset: var(--c); } .reveal.in .ring2 { stroke-dashoffset: var(--o); transition: stroke-dashoffset 1.5s cubic-bezier(.2,.7,.2,1) .35s; }
+      .caret { display:inline-block; width:2px; height:1em; background:var(--accent); margin-left:2px; vertical-align:-2px; animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50%{opacity:0} }
+      @media (prefers-reduced-motion: reduce){
+        .live::after,.home-glow,.crane,.caret{animation:none}
+        .sky-b,.pindrop,.floor{opacity:1;transform:none;animation:none}
+        .reveal.in .unit.sold{transition:none}
+      }
     </style>
   </head>
 
@@ -98,7 +120,7 @@
     <a href="#main" class="skip-link">Skip to content</a>
     <div id="progressWrap"><div id="progressBar" role="progressbar" aria-label="Reading progress"></div></div>
 
-    <!-- HEADER -->
+    <!-- HEADER (shared) -->
     <header class="fixed top-0 inset-x-0 z-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
@@ -118,7 +140,7 @@
       </div>
     </header>
 
-    <!-- MOBILE MENU -->
+    <!-- MOBILE MENU (shared) -->
     <div id="mobileMenu" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-label="Menu">
       <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
       <div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
@@ -139,8 +161,8 @@
 
     <main id="main">
       <article>
-      <!-- HERO -->
-      <section class="relative pt-28 sm:pt-36 pb-14 grid-lines overflow-hidden">
+      <!-- ===================== HERO — the property listing ===================== -->
+      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
             <a href="index.html" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm" aria-hidden="true"></iconify-icon>
@@ -150,205 +172,331 @@
           <div class="grid lg:grid-cols-12 gap-10 items-center">
             <div class="lg:col-span-6">
               <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:building-2" class="text-accent text-sm" aria-hidden="true"></iconify-icon> Industry · Real Estate &amp; Property</div>
-              <h1 class="reveal font-display text-[2.5rem] leading-[1.0] sm:text-6xl tt">Real estate marketing that fills projects with <span class="text-accent">qualified buyers</span></h1>
-              <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">BoostronixX helps builders, developers and brokers turn searches into serious site visits and bookings — with project branding, local SEO and RERA-ready performance campaigns.</p>
+              <h1 class="reveal font-display text-[2.6rem] leading-[1.0] sm:text-6xl tt">Sell out projects with <span class="text-accent">qualified buyers</span></h1>
+              <p class="reveal text-ink-soft mt-6 max-w-lg leading-relaxed" data-delay="1">We help builders, developers and brokers turn "3 BHK near me" into serious site visits and bookings — with project branding, local SEO and RERA-ready performance campaigns.</p>
               <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
                 <a href="contact-us.html" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Get qualified leads</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
-                <a href="#playbook" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:route" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10">See the playbook</span></a>
+                <a href="#path" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:key-round" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10">Path to possession</span></a>
               </div>
-              <p class="reveal text-xs text-ink-soft mt-6 inline-flex items-center gap-2" data-delay="3"><iconify-icon icon="lucide:sparkles" class="text-accent" aria-hidden="true"></iconify-icon> Built to be found everywhere — Google, AI Overviews, ChatGPT &amp; Perplexity.</p>
+              <div class="reveal flex flex-wrap items-center gap-x-5 gap-y-2 mt-7 text-xs text-ink-soft" data-delay="3">
+                <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:shield-check" class="text-accent" aria-hidden="true"></iconify-icon> RERA-ready</span>
+                <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:map-pinned" class="text-accent" aria-hidden="true"></iconify-icon> Hyper-local targeting</span>
+                <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:sparkles" class="text-accent" aria-hidden="true"></iconify-icon> Found on Google &amp; AI</span>
+              </div>
             </div>
-            <!-- hero visual: leads dashboard + listing -->
+
+            <!-- hero visual: a PROPERTY LISTING card -->
             <div class="lg:col-span-6 reveal" data-delay="1">
-              <div class="mock rounded-xl2 p-6 sm:p-8">
-                <div class="flex items-center justify-between"><span class="text-xs tracking-[.2em] uppercase text-ink-soft">Campaign · live</span><span class="inline-flex items-center gap-1.5 text-xs text-ink-soft"><span class="live inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true"></span> this month</span></div>
-                <div class="flex items-end gap-2 mt-3"><p class="font-display text-5xl sm:text-6xl tt text-accent"><span class="count" data-to="3">0</span>.4k</p><p class="text-ink-soft mb-2">qualified leads</p><span class="ml-auto mb-2 inline-flex items-center gap-1 text-sm font-semibold text-accent">+<span class="count" data-to="128">0</span>% <iconify-icon icon="lucide:trending-up" aria-hidden="true"></iconify-icon></span></div>
-                <div class="grid grid-cols-3 gap-3 mt-5">
-                  <div class="rounded-xl bg-surface p-3"><p class="text-[11px] text-ink-soft">Site visits</p><p class="font-display text-xl tt"><span class="count" data-to="610">0</span></p></div>
-                  <div class="rounded-xl bg-surface p-3"><p class="inline-flex items-center gap-0.5 text-[11px] text-ink-soft">Cost / lead <iconify-icon icon="lucide:arrow-down" class="text-accent" aria-hidden="true"></iconify-icon></p><p class="font-display text-xl tt">₹<span class="count" data-to="46">0</span></p></div>
-                  <div class="rounded-xl bg-surface p-3"><p class="text-[11px] text-ink-soft">Bookings</p><p class="font-display text-xl tt"><span class="count" data-to="38">0</span></p></div>
+              <div class="rounded-xl2 border border-line bg-paper shadow-[0_50px_90px_-55px_rgba(10,10,10,.5)] overflow-hidden">
+                <!-- listing image (CSS skyline) -->
+                <div class="relative h-48 bg-gradient-to-b from-[#1b3a52] to-[#0c1b2a] overflow-hidden flex items-end justify-center gap-1.5 px-6 pb-0">
+                  <div class="sky-b s1 w-8 bg-white/15 rounded-t" style="height:55%"></div>
+                  <div class="sky-b s2 w-10 bg-white/20 rounded-t" style="height:78%"></div>
+                  <div class="sky-b s3 w-12 bg-gradient-to-t from-accent/70 to-accent/30 rounded-t" style="height:96%"></div>
+                  <div class="sky-b s4 w-10 bg-white/20 rounded-t" style="height:70%"></div>
+                  <div class="sky-b s5 w-8 bg-white/15 rounded-t" style="height:50%"></div>
+                  <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-paper/95 text-ink text-[11px] font-bold px-2.5 py-1"><iconify-icon icon="lucide:shield-check" class="text-accent" aria-hidden="true"></iconify-icon> RERA ✓</span>
+                  <span class="absolute top-3 right-3 rounded-full bg-accent text-paper text-[11px] font-semibold px-3 py-1">Now Launching</span>
+                  <span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-paper/90 backdrop-blur px-2.5 py-1 text-[11px] font-medium"><span class="live inline-block h-1.5 w-1.5 rounded-full bg-accent"></span> 12 enquiries today</span>
                 </div>
-                <!-- property listing row -->
-                <div class="mt-4 rounded-xl border border-line p-3 flex items-center gap-3">
-                  <span class="grid place-items-center h-12 w-14 rounded-lg bg-gradient-to-br from-accent/30 to-surface-2 text-accent shrink-0" aria-hidden="true"><iconify-icon icon="lucide:building"></iconify-icon></span>
-                  <div class="flex-1 min-w-0"><p class="text-sm font-medium truncate">3 BHK · Mansarovar</p><p class="text-xs text-ink-soft">RERA ✓ · Possession 2026</p></div>
-                  <div class="text-right"><p class="font-display tt text-accent">₹85L</p><p class="text-[10px] text-ink-soft">Book visit</p></div>
+                <!-- listing details -->
+                <div class="p-6">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <p class="font-display text-xl tt">Skyline Residency</p>
+                      <p class="text-xs text-ink-soft mt-1 inline-flex items-center gap-1"><iconify-icon icon="lucide:map-pin" class="text-accent" aria-hidden="true"></iconify-icon> 3 &amp; 4 BHK · Mansarovar, Jaipur</p>
+                    </div>
+                    <div class="text-right shrink-0"><p class="font-display text-2xl tt text-accent">₹85L<span class="text-sm">*</span></p><p class="text-[11px] text-ink-soft">EMI ₹42k/mo</p></div>
+                  </div>
+                  <!-- amenities -->
+                  <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                    <span class="inline-flex items-center gap-1 rounded-full bg-surface px-2.5 py-1"><iconify-icon icon="lucide:waves" class="text-accent" aria-hidden="true"></iconify-icon> Pool</span>
+                    <span class="inline-flex items-center gap-1 rounded-full bg-surface px-2.5 py-1"><iconify-icon icon="lucide:dumbbell" class="text-accent" aria-hidden="true"></iconify-icon> Clubhouse</span>
+                    <span class="inline-flex items-center gap-1 rounded-full bg-surface px-2.5 py-1"><iconify-icon icon="lucide:trees" class="text-accent" aria-hidden="true"></iconify-icon> Park</span>
+                    <span class="inline-flex items-center gap-1 rounded-full bg-surface px-2.5 py-1"><iconify-icon icon="lucide:shield" class="text-accent" aria-hidden="true"></iconify-icon> 24×7</span>
+                  </div>
+                  <div class="flex items-center gap-2 mt-5">
+                    <button class="flex-1 btn-glow rounded-full py-3 font-medium inline-flex items-center justify-center gap-2"><iconify-icon icon="lucide:calendar-check" aria-hidden="true"></iconify-icon> <span class="sheen-text">Book a site visit</span></button>
+                    <button class="grid place-items-center h-11 w-11 rounded-full border border-line text-ink-soft" aria-label="Save"><iconify-icon icon="lucide:heart"></iconify-icon></button>
+                  </div>
+                  <p class="text-[11px] text-ink-soft mt-3">Possession 2026 · *Illustrative listing — your project, your numbers.</p>
                 </div>
-                <div class="flex items-end gap-1.5 h-12 mt-4" aria-hidden="true">
-                  <div class="bar2 w-[15%] bg-gradient-to-t from-ink/70 to-ink/10" style="--h:40%"></div>
-                  <div class="bar2 w-[15%] bg-gradient-to-t from-ink/70 to-ink/10" style="--h:58%"></div>
-                  <div class="bar2 w-[15%] bg-gradient-to-t from-ink/70 to-ink/10" style="--h:48%"></div>
-                  <div class="bar2 w-[15%] bg-gradient-to-t from-accent to-accent/20" style="--h:78%"></div>
-                  <div class="bar2 w-[15%] bg-gradient-to-t from-accent to-accent/20" style="--h:100%"></div>
-                </div>
-                <p class="text-[11px] text-ink-soft mt-2">Illustrative campaign dashboard</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- QUICK ANSWER (AEO / AIO / GEO) -->
-      <section class="pb-4" aria-label="Quick answer">
-        <div class="mx-auto max-w-4xl px-4 sm:px-6">
-          <div class="reveal rounded-xl2 border border-accent/30 bg-accent/[0.04] p-6 sm:p-8">
-            <p class="inline-flex items-center gap-2 text-xs font-semibold tracking-[.15em] uppercase text-accent mb-3"><iconify-icon icon="lucide:badge-info" aria-hidden="true"></iconify-icon> In short</p>
-            <p class="text-lg leading-relaxed text-ink">
-              <strong>BoostronixX is a real estate marketing agency in Jaipur, India</strong> that helps builders, developers and brokers sell faster. We combine
-              <strong>project branding</strong> that builds trust, <strong>local SEO &amp; content</strong> for the localities and budgets buyers search,
-              <strong>AEO &amp; GEO</strong> so AI answers recommend your project, and <strong>RERA-ready performance marketing</strong> that turns clicks into
-              qualified site visits and bookings — not junk leads.
-            </p>
+      <!-- ===================== PATH TO POSSESSION — the route ===================== -->
+      <section id="path" class="py-20 sm:py-28 blueprint text-paper relative overflow-hidden" aria-label="The path to possession">
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="max-w-2xl mb-12">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The path to possession</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">From a search to the keys in hand</h2>
+            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1">A home is a months-long journey. We map the whole route — and keep your project the destination from the first search to the day they get the keys.</p>
           </div>
+
+          <!-- the map route to the home (pins drop onto the route) -->
+          <div class="reveal overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0" data-delay="1">
+            <div class="relative min-w-[600px] pt-2">
+              <!-- dashed map road, runs through the pin centers -->
+              <div class="absolute left-[10%] right-[10%] top-9 h-[3px] rounded-full" style="background:repeating-linear-gradient(90deg,rgba(250,85,57,.9) 0 9px,transparent 9px 20px)" aria-hidden="true"></div>
+              <div class="relative grid grid-cols-5 gap-2 sm:gap-4 text-center">
+                <div>
+                  <div class="pindrop p1 mx-auto w-fit">
+                    <span class="relative z-10 grid place-items-center h-14 w-14 rounded-full bg-[#0c1b2a] border-2 border-white/25 text-accent text-xl"><iconify-icon icon="lucide:search" aria-hidden="true"></iconify-icon></span>
+                    <span class="block mx-auto -mt-1.5 h-3 w-3 rotate-45 bg-[#0c1b2a] border-b-2 border-r-2 border-white/25"></span>
+                  </div>
+                  <p class="font-display tt mt-3">Search</p><p class="text-[11px] text-paper/50 mt-1">"3 BHK in Mansarovar"</p>
+                </div>
+                <div>
+                  <div class="pindrop p2 mx-auto w-fit">
+                    <span class="relative z-10 grid place-items-center h-14 w-14 rounded-full bg-[#0c1b2a] border-2 border-white/25 text-accent text-xl"><iconify-icon icon="lucide:message-square-text" aria-hidden="true"></iconify-icon></span>
+                    <span class="block mx-auto -mt-1.5 h-3 w-3 rotate-45 bg-[#0c1b2a] border-b-2 border-r-2 border-white/25"></span>
+                  </div>
+                  <p class="font-display tt mt-3">Enquiry</p><p class="text-[11px] text-paper/50 mt-1">Qualified, not junk</p>
+                </div>
+                <div>
+                  <div class="pindrop p3 mx-auto w-fit">
+                    <span class="relative z-10 grid place-items-center h-14 w-14 rounded-full bg-[#0c1b2a] border-2 border-white/25 text-accent text-xl"><iconify-icon icon="lucide:map-pin" aria-hidden="true"></iconify-icon></span>
+                    <span class="block mx-auto -mt-1.5 h-3 w-3 rotate-45 bg-[#0c1b2a] border-b-2 border-r-2 border-white/25"></span>
+                  </div>
+                  <p class="font-display tt mt-3">Site visit</p><p class="text-[11px] text-paper/50 mt-1">One-tap booking</p>
+                </div>
+                <div>
+                  <div class="pindrop p4 mx-auto w-fit">
+                    <span class="relative z-10 grid place-items-center h-14 w-14 rounded-full bg-[#0c1b2a] border-2 border-white/25 text-accent text-xl"><iconify-icon icon="lucide:file-signature" aria-hidden="true"></iconify-icon></span>
+                    <span class="block mx-auto -mt-1.5 h-3 w-3 rotate-45 bg-[#0c1b2a] border-b-2 border-r-2 border-white/25"></span>
+                  </div>
+                  <p class="font-display tt mt-3">Booking</p><p class="text-[11px] text-paper/50 mt-1">Nurtured to close</p>
+                </div>
+                <div>
+                  <div class="pindrop p5 mx-auto w-fit">
+                    <span class="home-glow relative z-10 grid place-items-center h-14 w-14 rounded-full bg-accent text-paper text-2xl"><iconify-icon icon="lucide:house" aria-hidden="true"></iconify-icon></span>
+                    <span class="block mx-auto -mt-1.5 h-3 w-3 rotate-45 bg-accent"></span>
+                  </div>
+                  <p class="font-display tt mt-3">Possession</p><p class="text-[11px] text-paper/50 mt-1">Keys handed over 🔑</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="reveal text-xs text-paper/40 mt-6" data-delay="2">We optimise for site visits and bookings — not raw form-fills — and weed out the noise early.</p>
         </div>
       </section>
 
-      <!-- WHO WE HELP (SXO persona paths) -->
+      <!-- ===================== PROPERTY TYPES ===================== -->
       <section class="py-20 sm:py-28" aria-label="Who we help">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
             <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Who we help</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Built for every kind of property business</h2>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Every kind of property business</h2>
           </div>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="reveal lift rounded-xl2 border border-line p-7"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:building-2"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Builders &amp; developers</h3><p class="text-ink-soft text-sm mt-2">You want to sell out a project faster — we build demand and qualified site visits.</p></div>
-            <div class="reveal lift rounded-xl2 border border-line p-7" data-delay="1"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:handshake"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Brokers &amp; agencies</h3><p class="text-ink-soft text-sm mt-2">You want a steady pipeline of serious buyers — we send leads, not tyre-kickers.</p></div>
-            <div class="reveal lift rounded-xl2 border border-line p-7" data-delay="2"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:rocket"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">New project launches</h3><p class="text-ink-soft text-sm mt-2">You want a high-impact launch — branding, microsite and a launch-day lead surge.</p></div>
-            <div class="reveal lift rounded-xl2 border border-line p-7"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:map"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Plotting &amp; townships</h3><p class="text-ink-soft text-sm mt-2">You want investors and end-users — we target intent by location and budget.</p></div>
-            <div class="reveal lift rounded-xl2 border border-line p-7" data-delay="1"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:briefcase"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Commercial &amp; office</h3><p class="text-ink-soft text-sm mt-2">You want businesses and investors — we reach decision-makers, not browsers.</p></div>
-            <div class="reveal lift rounded-xl2 border border-line p-7" data-delay="2"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:gem"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Luxury &amp; premium homes</h3><p class="text-ink-soft text-sm mt-2">You want HNI buyers — premium branding and tightly-targeted, discreet campaigns.</p></div>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="ptype reveal rounded-xl2 border border-line bg-paper p-6 overflow-hidden">
+              <span class="ptype-roof block h-1.5 w-12 rounded-full bg-accent/30 mb-4" aria-hidden="true"></span>
+              <iconify-icon icon="lucide:building" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
+              <h3 class="font-display text-lg tt mt-3">Apartments &amp; builders</h3>
+              <p class="text-ink-soft text-sm mt-1.5">Sell out a project faster with qualified site visits.</p>
+            </div>
+            <div class="ptype reveal rounded-xl2 border border-line bg-paper p-6 overflow-hidden" data-delay="1">
+              <span class="ptype-roof block h-1.5 w-12 rounded-full bg-accent/30 mb-4" aria-hidden="true"></span>
+              <iconify-icon icon="lucide:home" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
+              <h3 class="font-display text-lg tt mt-3">Villas &amp; floors</h3>
+              <p class="text-ink-soft text-sm mt-1.5">Premium homes for end-users and investors.</p>
+            </div>
+            <div class="ptype reveal rounded-xl2 border border-line bg-paper p-6 overflow-hidden" data-delay="2">
+              <span class="ptype-roof block h-1.5 w-12 rounded-full bg-accent/30 mb-4" aria-hidden="true"></span>
+              <iconify-icon icon="lucide:map" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
+              <h3 class="font-display text-lg tt mt-3">Plots &amp; townships</h3>
+              <p class="text-ink-soft text-sm mt-1.5">Target intent by location and budget.</p>
+            </div>
+            <div class="ptype reveal rounded-xl2 border border-line bg-paper p-6 overflow-hidden">
+              <span class="ptype-roof block h-1.5 w-12 rounded-full bg-accent/30 mb-4" aria-hidden="true"></span>
+              <iconify-icon icon="lucide:briefcase" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
+              <h3 class="font-display text-lg tt mt-3">Commercial &amp; office</h3>
+              <p class="text-ink-soft text-sm mt-1.5">Reach decision-makers, not browsers.</p>
+            </div>
+            <div class="ptype reveal rounded-xl2 border border-line bg-paper p-6 overflow-hidden" data-delay="1">
+              <span class="ptype-roof block h-1.5 w-12 rounded-full bg-accent/30 mb-4" aria-hidden="true"></span>
+              <iconify-icon icon="lucide:gem" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
+              <h3 class="font-display text-lg tt mt-3">Luxury &amp; HNI</h3>
+              <p class="text-ink-soft text-sm mt-1.5">Premium branding, discreet targeting.</p>
+            </div>
+            <div class="ptype reveal rounded-xl2 border border-line bg-paper p-6 overflow-hidden" data-delay="2">
+              <span class="ptype-roof block h-1.5 w-12 rounded-full bg-accent/30 mb-4" aria-hidden="true"></span>
+              <iconify-icon icon="lucide:rocket" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
+              <h3 class="font-display text-lg tt mt-3">New launches</h3>
+              <p class="text-ink-soft text-sm mt-1.5">High-impact launch &amp; a lead-day surge.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- THE CHALLENGE -->
-      <section class="py-20 sm:py-28 bg-surface border-y border-line" aria-label="The real estate challenge">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10">
-          <div class="lg:col-span-4">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Why real estate is hard</p>
-            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">A high-ticket purchase with a long, careful journey</h2>
-            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">A home is the biggest buy most people make. They research for months, compare heavily and need to trust you before a single site visit.</p>
-          </div>
-          <div class="lg:col-span-8 grid sm:grid-cols-2 gap-4">
-            <div class="reveal rounded-2xl bg-paper border border-line p-6"><span class="text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:filter-x"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Junk lead overload</h3><p class="text-ink-soft text-sm mt-1.5">Most campaigns drown teams in unqualified enquiries — we optimise for quality.</p></div>
-            <div class="reveal rounded-2xl bg-paper border border-line p-6" data-delay="1"><span class="text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:calendar-clock"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Long decision cycles</h3><p class="text-ink-soft text-sm mt-1.5">Weeks to months of consideration — you need consistent nurturing, not one-off ads.</p></div>
-            <div class="reveal rounded-2xl bg-paper border border-line p-6"><span class="text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:shield-check"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Trust &amp; RERA</h3><p class="text-ink-soft text-sm mt-1.5">Buyers want proof and compliance — credibility decides who they visit.</p></div>
-            <div class="reveal rounded-2xl bg-paper border border-line p-6" data-delay="1"><span class="text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:map-pinned"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Hyper-local intent</h3><p class="text-ink-soft text-sm mt-1.5">They search by locality, BHK and budget — generic targeting wastes spend.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PLAYBOOK -->
-      <section id="playbook" class="py-20 sm:py-28" aria-label="How we grow real estate brands">
+      <!-- ===================== SERVICES — the building floor directory ===================== -->
+      <section class="py-20 sm:py-28 bg-surface border-y border-line" aria-label="How we sell projects">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The real estate playbook</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">How we sell projects faster</h2>
-            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">The full service stack, tuned for how property buyers actually decide. Each step links to the service that powers it.</p>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">We build it floor by floor</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Six floors that sell your project</h2>
+            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">Like any great building, growth is constructed from the ground up. Tap any floor for the service that powers it.</p>
           </div>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <a href="brand-consulting.html" class="reveal lift group rounded-xl2 border border-line p-7"><div class="flex items-center justify-between"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:shield-check"></iconify-icon></span><span class="font-display text-4xl tt text-accent/20">01</span></div><h3 class="font-display text-xl tt mt-4 group-hover:text-accent transition">Brand the project for trust</h3><p class="text-ink-soft text-sm mt-2">Project identity, RERA credibility and a story that makes buyers feel safe.</p></a>
-            <a href="seo-services.html" class="reveal lift group rounded-xl2 border border-line p-7" data-delay="1"><div class="flex items-center justify-between"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="font-display text-4xl tt text-accent/20">02</span></div><h3 class="font-display text-xl tt mt-4 group-hover:text-accent transition">Win local search</h3><p class="text-ink-soft text-sm mt-2">Local SEO, AEO &amp; GEO for "3 BHK in [locality]" and "best builder in [city]".</p></a>
-            <a href="performance-marketing.html" class="reveal lift group rounded-xl2 border border-line p-7" data-delay="2"><div class="flex items-center justify-between"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="font-display text-4xl tt text-accent/20">03</span></div><h3 class="font-display text-xl tt mt-4 group-hover:text-accent transition">Generate qualified leads</h3><p class="text-ink-soft text-sm mt-2">Meta &amp; Google campaigns tuned for site visits and bookings, not junk.</p></a>
-            <a href="website-design.html" class="reveal lift group rounded-xl2 border border-line p-7"><div class="flex items-center justify-between"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span><span class="font-display text-4xl tt text-accent/20">04</span></div><h3 class="font-display text-xl tt mt-4 group-hover:text-accent transition">Showcase the property</h3><p class="text-ink-soft text-sm mt-2">Fast project microsites with galleries, floor plans and easy site-visit booking.</p></a>
-            <a href="social-media-marketing.html" class="reveal lift group rounded-xl2 border border-line p-7" data-delay="1"><div class="flex items-center justify-between"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span><span class="font-display text-4xl tt text-accent/20">05</span></div><h3 class="font-display text-xl tt mt-4 group-hover:text-accent transition">Build reach &amp; proof</h3><p class="text-ink-soft text-sm mt-2">Walkthroughs, locality content and reviews that build desire and confidence.</p></a>
-            <a href="digital-marketing.html" class="reveal lift group rounded-xl2 border border-line p-7" data-delay="2"><div class="flex items-center justify-between"><span class="inline-grid place-items-center h-12 w-12 rounded-2xl bg-surface text-accent text-2xl" aria-hidden="true"><iconify-icon icon="lucide:repeat"></iconify-icon></span><span class="font-display text-4xl tt text-accent/20">06</span></div><h3 class="font-display text-xl tt mt-4 group-hover:text-accent transition">Nurture to booking</h3><p class="text-ink-soft text-sm mt-2">Follow-up, retargeting and CRM-friendly flows that close long cycles.</p></a>
-          </div>
-        </div>
-      </section>
 
-      <!-- LEAD-TO-BOOKING FUNNEL -->
-      <section class="py-20 sm:py-28 bg-ink text-paper relative overflow-hidden" aria-label="The lead-to-booking funnel">
-        <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
-        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">From impression to booking</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">We optimise for site visits and bookings</h2>
-            <p class="reveal text-paper/60 mt-5 max-w-md leading-relaxed" data-delay="1">Leads alone don't sell flats — site visits do. We engineer the whole funnel toward visits and bookings, and weed out the noise early.</p>
-            <ul class="reveal grid sm:grid-cols-2 gap-3 mt-7 text-sm" data-delay="2">
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> More qualified leads</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Lower cost per visit</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Higher visit→booking rate</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Shorter sales cycle</li>
-            </ul>
-          </div>
-          <div class="reveal" data-delay="1">
-            <div class="rounded-xl2 bg-white/5 border border-white/10 p-6 sm:p-8 space-y-2.5">
-              <div class="fstage f1 rounded-xl bg-white/10 px-4 py-3 flex items-center justify-between mx-auto" style="width:100%"><span class="text-sm font-medium">Impressions</span><span class="font-display tt"><span class="count" data-to="420">0</span>k</span></div>
-              <div class="fstage f2 rounded-xl bg-white/15 px-4 py-3 flex items-center justify-between mx-auto" style="width:80%"><span class="text-sm font-medium">Clicks</span><span class="font-display tt"><span class="count" data-to="14">0</span>.2k</span></div>
-              <div class="fstage f3 rounded-xl bg-accent/40 px-4 py-3 flex items-center justify-between mx-auto" style="width:60%"><span class="text-sm font-medium">Qualified leads</span><span class="font-display tt"><span class="count" data-to="3">0</span>.4k</span></div>
-              <div class="fstage f4 rounded-xl bg-accent/70 px-4 py-3 flex items-center justify-between mx-auto" style="width:42%"><span class="text-sm font-medium">Site visits</span><span class="font-display tt"><span class="count" data-to="610">0</span></span></div>
-              <div class="fstage f5 rounded-xl bg-accent text-paper px-4 py-3 flex items-center justify-between mx-auto" style="width:28%"><span class="text-sm font-medium">Bookings</span><span class="font-display tt"><span class="count" data-to="38">0</span></span></div>
-              <p class="text-[11px] text-paper/40 pt-2 text-center">Illustrative lead-to-booking funnel</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- AI SEARCH (AEO / GEO / AIO) -->
-      <section id="ai-search" class="py-20 sm:py-28" aria-labelledby="aiHeading">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-6">
-            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> AEO · GEO · AI Overviews</p>
-            <h2 id="aiHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Buyers ask AI now — be the recommendation</h2>
-            <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">Home buyers increasingly start by asking AI. We make sure that when someone asks ChatGPT, Perplexity or Google's AI Overview for the best project in your city or budget, <strong class="text-ink">your project is named — with a citation.</strong></p>
-            <div class="grid sm:grid-cols-2 gap-3 mt-7">
-              <div class="reveal lift rounded-2xl border border-line p-5"><span class="text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:message-square-quote"></iconify-icon></span><h3 class="font-display tt mt-3">AEO</h3><p class="text-ink-soft text-sm mt-1">Featured snippets &amp; People Also Ask for locality, budget &amp; "best builder" queries.</p></div>
-              <div class="reveal lift rounded-2xl border border-line p-5" data-delay="1"><span class="text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:bot"></iconify-icon></span><h3 class="font-display tt mt-3">GEO</h3><p class="text-ink-soft text-sm mt-1">Schema, locality entities &amp; citable content so AI tools recommend your project.</p></div>
-            </div>
-            <a href="seo-services.html#aeo-geo" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="2"><span class="relative z-10 sheen-text">How AEO &amp; GEO works</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
-          </div>
-          <!-- AI chat mock -->
-          <div class="lg:col-span-6 reveal" data-delay="1">
-            <div class="rounded-xl2 bg-[#141414] border border-white/10 p-5 sm:p-7">
-              <div class="flex items-center gap-2 pb-4 border-b border-white/10">
-                <span class="aiglow grid place-items-center h-8 w-8 rounded-full bg-accent text-paper" aria-hidden="true"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
-                <p class="text-sm font-medium text-paper">AI Assistant</p>
-                <span class="ml-auto inline-flex items-center gap-1.5 rounded-full bg-white/8 px-2.5 py-1 text-[10px] text-paper/60"><span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true"></span> answering</span>
-              </div>
-              <div class="mt-5 space-y-4">
-                <div class="bubble bu1 flex justify-end"><p class="max-w-[82%] rounded-2xl rounded-br-md bg-white/10 text-paper text-sm px-4 py-3">Best 3 BHK flats in Jaipur under ₹1 crore?</p></div>
-                <div class="bubble bu2 flex gap-2.5">
-                  <span class="grid place-items-center h-7 w-7 rounded-full bg-accent text-paper text-xs shrink-0" aria-hidden="true"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
-                  <div class="max-w-[85%] rounded-2xl rounded-tl-md bg-white/5 border border-white/10 px-4 py-3">
-                    <p class="text-sm text-paper/85 leading-relaxed">A strong RERA-approved option is <strong class="text-accent">Skyline Residency by your brand</strong> — 3 BHK homes in a prime locality with great amenities and reviews<span class="caret" aria-hidden="true"></span></p>
-                    <a href="contact-us.html" class="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:link" class="text-[11px]" aria-hidden="true"></iconify-icon> your-realty.com <span class="text-[10px] opacity-70">[1]</span></a>
-                  </div>
-                </div>
-                <div class="bubble bu3 flex justify-center"><span class="inline-flex items-center gap-1.5 rounded-full bg-accent text-paper text-xs font-semibold px-3 py-1.5"><iconify-icon icon="lucide:badge-check" aria-hidden="true"></iconify-icon> Your project, cited as the answer</span></div>
+          <!-- the building -->
+          <div class="reveal mx-auto" data-delay="1">
+            <!-- roof + crane -->
+            <div class="relative">
+              <!-- crane -->
+              <svg class="crane absolute -top-12 right-2 w-24 h-16 hidden sm:block" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+                <line x1="14" y1="78" x2="14" y2="10" stroke="#0a0a0a" stroke-width="3"/>
+                <line x1="6" y1="14" x2="100" y2="14" stroke="#0a0a0a" stroke-width="3"/>
+                <line x1="14" y1="14" x2="40" y2="34" stroke="#0a0a0a" stroke-width="2"/>
+                <line x1="86" y1="14" x2="86" y2="40" stroke="#fa5539" stroke-width="2"/>
+                <rect x="80" y="40" width="12" height="9" rx="1.5" fill="#fa5539"/>
+              </svg>
+              <div class="rounded-t-2xl bg-ink text-paper px-6 py-4 flex items-center justify-between">
+                <span class="inline-flex items-center gap-2 text-sm font-display tt"><iconify-icon icon="lucide:flag" class="text-accent" aria-hidden="true"></iconify-icon> Now selling — the growth tower</span>
+                <span class="text-[11px] text-paper/50">6 floors</span>
               </div>
             </div>
+            <!-- floors: top (06) -> ground (01) -->
+            <div class="border-x border-line divide-y divide-line bg-paper">
+              <a href="digital-marketing.html" class="floor f6 flex items-center gap-4 px-5 sm:px-6 py-4 bg-paper">
+                <span class="shrink-0 font-display text-2xl tt text-accent/30 w-9">06</span>
+                <span class="hidden sm:flex gap-1 shrink-0" aria-hidden="true"><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span></span>
+                <span class="flex-1 min-w-0"><span class="font-display tt block">Nurture to booking</span><span class="text-xs text-ink-soft">Follow-ups, retargeting &amp; CRM flows that close long cycles.</span></span>
+                <iconify-icon icon="lucide:arrow-up-right" class="floor-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon>
+              </a>
+              <a href="social-media-marketing.html" class="floor f5 flex items-center gap-4 px-5 sm:px-6 py-4 bg-paper">
+                <span class="shrink-0 font-display text-2xl tt text-accent/30 w-9">05</span>
+                <span class="hidden sm:flex gap-1 shrink-0" aria-hidden="true"><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span></span>
+                <span class="flex-1 min-w-0"><span class="font-display tt block">Build reach &amp; proof</span><span class="text-xs text-ink-soft">Walkthroughs, locality content &amp; reviews that build desire.</span></span>
+                <iconify-icon icon="lucide:arrow-up-right" class="floor-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon>
+              </a>
+              <a href="website-design.html" class="floor f4 flex items-center gap-4 px-5 sm:px-6 py-4 bg-paper">
+                <span class="shrink-0 font-display text-2xl tt text-accent/30 w-9">04</span>
+                <span class="hidden sm:flex gap-1 shrink-0" aria-hidden="true"><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span></span>
+                <span class="flex-1 min-w-0"><span class="font-display tt block">Showcase the property</span><span class="text-xs text-ink-soft">Fast microsites with galleries, floor plans &amp; site-visit booking.</span></span>
+                <iconify-icon icon="lucide:arrow-up-right" class="floor-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon>
+              </a>
+              <a href="performance-marketing.html" class="floor f3 flex items-center gap-4 px-5 sm:px-6 py-4 bg-paper">
+                <span class="shrink-0 font-display text-2xl tt text-accent/30 w-9">03</span>
+                <span class="hidden sm:flex gap-1 shrink-0" aria-hidden="true"><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span></span>
+                <span class="flex-1 min-w-0"><span class="font-display tt block">Generate qualified leads</span><span class="text-xs text-ink-soft">Meta &amp; Google campaigns tuned for site visits, not junk.</span></span>
+                <iconify-icon icon="lucide:arrow-up-right" class="floor-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon>
+              </a>
+              <a href="seo-services.html" class="floor f2 flex items-center gap-4 px-5 sm:px-6 py-4 bg-paper">
+                <span class="shrink-0 font-display text-2xl tt text-accent/30 w-9">02</span>
+                <span class="hidden sm:flex gap-1 shrink-0" aria-hidden="true"><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span></span>
+                <span class="flex-1 min-w-0"><span class="font-display tt block">Win local search</span><span class="text-xs text-ink-soft">Local SEO, AEO &amp; GEO for locality, BHK &amp; budget queries.</span></span>
+                <iconify-icon icon="lucide:arrow-up-right" class="floor-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon>
+              </a>
+              <a href="brand-consulting.html" class="floor f1 flex items-center gap-4 px-5 sm:px-6 py-4 bg-paper">
+                <span class="shrink-0 font-display text-2xl tt text-accent/30 w-9">01</span>
+                <span class="hidden sm:flex gap-1 shrink-0" aria-hidden="true"><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span><span class="h-3 w-3 rounded-sm bg-surface-2"></span></span>
+                <span class="flex-1 min-w-0"><span class="font-display tt block">Brand the project for trust</span><span class="text-xs text-ink-soft">Identity, RERA credibility &amp; a story that makes buyers feel safe.</span></span>
+                <iconify-icon icon="lucide:arrow-up-right" class="floor-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
+            <!-- ground / lobby -->
+            <div class="rounded-b-2xl bg-ink text-paper px-6 py-3 flex items-center justify-center gap-2 text-xs text-paper/60">
+              <iconify-icon icon="lucide:door-open" class="text-accent" aria-hidden="true"></iconify-icon> Ground floor: a strategy-first foundation
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- PROOF -->
-      <section class="py-20 sm:py-28 bg-surface border-y border-line" aria-label="Proof">
+      <!-- ===================== PROOF — the availability board ===================== -->
+      <section class="py-20 sm:py-28" aria-label="Results">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Proof in real estate</p>
-            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">We've moved the needle for property brands</h2>
-            <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1">From premium-feeling campaign visuals to lead-gen that climbed <strong class="text-ink">+128%</strong> in qualified leads, we build real estate marketing that brings buyers to the door.</p>
-            <figure class="reveal mt-7 rounded-2xl bg-paper border border-line p-6" data-delay="1">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Project performance</p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Inventory that moves, leads that convert</h2>
+            <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1">From premium-feeling campaign visuals to lead-gen that climbed <strong class="text-ink">+128%</strong> in qualified leads, we build real estate marketing that brings buyers to the door — and to a booking.</p>
+            <figure class="reveal mt-7 rounded-2xl bg-surface border border-line p-6" data-delay="1">
               <blockquote class="font-display tt text-lg leading-snug">"They understood our market from day one — the campaigns felt built for our buyers, not copy-pasted from another industry."</blockquote>
               <figcaption class="mt-4 flex items-center gap-3"><span class="grid place-items-center h-10 w-10 rounded-full bg-accent text-paper font-display" aria-hidden="true">V</span><span class="text-sm"><span class="block font-medium">Vikram Rathore</span><span class="block text-ink-soft text-xs">Real estate client</span></span><span class="ml-auto text-accent text-sm" aria-label="5 out of 5 stars">★★★★★</span></figcaption>
             </figure>
           </div>
-          <div class="reveal grid grid-cols-2 gap-4" data-delay="1">
-            <div class="rounded-2xl bg-paper border border-line p-6 flex flex-col justify-center"><p class="font-display text-4xl tt text-accent">+<span class="count" data-to="128">0</span>%</p><p class="text-sm text-ink-soft mt-1">qualified leads</p></div>
-            <div class="rounded-2xl bg-paper border border-line p-6 text-center">
-              <svg viewBox="0 0 80 80" class="h-20 w-20 mx-auto -rotate-90" aria-hidden="true"><circle cx="40" cy="40" r="32" fill="none" stroke="#e6e1da" stroke-width="8" /><circle class="ring2" cx="40" cy="40" r="32" fill="none" stroke="#fa5539" stroke-width="8" stroke-linecap="round" stroke-dasharray="201" style="--c:201;--o:70" /></svg>
-              <p class="font-display text-2xl tt -mt-14">65%</p>
-              <p class="text-xs text-ink-soft mt-10">visit show-up rate</p>
+          <!-- availability board -->
+          <div class="reveal" data-delay="1">
+            <div class="rounded-xl2 border border-line bg-paper p-6 sm:p-8">
+              <div class="flex items-center justify-between">
+                <p class="font-display tt">Skyline Residency · availability</p>
+                <span class="inline-flex items-center gap-1.5 text-xs text-ink-soft"><span class="live inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true"></span> live</span>
+              </div>
+              <!-- units grid -->
+              <div class="grid grid-cols-10 gap-1.5 mt-5" aria-hidden="true">
+                <span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span>
+                <span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit sold h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit h-6 rounded-sm border border-line bg-surface-2"></span><span class="unit h-6 rounded-sm border border-line bg-surface-2"></span>
+              </div>
+              <div class="flex items-center gap-4 mt-3 text-[11px] text-ink-soft">
+                <span class="inline-flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm bg-accent"></span> Sold</span>
+                <span class="inline-flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm bg-surface-2 border border-line"></span> Available</span>
+                <span class="ml-auto font-display text-ink tt text-base"><span class="count" data-to="85">0</span>% sold</span>
+              </div>
+              <!-- KPIs -->
+              <div class="grid grid-cols-2 gap-3 mt-6">
+                <div class="rounded-xl bg-surface p-4"><p class="font-display text-3xl tt text-accent">+<span class="count" data-to="128">0</span>%</p><p class="text-xs text-ink-soft mt-1">qualified leads</p></div>
+                <div class="rounded-xl bg-surface p-4 text-center">
+                  <svg viewBox="0 0 80 80" class="h-16 w-16 mx-auto -rotate-90" aria-hidden="true"><circle cx="40" cy="40" r="32" fill="none" stroke="#e6e1da" stroke-width="8" /><circle class="ring2" cx="40" cy="40" r="32" fill="none" stroke="#fa5539" stroke-width="8" stroke-linecap="round" stroke-dasharray="201" style="--c:201;--o:70" /></svg>
+                  <p class="font-display text-lg tt -mt-11">65%</p>
+                  <p class="text-[11px] text-ink-soft mt-7">visit show-up</p>
+                </div>
+                <div class="rounded-xl bg-surface p-4"><p class="font-display text-3xl tt">₹<span class="count" data-to="46">0</span></p><p class="text-xs text-ink-soft mt-1">cost per lead</p></div>
+                <div class="rounded-xl bg-ink text-paper p-4"><p class="font-display text-3xl tt text-accent"><span class="count" data-to="38">0</span></p><p class="text-xs text-paper/60 mt-1">bookings / month</p></div>
+              </div>
+              <p class="text-[11px] text-ink-soft mt-4">Illustrative — results vary by project, location and budget.</p>
             </div>
-            <div class="rounded-2xl bg-paper border border-line p-6 flex flex-col justify-center"><p class="font-display text-4xl tt">₹<span class="count" data-to="46">0</span></p><p class="text-sm text-ink-soft mt-1">cost per lead</p></div>
-            <div class="rounded-2xl bg-ink text-paper p-6 flex flex-col justify-center"><p class="font-display text-4xl tt text-accent"><span class="count" data-to="38">0</span></p><p class="text-sm text-paper/60 mt-1">bookings / month</p></div>
-            <p class="col-span-2 text-[11px] text-ink-soft text-center">Illustrative — results vary by project, location and budget.</p>
           </div>
         </div>
       </section>
 
-      <!-- FAQ (AEO / AIO) -->
+      <!-- ===================== BUYERS ASK AI — property portal result ===================== -->
+      <section id="ai-search" class="py-20 sm:py-28 bg-surface border-y border-line" aria-labelledby="aiHeading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6">
+            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> AEO · GEO · AI Overviews</p>
+            <h2 id="aiHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Buyers ask AI — be the recommendation</h2>
+            <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">Home buyers increasingly start by asking AI or searching a portal. We make sure that for "best 3 BHK in [locality] under ₹1 crore", <strong class="text-ink">your project is ranked, cited and RERA-verified.</strong></p>
+            <ul class="reveal space-y-2 mt-6 text-sm" data-delay="2">
+              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Featured for locality, BHK &amp; budget queries</li>
+              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Schema &amp; locality entities AI tools can cite</li>
+              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> RERA trust signals that win the visit</li>
+            </ul>
+            <a href="seo-services.html#aeo-geo" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="3"><span class="relative z-10 sheen-text">How AEO &amp; GEO works</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+          </div>
+          <!-- portal result -->
+          <div class="lg:col-span-6 reveal" data-delay="1">
+            <div class="rounded-xl2 border border-line bg-paper shadow-[0_45px_90px_-55px_rgba(10,10,10,.5)] overflow-hidden">
+              <div class="flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2.5 m-4 text-sm text-ink">
+                <iconify-icon icon="lucide:search" class="text-ink-soft" aria-hidden="true"></iconify-icon>
+                <span>3 BHK in Mansarovar under ₹1 crore<span class="caret" aria-hidden="true"></span></span>
+              </div>
+              <div class="mx-4 mb-3 rounded-xl bg-accent/[0.06] border border-accent/25 p-3">
+                <p class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-accent uppercase tracking-wide"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> AI Overview</p>
+                <p class="text-sm text-ink mt-1.5 leading-relaxed">A strong RERA-approved option is <strong class="text-accent">Skyline Residency</strong> — 3 BHK homes in a prime Mansarovar locality. <span class="text-ink-soft">[1]</span></p>
+              </div>
+              <div class="mx-4 mb-4 rounded-xl border border-line p-4">
+                <div class="flex items-start gap-3">
+                  <span class="grid place-items-center h-11 w-11 rounded-lg bg-accent/15 text-accent shrink-0" aria-hidden="true"><iconify-icon icon="lucide:building-2" class="text-xl"></iconify-icon></span>
+                  <div class="flex-1 min-w-0">
+                    <p class="font-display tt inline-flex items-center gap-2">Skyline Residency <span class="inline-flex items-center gap-1 rounded-full bg-accent/10 text-accent text-[10px] font-semibold px-2 py-0.5">Rank #1 <iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon></span></p>
+                    <p class="text-xs text-ink-soft mt-0.5">3 &amp; 4 BHK · Mansarovar, Jaipur · ₹85L onwards</p>
+                    <p class="text-xs text-ink-soft mt-0.5 inline-flex items-center gap-1"><iconify-icon icon="lucide:shield-check" class="text-accent" aria-hidden="true"></iconify-icon> RERA verified · Possession 2026</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 mt-3">
+                  <a href="contact-us.html" class="flex-1 text-center rounded-full bg-ink text-paper text-xs font-medium py-2">Book a visit</a>
+                  <a href="tel:+918058212202" class="flex-1 text-center rounded-full border border-line text-xs font-medium py-2">Call</a>
+                </div>
+              </div>
+              <div class="mx-4 mb-4 flex items-center justify-center gap-1.5 rounded-full bg-accent text-paper text-xs font-semibold py-2"><iconify-icon icon="lucide:badge-check" aria-hidden="true"></iconify-icon> Your project, cited as the answer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ (shared design) ===================== -->
       <section class="py-20 sm:py-28" aria-label="Frequently asked questions">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
           <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Real estate FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Your questions, answered</h2></div>
@@ -363,14 +511,14 @@
         </div>
       </section>
 
-      <!-- RELATED + CTA -->
-      <section class="pb-20 sm:pb-28" aria-label="Related and contact">
+      <!-- ===================== RELATED + CTA (shared design) ===================== -->
+      <section class="pb-20 sm:pb-28 pt-4" aria-label="Related and contact">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Explore more</p>
           <div class="grid sm:grid-cols-3 gap-4 mb-12">
-            <a href="performance-marketing.html" class="reveal lift group rounded-2xl border border-line p-6 flex items-center gap-4"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Performance Marketing</span><span class="text-xs text-ink-soft">Lead-gen that converts</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
-            <a href="seo-services.html" class="reveal lift group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">SEO · AEO · GEO</span><span class="text-xs text-ink-soft">Win local search &amp; AI</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
-            <a href="industries.html" class="reveal lift group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:layers"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">All Industries</span><span class="text-xs text-ink-soft">Other sectors</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
+            <a href="performance-marketing.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Performance Marketing</span><span class="text-xs text-ink-soft">Lead-gen that converts</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
+            <a href="seo-services.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">SEO · AEO · GEO</span><span class="text-xs text-ink-soft">Win local search &amp; AI</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
+            <a href="industries.html" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:layers"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">All Industries</span><span class="text-xs text-ink-soft">Other sectors</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
           </div>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
             <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
@@ -388,7 +536,7 @@
       </article>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (shared) -->
     <footer class="border-t border-line pt-16 pb-28 lg:pb-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
@@ -413,7 +561,7 @@
       </div>
     </footer>
 
-    <!-- BOTTOM NAV -->
+    <!-- BOTTOM NAV (shared) -->
     <nav class="appnav lg:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/90 backdrop-blur-md border-t border-line" aria-label="Quick">
       <div class="grid grid-cols-4 max-w-md mx-auto">
         <a href="index.html" class="flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium text-ink-soft"><iconify-icon icon="lucide:house" class="text-[22px]" aria-hidden="true"></iconify-icon>Home</a>
@@ -446,7 +594,7 @@
           { "@type": "Question", "name": "Do you build project microsites and landing pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — our website and UI/UX teams build fast, SEO-ready project microsites and landing pages with galleries, floor plans, locality maps and one-tap site-visit booking." } } ] } ] }
     </script>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS (shared) -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var bar = document.getElementById("hdrbar"); var progress = document.getElementById("progressBar");

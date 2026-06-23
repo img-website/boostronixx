@@ -60,7 +60,6 @@
       .nav-link::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--accent); transition:width .3s ease; }
       .nav-link:hover::after, .nav-link.active::after { width:100%; }
       @keyframes spin { to { transform: rotate(360deg); } } .spin { animation: spin 16s linear infinite; }
-      .mock { background:#fff; border:1px solid var(--color-line); border-radius:1.75rem; box-shadow:0 40px 80px -50px rgba(10,10,10,.45); }
       .imgph { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; isolation:isolate; }
       .imgph > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
       .imgph .lbl { position:relative; z-index:1; text-align:center; padding:1rem; max-width:92%; }
@@ -155,7 +154,7 @@
             </div>
             <!-- BRAND BOARD MOCK -->
             <div class="lg:col-span-6 reveal" data-delay="1">
-              <div class="mock rounded-xl2 p-6 sm:p-8">
+              <div class="bg-paper border border-line rounded-xl2 shadow-[0_40px_80px_-50px_rgba(10,10,10,0.45)] p-6 sm:p-8">
                 <div class="flex items-center justify-between mb-5"><span class="text-xs tracking-[.2em] uppercase text-ink-soft">Brand Board</span><span class="text-xs text-ink-soft">v1.0</span></div>
                 <div class="grid grid-cols-3 gap-3">
                   <div class="bb-tile col-span-2 rounded-2xl bg-ink text-paper p-5 flex items-end min-h-[120px]"><span class="font-display text-3xl tt">Lumen<span class="text-accent">.</span></span></div>
