@@ -776,9 +776,10 @@
             </div>
             <div class="lg:col-span-4">
               <p class="reveal text-ink-soft leading-relaxed" data-delay="1">
-                BoostronixX is a digital marketing agency in Jaipur — branding,
+                BoostronixX is a digital marketing company in Jaipur — branding,
                 SEO, social media and performance marketing in one creative team,
-                turning ambitious businesses into brands people remember.
+                turning ambitious businesses into brands people remember with
+                ROI-driven, affordable growth.
               </p>
               <div
                 class="reveal flex flex-wrap items-center gap-3 mt-6"
@@ -2897,7 +2898,9 @@
                 <p class="text-paper/70 mt-6 text-lg max-w-xl">
                   Real estate, school, D2C or healthcare brand ready to scale
                   — BoostronixX is your creative branding and digital marketing
-                  partner in Jaipur. Book a free strategy call today.
+                  partner in Jaipur, trusted as one of the best digital marketing
+                  agencies in Jaipur for ROI-driven, affordable growth. Book a
+                  free strategy call today.
                 </p>
                 <div class="flex flex-wrap items-center gap-3 mt-9">
                   <a
@@ -3960,6 +3963,123 @@
         if (!k) return;
         var a = document.querySelector('.appnav a[href="' + k + '"]');
         if (a) { a.classList.remove("text-ink-soft", "text-white/55"); a.classList.add("text-accent"); }
+      })();
+    </script>
+
+    <!-- ===== HOMEPAGE LEAD POPUP ===== -->
+    <style>
+      #hpPop{ position:fixed; inset:0; z-index:80; display:none; }
+      #hpPop.hp-open{ display:block; }
+      #hpPop .hp-bd{ position:absolute; inset:0; background:rgba(10,10,10,.6); backdrop-filter:blur(7px); opacity:0; transition:opacity .4s ease; }
+      #hpPop.hp-show .hp-bd{ opacity:1; }
+      #hpPop .hp-card{ position:absolute; left:50%; top:50%; translate:-50% -50%; width:calc(100% - 1.5rem); max-width:880px; max-height:94vh; overflow:auto;
+        background:#fff; border-radius:1.9rem; box-shadow:0 60px 130px -30px rgba(10,10,10,.65);
+        opacity:0; transform:translateY(22px) scale(.96); transition:opacity .45s ease, transform .45s cubic-bezier(.2,.7,.2,1); }
+      #hpPop.hp-show .hp-card{ opacity:1; transform:none; }
+      .hp-grid{ display:grid; grid-template-columns:1fr; }
+      @media (min-width:760px){ .hp-grid{ grid-template-columns:0.92fr 1.08fr; } }
+      .hp-vis{ position:relative; overflow:hidden; background:linear-gradient(150deg,#fa5539 0%,#ff7d4f 46%,#1d1b1a 135%); color:#fff; padding:1.8rem 1.7rem; display:flex; flex-direction:column; justify-content:space-between; gap:1.1rem; }
+      @media (min-width:760px){ .hp-vis{ padding:2.3rem 2.1rem; } }
+      .hp-orb{ position:absolute; border-radius:50%; filter:blur(42px); pointer-events:none; }
+      .hp-float{ animation:hpFloat 5s ease-in-out infinite; }
+      .hp-float2{ animation:hpFloat 6.5s ease-in-out infinite 1s; }
+      @keyframes hpFloat{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-9px) } }
+      .hp-chip{ display:inline-flex; align-items:center; gap:.35rem; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3); padding:.32rem .72rem; border-radius:999px; font-size:.72rem; font-weight:600; }
+      #hpPop .bxfld{ position:relative; }
+      #hpPop .bxfld input, #hpPop .bxfld textarea{ width:100%; border:1px solid var(--color-line,#e6e1da); border-radius:.85rem; padding:1.1rem .9rem .4rem; background:#fff; outline:none; font-family:inherit; font-size:.9rem; color:var(--ink); transition:border-color .2s ease, box-shadow .2s ease; appearance:none; }
+      #hpPop .bxfld textarea{ resize:vertical; min-height:70px; }
+      #hpPop .bxfld input:focus, #hpPop .bxfld textarea:focus{ border-color:var(--accent); box-shadow:0 0 0 4px rgba(250,85,57,.12); }
+      #hpPop .bxfld label{ position:absolute; left:.9rem; top:.78rem; color:#8a8276; font-size:.9rem; pointer-events:none; transition:.18s ease; }
+      #hpPop .bxfld input:focus ~ label, #hpPop .bxfld input:not(:placeholder-shown) ~ label, #hpPop .bxfld textarea:focus ~ label, #hpPop .bxfld textarea:not(:placeholder-shown) ~ label{ top:.32rem; font-size:.62rem; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+      #hpPop .spinner{ width:18px; height:18px; border-radius:50%; border:2px solid rgba(255,255,255,.4); border-top-color:#fff; animation:spinq .7s linear infinite; }
+      @keyframes spinq{ to{ transform:rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce){ .hp-float,.hp-float2{ animation:none } }
+    </style>
+
+    <div id="hpPop" role="dialog" aria-modal="true" aria-labelledby="hpTitle">
+      <div class="hp-bd" data-hpclose></div>
+      <div class="hp-card">
+        <button type="button" data-hpclose aria-label="Close" class="absolute right-3.5 top-3.5 z-20 h-9 w-9 inline-flex items-center justify-center rounded-full bg-white/85 text-ink hover:bg-white shadow transition"><iconify-icon icon="lucide:x" class="text-lg" aria-hidden="true"></iconify-icon></button>
+        <div class="hp-grid">
+          <!-- LEFT: form -->
+          <div class="p-7 sm:p-9 order-2 md:order-1">
+            <div>
+              <p class="text-[11px] font-semibold tracking-[.18em] uppercase text-accent">Before you go</p>
+              <h3 id="hpTitle" class="font-display text-2xl sm:text-[28px] tt leading-tight mt-2">Get a free <span class="text-accent">growth plan</span> for your brand.</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Drop your details and we'll send 2-3 quick, practical wins tailored to your business. No spam, no obligation.</p>
+              <form id="hpForm" class="mt-5 grid gap-4" novalidate>
+                <div class="bxfld">
+                  <input id="hpName" name="name" type="text" placeholder=" " required />
+                  <label for="hpName">Full name *</label>
+                </div>
+                <div class="bxfld">
+                  <input id="hpEmail" name="email" type="email" placeholder=" " required />
+                  <label for="hpEmail">Email *</label>
+                </div>
+                <div class="bxfld">
+                  <input id="hpPhone" name="phone" type="tel" placeholder=" " />
+                  <label for="hpPhone">Phone</label>
+                </div>
+                <div class="bxfld">
+                  <textarea id="hpMsg" name="message" placeholder=" "></textarea>
+                  <label for="hpMsg">What do you want to grow?</label>
+                </div>
+                <button id="hpSubmit" type="submit" class="btn-glow inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-medium">
+                  <span id="hpBtnLabel" class="inline-flex items-center gap-2">Get my free plan <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span>
+                  <span id="hpSpinner" class="spinner hidden"></span>
+                </button>
+                <p class="text-[11px] text-ink-soft text-center">Replies within 24 hours &middot; No spam, ever.</p>
+              </form>
+            </div>
+          </div>
+          <!-- RIGHT: visual -->
+          <div class="hp-vis order-1 md:order-2">
+            <span class="hp-orb" style="width:170px;height:170px;background:#ffd0a8;opacity:.5;top:-36px;right:-26px;"></span>
+            <span class="hp-orb" style="width:140px;height:140px;background:#fa5539;opacity:.4;bottom:-34px;left:24px;"></span>
+            <div class="relative z-10">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="hp-chip"><iconify-icon icon="lucide:zap" aria-hidden="true"></iconify-icon> Free 20-min call</span>
+                <span class="hp-chip"><iconify-icon icon="lucide:trending-up" aria-hidden="true"></iconify-icon> ROI-driven</span>
+              </div>
+              <h4 class="font-display text-2xl sm:text-3xl tt leading-tight mt-4">Brands we touch don't stay invisible.</h4>
+              <p class="text-white/75 text-sm mt-2 leading-relaxed">A Jaipur studio that pairs sharp design with performance marketing - and reports on every rupee.</p>
+            </div>
+            <div class="relative z-10 hidden md:block">
+              <div class="hp-float bg-white/12 border border-white/20 rounded-2xl p-4 backdrop-blur-sm max-w-[262px]">
+                <div class="flex items-center justify-between text-[11px] text-white/70"><span>Avg. client growth</span><span class="h-2 w-2 rounded-full bg-white"></span></div>
+                <p class="font-display text-4xl tt mt-1">+220%</p>
+                <div class="flex items-end gap-1.5 h-12 mt-3" aria-hidden="true">
+                  <span class="flex-1 rounded-sm bg-white/30" style="height:32%"></span>
+                  <span class="flex-1 rounded-sm bg-white/40" style="height:46%"></span>
+                  <span class="flex-1 rounded-sm bg-white/30" style="height:38%"></span>
+                  <span class="flex-1 rounded-sm bg-white/55" style="height:64%"></span>
+                  <span class="flex-1 rounded-sm bg-white/45" style="height:54%"></span>
+                  <span class="flex-1 rounded-sm bg-white" style="height:88%"></span>
+                  <span class="flex-1 rounded-sm bg-white/70" style="height:74%"></span>
+                </div>
+              </div>
+              <div class="hp-float2 absolute -bottom-3 right-1 bg-white text-ink rounded-xl px-3 py-2 shadow-xl flex items-center gap-2">
+                <span class="text-accent text-sm tracking-tight">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="text-[11px] font-semibold">4.9 &middot; 50+ brands</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        var pop=document.getElementById('hpPop'); if(!pop) return;
+        var KEY='hp_lead_seen';
+        function open(){ pop.classList.add('hp-open'); requestAnimationFrame(function(){ pop.classList.add('hp-show'); }); document.body.style.overflow='hidden'; try{ sessionStorage.setItem(KEY,'1'); }catch(e){} }
+        function close(){ pop.classList.remove('hp-show'); document.body.style.overflow=''; setTimeout(function(){ pop.classList.remove('hp-open'); },430); }
+        var seen=false; try{ seen=sessionStorage.getItem(KEY)==='1'; }catch(e){}
+        if(!seen){ setTimeout(open, 10000); }
+        pop.querySelectorAll('[data-hpclose]').forEach(function(el){ el.addEventListener('click', close); });
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape' && pop.classList.contains('hp-open')) close(); });
+        var form=document.getElementById('hpForm');
+        if(form) form.addEventListener('submit', function(e){ e.preventDefault(); if(!form.checkValidity()){ form.reportValidity(); var fi=form.querySelector(':invalid'); if(fi) fi.focus(); return; } var b=document.getElementById('hpSubmit'); b.disabled=true; b.style.opacity='.85'; document.getElementById('hpBtnLabel').classList.add('hidden'); document.getElementById('hpSpinner').classList.remove('hidden'); try{ sessionStorage.setItem('bx_name', form.querySelector('[name=name]').value.trim()); }catch(err){} setTimeout(function(){ window.location.href='thank-you.html'; }, 1100); });
       })();
     </script>
   </body>

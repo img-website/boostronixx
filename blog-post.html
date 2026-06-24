@@ -578,5 +578,101 @@
         if (a) { a.classList.remove("text-ink-soft", "text-white/55"); a.classList.add("text-accent"); }
       })();
     </script>
+
+    <!-- ===== STICKY CONTACT CTA + MODAL ===== -->
+    <style>
+      #bpCtaBtn{ display:inline-flex; align-items:center; gap:.55rem; padding:.95rem 1.5rem; border-radius:999px;
+        background:linear-gradient(135deg,#fa5539,#ff7d4f); color:#fff; font-weight:600; font-size:.95rem; line-height:1;
+        box-shadow:0 18px 42px -14px rgba(250,85,57,.7), 0 4px 14px -4px rgba(0,0,0,.3); border:none; cursor:pointer;
+        opacity:0; transform:translateY(26px); isolation:isolate; overflow:hidden;
+        transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, scale .2s ease; }
+      #bpCtaBtn.bp-in{ opacity:1; transform:translateY(0); animation:bpFloat 3.6s ease-in-out infinite 1s; }
+      #bpCtaBtn:hover{ scale:1.05; box-shadow:0 26px 56px -12px rgba(250,85,57,.85); }
+      #bpCtaBtn:active{ scale:.97; }
+      #bpCtaBtn .bp-ico{ font-size:1.2rem; }
+      #bpCtaBtn::before{ content:""; position:absolute; inset:0; border-radius:999px; z-index:-1;
+        animation:bpPing 2.4s cubic-bezier(0,0,.2,1) infinite; }
+      #bpCtaBtn::after{ content:""; position:absolute; top:0; left:-60%; width:42%; height:100%; z-index:1;
+        background:linear-gradient(110deg,transparent,rgba(255,255,255,.55),transparent); transform:skewX(-18deg);
+        animation:bpShine 4s ease-in-out infinite 1.6s; }
+      @keyframes bpFloat{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-6px) } }
+      @keyframes bpPing{ 0%{ box-shadow:0 0 0 0 rgba(250,85,57,.5) } 70%,100%{ box-shadow:0 0 0 16px rgba(250,85,57,0) } }
+      @keyframes bpShine{ 0%,55%{ left:-60% } 88%,100%{ left:130% } }
+      #bpModal{ position:fixed; inset:0; z-index:70; display:none; }
+      #bpModal.bp-open{ display:block; }
+      #bpModal .bp-bd{ position:absolute; inset:0; background:rgba(10,10,10,.55); backdrop-filter:blur(6px); opacity:0; transition:opacity .35s ease; }
+      #bpModal.bp-show .bp-bd{ opacity:1; }
+      #bpModal .bp-card{ position:absolute; left:50%; top:50%; translate:-50% -50%; width:calc(100% - 2rem); max-width:440px; max-height:92vh; overflow:auto;
+        background:#fff; border-radius:1.75rem; padding:1.9rem 1.7rem; border:1px solid #e6e1da; box-shadow:0 50px 110px -30px rgba(10,10,10,.6);
+        opacity:0; transform:translateY(18px) scale(.97); transition:opacity .4s ease, transform .4s cubic-bezier(.2,.7,.2,1); }
+      #bpModal.bp-show .bp-card{ opacity:1; transform:none; }
+      #bpModal .bxfld{ position:relative; }
+      #bpModal .bxfld input, #bpModal .bxfld textarea{ width:100%; border:1px solid var(--color-line,#e6e1da); border-radius:.85rem; padding:1.1rem .9rem .4rem; background:#fff; outline:none; font-family:inherit; font-size:.9rem; color:var(--ink); transition:border-color .2s ease, box-shadow .2s ease; appearance:none; }
+      #bpModal .bxfld textarea{ resize:vertical; min-height:70px; }
+      #bpModal .bxfld input:focus, #bpModal .bxfld textarea:focus{ border-color:var(--accent); box-shadow:0 0 0 4px rgba(250,85,57,.12); }
+      #bpModal .bxfld label{ position:absolute; left:.9rem; top:.78rem; color:#8a8276; font-size:.9rem; pointer-events:none; transition:.18s ease; }
+      #bpModal .bxfld input:focus ~ label, #bpModal .bxfld input:not(:placeholder-shown) ~ label, #bpModal .bxfld textarea:focus ~ label, #bpModal .bxfld textarea:not(:placeholder-shown) ~ label{ top:.32rem; font-size:.62rem; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+      #bpModal .spinner{ width:18px; height:18px; border-radius:50%; border:2px solid rgba(255,255,255,.4); border-top-color:#fff; animation:spinq .7s linear infinite; }
+      @keyframes spinq{ to{ transform:rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce){ #bpCtaBtn,#bpCtaBtn::before,#bpCtaBtn::after{ animation:none } }
+    </style>
+
+    <button id="bpCtaBtn" type="button" class="fixed right-4 sm:right-6 bottom-20 lg:bottom-6 z-40" aria-haspopup="dialog" aria-controls="bpModal">
+      <iconify-icon icon="lucide:sparkles" class="bp-ico" aria-hidden="true"></iconify-icon>
+      <span>Get a free strategy call</span>
+    </button>
+
+    <div id="bpModal" role="dialog" aria-modal="true" aria-labelledby="bpTitle">
+      <div class="bp-bd" data-bpclose></div>
+      <div class="bp-card">
+        <button type="button" data-bpclose aria-label="Close" class="absolute right-4 top-4 h-9 w-9 inline-flex items-center justify-center rounded-full border border-line text-ink-soft hover:bg-surface transition">
+          <iconify-icon icon="lucide:x" class="text-lg" aria-hidden="true"></iconify-icon>
+        </button>
+        <div>
+          <p class="text-[11px] font-semibold tracking-[.18em] uppercase text-accent">Free 20-min strategy call</p>
+          <h3 id="bpTitle" class="font-display text-2xl sm:text-3xl tt leading-tight mt-2">Turn this read into <span class="text-accent">real growth.</span></h3>
+          <p class="text-ink-soft text-sm mt-2 leading-relaxed">Tell us where you want to go — we'll come back with quick, practical wins. No fluff, no obligation.</p>
+          <form id="bpForm" class="mt-5 grid gap-4" novalidate>
+            <div class="bxfld">
+              <input id="bpName" name="name" type="text" placeholder=" " required />
+              <label for="bpName">Full name *</label>
+            </div>
+            <div class="bxfld">
+              <input id="bpEmail" name="email" type="email" placeholder=" " required />
+              <label for="bpEmail">Email *</label>
+            </div>
+            <div class="bxfld">
+              <input id="bpPhone" name="phone" type="tel" placeholder=" " />
+              <label for="bpPhone">Phone</label>
+            </div>
+            <div class="bxfld">
+              <textarea id="bpMsg" name="message" placeholder=" " required></textarea>
+              <label for="bpMsg">What do you want to grow? *</label>
+            </div>
+            <label class="flex items-start gap-2 text-xs text-ink-soft cursor-pointer"><input type="checkbox" required class="mt-0.5 h-4 w-4 accent-[#fa5539]" /> I agree to be contacted about my enquiry.</label>
+            <button id="bpSubmit" type="submit" class="btn-glow inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-medium mt-1">
+              <span id="bpBtnLabel" class="inline-flex items-center gap-2">Send &amp; get my plan <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></span>
+              <span id="bpSpinner" class="spinner hidden"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        var btn=document.getElementById('bpCtaBtn'), modal=document.getElementById('bpModal');
+        if(!btn||!modal) return;
+        setTimeout(function(){ btn.classList.add('bp-in'); }, 1200);
+        var lastFocus=null;
+        function open(){ lastFocus=document.activeElement; modal.classList.add('bp-open'); requestAnimationFrame(function(){ modal.classList.add('bp-show'); }); document.body.style.overflow='hidden'; var f=modal.querySelector('.bp-field'); if(f) setTimeout(function(){ f.focus(); }, 260); }
+        function close(){ modal.classList.remove('bp-show'); document.body.style.overflow=''; setTimeout(function(){ modal.classList.remove('bp-open'); }, 380); if(lastFocus&&lastFocus.focus) lastFocus.focus(); }
+        btn.addEventListener('click', open);
+        modal.querySelectorAll('[data-bpclose]').forEach(function(el){ el.addEventListener('click', close); });
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('bp-open')) close(); });
+        var form=document.getElementById('bpForm');
+        if(form) form.addEventListener('submit', function(e){ e.preventDefault(); if(!form.checkValidity()){ form.reportValidity(); var fi=form.querySelector(':invalid'); if(fi) fi.focus(); return; } var b=document.getElementById('bpSubmit'); b.disabled=true; b.style.opacity='.85'; document.getElementById('bpBtnLabel').classList.add('hidden'); document.getElementById('bpSpinner').classList.remove('hidden'); try{ sessionStorage.setItem('bx_name', form.querySelector('[name=name]').value.trim()); }catch(err){} setTimeout(function(){ window.location.href='thank-you.html'; }, 1100); });
+      })();
+    </script>
   </body>
 </html>
