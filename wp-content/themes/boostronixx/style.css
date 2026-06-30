@@ -1,0 +1,21 @@
+/*
+Theme Name: BoostronixX
+Theme URI: https://www.boostronixx.com/
+Author: IMG Global Infotech
+Author URI: https://www.imgglobalinfotech.com/
+Description: Custom theme for BoostronixX — creative branding & digital marketing agency. Built from bespoke Tailwind designs. Presentation layer only; site logic lives in the project-core plugin.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.5
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: boostronixx
+Tags: custom, agency, tailwind
+*/
+
+/*
+ * NOTE: All actual styling is compiled into assets/css/app.min.css
+ * (Tailwind v4 + the project's custom CSS layer). This file exists only
+ * to register the theme with WordPress, per the WP theme standard.
+ */
