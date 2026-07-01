@@ -3431,3 +3431,16 @@ body.bx-page-website-design ::selection{ background: #fa5539; color: #fff; }
 .bx-page-blog-post .prose th, .bx-page-blog-post .prose td { border: 1px solid var(--color-line); padding: .7rem .9rem; text-align: left; vertical-align: top; }
 .bx-page-blog-post .prose thead th { background: var(--color-surface); font-family: var(--brand-font); font-weight: 600; }
 .bx-page-blog-post .prose tbody tr:nth-child(even) { background: rgba(0,0,0,.02); }
+
+/* --- figure margin utilities restore (see build_css.py) ---------------------
+   Tailwind preflight resets <figure> margins with an unlayered :where(figure)
+   rule that beats layered mt-* utilities; restore them for section figures. */
+figure.mt-4{margin-top:calc(var(--spacing)*4)}
+figure.mt-5{margin-top:calc(var(--spacing)*5)}
+figure.mt-6{margin-top:calc(var(--spacing)*6)}
+figure.mt-7{margin-top:calc(var(--spacing)*7)}
+figure.mt-8{margin-top:calc(var(--spacing)*8)}
+figure.mt-10{margin-top:calc(var(--spacing)*10)}
+figure.mt-12{margin-top:calc(var(--spacing)*12)}
+figure.mt-14{margin-top:calc(var(--spacing)*14)}
+figure.mt-16{margin-top:calc(var(--spacing)*16)}

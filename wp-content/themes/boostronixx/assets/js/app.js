@@ -1336,3 +1336,68 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { threshold: 0.08 });
   [].forEach.call(staggers, function (s) { io.observe(s); });
 })();
+
+/* seo-services hero — animated SERP rank mock (typewriter cycling BoostronixX
+ * SEO keywords, all ranked #1). Guarded on #serpType so it only runs on the SEO
+ * Services page. Ported from the original seo-services.html inline script that
+ * was missed during the JS consolidation. */
+(function () {
+  var typeEl = document.getElementById("serpType");
+  if (!typeEl) return;
+  var data = [
+    { kw: "seo company in jaipur", title: "SEO Company in Jaipur — BoostronixX", bars: [24, 34, 30, 48, 60, 78, 96] },
+    { kw: "seo services in jaipur", title: "SEO Services in Jaipur — BoostronixX", bars: [30, 26, 42, 38, 58, 74, 100] },
+    { kw: "local seo company jaipur", title: "Local SEO Company in Jaipur — BoostronixX", bars: [18, 32, 44, 40, 62, 82, 94] },
+    { kw: "best seo agency jaipur", title: "Best SEO Agency in Jaipur — BoostronixX", bars: [28, 40, 34, 52, 66, 80, 98] }
+  ];
+  var mock = document.getElementById("serpMock");
+  var card = document.getElementById("serpCard");
+  var titleEl = document.getElementById("serpTitle");
+  var bars = [].slice.call((mock || document).querySelectorAll(".bar"));
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function paint(d) {
+    if (titleEl) titleEl.textContent = d.title;
+    bars.forEach(function (b, i) { if (d.bars[i] != null) b.style.height = d.bars[i] + "%"; });
+  }
+  async function typeKw(kw) { for (var i = 1; i <= kw.length; i++) { typeEl.textContent = kw.slice(0, i); await sleep(55); } }
+  async function eraseKw() { var t = typeEl.textContent; for (var i = t.length; i >= 0; i--) { typeEl.textContent = t.slice(0, i); await sleep(28); } }
+  async function loop() {
+    var idx = 0;
+    await typeKw(data[0].kw);
+    await sleep(2300);
+    while (true) {
+      await eraseKw();
+      var ni = (idx + 1) % data.length;
+      await typeKw(data[ni].kw);
+      if (card) card.style.opacity = "0";
+      await sleep(300);
+      paint(data[ni]);
+      if (card) card.style.opacity = "1";
+      idx = ni;
+      await sleep(2300);
+    }
+  }
+  var started = false;
+  function start() {
+    if (started) return;
+    started = true;
+    if (reduce) { paint(data[0]); typeEl.textContent = data[0].kw; return; }
+    typeEl.textContent = "";
+    paint(data[0]);
+    loop();
+  }
+  function ready() {
+    if (mock && "IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); start(); } });
+      }, { threshold: 0.2 });
+      io.observe(mock);
+    }
+    setTimeout(function () {
+      var r = (mock || typeEl).getBoundingClientRect();
+      if (r.top < (window.innerHeight || 800) && r.bottom > 0) start();
+    }, 1200);
+  }
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", ready); } else { ready(); }
+})();

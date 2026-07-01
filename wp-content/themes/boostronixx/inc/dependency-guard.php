@@ -107,8 +107,9 @@ function bx_cta_image( $selector, $fallback = '', $post_id = false, $alt = 'Boos
 		return;
 	}
 	printf(
-		'<div class="relative overflow-hidden"><img src="%s" alt="%s" loading="lazy" class="md:h-full w-full object-contain object-center" /></div>',
+		'<div class="relative overflow-hidden rounded-xl2 aspect-[4/3]"><img src="%s" alt="%s" title="%s" width="1200" height="900" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top" /></div>',
 		esc_url( $url ),
+		esc_attr( $alt ),
 		esc_attr( $alt )
 	);
 }
