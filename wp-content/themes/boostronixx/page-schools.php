@@ -15,7 +15,7 @@ get_header();
 <main id="main">
       <article>
       <!-- ===================== HERO — report card + admissions-open seal ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-12 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
             <a href="/" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm" aria-hidden="true"></iconify-icon>
@@ -24,18 +24,26 @@ get_header();
           </nav>
           <div class="grid lg:grid-cols-12 gap-10 items-center">
             <div class="lg:col-span-6">
-              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:graduation-cap" class="text-accent text-sm" aria-hidden="true"></iconify-icon> Industry · Schools &amp; Admissions</div>
-              <h1 class="reveal font-display text-[2.6rem] leading-[1.0] sm:text-6xl tt">Fill every seat,<br />
-                <span class="relative inline-block">every <span class="text-accent">admission season</span>
+              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:graduation-cap" class="text-accent text-sm" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'schools_hero_badge', false, 'Industry · Schools & Admissions' ) ); ?></div>
+              <h1 class="reveal font-display text-[2.6rem] leading-[1.0] sm:text-6xl tt"><?php echo esc_html( bx_field( 'schools_hero_heading_a', false, 'Fill every seat,' ) ); ?><br />
+                <span class="relative inline-block"><?php echo esc_html( bx_field( 'schools_hero_heading_b', false, 'every ' ) ); ?><span class="text-accent"><?php echo esc_html( bx_field( 'schools_hero_heading_accent', false, 'admission season' ) ); ?></span>
                   <svg class="absolute -bottom-2 left-0 w-full" height="14" viewBox="0 0 320 14" fill="none" aria-hidden="true"><path class="chalk-path" pathLength="1" d="M3,9 C70,3 130,12 180,7 C230,3 290,10 317,5" stroke="#fa5539" stroke-width="4" stroke-linecap="round"/></svg>
                 </span>
               </h1>
-              <p class="reveal text-ink-soft mt-7 max-w-lg leading-relaxed" data-delay="1">As a school marketing agency in Jaipur, we help pre-schools, K-12, CBSE, ICSE, boarding and international schools earn parent trust and turn "best school near me" into admission enquiries, campus visits and confirmed admissions.</p>
+              <p class="reveal text-ink-soft mt-7 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'schools_hero_text', false, 'As a school marketing agency in Jaipur, we help pre-schools, K-12, CBSE, ICSE, boarding and international schools earn parent trust and turn "best school near me" into admission enquiries, campus visits and confirmed admissions.' ) ); ?></p>
+              <?php
+              $schools_hero_cta1       = get_field( 'schools_hero_cta_primary' );
+              $schools_hero_cta1_url   = is_array( $schools_hero_cta1 ) && ! empty( $schools_hero_cta1['url'] ) ? $schools_hero_cta1['url'] : '/contact-us/';
+              $schools_hero_cta1_label = is_array( $schools_hero_cta1 ) && ! empty( $schools_hero_cta1['title'] ) ? $schools_hero_cta1['title'] : 'Grow my admissions';
+              $schools_hero_cta2       = get_field( 'schools_hero_cta_secondary' );
+              $schools_hero_cta2_url   = is_array( $schools_hero_cta2 ) && ! empty( $schools_hero_cta2['url'] ) ? $schools_hero_cta2['url'] : '#journey';
+              $schools_hero_cta2_label = is_array( $schools_hero_cta2 ) && ! empty( $schools_hero_cta2['title'] ) ? $schools_hero_cta2['title'] : 'Follow the journey';
+              ?>
               <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
-                <a href="/contact-us/" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Grow my admissions</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
-                <a href="#journey" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:bus-front" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10">Follow the journey</span></a>
+                <a href="<?php echo esc_url( $schools_hero_cta1_url ); ?>" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text"><?php echo esc_html( $schools_hero_cta1_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+                <a href="<?php echo esc_url( $schools_hero_cta2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:bus-front" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10"><?php echo esc_html( $schools_hero_cta2_label ); ?></span></a>
               </div>
-              <p class="reveal hand text-2xl text-ink-soft mt-7 inline-flex items-center gap-2" data-delay="3"><iconify-icon icon="lucide:sparkles" class="text-accent text-base" aria-hidden="true"></iconify-icon> built to be found wherever parents look — Google, Maps &amp; AI</p>
+              <p class="reveal hand text-2xl text-ink-soft mt-7 inline-flex items-center gap-2" data-delay="3"><iconify-icon icon="lucide:sparkles" class="text-accent text-base" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'schools_hero_note', false, 'built to be found wherever parents look — Google, Maps & AI' ) ); ?></p>
             </div>
 
             <!-- hero visual: a marketing REPORT CARD -->
@@ -87,9 +95,9 @@ get_header();
         <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The admission journey</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">From "best school near me" to a confirmed seat</h2>
-            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1">Every parent in the city rides the same route. Our admission marketing in Jaipur makes sure your school is the destination at every single stop — and drives them all the way to a confirmed seat.</p>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'schools_journey_eyebrow', false, 'The admission journey' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'schools_journey_heading', false, 'From "best school near me" to a confirmed seat' ) ); ?></h2>
+            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'schools_journey_text', false, 'Every parent in the city rides the same route. Our admission marketing in Jaipur makes sure your school is the destination at every single stop — and drives them all the way to a confirmed seat.' ) ); ?></p>
           </div>
 
           <!-- the route -->
@@ -135,7 +143,7 @@ get_header();
               </div>
             </div>
           </div>
-          <p class="reveal text-xs text-paper/40 mt-6" data-delay="2">We engineer every stop — discovery, enquiry, visit and follow-up — so fewer parents drop off and more reach admission.</p>
+          <p class="reveal text-xs text-paper/40 mt-6" data-delay="2"><?php echo esc_html( bx_field( 'schools_journey_footnote', false, 'We engineer every stop — discovery, enquiry, visit and follow-up — so fewer parents drop off and more reach admission.' ) ); ?></p>
         </div>
       </section>
 
@@ -143,48 +151,13 @@ get_header();
       <section class="py-20 sm:py-28" aria-label="Our school growth timetable">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-start">
           <div class="lg:col-span-4 lg:sticky lg:top-28">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Your growth timetable</p>
-            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">What a school marketing agency in Jaipur runs for you</h2>
-            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">Think of it as a school day for your admissions. Each "period" is a capability we run for you — six together cover the full sweep of education digital marketing in Jaipur. Tap any to see the service behind it.</p>
-            <div class="reveal mt-6 inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-sm" data-delay="2"><iconify-icon icon="lucide:bell" class="text-accent" aria-hidden="true"></iconify-icon> One team, one timetable, full classrooms</div>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'schools_timetable_eyebrow', false, 'Your growth timetable' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight"><?php echo esc_html( bx_field( 'schools_timetable_heading', false, 'What a school marketing agency in Jaipur runs for you' ) ); ?></h2>
+            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'schools_timetable_text', false, 'Think of it as a school day for your admissions. Each "period" is a capability we run for you — six together cover the full sweep of education digital marketing in Jaipur. Tap any to see the service behind it.' ) ); ?></p>
+            <div class="reveal mt-6 inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-sm" data-delay="2"><iconify-icon icon="lucide:bell" class="text-accent" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'schools_timetable_pill', false, 'One team, one timetable, full classrooms' ) ); ?></div>
           </div>
           <div class="lg:col-span-8 rounded-xl2 border border-line overflow-hidden divide-y divide-line">
-            <a href="/brand-consulting/" class="period reveal flex items-center gap-4 sm:gap-6 p-5 sm:p-6 bg-paper">
-              <span class="shrink-0 grid place-items-center h-12 w-12 rounded-xl bg-ink text-paper font-display tt">P1</span>
-              <span class="bell text-accent text-2xl shrink-0" aria-hidden="true"><iconify-icon icon="lucide:palette"></iconify-icon></span>
-              <span class="flex-1 min-w-0"><span class="font-display text-lg tt block">Brand &amp; identity</span><span class="text-ink-soft text-sm">School branding in Jaipur parents instantly trust — name, crest, story &amp; tone.</span></span>
-              <iconify-icon icon="lucide:arrow-up-right" class="text-ink-soft text-xl shrink-0" aria-hidden="true"></iconify-icon>
-            </a>
-            <a href="/seo-services/" class="period reveal flex items-center gap-4 sm:gap-6 p-5 sm:p-6 bg-paper" data-delay="1">
-              <span class="shrink-0 grid place-items-center h-12 w-12 rounded-xl bg-ink text-paper font-display tt">P2</span>
-              <span class="bell text-accent text-2xl shrink-0" aria-hidden="true"><iconify-icon icon="lucide:map-pin"></iconify-icon></span>
-              <span class="flex-1 min-w-0"><span class="font-display text-lg tt block">Local SEO &amp; Maps</span><span class="text-ink-soft text-sm">School SEO in Jaipur that owns "best CBSE school near me" and the Google map pack.</span></span>
-              <iconify-icon icon="lucide:arrow-up-right" class="text-ink-soft text-xl shrink-0" aria-hidden="true"></iconify-icon>
-            </a>
-            <a href="/performance-marketing/" class="period reveal flex items-center gap-4 sm:gap-6 p-5 sm:p-6 bg-paper" data-delay="2">
-              <span class="shrink-0 grid place-items-center h-12 w-12 rounded-xl bg-ink text-paper font-display tt">P3</span>
-              <span class="bell text-accent text-2xl shrink-0" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span>
-              <span class="flex-1 min-w-0"><span class="font-display text-lg tt block">Admission campaigns</span><span class="text-ink-soft text-sm">Admission campaigns in Jaipur on Meta &amp; Google ads, timed to the season, tuned for quality enquiries.</span></span>
-              <iconify-icon icon="lucide:arrow-up-right" class="text-ink-soft text-xl shrink-0" aria-hidden="true"></iconify-icon>
-            </a>
-            <a href="/website-design/" class="period reveal flex items-center gap-4 sm:gap-6 p-5 sm:p-6 bg-paper">
-              <span class="shrink-0 grid place-items-center h-12 w-12 rounded-xl bg-ink text-paper font-display tt">P4</span>
-              <span class="bell text-accent text-2xl shrink-0" aria-hidden="true"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span>
-              <span class="flex-1 min-w-0"><span class="font-display text-lg tt block">Website &amp; enquiry</span><span class="text-ink-soft text-sm">A fast site with virtual tour, facilities &amp; a one-tap enquiry form.</span></span>
-              <iconify-icon icon="lucide:arrow-up-right" class="text-ink-soft text-xl shrink-0" aria-hidden="true"></iconify-icon>
-            </a>
-            <a href="/social-media-marketing/" class="period reveal flex items-center gap-4 sm:gap-6 p-5 sm:p-6 bg-paper" data-delay="1">
-              <span class="shrink-0 grid place-items-center h-12 w-12 rounded-xl bg-ink text-paper font-display tt">P5</span>
-              <span class="bell text-accent text-2xl shrink-0" aria-hidden="true"><iconify-icon icon="lucide:star"></iconify-icon></span>
-              <span class="flex-1 min-w-0"><span class="font-display text-lg tt block">Reviews &amp; social</span><span class="text-ink-soft text-sm">Events, achievements &amp; reviews that make your reputation visible.</span></span>
-              <iconify-icon icon="lucide:arrow-up-right" class="text-ink-soft text-xl shrink-0" aria-hidden="true"></iconify-icon>
-            </a>
-            <a href="/digital-marketing/" class="period reveal flex items-center gap-4 sm:gap-6 p-5 sm:p-6 bg-paper" data-delay="2">
-              <span class="shrink-0 grid place-items-center h-12 w-12 rounded-xl bg-ink text-paper font-display tt">P6</span>
-              <span class="bell text-accent text-2xl shrink-0" aria-hidden="true"><iconify-icon icon="lucide:repeat"></iconify-icon></span>
-              <span class="flex-1 min-w-0"><span class="font-display text-lg tt block">Nurture &amp; recall</span><span class="text-ink-soft text-sm">WhatsApp follow-ups &amp; reminders that turn enquiries into seats.</span></span>
-              <iconify-icon icon="lucide:arrow-up-right" class="text-ink-soft text-xl shrink-0" aria-hidden="true"></iconify-icon>
-            </a>
+            <?php bx_schools_render_periods(); ?>
           </div>
         </div>
       </section>
@@ -193,46 +166,11 @@ get_header();
       <section class="py-20 sm:py-28 bg-surface border-y border-line" aria-label="Schools we help">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Every kind of school</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Whatever your campus, we fill it</h2>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'schools_types_eyebrow', false, 'Every kind of school' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'schools_types_heading', false, 'Whatever your campus, we fill it' ) ); ?></h2>
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="tcard reveal rounded-xl2 border border-line bg-paper p-6">
-              <span class="roof block h-1.5 w-10 rounded-full bg-accent/30 mb-4 transition-colors" aria-hidden="true"></span>
-              <iconify-icon icon="lucide:baby" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
-              <h3 class="font-display text-lg tt mt-3">Pre-schools &amp; daycare</h3>
-              <p class="text-ink-soft text-sm mt-1.5">Warmth, safety &amp; trust that fills every batch.</p>
-            </div>
-            <div class="tcard reveal rounded-xl2 border border-line bg-paper p-6" data-delay="1">
-              <span class="roof block h-1.5 w-10 rounded-full bg-accent/30 mb-4 transition-colors" aria-hidden="true"></span>
-              <iconify-icon icon="lucide:school" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
-              <h3 class="font-display text-lg tt mt-3">CBSE &amp; ICSE day schools</h3>
-              <p class="text-ink-soft text-sm mt-1.5">CBSE school marketing and school SEO in Jaipur that wins local search and admission enquiries.</p>
-            </div>
-            <div class="tcard reveal rounded-xl2 border border-line bg-paper p-6" data-delay="2">
-              <span class="roof block h-1.5 w-10 rounded-full bg-accent/30 mb-4 transition-colors" aria-hidden="true"></span>
-              <iconify-icon icon="lucide:book-open" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
-              <h3 class="font-display text-lg tt mt-3">State-board schools</h3>
-              <p class="text-ink-soft text-sm mt-1.5">Local enquiries that convert to seats.</p>
-            </div>
-            <div class="tcard reveal rounded-xl2 border border-line bg-paper p-6">
-              <span class="roof block h-1.5 w-10 rounded-full bg-accent/30 mb-4 transition-colors" aria-hidden="true"></span>
-              <iconify-icon icon="lucide:bed" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
-              <h3 class="font-display text-lg tt mt-3">Boarding &amp; residential</h3>
-              <p class="text-ink-soft text-sm mt-1.5">Trust &amp; reach across cities.</p>
-            </div>
-            <div class="tcard reveal rounded-xl2 border border-line bg-paper p-6" data-delay="1">
-              <span class="roof block h-1.5 w-10 rounded-full bg-accent/30 mb-4 transition-colors" aria-hidden="true"></span>
-              <iconify-icon icon="lucide:globe" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
-              <h3 class="font-display text-lg tt mt-3">International &amp; IB</h3>
-              <p class="text-ink-soft text-sm mt-1.5">Premium positioning for discerning parents.</p>
-            </div>
-            <div class="tcard reveal rounded-xl2 border border-line bg-paper p-6" data-delay="2">
-              <span class="roof block h-1.5 w-10 rounded-full bg-accent/30 mb-4 transition-colors" aria-hidden="true"></span>
-              <iconify-icon icon="lucide:building-2" class="text-accent text-3xl" aria-hidden="true"></iconify-icon>
-              <h3 class="font-display text-lg tt mt-3">School groups &amp; chains</h3>
-              <p class="text-ink-soft text-sm mt-1.5">Fill seats across every campus, one brand.</p>
-            </div>
+            <?php bx_schools_render_types(); ?>
           </div>
         </div>
       </section>
@@ -241,8 +179,8 @@ get_header();
       <section class="py-20 sm:py-28" aria-label="Results">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">On the noticeboard</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Results worth pinning up</h2>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'schools_proof_eyebrow', false, 'On the noticeboard' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'schools_proof_heading', false, 'Results worth pinning up' ) ); ?></h2>
           </div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             <div class="pin reveal relative rounded-xl bg-paper border border-line p-6 rotate-[-2deg]">
@@ -277,15 +215,22 @@ get_header();
       <section id="ai-search" class="py-20 sm:py-28 bg-surface border-y border-line" aria-labelledby="aiHeading">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-6">
-            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> AEO · GEO · AI Overviews</p>
-            <h2 id="aiHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Parents ask AI before they ask you</h2>
-            <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">More parents now start admissions research inside ChatGPT, Perplexity or Google's AI Overview. We make sure that when they ask, <strong class="text-ink">your school is the answer — named, cited and trusted.</strong></p>
+            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'schools_ai_eyebrow', false, 'AEO · GEO · AI Overviews' ) ); ?></p>
+            <h2 id="aiHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'schools_ai_heading', false, 'Parents ask AI before they ask you' ) ); ?></h2>
+            <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'schools_ai_text', false, 'More parents now start admissions research inside ChatGPT, Perplexity or Google\'s AI Overview. We make sure that when they ask,' ) ); ?> <strong class="text-ink">your school is the answer — named, cited and trusted.</strong></p>
             <ul class="reveal space-y-2 mt-6 text-sm" data-delay="2">
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Answer-ready content for board, area &amp; grade queries</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Schema &amp; entities so AI tools cite your school</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> A review profile that earns the click</li>
+              <?php
+              foreach ( bx_lines( bx_field( 'schools_ai_points', false, "Answer-ready content for board, area & grade queries\nSchema & entities so AI tools cite your school\nA review profile that earns the click" ) ) as $schools_ai_point ) {
+                  echo '<li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> ' . esc_html( $schools_ai_point ) . '</li>';
+              }
+              ?>
             </ul>
-            <a href="/seo-services/#aeo-geo" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="3"><span class="relative z-10 sheen-text">How AEO &amp; GEO works</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+            <?php
+            $schools_ai_btn       = get_field( 'schools_ai_button' );
+            $schools_ai_btn_url   = is_array( $schools_ai_btn ) && ! empty( $schools_ai_btn['url'] ) ? $schools_ai_btn['url'] : '/seo-services/#aeo-geo';
+            $schools_ai_btn_label = is_array( $schools_ai_btn ) && ! empty( $schools_ai_btn['title'] ) ? $schools_ai_btn['title'] : 'How AEO & GEO works';
+            ?>
+            <a href="<?php echo esc_url( $schools_ai_btn_url ); ?>" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="3"><span class="relative z-10 sheen-text"><?php echo esc_html( $schools_ai_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
           </div>
           <!-- parent's phone -->
           <div class="lg:col-span-6 reveal flex justify-center" data-delay="1">
@@ -313,14 +258,9 @@ get_header();
       <!-- ===================== FAQ (shared design) ===================== -->
       <section class="py-20 sm:py-28" aria-label="Frequently asked questions">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
-          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">School marketing FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Your questions, answered</h2></div>
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'schools_faq_eyebrow', false, 'School marketing FAQ' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'schools_faq_heading', false, 'Your questions, answered' ) ); ?></h2></div>
           <div class="space-y-3">
-            <div class="faq border border-line rounded-2xl px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="true">How do you market a school?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">As a school marketing agency in Jaipur, we brand the school for trust, win local search with SEO/AEO/GEO and Google Business Profile for board, area and grade queries, fill admission enquiries with Meta and Google campaigns timed for the season, and make enquiring easy with a fast website and one-tap enquiry form — then nurture enquiries to confirmed admissions.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">How do you increase admission enquiries?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">We target parents by area, board and grade with high-intent campaigns, capture them with clear landing pages and a simple enquiry form, and optimise toward school visits rather than raw form-fills. WhatsApp follow-ups and visit reminders convert enquiries into applications and admissions.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">When should we start before admission season?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Ideally 3–4 months before the admission window opens, so we can build awareness and reviews early, warm up campaigns, and capture parents in the research phase — making your school top of mind when they're ready to enquire and visit.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">Which channels work best for schools?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Effective education digital marketing in Jaipur blends Google Search and Google Ads with the map pack for near-me queries, Meta ads for awareness and lead-gen among local parents, a strong review profile for trust, and Instagram/YouTube for events and campus life. The mix depends on whether you're a pre-school, day school or boarding school.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">Do you build school websites with enquiry forms?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes — our website and UI/UX teams build fast, SEO-ready school websites with virtual tours, faculty and facilities, fee and curriculum details, and a one-tap admission enquiry/apply form.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">Do you also help with school management software?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. Beyond marketing, we designed Edoovi — an AI-powered school ERP that connects administration, teachers, parents and students with attendance, fees, transport and communication in one platform. See the Edoovi case study to learn more.</div></div></div>
+            <?php bx_schools_render_faqs(); ?>
           </div>
         </div>
       </section>
@@ -328,21 +268,27 @@ get_header();
       <!-- ===================== RELATED + CTA (shared design) ===================== -->
       <section class="pb-20 sm:pb-28 pt-4" aria-label="Related and contact">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Explore more</p>
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6"><?php echo esc_html( bx_field( 'schools_related_eyebrow', false, 'Explore more' ) ); ?></p>
           <div class="grid sm:grid-cols-3 gap-4 mb-12">
-            <a href="/performance-marketing/" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Performance Marketing</span><span class="text-xs text-ink-soft">Admission campaigns</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
-            <a href="/edoovi-erp/" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Edoovi School ERP</span><span class="text-xs text-ink-soft">Our case study</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
-            <a href="/industries/" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:layers"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">All Industries</span><span class="text-xs text-ink-soft">Other sectors</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
+            <?php bx_schools_render_related(); ?>
           </div>
+          <?php
+          $schools_cta_btn       = get_field( 'schools_cta_button' );
+          $schools_cta_btn_url   = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['url'] ) ? $schools_cta_btn['url'] : '/contact-us/';
+          $schools_cta_btn_label = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['title'] ) ? $schools_cta_btn['title'] : 'Grow my admissions';
+          ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
             <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
-            <div class="relative max-w-2xl">
-              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's fill your next admission season</h2>
-              <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us about your school — we'll map a plan to bring more admission enquiries, school visits and confirmed seats. Free, no obligation.</p>
+            <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+            	<div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'schools_cta_heading', false, "Let's fill your next admission season" ) ); ?></h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'schools_cta_text', false, "Tell us about your school — we'll map a plan to bring more admission enquiries, school visits and confirmed seats. Free, no obligation." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Grow my admissions</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
-                <a href="tel:+918058212202" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10">+91 80582 12202</span></a>
+                <a href="<?php echo esc_url( $schools_cta_btn_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light"><?php echo esc_html( $schools_cta_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+                <a href="<?php echo esc_url( bx_field( 'schools_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10"><?php echo esc_html( bx_field( 'schools_cta_phone', false, '+91 80582 12202' ) ); ?></span></a>
               </div>
+            </div>
+            	<?php bx_cta_image( 'schools_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/edtech-cta-image.avif', false, 'BoostronixX school & education marketing team in Jaipur' ); ?>
             </div>
           </div>
         </div>

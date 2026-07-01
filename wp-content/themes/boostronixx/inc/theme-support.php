@@ -16,6 +16,8 @@ add_action( 'after_setup_theme', 'bx_theme_support' );
 function bx_theme_support() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	// Blog cover/banner crop — 3:4 portrait, used for featured images on posts & cards.
+	add_image_size( 'bx-blog-cover', 900, 1200, true );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support(
 		'html5',
@@ -56,6 +58,11 @@ add_filter( 'body_class', 'bx_body_class' );
 function bx_body_class( $classes ) {
 	if ( is_404() ) {
 		$classes[] = 'bx-page-404';
+		return $classes;
+	}
+	// Single blog posts reuse the blog-post article design's scope class.
+	if ( is_singular( 'post' ) ) {
+		$classes[] = 'bx-page-blog-post';
 		return $classes;
 	}
 	$obj = get_queried_object();

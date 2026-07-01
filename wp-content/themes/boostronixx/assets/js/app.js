@@ -7,7 +7,7 @@
  * "assets/img/" paths and the thank-you URL are injected from PHP
  * via window.BX (see inc/enqueue.php).
  * ============================================================= */
-var BXIMG = (window.BX && window.BX.img) || "/wp-content/themes/boostronixx/assets/img/";
+var BXIMG = (window.BX && window.BX.img) || "https://boostronixx.s3.ap-south-1.amazonaws.com/images/";
 var BXTHANKYOU = (window.BX && window.BX.urls && window.BX.urls.thankYou) || "/thank-you/";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -572,7 +572,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // hero word rotator
         var rot = document.getElementById("rotator");
         if (rot) {
-          var words = ["get noticed", "convert", "stand out", "scale fast"],
+          var words = (rot.dataset.words
+            ? rot.dataset.words.split("|").map(function (w) { return w.trim(); }).filter(Boolean)
+            : ["get noticed", "convert", "stand out", "scale fast"]),
             wi = 0;
           setInterval(function () {
             wi = (wi + 1) % words.length;
@@ -892,32 +894,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 
-/* blog-category-search-filter  [blog] */
+/* blog-search-live-filter  [blog] */
 (function(){
   var grid = document.getElementById("grid");
   var empty = document.getElementById("blogEmpty");
-  if (!grid || !empty) return;
-  var chips = [].slice.call(document.querySelectorAll(".chip"));
-  var posts = [].slice.call(document.querySelectorAll("#grid .post"));
   var search = document.getElementById("blogSearch");
-  var activeCat = "all";
+  if (!grid || !empty || !search) return;
+  // Category chips are real links now (server-side archives). Only the search
+  // box filters live: as you type it filters the loaded cards AND hides the
+  // Featured block so the matches read cleanly. Enter still submits the form
+  // (→ full site search across every post).
+  var posts = [].slice.call(document.querySelectorAll("#grid .post"));
+  var featured = document.querySelector('section[aria-label="Featured article"]');
   function apply(){
     var term = (search.value||"").trim().toLowerCase();
     var shown = 0;
+    // The Featured block is hidden while searching so results read cleanly —
+    // UNLESS the featured post itself is the match (then it stays as the top result).
+    var featMatch = featured ? featured.textContent.toLowerCase().indexOf(term) !== -1 : false;
+    if (featured) featured.classList.toggle("hidden", term.length > 0 && !featMatch);
+    if (term && featMatch) shown++;
     posts.forEach(function(p){
-      var catOk = activeCat === "all" || (p.dataset.cat||"").split(" ").indexOf(activeCat) !== -1;
       var hay = ((p.dataset.title||"") + " " + (p.querySelector(".ttl")?p.querySelector(".ttl").textContent:"")).toLowerCase();
-      var textOk = !term || hay.indexOf(term) !== -1;
-      var vis = catOk && textOk;
+      var vis = !term || hay.indexOf(term) !== -1;
       p.classList.toggle("hide", !vis);
       var t = p.querySelector(".ttl");
       if (t){ t.innerHTML = t.textContent; if (vis && term){ var s=t.textContent, i=s.toLowerCase().indexOf(term); if(i!==-1) t.innerHTML = s.slice(0,i)+"<mark>"+s.slice(i,i+term.length)+"</mark>"+s.slice(i+term.length); } }
       if (vis) shown++;
     });
-    empty.classList.toggle("hidden", shown !== 0);
+    empty.classList.toggle("hidden", !(term && shown === 0));
   }
-  chips.forEach(function(c){ c.addEventListener("click", function(){ chips.forEach(function(x){ x.classList.remove("active"); x.setAttribute("aria-pressed","false"); }); c.classList.add("active"); c.setAttribute("aria-pressed","true"); activeCat = c.dataset.cat; apply(); }); });
-  if (search) search.addEventListener("input", apply);
+  search.addEventListener("input", apply);
+  // Enter should filter in place, not navigate off to a bare /?s= page.
+  var form = search.closest("form");
+  if (form) { form.addEventListener("submit", function (e) { e.preventDefault(); apply(); }); }
 })();
 
 /* select-label-float  [contact-us] */
@@ -1310,4 +1320,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var vp = document.getElementById("viewport"), btns = [].slice.call(document.querySelectorAll(".device-btn"));
   if (!vp || !btns.length) return;
   btns.forEach(function(b){ b.addEventListener("click", function(){ btns.forEach(function(x){ x.classList.remove("active"); }); b.classList.add("active"); vp.style.maxWidth = b.dataset.w; }); });
+})();
+
+/* sitemap-stagger-reveal  [sitemap]
+ * The sitemap's .stagger lists need an "in" class to fade their links in.
+ * The base reveal observer only adds "in" to .reveal elements, so observe
+ * .stagger directly. Guarded — no-ops on pages without a .stagger. */
+(function () {
+  var staggers = document.querySelectorAll('.stagger');
+  if (!staggers.length) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  [].forEach.call(staggers, function (s) { io.observe(s); });
 })();

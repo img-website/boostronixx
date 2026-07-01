@@ -14,7 +14,7 @@ get_header();
 
 <main id="top">
       <!-- ===================== HERO + FORM ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-16 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-16 grid-lines overflow-hidden">
         <span class="orb orb-a" style="width: 320px; height: 320px; background: #fa5539; top: -40px; left: -60px"></span>
         <span class="orb orb-b" style="width: 280px; height: 280px; background: #ffb38a; bottom: -60px; right: 10%"></span>
 

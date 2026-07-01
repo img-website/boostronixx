@@ -14,7 +14,7 @@ get_header();
 
 <main id="top">
       <!-- HERO with FUNNEL -->
-      <section class="relative pt-28 sm:pt-36 pb-14 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-14 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
             <a href="/" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
@@ -23,12 +23,20 @@ get_header();
           </nav>
           <div class="grid lg:grid-cols-12 gap-10 items-center">
             <div class="lg:col-span-6">
-              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:filter" class="text-accent text-sm"></iconify-icon> Full-funnel growth, measured</div>
-              <h1 class="reveal font-display text-[2.5rem] leading-[1.0] sm:text-6xl tt">Marketing that turns traffic into <span class="text-accent">customers</span></h1>
-              <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">Full-funnel digital marketing in Jaipur: SEO, content, email, social and ads working together as one funnel, with dashboards that show exactly how a click becomes a customer.</p>
+              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:filter" class="text-accent text-sm"></iconify-icon> <?php echo esc_html( bx_field( 'digital_marketing_hero_badge', false, 'Full-funnel growth, measured' ) ); ?></div>
+              <h1 class="reveal font-display text-[2.5rem] leading-[1.0] sm:text-6xl tt"><?php echo esc_html( bx_field( 'digital_marketing_hero_heading', false, 'Marketing that turns traffic into ' ) ); ?><span class="text-accent"><?php echo esc_html( bx_field( 'digital_marketing_hero_heading_accent', false, 'customers' ) ); ?></span></h1>
+              <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'digital_marketing_hero_text', false, 'Full-funnel digital marketing in Jaipur: SEO, content, email, social and ads working together as one funnel, with dashboards that show exactly how a click becomes a customer.' ) ); ?></p>
+              <?php
+              $dm_hero_cta1       = get_field( 'digital_marketing_hero_cta_primary' );
+              $dm_hero_cta1_url   = is_array( $dm_hero_cta1 ) && ! empty( $dm_hero_cta1['url'] ) ? $dm_hero_cta1['url'] : '/contact-us/';
+              $dm_hero_cta1_label = is_array( $dm_hero_cta1 ) && ! empty( $dm_hero_cta1['title'] ) ? $dm_hero_cta1['title'] : 'Plan my growth';
+              $dm_hero_cta2       = get_field( 'digital_marketing_hero_cta_secondary' );
+              $dm_hero_cta2_url   = is_array( $dm_hero_cta2 ) && ! empty( $dm_hero_cta2['url'] ) ? $dm_hero_cta2['url'] : '#funnel';
+              $dm_hero_cta2_label = is_array( $dm_hero_cta2 ) && ! empty( $dm_hero_cta2['title'] ) ? $dm_hero_cta2['title'] : 'See the funnel';
+              ?>
               <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
-                <a href="/contact-us/" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Plan my growth</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
-                <a href="#funnel" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:filter" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See the funnel</span></a>
+                <a href="<?php echo esc_url( $dm_hero_cta1_url ); ?>" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text"><?php echo esc_html( $dm_hero_cta1_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="<?php echo esc_url( $dm_hero_cta2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:filter" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $dm_hero_cta2_label ); ?></span></a>
               </div>
             </div>
             <!-- FUNNEL MOCK -->
@@ -52,14 +60,11 @@ get_header();
       <section class="py-20 sm:py-28 bg-surface border-y border-line">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">One connected engine</p>
-            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Every channel, pulling together</h2>
-            <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1">Channels in silos waste budget. As a digital marketing company in Jaipur, we orchestrate SEO, content, email, social and paid so each one amplifies the others — awareness, consideration and conversion all reporting into one place.</p>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'digital_marketing_channels_eyebrow', false, 'One connected engine' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight"><?php echo esc_html( bx_field( 'digital_marketing_channels_heading', false, 'Every channel, pulling together' ) ); ?></h2>
+            <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'digital_marketing_channels_text', false, 'Channels in silos waste budget. As a digital marketing company in Jaipur, we orchestrate SEO, content, email, social and paid so each one amplifies the others — awareness, consideration and conversion all reporting into one place.' ) ); ?></p>
             <div class="reveal grid sm:grid-cols-2 gap-3 mt-7" data-delay="2">
-              <div class="flex items-center gap-3 rounded-xl bg-paper border border-line p-4"><iconify-icon icon="lucide:search" class="text-accent text-xl"></iconify-icon><span class="font-medium text-sm">SEO &amp; organic</span></div>
-              <div class="flex items-center gap-3 rounded-xl bg-paper border border-line p-4"><iconify-icon icon="lucide:pen-tool" class="text-accent text-xl"></iconify-icon><span class="font-medium text-sm">Content marketing</span></div>
-              <div class="flex items-center gap-3 rounded-xl bg-paper border border-line p-4"><iconify-icon icon="lucide:mail" class="text-accent text-xl"></iconify-icon><span class="font-medium text-sm">Email &amp; CRM</span></div>
-              <div class="flex items-center gap-3 rounded-xl bg-paper border border-line p-4"><iconify-icon icon="lucide:megaphone" class="text-accent text-xl"></iconify-icon><span class="font-medium text-sm">Paid &amp; social</span></div>
+              <?php bx_digital_marketing_render_channels(); ?>
             </div>
           </div>
           <!-- channel orbit -->
@@ -81,12 +86,9 @@ get_header();
       <!-- TRAFFIC -> CUSTOMER FLOW -->
       <section id="funnel" class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">How it connects</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Full-funnel digital marketing in Jaipur, from first click to loyal customer</h2></div>
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'digital_marketing_flow_eyebrow', false, 'How it connects' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'digital_marketing_flow_heading', false, 'Full-funnel digital marketing in Jaipur, from first click to loyal customer' ) ); ?></h2></div>
           <div class="reveal grid sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch" data-delay="1">
-            <div class="card rounded-xl2 border border-line p-6"><span class="inline-grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:users"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Attract</h3><p class="text-ink-soft text-sm mt-1.5">SEO &amp; content bring the right people in.</p></div>
-            <div class="card rounded-xl2 border border-line p-6"><span class="inline-grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:heart-handshake"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Engage</h3><p class="text-ink-soft text-sm mt-1.5">Social &amp; email marketing nurture consideration into intent.</p></div>
-            <div class="card rounded-xl2 border border-line p-6"><span class="inline-grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:badge-indian-rupee"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Convert</h3><p class="text-ink-soft text-sm mt-1.5">Landing pages &amp; ads close the loop.</p></div>
-            <div class="card rounded-xl2 border border-line p-6"><span class="inline-grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:repeat"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Retain</h3><p class="text-ink-soft text-sm mt-1.5">Lifecycle and retention marketing turn buyers into fans.</p></div>
+            <?php bx_digital_marketing_render_flow(); ?>
           </div>
         </div>
       </section>
@@ -111,13 +113,13 @@ get_header();
             </div>
           </div>
           <div>
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">No black boxes</p>
-            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Dashboards, not vanity metrics</h2>
-            <p class="reveal text-paper/60 mt-5 max-w-md leading-relaxed" data-delay="1">As an online marketing agency in Jaipur, we give you a live view of what's working — traffic, leads, conversion rate and revenue impact — with clear attribution, so every rupee of marketing is accountable.</p>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'digital_marketing_analytics_eyebrow', false, 'No black boxes' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight"><?php echo esc_html( bx_field( 'digital_marketing_analytics_heading', false, 'Dashboards, not vanity metrics' ) ); ?></h2>
+            <p class="reveal text-paper/60 mt-5 max-w-md leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'digital_marketing_analytics_text', false, "As an online marketing agency in Jaipur, we give you a live view of what's working — traffic, leads, conversion rate and revenue impact — with clear attribution, so every rupee of marketing is accountable." ) ); ?></p>
             <!-- IMAGE PLACEHOLDER -->
-            <figure class="imgph rounded-xl2 aspect-[16/9] bg-white/[0.04] border border-white/10 mt-8 reveal" data-delay="1">
-              <img src="/wp-content/themes/boostronixx/assets/img/ga-dashboard.avif" alt="Google Analytics 4 dashboard showing traffic, leads and conversion trends" loading="lazy" onerror="this.remove()" />
-              <figcaption class="lbl"><b>Analytics dashboard · 1280×720</b><span>Screenshot of a GA4 / Looker Studio report with traffic, leads and conversion trends. Anonymise data.</span></figcaption>
+            <figure class="imgph rounded-xl2 aspect-[16/9] bg-white/[0.04] border border-white/10 mt-10 reveal" data-delay="1">
+              <img src="<?php echo esc_url( bx_img_url( 'digital_marketing_analytics_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ga-dashboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'digital_marketing_analytics_image_alt', false, 'Google Analytics 4 dashboard showing traffic, leads and conversion trends' ) ); ?>" loading="lazy" onerror="this.remove()" />
+              <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'digital_marketing_analytics_image_caption_title', false, 'Analytics dashboard · 1280×720' ) ); ?></b><span><?php echo esc_html( bx_field( 'digital_marketing_analytics_image_caption_text', false, 'Screenshot of a GA4 / Looker Studio report with traffic, leads and conversion trends. Anonymise data.' ) ); ?></span></figcaption>
             </figure>
           </div>
         </div>
@@ -126,16 +128,13 @@ get_header();
       <!-- PROCESS -->
       <section class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="max-w-2xl mb-14"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Our process</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Strategy first, always</h2></div>
+          <div class="max-w-2xl mb-14"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'digital_marketing_process_eyebrow', false, 'Our process' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'digital_marketing_process_heading', false, 'Strategy first, always' ) ); ?></h2></div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="reveal card rounded-xl2 border border-line p-7"><span class="font-display text-5xl tt text-accent/25">01</span><h3 class="font-display text-xl tt mt-3">Audit &amp; goals</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">We map your funnel, baseline metrics and the outcomes that matter.</p></div>
-            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="1"><span class="font-display text-5xl tt text-accent/25">02</span><h3 class="font-display text-xl tt mt-3">Strategy</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">A channel plan, calendar and KPIs aligned to your budget.</p></div>
-            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="2"><span class="font-display text-5xl tt text-accent/25">03</span><h3 class="font-display text-xl tt mt-3">Execute</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">As a content marketing agency in Jaipur, we ship content, campaigns and automation consistently.</p></div>
-            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="3"><span class="font-display text-5xl tt text-accent/25">04</span><h3 class="font-display text-xl tt mt-3">Optimise</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Monthly reviews to double down on what drives revenue.</p></div>
+            <?php bx_digital_marketing_render_process(); ?>
           </div>
           <div class="reveal mt-8 rounded-2xl border border-line bg-surface p-6 flex items-center gap-4" data-delay="1">
             <span class="grid place-items-center h-12 w-12 rounded-full bg-ink text-paper shrink-0"><iconify-icon icon="lucide:badge-check" class="text-xl text-accent"></iconify-icon></span>
-            <p class="text-sm text-ink-soft">Run by the BoostronixX growth team — a growth marketing agency in Jaipur with strategy, content, design and analytics in-house, building your full funnel marketing strategy and reporting against real business goals.</p>
+            <p class="text-sm text-ink-soft"><?php echo esc_html( bx_field( 'digital_marketing_process_note', false, 'Run by the BoostronixX growth team — a growth marketing agency in Jaipur with strategy, content, design and analytics in-house, building your full funnel marketing strategy and reporting against real business goals.' ) ); ?></p>
           </div>
         </div>
       </section>
@@ -143,12 +142,9 @@ get_header();
       <!-- FAQ -->
       <section class="py-20 sm:py-28 bg-surface border-y border-line">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
-          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Digital marketing, answered</h2></div>
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'digital_marketing_faq_eyebrow', false, 'FAQ' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'digital_marketing_faq_heading', false, 'Digital marketing, answered' ) ); ?></h2></div>
           <div class="space-y-3">
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Is digital marketing different from just running ads?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. Ads are one channel; full-funnel digital marketing in Jaipur is the whole funnel — SEO, content, email and social working together so you're not dependent on paid spend alone.</div></div></div>
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Can I start with just one channel?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Absolutely. Many clients start with SEO or social and expand as results come in. We'll recommend the highest-impact starting point for your stage and budget.</div></div></div>
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">How do you measure success?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Against the KPIs we agree up front — traffic, leads, conversion rate and revenue impact — reported in a clear monthly dashboard, not vanity metrics.</div></div></div>
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">When will I see results?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Paid channels can move quickly; organic compounds over months. A blended full funnel marketing strategy in Jaipur typically shows meaningful momentum across the first 60–90 days, from awareness through to retention.</div></div></div>
+            <?php bx_digital_marketing_render_faqs(); ?>
           </div>
         </div>
       </section>
@@ -156,21 +152,30 @@ get_header();
       <!-- RELATED + CTA -->
       <section class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Pairs well with</p>
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6"><?php echo esc_html( bx_field( 'digital_marketing_related_eyebrow', false, 'Pairs well with' ) ); ?></p>
           <div class="grid sm:grid-cols-3 gap-4 mb-12">
-            <a href="/seo-services/" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">SEO Services</span><span class="text-xs text-ink-soft">Top of funnel</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
-            <a href="/performance-marketing/" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Performance Marketing</span><span class="text-xs text-ink-soft">Convert faster</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
-            <a href="/social-media-marketing/" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Social Media</span><span class="text-xs text-ink-soft">Stay top of mind</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <?php bx_digital_marketing_render_related(); ?>
           </div>
+          <?php
+          $dm_cta_btn        = get_field( 'digital_marketing_cta_button' );
+          $dm_cta_btn_url    = is_array( $dm_cta_btn ) && ! empty( $dm_cta_btn['url'] ) ? $dm_cta_btn['url'] : '/contact-us/';
+          $dm_cta_btn_label  = is_array( $dm_cta_btn ) && ! empty( $dm_cta_btn['title'] ) ? $dm_cta_btn['title'] : 'Plan my growth';
+          $dm_cta_btn2       = get_field( 'digital_marketing_cta_button_secondary' );
+          $dm_cta_btn2_url   = is_array( $dm_cta_btn2 ) && ! empty( $dm_cta_btn2['url'] ) ? $dm_cta_btn2['url'] : '/services/';
+          $dm_cta_btn2_label = is_array( $dm_cta_btn2 ) && ! empty( $dm_cta_btn2['title'] ) ? $dm_cta_btn2['title'] : 'All services';
+          ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
-            <div class="relative max-w-2xl">
-              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's build your growth engine</h2>
-              <p class="text-paper/70 mt-5 text-lg max-w-xl">Book a free strategy call — we'll map your funnel and the channels that will move it fastest.</p>
+            <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+            	<div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'digital_marketing_cta_heading', false, "Let's build your growth engine" ) ); ?></h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'digital_marketing_cta_text', false, "Book a free strategy call — we'll map your funnel and the channels that will move it fastest." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Plan my growth</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
-                <a href="/services/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">All services</span></a>
+                <a href="<?php echo esc_url( $dm_cta_btn_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light"><?php echo esc_html( $dm_cta_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="<?php echo esc_url( $dm_cta_btn2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $dm_cta_btn2_label ); ?></span></a>
               </div>
+            </div>
+            	<?php bx_cta_image( 'digital_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/digital-marketing-cta-image.avif', false, 'BoostronixX digital marketing team in Jaipur' ); ?>
             </div>
           </div>
         </div>

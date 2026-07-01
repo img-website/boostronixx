@@ -93,11 +93,27 @@ function bx_enqueue_assets() {
 	// Expose the theme image base + a few flags to app.js
 	// (the original markup used relative "assets/img/" paths).
 	$data = array(
-		'img'     => trailingslashit( BX_URI ) . 'assets/img/',
+		'img'     => 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/',
 		'isFront' => is_front_page(),
 		'urls'    => array(
 			'thankYou' => home_url( '/thank-you/' ),
 		),
 	);
 	wp_add_inline_script( 'bx-app', 'window.BX = ' . wp_json_encode( $data ) . ';', 'before' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'bx_enqueue_editor_assets' );
+/**
+ * Load the Iconify web component inside the block editor so the <iconify-icon>
+ * elements in our block patterns (callouts, key-takeaways, etc.) render with
+ * their icons in the editor preview, not just on the front end.
+ */
+function bx_enqueue_editor_assets() {
+	wp_enqueue_script(
+		'bx-iconify-editor',
+		'https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js',
+		array(),
+		null,
+		true
+	);
 }

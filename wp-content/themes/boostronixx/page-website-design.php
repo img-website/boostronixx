@@ -14,7 +14,7 @@ get_header();
 
 <main id="top">
       <!-- HERO: browser building in -->
-      <section class="relative pt-28 sm:pt-36 pb-14 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-14 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
             <a href="/" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm"></iconify-icon>
@@ -22,12 +22,20 @@ get_header();
             <span class="text-ink font-medium">Website Design</span>
           </nav>
           <div class="text-center max-w-3xl mx-auto">
-            <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:gauge" class="text-accent text-sm"></iconify-icon> Fast · Responsive · SEO-ready</div>
-            <h1 class="reveal font-display text-[2.6rem] leading-[0.98] sm:text-7xl tt">Websites that load fast<br class="hidden sm:block" /> &amp; <span class="text-accent">convert faster</span></h1>
-            <p class="reveal text-ink-soft mt-5 max-w-xl mx-auto leading-relaxed" data-delay="1">As a website design company in Jaipur, we build everything from marketing sites to product front-ends — engineered for Core Web Vitals, built to convert, and easy for your team to manage.</p>
+            <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:gauge" class="text-accent text-sm"></iconify-icon> <?php echo esc_html( bx_field( 'website_design_hero_badge', false, 'Fast · Responsive · SEO-ready' ) ); ?></div>
+            <h1 class="reveal font-display text-[2.6rem] leading-[0.98] sm:text-7xl tt"><?php echo esc_html( bx_field( 'website_design_hero_heading_a', false, 'Websites that load fast' ) ); ?><br class="hidden sm:block" /> &amp; <?php echo esc_html( bx_field( 'website_design_hero_heading_b', false, '' ) ); ?><span class="text-accent"><?php echo esc_html( bx_field( 'website_design_hero_heading_accent', false, 'convert faster' ) ); ?></span></h1>
+            <p class="reveal text-ink-soft mt-5 max-w-xl mx-auto leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'website_design_hero_text', false, 'As a website design company in Jaipur, we build everything from marketing sites to product front-ends — engineered for Core Web Vitals, built to convert, and easy for your team to manage.' ) ); ?></p>
+            <?php
+            $wd_hero_cta1 = get_field( 'website_design_hero_cta_primary' );
+            $wd_hero_cta1_url   = is_array( $wd_hero_cta1 ) && ! empty( $wd_hero_cta1['url'] ) ? $wd_hero_cta1['url'] : '/contact-us/';
+            $wd_hero_cta1_label = is_array( $wd_hero_cta1 ) && ! empty( $wd_hero_cta1['title'] ) ? $wd_hero_cta1['title'] : 'Build my website';
+            $wd_hero_cta2 = get_field( 'website_design_hero_cta_secondary' );
+            $wd_hero_cta2_url   = is_array( $wd_hero_cta2 ) && ! empty( $wd_hero_cta2['url'] ) ? $wd_hero_cta2['url'] : '#perf';
+            $wd_hero_cta2_label = is_array( $wd_hero_cta2 ) && ! empty( $wd_hero_cta2['title'] ) ? $wd_hero_cta2['title'] : 'See performance';
+            ?>
             <div class="reveal flex flex-wrap items-center justify-center gap-3 mt-7" data-delay="2">
-              <a href="/contact-us/" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Build my website</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
-              <a href="#perf" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:zap" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See performance</span></a>
+              <a href="<?php echo esc_url( $wd_hero_cta1_url ); ?>" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text"><?php echo esc_html( $wd_hero_cta1_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+              <a href="<?php echo esc_url( $wd_hero_cta2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:zap" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $wd_hero_cta2_label ); ?></span></a>
             </div>
           </div>
 
@@ -60,8 +68,8 @@ get_header();
       <!-- RESPONSIVE SWITCHER -->
       <section class="py-20 sm:py-28 bg-surface border-y border-line">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Looks right everywhere</p>
-          <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Responsive website designing in Jaipur, pixel-perfect on every screen</h2>
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'website_design_responsive_eyebrow', false, 'Looks right everywhere' ) ); ?></p>
+          <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'website_design_responsive_heading', false, 'Responsive website designing in Jaipur, pixel-perfect on every screen' ) ); ?></h2>
           <div class="reveal flex items-center justify-center gap-2 mt-8" data-delay="1">
             <button class="device-btn active rounded-full border border-line px-4 py-2 text-sm font-medium inline-flex items-center gap-2" data-w="100%"><iconify-icon icon="lucide:monitor"></iconify-icon> Desktop</button>
             <button class="device-btn rounded-full border border-line px-4 py-2 text-sm font-medium inline-flex items-center gap-2" data-w="640px"><iconify-icon icon="lucide:tablet"></iconify-icon> Tablet</button>
@@ -83,7 +91,7 @@ get_header();
       <!-- PERFORMANCE GAUGES -->
       <section id="perf" class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Built for speed</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Performance you can measure</h2><p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">As a web development company in Jaipur, we engineer for Core Web Vitals and page speed from day one — because fast sites rank better, convert better and feel better.</p></div>
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'website_design_perf_eyebrow', false, 'Built for speed' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'website_design_perf_heading', false, 'Performance you can measure' ) ); ?></h2><p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'website_design_perf_text', false, 'As a web development company in Jaipur, we engineer for Core Web Vitals and page speed from day one — because fast sites rank better, convert better and feel better.' ) ); ?></p></div>
           <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4" data-delay="1">
             <div class="rounded-xl2 border border-line p-6 text-center">
               <svg viewBox="0 0 120 120" class="w-28 h-28 mx-auto -rotate-90"><circle cx="60" cy="60" r="50" fill="none" stroke="#e6e1da" stroke-width="10" /><circle class="ring-fg" cx="60" cy="60" r="50" fill="none" stroke="#2e7d5b" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" style="--c:314;--o:24" /></svg>
@@ -106,24 +114,21 @@ get_header();
               <p class="text-sm text-ink-soft mt-14">SEO</p>
             </div>
           </div>
-          <p class="reveal text-xs text-ink-soft mt-5" data-delay="2">Illustrative Lighthouse scores — we target 90+ across the board on every build.</p>
+          <p class="reveal text-xs text-ink-soft mt-5" data-delay="2"><?php echo esc_html( bx_field( 'website_design_perf_footnote', false, 'Illustrative Lighthouse scores — we target 90+ across the board on every build.' ) ); ?></p>
         </div>
       </section>
 
       <!-- WHAT WE BUILD -->
       <section class="py-20 sm:py-28 bg-surface border-y border-line">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">What we build</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">A website design company in Jaipur for every job</h2></div>
+          <div class="max-w-2xl mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'website_design_build_eyebrow', false, 'What we build' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'website_design_build_heading', false, 'A website design company in Jaipur for every job' ) ); ?></h2></div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="reveal card rounded-xl2 bg-paper border border-line p-7"><span class="text-accent text-2xl"><iconify-icon icon="lucide:globe"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Marketing sites</h3><p class="text-ink-soft text-sm mt-1.5">Custom website design for Jaipur brands that tells your story and converts.</p></div>
-            <div class="reveal card rounded-xl2 bg-paper border border-line p-7" data-delay="1"><span class="text-accent text-2xl"><iconify-icon icon="lucide:mouse-pointer-click"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Landing pages</h3><p class="text-ink-soft text-sm mt-1.5">Focused, fast pages built for campaigns &amp; ads.</p></div>
-            <div class="reveal card rounded-xl2 bg-paper border border-line p-7" data-delay="2"><span class="text-accent text-2xl"><iconify-icon icon="lucide:shopping-bag"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">E-commerce</h3><p class="text-ink-soft text-sm mt-1.5">Ecommerce website design in Jaipur — stores easy to shop and easy to run.</p></div>
-            <div class="reveal card rounded-xl2 bg-paper border border-line p-7" data-delay="3"><span class="text-accent text-2xl"><iconify-icon icon="lucide:layout-dashboard"></iconify-icon></span><h3 class="font-display text-lg tt mt-3">Web apps &amp; front-ends</h3><p class="text-ink-soft text-sm mt-1.5">Product UIs built from your designs.</p></div>
+            <?php bx_website_design_render_build(); ?>
           </div>
           <!-- IMAGE PLACEHOLDER -->
-          <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 border border-line mt-6 reveal">
-            <img src="/wp-content/themes/boostronixx/assets/img/website-showcase.avif" alt="Responsive BoostronixX website shown across desktop, tablet and mobile devices" loading="lazy" onerror="this.remove()" />
-            <figcaption class="lbl"><b>Device showcase · 1600×700</b><span>A real client website displayed across desktop, tablet and phone frames — proves responsive, polished delivery.</span></figcaption>
+          <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 border border-line mt-12 reveal">
+            <img src="<?php echo esc_url( bx_img_url( 'website_design_build_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/website-showcase.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'website_design_build_image_alt', false, 'Responsive BoostronixX website shown across desktop, tablet and mobile devices' ) ); ?>" loading="lazy" onerror="this.remove()" />
+            <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'website_design_build_image_caption_a', false, 'Device showcase · 1600×700' ) ); ?></b><span><?php echo esc_html( bx_field( 'website_design_build_image_caption_b', false, 'A real client website displayed across desktop, tablet and phone frames — proves responsive, polished delivery.' ) ); ?></span></figcaption>
           </figure>
         </div>
       </section>
@@ -131,16 +136,13 @@ get_header();
       <!-- PROCESS -->
       <section class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="max-w-2xl mb-14"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">How we build</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Design. Build. Test. Launch.</h2></div>
+          <div class="max-w-2xl mb-14"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'website_design_process_eyebrow', false, 'How we build' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'website_design_process_heading', false, 'Design. Build. Test. Launch.' ) ); ?></h2></div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="reveal card rounded-xl2 border border-line p-7"><span class="font-display text-5xl tt text-accent/25">01</span><h3 class="font-display text-xl tt mt-3">Design</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">UX and UI mapped to your brand and conversion goals.</p></div>
-            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="1"><span class="font-display text-5xl tt text-accent/25">02</span><h3 class="font-display text-xl tt mt-3">Build</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Clean, responsive, mobile-first code — custom or WordPress — with an easy-to-edit CMS.</p></div>
-            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="2"><span class="font-display text-5xl tt text-accent/25">03</span><h3 class="font-display text-xl tt mt-3">Test</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Speed, cross-device, SEO and accessibility checks.</p></div>
-            <div class="reveal card rounded-xl2 border border-line p-7" data-delay="3"><span class="font-display text-5xl tt text-accent/25">04</span><h3 class="font-display text-xl tt mt-3">Launch</h3><p class="text-ink-soft text-sm mt-2 leading-relaxed">Go live with analytics, training and ongoing support.</p></div>
+            <?php bx_website_design_render_process(); ?>
           </div>
           <div class="reveal mt-8 rounded-2xl border border-line bg-surface p-6 flex items-center gap-4" data-delay="1">
             <span class="grid place-items-center h-12 w-12 rounded-full bg-ink text-paper shrink-0"><iconify-icon icon="lucide:badge-check" class="text-xl text-accent"></iconify-icon></span>
-            <p class="text-sm text-ink-soft">Built by the BoostronixX web team — affordable website design in Jaipur with SEO-ready markup, Core Web Vitals tuned, and a CMS your team can actually use.</p>
+            <p class="text-sm text-ink-soft"><?php echo esc_html( bx_field( 'website_design_process_callout', false, 'Built by the BoostronixX web team — affordable website design in Jaipur with SEO-ready markup, Core Web Vitals tuned, and a CMS your team can actually use.' ) ); ?></p>
           </div>
         </div>
       </section>
@@ -148,12 +150,9 @@ get_header();
       <!-- FAQ -->
       <section class="py-20 sm:py-28 bg-surface border-y border-line">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
-          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Website questions</h2></div>
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'website_design_faq_eyebrow', false, 'FAQ' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'website_design_faq_heading', false, 'Website questions' ) ); ?></h2></div>
           <div class="space-y-3">
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">How long does a website take?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Most marketing websites take 4–8 weeks depending on the number of pages, content readiness and complexity. We'll share a clear timeline and milestones in your proposal.</div></div></div>
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Can I update the site myself?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. We build on an easy-to-manage CMS and include training, so your team can edit content, add pages and publish without touching code.</div></div></div>
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Is the website SEO-ready?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Always. Whether it's a custom build or WordPress website design, clean markup, fast load times, proper headings, schema and mobile-first design come standard — and our SEO team can take it further from there.</div></div></div>
-            <div class="faq border border-line rounded-2xl bg-paper px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg">Do you offer maintenance after launch?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes — we offer ongoing care plans for updates, backups, security and improvements, so your site stays fast and secure.</div></div></div>
+            <?php bx_website_design_render_faqs(); ?>
           </div>
         </div>
       </section>
@@ -161,21 +160,30 @@ get_header();
       <!-- RELATED + CTA -->
       <section class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Pairs well with</p>
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6"><?php echo esc_html( bx_field( 'website_design_related_eyebrow', false, 'Pairs well with' ) ); ?></p>
           <div class="grid sm:grid-cols-3 gap-4 mb-12">
-            <a href="/ui-ux-design/" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:figma"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">UI/UX Design</span><span class="text-xs text-ink-soft">Design the experience</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
-            <a href="/seo-services/" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">SEO Services</span><span class="text-xs text-ink-soft">Get it ranking</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
-            <a href="/brand-consulting/" class="reveal card group rounded-2xl border border-line p-6 flex items-center gap-4" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:palette"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Brand Consulting</span><span class="text-xs text-ink-soft">Look the part</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition"></iconify-icon></a>
+            <?php bx_website_design_render_related(); ?>
           </div>
+          <?php
+          $wd_cta_btn1 = get_field( 'website_design_cta_button_primary' );
+          $wd_cta_btn1_url   = is_array( $wd_cta_btn1 ) && ! empty( $wd_cta_btn1['url'] ) ? $wd_cta_btn1['url'] : '/contact-us/';
+          $wd_cta_btn1_label = is_array( $wd_cta_btn1 ) && ! empty( $wd_cta_btn1['title'] ) ? $wd_cta_btn1['title'] : 'Get a website quote';
+          $wd_cta_btn2 = get_field( 'website_design_cta_button_secondary' );
+          $wd_cta_btn2_url   = is_array( $wd_cta_btn2 ) && ! empty( $wd_cta_btn2['url'] ) ? $wd_cta_btn2['url'] : '/portfolio/';
+          $wd_cta_btn2_label = is_array( $wd_cta_btn2 ) && ! empty( $wd_cta_btn2['title'] ) ? $wd_cta_btn2['title'] : "See sites we've built";
+          ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
-            <div class="relative max-w-2xl">
-              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's build a site that works as hard as you do</h2>
-              <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us about your project — we'll scope a fast, beautiful, SEO-ready website around your goals.</p>
+            <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+            	<div class="relative max-w-2xl">
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'website_design_cta_heading', false, "Let's build a site that works as hard as you do" ) ); ?></h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'website_design_cta_text', false, "Tell us about your project — we'll scope a fast, beautiful, SEO-ready website around your goals." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Get a website quote</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
-                <a href="/portfolio/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:briefcase" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See sites we've built</span></a>
+                <a href="<?php echo esc_url( $wd_cta_btn1_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light"><?php echo esc_html( $wd_cta_btn1_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="<?php echo esc_url( $wd_cta_btn2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:briefcase" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $wd_cta_btn2_label ); ?></span></a>
               </div>
+            </div>
+            	<?php bx_cta_image( 'website_design_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/website-design-cta-image.avif', false, 'BoostronixX website design team in Jaipur' ); ?>
             </div>
           </div>
         </div>

@@ -13,13 +13,22 @@ get_header();
 
 <main id="top">
       <!-- ===================== HERO ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+      <?php
+      $bx_hero_words = bx_lines( bx_field( 'hero_rotating_words', false, "get noticed\nconvert\nstand out\nscale fast" ) );
+      $bx_hero_first = $bx_hero_words ? $bx_hero_words[0] : 'get noticed';
+      $bx_cta1       = function_exists( 'get_field' ) ? get_field( 'hero_cta_primary' ) : false;
+      $bx_cta2       = function_exists( 'get_field' ) ? get_field( 'hero_cta_secondary' ) : false;
+      $bx_cta1_url   = ( is_array( $bx_cta1 ) && ! empty( $bx_cta1['url'] ) ) ? $bx_cta1['url'] : '#contact';
+      $bx_cta1_txt   = ( is_array( $bx_cta1 ) && ! empty( $bx_cta1['title'] ) ) ? $bx_cta1['title'] : 'Free Strategy Call';
+      $bx_cta2_url   = ( is_array( $bx_cta2 ) && ! empty( $bx_cta2['url'] ) ) ? $bx_cta2['url'] : '#services';
+      $bx_cta2_txt   = ( is_array( $bx_cta2 ) && ! empty( $bx_cta2['title'] ) ) ? $bx_cta2['title'] : 'See what we do';
+      ?>
+      <section class="relative pt-24 sm:pt-28 pb-12 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div
             class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft"
           >
-            <span class="h-2 w-2 rounded-full bg-accent"></span> Creative
-            branding & growth studio · Jaipur, India
+            <span class="h-2 w-2 rounded-full bg-accent"></span> <?php echo esc_html( bx_field( 'hero_badge', false, 'Creative branding & growth studio · Jaipur, India' ) ); ?>
           </div>
 
           <div class="grid lg:grid-cols-12 gap-8 items-end mt-6">
@@ -27,28 +36,25 @@ get_header();
               <h1
                 class="reveal font-display text-[2.9rem] leading-[0.95] sm:text-7xl lg:text-[5.4rem] tt"
               >
-                We build brands that<br class="hidden sm:block" />
-                <span id="rotator" class="text-accent">get noticed</span
+                <?php echo esc_html( bx_field( 'hero_heading', false, 'We build brands that' ) ); ?><br class="hidden sm:block" />
+                <span id="rotator" class="text-accent" data-words="<?php echo esc_attr( implode( '|', $bx_hero_words ) ); ?>"><?php echo esc_html( $bx_hero_first ); ?></span
                 ><span class="caret"></span>
               </h1>
             </div>
             <div class="lg:col-span-4">
               <p class="reveal text-ink-soft leading-relaxed" data-delay="1">
-                BoostronixX is a digital marketing company in Jaipur — branding,
-                SEO, social media and performance marketing in one creative team,
-                turning ambitious businesses into brands people remember with
-                ROI-driven, affordable growth.
+                <?php echo esc_html( bx_field( 'hero_subheading', false, 'BoostronixX is a digital marketing company in Jaipur — branding, SEO, social media and performance marketing in one creative team, turning ambitious businesses into brands people remember with ROI-driven, affordable growth.' ) ); ?>
               </p>
               <div
                 class="reveal flex flex-wrap items-center gap-3 mt-6"
                 data-delay="2"
               >
                 <a
-                  href="#contact"
+                  href="<?php echo esc_url( $bx_cta1_url ); ?>"
                   class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"
                 >
                   <span class="relative z-10 sheen-text"
-                    >Free Strategy Call</span
+                    ><?php echo esc_html( $bx_cta1_txt ); ?></span
                   >
                   <iconify-icon
                     icon="lucide:arrow-right"
@@ -56,7 +62,7 @@ get_header();
                   ></iconify-icon>
                 </a>
                 <a
-                  href="#services"
+                  href="<?php echo esc_url( $bx_cta2_url ); ?>"
                   class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"
                 >
                   <iconify-icon
@@ -64,7 +70,7 @@ get_header();
                     class="relative z-10 shrink-0"
                   ></iconify-icon>
                   <span class="relative z-10 sheen-text-dark"
-                    >See what we do</span
+                    ><?php echo esc_html( $bx_cta2_txt ); ?></span
                   >
                 </a>
               </div>
@@ -81,25 +87,22 @@ get_header();
                 <div class="flex items-center justify-between">
                   <span
                     class="text-xs font-medium tracking-[.2em] uppercase text-ink-soft"
-                    >Brands grown</span
+                    ><?php echo esc_html( bx_field( 'hero_stat_eyebrow', false, 'Brands grown' ) ); ?></span
                   >
                   <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
                 </div>
                 <div>
                   <p class="font-display text-6xl sm:text-7xl tt">
-                    <span class="count" data-to="50">0</span>+
+                    <span class="count" data-to="<?php echo (int) bx_field( 'hero_stat_number', false, 50 ); ?>">0</span><?php echo esc_html( bx_field( 'hero_stat_suffix', false, '+' ) ); ?>
                   </p>
                   <p class="text-ink-soft mt-1">
-                    happy clients across 5+ years
+                    <?php echo esc_html( bx_field( 'hero_stat_caption', false, 'happy clients & counting' ) ); ?>
                   </p>
                 </div>
                 <div class="flex flex-wrap gap-2 mt-4 text-xs">
-                  <span class="rounded-full bg-surface px-3 py-1"
-                    >Branding</span
-                  >
-                  <span class="rounded-full bg-surface px-3 py-1">SEO</span>
-                  <span class="rounded-full bg-surface px-3 py-1">Social</span>
-                  <span class="rounded-full bg-surface px-3 py-1">Ads</span>
+                  <?php foreach ( bx_lines( bx_field( 'hero_stat_tags', false, "Branding\nSEO\nSocial\nAds" ) ) as $bx_tag ) : ?>
+                  <span class="rounded-full bg-surface px-3 py-1"><?php echo esc_html( $bx_tag ); ?></span>
+                  <?php endforeach; ?>
                 </div>
               </div>
               <!-- mini SERP -->
@@ -122,7 +125,7 @@ get_header();
                       class="h-4 w-4 rounded overflow-hidden grid place-items-center bg-surface shrink-0"
                       ><img
                         id="serpFav2"
-                        src="/wp-content/themes/boostronixx/assets/img/souk-favicon.avif"
+                        src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/souk-favicon.avif"
                         alt=""
                         class="h-full w-full object-contain"
                     /></span>
@@ -196,7 +199,7 @@ get_header();
                   >
                     <img
                       id="igAvatar"
-                      src="/wp-content/themes/boostronixx/assets/img/ashiana-favicon.avif"
+                      src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/ashiana-favicon.avif"
                       alt=""
                       class="h-full w-full rounded-full object-cover bg-paper"
                     />
@@ -218,7 +221,7 @@ get_header();
                 >
                   <img
                     id="igPostA"
-                    src="/wp-content/themes/boostronixx/assets/img/ashiana-post.avif"
+                    src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/ashiana-post.avif"
                     alt=""
                     class="absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500"
                   />
@@ -260,23 +263,13 @@ get_header();
       <section class="py-6 border-y border-line bg-surface overflow-hidden">
         <div class="marquee text-ink/30">
           <div class="flex items-center gap-12 pr-12 font-display text-xl tt">
-            <span>UrbanCraft</span><span>•</span><span>GreenLeaf</span
-            ><span>•</span><span>TechFlow</span><span>•</span
-            ><span>Bella&nbsp;Vita</span><span>•</span
-            ><span>Aurum&nbsp;Realty</span><span>•</span><span>Silhouette</span
-            ><span>•</span><span>FinEdge</span><span>•</span
-            ><span>NutriFresh</span><span>•</span>
+<?php bx_home_marquee_row(); ?>
           </div>
           <div
             class="flex items-center gap-12 pr-12 font-display text-xl tt"
             aria-hidden="true"
           >
-            <span>UrbanCraft</span><span>•</span><span>GreenLeaf</span
-            ><span>•</span><span>TechFlow</span><span>•</span
-            ><span>Bella&nbsp;Vita</span><span>•</span
-            ><span>Aurum&nbsp;Realty</span><span>•</span><span>Silhouette</span
-            ><span>•</span><span>FinEdge</span><span>•</span
-            ><span>NutriFresh</span><span>•</span>
+<?php bx_home_marquee_row(); ?>
           </div>
         </div>
       </section>
@@ -287,12 +280,12 @@ get_header();
           <p
             class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
           >
-            What we do — and how it looks
+            <?php echo esc_html( bx_field( 'services_eyebrow', false, 'What we do — and how it looks' ) ); ?>
           </p>
           <h2
             class="reveal font-display text-3xl sm:text-5xl tt max-w-2xl leading-tight"
           >
-            Every service, shown the way we'd build it for you
+            <?php echo esc_html( bx_field( 'services_heading', false, "Every service, shown the way we'd build it for you" ) ); ?>
           </h2>
         </div>
 
@@ -308,9 +301,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                Full-funnel growth you can actually measure
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc1_title', false, 'Full-funnel growth you can actually measure' ) ); ?></h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 SEO, content and social working together — with dashboards that
                 show exactly how traffic turns into customers.
@@ -401,9 +392,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                Rank on Google — and get cited by AI
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc2_title', false, 'Rank on Google — and get cited by AI' ) ); ?></h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 On-page, technical and local SEO that climbs you to page one —
                 plus <strong class="text-ink">AEO &amp; GEO</strong>, so answer
@@ -498,7 +487,7 @@ get_header();
                       class="h-5 w-5 rounded overflow-hidden grid place-items-center bg-surface shrink-0"
                       ><img
                         id="serpFav"
-                        src="/wp-content/themes/boostronixx/assets/img/souk-favicon.avif"
+                        src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/souk-favicon.avif"
                         alt=""
                         class="h-full w-full object-contain"
                     /></span>
@@ -596,9 +585,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                Feeds that turn followers into customers
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc3_title', false, 'Feeds that turn followers into customers' ) ); ?></h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 Platform-native content for Instagram, Facebook, LinkedIn and
                 YouTube — built to stop the scroll and drive action.
@@ -643,7 +630,7 @@ get_header();
                     >
                       <img
                         id="igAvatarSocial"
-                        src="/wp-content/themes/boostronixx/assets/img/veeba-favicon.avif"
+                        src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/veeba-favicon.avif"
                         alt="BoostronixX"
                         class="h-full w-full rounded-full object-cover bg-paper"
                       />
@@ -667,7 +654,7 @@ get_header();
                   >
                     <img
                       id="igPostASocial"
-                      src="/wp-content/themes/boostronixx/assets/img/veeba-carousel-1.avif"
+                      src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/veeba-carousel-1.avif"
                       alt="BoostronixX social feed"
                       class="absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500"
                     />
@@ -723,9 +710,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                Every rupee tracked, optimised and accountable
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc4_title', false, 'Every rupee tracked, optimised and accountable' ) ); ?></h3>
               <p class="text-paper/70 mt-4 max-w-md">
                 Meta & Google Ads run on data — A/B tested, audience-segmented
                 and aligned to the only metric that matters: ROI.
@@ -841,9 +826,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                A brand identity people instantly recognise
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc5_title', false, 'A brand identity people instantly recognise' ) ); ?></h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 Positioning, strategy, logo and a complete visual system — built
                 from research, designed to convert.
@@ -933,9 +916,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                From rough wireframe to interface that converts
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc6_title', false, 'From rough wireframe to interface that converts' ) ); ?></h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 UX research and product design for apps and websites — every
                 screen built for clarity, usability and brand feel.
@@ -1022,9 +1003,7 @@ get_header();
               </div>
               <h3
                 class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              >
-                Fast, responsive sites that load and convert
-              </h3>
+              ><?php echo esc_html( bx_field( 'svc7_title', false, 'Fast, responsive sites that load and convert' ) ); ?></h3>
               <p class="text-ink-soft mt-4 max-w-md">
                 Custom, SEO-friendly websites and e-commerce builds — engineered
                 for speed, polished for brand, optimised to sell.
@@ -1143,12 +1122,12 @@ get_header();
             <p
               class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
             >
-              Why BoostronixX
+              <?php echo esc_html( bx_field( 'whyus_eyebrow', false, 'Why BoostronixX' ) ); ?>
             </p>
             <h2
               class="reveal font-display text-3xl sm:text-5xl tt leading-tight"
             >
-              Outcomes, not vanity metrics — from a digital marketing agency in Jaipur
+              <?php echo esc_html( bx_field( 'whyus_heading', false, 'Outcomes, not vanity metrics — from a digital marketing agency in Jaipur' ) ); ?>
             </h2>
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:auto-rows-[170px]">
@@ -1156,20 +1135,20 @@ get_header();
               class="reveal relative overflow-hidden col-span-2 row-span-2 rounded-xl2 bg-ink text-paper p-7 flex flex-col justify-between"
             >
               <div class="md:absolute md:right-0 md:bottom-0 max-md:w-full max-md:order-last max-md:-mb-7">
-                <img src="/wp-content/themes/boostronixx/assets/img/why-boostronixx.avif" alt="BoostronixX performance illustration" class="pointer-events-none z-0 md:max-w-[300px] md:w-[36vw] md:min-w-[160px] max-md:w-full rounded-[2rem] shadow-[0_25px_60px_-30px_rgba(0,0,0,.55)] object-cover" />
+                <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/why-boostronixx.avif" alt="BoostronixX performance illustration" class="pointer-events-none z-0 md:max-w-[300px] md:w-[36vw] md:min-w-[160px] max-md:w-full rounded-[2rem] shadow-[0_25px_60px_-30px_rgba(0,0,0,.55)] object-cover" />
               </div>
               <div class="flex items-center justify-between">
                 <span
                   class="text-xs font-medium tracking-[.2em] uppercase text-paper/50"
-                  >Avg. client result</span
+                  ><?php echo esc_html( bx_field( 'whyus_result_label', false, 'Avg. client result' ) ); ?></span
                 ><span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
               </div>
               <div>
                 <p class="font-display text-6xl sm:text-7xl tt">
-                  <span class="count" data-to="65">0</span>%
+                  <span class="count" data-to="<?php echo (int) bx_field( 'whyus_result_number', false, 65 ); ?>">0</span>%
                 </p>
                 <p class="text-paper/70 mt-2 max-w-xs">
-                  average year-on-year sales growth reported by our clients across Jaipur and beyond.
+                  <?php echo esc_html( bx_field( 'whyus_result_text', false, 'average year-on-year sales growth reported by our clients across Jaipur and beyond.' ) ); ?>
                 </p>
               </div>
             </div>
@@ -1179,10 +1158,10 @@ get_header();
             >
               <span
                 class="text-xs font-medium tracking-[.2em] uppercase text-ink-soft"
-                >Experience</span
+                >In-house</span
               >
               <p class="font-display text-5xl tt">
-                <span class="count" data-to="5">0</span>+
+                <span class="count" data-to="<?php echo (int) bx_field( 'whyus_exp_number', false, 100 ); ?>">0</span>%
               </p>
             </div>
             <div
@@ -1194,7 +1173,7 @@ get_header();
                 >Clients</span
               >
               <p class="font-display text-5xl tt">
-                <span class="count" data-to="50">0</span>+
+                <span class="count" data-to="<?php echo (int) bx_field( 'whyus_clients_number', false, 50 ); ?>">0</span>+
               </p>
             </div>
             <div
@@ -1202,8 +1181,7 @@ get_header();
               data-delay="2"
             >
               <p class="font-display text-xl sm:text-2xl tt leading-snug">
-                "They don't just deliver services — they become your
-                <span class="text-accent">growth partners.</span>"
+                "<?php echo esc_html( bx_field( 'whyus_quote', false, "They don't just deliver services — they become your growth partners." ) ); ?>"
               </p>
             </div>
           </div>
@@ -1220,21 +1198,26 @@ get_header();
               <p
                 class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
               >
-                Selected work
+                <?php echo esc_html( bx_field( 'work_eyebrow', false, 'Selected work' ) ); ?>
               </p>
               <h2
                 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight"
               >
-                Our latest projects
+                <?php echo esc_html( bx_field( 'work_heading', false, 'Our latest projects' ) ); ?>
               </h2>
             </div>
+            <?php
+            $bx_wk     = function_exists( 'get_field' ) ? get_field( 'work_button' ) : false;
+            $bx_wk_url = ( is_array( $bx_wk ) && ! empty( $bx_wk['url'] ) ) ? $bx_wk['url'] : home_url( '/portfolio/' );
+            $bx_wk_txt = ( is_array( $bx_wk ) && ! empty( $bx_wk['title'] ) ) ? $bx_wk['title'] : 'View all projects';
+            ?>
             <a
-              href="/portfolio/"
+              href="<?php echo esc_url( $bx_wk_url ); ?>"
               class="reveal group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"
               data-delay="1"
             >
               <span class="relative z-10 sheen-text-dark"
-                >View all projects</span
+                ><?php echo esc_html( $bx_wk_txt ); ?></span
               >
               <iconify-icon
                 icon="lucide:arrow-right"
@@ -1243,81 +1226,7 @@ get_header();
             </a>
           </div>
           <div class="grid md:grid-cols-2 gap-6">
-            <a
-              href="/edoovi-erp/"
-              class="reveal group block"
-            >
-              <figure class="imgph rounded-xl2 aspect-[16/11] !bg-[#161616]">
-                <img
-                  src="assets/work-edoovi.webp"
-                  alt="Edoovi ERP SaaS dashboard UI designed by BoostronixX"
-                  width="1280"
-                  height="880"
-                  loading="lazy"
-                  onerror="this.remove()"
-                />
-                <figcaption class="lbl">
-                  <b style="color: #7d7d7d">Project · 1280×880</b
-                  ><span style="color: #6a6a6a"
-                    >Edoovi ERP — dashboard UI on device, dark set</span
-                  >
-                </figcaption>
-              </figure>
-              <div class="flex items-center justify-between mt-5">
-                <div>
-                  <h3 class="font-display text-2xl tt">Edoovi — ERP SaaS</h3>
-                  <p class="text-sm text-paper/50 mt-1">
-                    Product design · Branding · Web
-                  </p>
-                </div>
-                <span
-                  class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"
-                  ><iconify-icon
-                    icon="lucide:arrow-up-right"
-                    class="text-lg"
-                  ></iconify-icon
-                ></span>
-              </div>
-            </a>
-            <a
-              href="/portfolio/"
-              class="reveal group block md:mt-16"
-              data-delay="1"
-            >
-              <figure class="imgph rounded-xl2 aspect-[16/11] !bg-[#161616]">
-                <img
-                  src="assets/work-freshee.webp"
-                  alt="Freshee quick-commerce mobile app screens by BoostronixX"
-                  width="1280"
-                  height="880"
-                  loading="lazy"
-                  onerror="this.remove()"
-                />
-                <figcaption class="lbl">
-                  <b style="color: #7d7d7d">Project · 1280×880</b
-                  ><span style="color: #6a6a6a"
-                    >Freshee — quick-commerce app screens</span
-                  >
-                </figcaption>
-              </figure>
-              <div class="flex items-center justify-between mt-5">
-                <div>
-                  <h3 class="font-display text-2xl tt">
-                    Freshee — Quick Commerce
-                  </h3>
-                  <p class="text-sm text-paper/50 mt-1">
-                    Mobile app · UI/UX · Brand
-                  </p>
-                </div>
-                <span
-                  class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"
-                  ><iconify-icon
-                    icon="lucide:arrow-up-right"
-                    class="text-lg"
-                  ></iconify-icon
-                ></span>
-              </div>
-            </a>
+            <?php bx_home_render_work(); ?>
           </div>
         </div>
       </section>
@@ -1331,7 +1240,7 @@ get_header();
             <div class="relative">
               <figure class="imgph rounded-xl2 aspect-[4/5]">
                 <img
-                  src="/wp-content/themes/boostronixx/assets/img/about-studio.avif"
+                  src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/about-studio.avif"
                   alt="Inside the BoostronixX studio in Jaipur, Rajasthan"
                   width="880"
                   height="1100"
@@ -1379,70 +1288,69 @@ get_header();
             <p
               class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
             >
-              Get to know us
+              <?php echo esc_html( bx_field( 'about_eyebrow', false, 'Get to know us' ) ); ?>
             </p>
             <h2
               class="reveal font-display text-3xl sm:text-5xl tt leading-tight max-w-xl"
             >
-              A creative studio that thinks like a growth team
+              <?php echo esc_html( bx_field( 'about_heading', false, 'A creative studio that thinks like a growth team' ) ); ?>
             </h2>
             <p
               class="reveal text-ink-soft mt-6 max-w-xl leading-relaxed"
               data-delay="1"
             >
-              BoostronixX turns ideas into scalable brands. We combine strategy,
-              creativity and performance marketing to deliver consistent results
-              — whether you're a start-up finding your footing or an established
-              business ready to scale.
+              <?php echo esc_html( bx_field( 'about_text', false, "BoostronixX turns ideas into scalable brands. We combine strategy, creativity and performance marketing to deliver consistent results — whether you're a start-up finding your footing or an established business ready to scale." ) ); ?>
             </p>
             <ul
               class="reveal grid sm:grid-cols-2 gap-3 mt-8 text-sm"
               data-delay="2"
             >
+              <?php foreach ( bx_lines( bx_field( 'about_points', false, "Strategy-first, creative-led\nTransparent, tracked ROI\nIn-house design & dev\nAI + data optimisation" ) ) as $bx_pt ) : ?>
               <li class="flex items-center gap-3">
                 <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                Strategy-first, creative-led
+                <?php echo esc_html( $bx_pt ); ?>
               </li>
-              <li class="flex items-center gap-3">
-                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                Transparent, tracked ROI
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                In-house design & dev
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span> AI +
-                data optimisation
-              </li>
+              <?php endforeach; ?>
             </ul>
             <dl
               class="reveal grid grid-cols-2 sm:grid-cols-4 gap-px mt-9 rounded-2xl overflow-hidden border border-line bg-line"
               data-delay="2"
             >
+              <?php
+              $bx_about_stats = array();
+              if ( function_exists( 'have_rows' ) && have_rows( 'about_stats' ) ) {
+                  while ( have_rows( 'about_stats' ) ) {
+                      the_row();
+                      $bx_about_stats[] = array( (string) get_sub_field( 'label' ), (string) get_sub_field( 'value' ) );
+                  }
+              }
+              if ( ! $bx_about_stats ) {
+                  $bx_about_stats = array(
+                      array( 'Founded', '2026' ),
+                      array( 'Based in', 'Jaipur' ),
+                      array( 'Brands served', '50+' ),
+                      array( 'Avg. reply', '<24h' ),
+                  );
+              }
+              foreach ( $bx_about_stats as $bx_st ) :
+                  ?>
               <div class="bg-paper p-4">
-                <dt class="text-xs text-ink-soft">Founded</dt>
-                <dd class="font-display text-2xl tt mt-1">2021</dd>
+                <dt class="text-xs text-ink-soft"><?php echo esc_html( $bx_st[0] ); ?></dt>
+                <dd class="font-display text-2xl tt mt-1"><?php echo esc_html( $bx_st[1] ); ?></dd>
               </div>
-              <div class="bg-paper p-4">
-                <dt class="text-xs text-ink-soft">Based in</dt>
-                <dd class="font-display text-2xl tt mt-1">Jaipur</dd>
-              </div>
-              <div class="bg-paper p-4">
-                <dt class="text-xs text-ink-soft">Brands served</dt>
-                <dd class="font-display text-2xl tt mt-1">50+</dd>
-              </div>
-              <div class="bg-paper p-4">
-                <dt class="text-xs text-ink-soft">Avg. reply</dt>
-                <dd class="font-display text-2xl tt mt-1">&lt;24h</dd>
-              </div>
+              <?php endforeach; ?>
             </dl>
+            <?php
+            $bx_ab     = function_exists( 'get_field' ) ? get_field( 'about_button' ) : false;
+            $bx_ab_url = ( is_array( $bx_ab ) && ! empty( $bx_ab['url'] ) ) ? $bx_ab['url'] : home_url( '/about-us/' );
+            $bx_ab_txt = ( is_array( $bx_ab ) && ! empty( $bx_ab['title'] ) ) ? $bx_ab['title'] : 'About BoostronixX';
+            ?>
             <a
-              href="/about-us/"
+              href="<?php echo esc_url( $bx_ab_url ); ?>"
               class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-9 font-medium"
               data-delay="2"
             >
-              <span class="relative z-10 sheen-text">About BoostronixX</span>
+              <span class="relative z-10 sheen-text"><?php echo esc_html( $bx_ab_txt ); ?></span>
               <iconify-icon
                 icon="lucide:arrow-right"
                 class="relative z-10"
@@ -1462,20 +1370,25 @@ get_header();
               <p
                 class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
               >
-                Industries we empower
+                <?php echo esc_html( bx_field( 'industries_eyebrow', false, 'Industries we empower' ) ); ?>
               </p>
               <h2
                 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"
               >
-                Growth strategy, tailored to your sector
+                <?php echo esc_html( bx_field( 'industries_heading', false, 'Growth strategy, tailored to your sector' ) ); ?>
               </h2>
             </div>
+            <?php
+            $bx_ind     = function_exists( 'get_field' ) ? get_field( 'industries_button' ) : false;
+            $bx_ind_url = ( is_array( $bx_ind ) && ! empty( $bx_ind['url'] ) ) ? $bx_ind['url'] : home_url( '/industries/' );
+            $bx_ind_txt = ( is_array( $bx_ind ) && ! empty( $bx_ind['title'] ) ) ? $bx_ind['title'] : 'View all industries';
+            ?>
             <a
-              href="/industries/"
+              href="<?php echo esc_url( $bx_ind_url ); ?>"
               class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium shrink-0"
               data-delay="1"
             >
-              <span class="relative z-10 sheen-text">View all industries</span>
+              <span class="relative z-10 sheen-text"><?php echo esc_html( $bx_ind_txt ); ?></span>
               <iconify-icon
                 icon="lucide:arrow-right"
                 class="relative z-10"
@@ -1574,12 +1487,12 @@ get_header();
               <p
                 class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
               >
-                Results clients trust
+                <?php echo esc_html( bx_field( 'testimonials_eyebrow', false, 'Results clients trust' ) ); ?>
               </p>
               <h2
                 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"
               >
-                Brands that grew with us
+                <?php echo esc_html( bx_field( 'testimonials_heading', false, 'Brands that grew with us' ) ); ?>
               </h2>
             </div>
             <div class="reveal flex items-center gap-3" data-delay="1">
@@ -1609,258 +1522,7 @@ get_header();
           </div>
           <div id="tViewport">
             <div id="tTrack">
-              <div class="tslide pr-5">
-                <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
-                >
-                  <div
-                    class="flex gap-0.5 text-accent text-lg"
-                    role="img"
-                    aria-label="5 out of 5 stars"
-                  >
-                    <iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon>
-                  </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed grow">
-                    "Boostronixx completely transformed our brand identity. We
-                    saw a
-                    <span class="text-accent font-medium"
-                      >40% increase in engagement</span
-                    >
-                    within the first three months."
-                  </blockquote>
-                  <figcaption class="flex items-center gap-3 mt-7">
-                    <img src="/wp-content/themes/boostronixx/assets/img/boy-avatar.avif" alt="Arjun Khanna" class="h-12 w-12 rounded-full object-cover" />
-                    <span>
-                      <span class="block font-display">Arjun Khanna</span>
-                      <span class="block text-sm text-ink-soft">
-                        Founder, UrbanCraft
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="tslide pr-5">
-                <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
-                >
-                  <div
-                    class="flex gap-0.5 text-accent text-lg"
-                    role="img"
-                    aria-label="5 out of 5 stars"
-                  >
-                    <iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon>
-                  </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed grow">
-                    "They became our growth partners — translated our vision
-                    into a powerful brand strategy. Our customer recall improved
-                    significantly."
-                  </blockquote>
-                  <figcaption class="flex items-center gap-3 mt-7">
-                    <img src="/wp-content/themes/boostronixx/assets/img/girl-avatar.avif" alt="Kavita Nair" class="h-12 w-12 rounded-full object-cover" />
-                    <span>
-                      <span class="block font-display">Kavita Nair</span>
-                      <span class="block text-sm text-ink-soft">
-                        Director, GreenLeaf Organics
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="tslide pr-5">
-                <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
-                >
-                  <div
-                    class="flex gap-0.5 text-accent text-lg"
-                    role="img"
-                    aria-label="5 out of 5 stars"
-                  >
-                    <iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon>
-                  </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed grow">
-                    "Data-driven strategy with creative excellence. Our website
-                    traffic doubled and conversions improved by
-                    <span class="text-accent font-medium"
-                      >35% in six months</span
-                    >."
-                  </blockquote>
-                  <figcaption class="flex items-center gap-3 mt-7">
-                    <img src="/wp-content/themes/boostronixx/assets/img/boy-avatar.avif" alt="Rajesh Menon" class="h-12 w-12 rounded-full object-cover" />
-                    <span>
-                      <span class="block font-display">Rajesh Menon</span>
-                      <span class="block text-sm text-ink-soft">
-                        CEO, TechFlow Solutions
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="tslide pr-5">
-                <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
-                >
-                  <div
-                    class="flex gap-0.5 text-accent text-lg"
-                    role="img"
-                    aria-label="5 out of 5 stars"
-                  >
-                    <iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon>
-                  </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed grow">
-                    "Online sales grew by
-                    <span class="text-accent font-medium">65% year-on-year</span
-                    >. From logo to website to social — everything was cohesive
-                    and on-brand."
-                  </blockquote>
-                  <figcaption class="flex items-center gap-3 mt-7">
-                    <img src="/wp-content/themes/boostronixx/assets/img/boy-avatar.avif" alt="Vikram Rathore" class="h-12 w-12 rounded-full object-cover" />
-                    <span>
-                      <span class="block font-display">Vikram Rathore</span>
-                      <span class="block text-sm text-ink-soft">
-                        MD, Aurum Realty
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="tslide pr-5">
-                <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
-                >
-                  <div
-                    class="flex gap-0.5 text-accent text-lg"
-                    role="img"
-                    aria-label="5 out of 5 stars"
-                  >
-                    <iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon>
-                  </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed grow">
-                    "We approached them with a vague idea and got a concrete
-                    brand identity — delivered ahead of schedule. CAC dropped
-                    <span class="text-accent font-medium">25%</span>."
-                  </blockquote>
-                  <figcaption class="flex items-center gap-3 mt-7">
-                    <img src="/wp-content/themes/boostronixx/assets/img/girl-avatar.avif" alt="Anjali Deshmukh" class="h-12 w-12 rounded-full object-cover" />
-                    <span>
-                      <span class="block font-display">Anjali Deshmukh</span>
-                      <span class="block text-sm text-ink-soft">
-                        Founder, Silhouette Studio
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="tslide pr-5">
-                <figure
-                  class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"
-                >
-                  <div
-                    class="flex gap-0.5 text-accent text-lg"
-                    role="img"
-                    aria-label="5 out of 5 stars"
-                  >
-                    <iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon
-                    ><iconify-icon
-                      icon="material-symbols:star-rounded"
-                    ></iconify-icon>
-                  </div>
-                  <blockquote class="mt-5 text-lg leading-relaxed grow">
-                    "They understood our budget but never compromised on
-                    quality. The branding helped us pitch investors — seed round
-                    closed in two months."
-                  </blockquote>
-                  <figcaption class="flex items-center gap-3 mt-7">
-                    <img src="/wp-content/themes/boostronixx/assets/img/boy-avatar.avif" alt="Suresh Iyer" class="h-12 w-12 rounded-full object-cover" />
-                    <span>
-                      <span class="block font-display">Suresh Iyer</span>
-                      <span class="block text-sm text-ink-soft">
-                        Director, FinEdge Capital
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </div>
+              <?php bx_home_render_testimonials(); ?>
             </div>
           </div>
           <div class="flex items-center justify-between mt-7">
@@ -1883,12 +1545,12 @@ get_header();
               <p
                 class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
               >
-                Insights
+                <?php echo esc_html( bx_field( 'insights_eyebrow', false, 'Insights' ) ); ?>
               </p>
               <h2
                 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight"
               >
-                Ideas on branding & growth
+                <?php echo esc_html( bx_field( 'insights_heading', false, 'Ideas on branding & growth' ) ); ?>
               </h2>
             </div>
             <a
@@ -1903,123 +1565,7 @@ get_header();
             ></a>
           </div>
           <div class="grid md:grid-cols-3 gap-6">
-            <article class="reveal group">
-              <a href="/blog/" class="block"
-                ><figure class="imgph rounded-xl2 shadow-lg mb-5">
-                  <img
-                    src="/wp-content/themes/boostronixx/assets/img/the-souled-store-post.avif"
-                    alt="How to define your target audience for better brand communication"
-                    width="768"
-                    height="576"
-                    loading="lazy"
-                    class="relative"
-                    onerror="this.remove()"
-                  />
-                  <figcaption class="lbl">
-                    <b>Blog · 768×576</b><span>Editorial cover</span>
-                  </figcaption>
-                </figure>
-                <div
-                  class="flex flex-wrap items-center gap-3 text-xs text-ink-soft"
-                >
-                  <span
-                    class="rounded-full bg-paper border border-line px-3 py-1 font-medium"
-                    >Branding &amp; Strategy</span
-                  ><time datetime="2026-05-16">May 16, 2026</time
-                  ><span>· 6 min read</span>
-                </div>
-                <h3
-                  class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors"
-                >
-                  How to Define Your Target Audience for Better Brand
-                  Communication
-                </h3>
-                <p class="text-xs text-ink-soft mt-2">
-                  By
-                  <span class="font-medium text-ink"
-                    >BoostronixX Editorial Team</span
-                  >
-                </p></a
-              >
-            </article>
-            <article class="reveal group" data-delay="1">
-              <a href="/blog/" class="block"
-                ><figure class="imgph rounded-xl2 shadow-lg mb-5">
-                  <img
-                    src="/wp-content/themes/boostronixx/assets/img/the-souled-store-post.avif"
-                    alt="Employer branding in India and company culture"
-                    width="768"
-                    height="576"
-                    loading="lazy"
-                    class="relative"
-                    onerror="this.remove()"
-                  />
-                  <figcaption class="lbl">
-                    <b>Blog · 768×576</b><span>Editorial cover</span>
-                  </figcaption>
-                </figure>
-                <div
-                  class="flex flex-wrap items-center gap-3 text-xs text-ink-soft"
-                >
-                  <span
-                    class="rounded-full bg-paper border border-line px-3 py-1 font-medium"
-                    >Branding &amp; Strategy</span
-                  ><time datetime="2026-05-12">May 12, 2026</time
-                  ><span>· 7 min read</span>
-                </div>
-                <h3
-                  class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors"
-                >
-                  Employer Branding in India: Why Your Company Culture IS Your
-                  Brand
-                </h3>
-                <p class="text-xs text-ink-soft mt-2">
-                  By
-                  <span class="font-medium text-ink"
-                    >BoostronixX Editorial Team</span
-                  >
-                </p></a
-              >
-            </article>
-            <article class="reveal group" data-delay="2">
-              <a href="/blog/" class="block"
-                ><figure class="imgph rounded-xl2 shadow-lg mb-5">
-                  <img
-                    src="/wp-content/themes/boostronixx/assets/img/the-souled-store-post.avif"
-                    alt="Brand storytelling examples from Indian brands"
-                    width="768"
-                    height="576"
-                    loading="lazy"
-                    class="relative"
-                    onerror="this.remove()"
-                  />
-                  <figcaption class="lbl">
-                    <b>Blog · 768×576</b><span>Editorial cover</span>
-                  </figcaption>
-                </figure>
-                <div
-                  class="flex flex-wrap items-center gap-3 text-xs text-ink-soft"
-                >
-                  <span
-                    class="rounded-full bg-paper border border-line px-3 py-1 font-medium"
-                    >Branding &amp; Strategy</span
-                  ><time datetime="2026-05-08">May 8, 2026</time
-                  ><span>· 8 min read</span>
-                </div>
-                <h3
-                  class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors"
-                >
-                  Brand Storytelling: 7 Indian Brands That Did It Right in
-                  2025-26
-                </h3>
-                <p class="text-xs text-ink-soft mt-2">
-                  By
-                  <span class="font-medium text-ink"
-                    >BoostronixX Editorial Team</span
-                  >
-                </p></a
-              >
-            </article>
+            <?php bx_home_render_insights(); ?>
           </div>
         </div>
       </section>
@@ -2031,93 +1577,29 @@ get_header();
             <p
               class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"
             >
-              FAQ
+              <?php echo esc_html( bx_field( 'faq_eyebrow', false, 'FAQ' ) ); ?>
             </p>
             <h2
               class="reveal font-display text-3xl sm:text-5xl tt leading-tight"
             >
-              Questions, answered
+              <?php echo esc_html( bx_field( 'faq_heading', false, 'Questions, answered' ) ); ?>
             </h2>
           </div>
           <div class="space-y-3">
-            <div class="faq border border-line rounded-2xl px-6 group open">
-              <button
-                class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg"
-              >
-                Which services does BoostronixX offer?<span
-                  class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"
-                  ><iconify-icon icon="lucide:plus"></iconify-icon
-                ></span>
-              </button>
-              <div class="faq-body">
-                <div
-                  class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed"
-                >
-                  Brand consulting, digital marketing, SEO, social media
-                  marketing, performance marketing, UI/UX design and website
-                  design — strategy through execution, all in-house.
-                </div>
-              </div>
-            </div>
-            <div class="faq border border-line rounded-2xl px-6 group">
-              <button
-                class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg"
-              >
-                Where is BoostronixX located?<span
-                  class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"
-                  ><iconify-icon icon="lucide:plus"></iconify-icon
-                ></span>
-              </button>
-              <div class="faq-body">
-                <div
-                  class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed"
-                >
-                  Jaipur, Rajasthan, India — working with clients across India
-                  and internationally.
-                </div>
-              </div>
-            </div>
-            <div class="faq border border-line rounded-2xl px-6 group">
-              <button
-                class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg"
-              >
-                Which industries do you specialise in?<span
-                  class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"
-                  ><iconify-icon icon="lucide:plus"></iconify-icon
-                ></span>
-              </button>
-              <div class="faq-body">
-                <div
-                  class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed"
-                >
-                  Real estate, schools, D2C eCommerce and healthcare — our
-                  framework adapts to most growth-stage businesses.
-                </div>
-              </div>
-            </div>
-            <div class="faq border border-line rounded-2xl px-6 group">
-              <button
-                class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg"
-              >
-                How do we get started?<span
-                  class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"
-                  ><iconify-icon icon="lucide:plus"></iconify-icon
-                ></span>
-              </button>
-              <div class="faq-body">
-                <div
-                  class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed"
-                >
-                  Book a free strategy call. We'll review your goals, share
-                  quick wins and propose a roadmap — no obligation.
-                </div>
-              </div>
-            </div>
+            <?php bx_home_render_faqs(); ?>
           </div>
         </div>
       </section>
 
       <!-- ===================== CTA ===================== -->
+      <?php
+      $bx_cta_btn     = function_exists( 'get_field' ) ? get_field( 'cta_button' ) : false;
+      $bx_cta_btn_url = ( is_array( $bx_cta_btn ) && ! empty( $bx_cta_btn['url'] ) ) ? $bx_cta_btn['url'] : home_url( '/contact-us/' );
+      $bx_cta_btn_txt = ( is_array( $bx_cta_btn ) && ! empty( $bx_cta_btn['title'] ) ) ? $bx_cta_btn['title'] : 'Book a Free Strategy Call';
+      $bx_cta_phone   = bx_field( 'cta_phone', false, '+91 80582 12202' );
+      $bx_cta_tel     = preg_replace( '/[^0-9+]/', '', $bx_cta_phone );
+      $bx_cta_email   = bx_field( 'cta_email', false, 'boostronixx@gmail.com' );
+      ?>
       <section id="contact" class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div
@@ -2151,22 +1633,18 @@ get_header();
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
               <div class="max-w-2xl">
                 <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">
-                  Ready to build something great together?
+                  <?php echo esc_html( bx_field( 'cta_heading', false, 'Ready to build something great together?' ) ); ?>
                 </h2>
                 <p class="text-paper/70 mt-6 text-lg max-w-xl">
-                  Real estate, school, D2C or healthcare brand ready to scale
-                  — BoostronixX is your creative branding and digital marketing
-                  partner in Jaipur, trusted as one of the best digital marketing
-                  agencies in Jaipur for ROI-driven, affordable growth. Book a
-                  free strategy call today.
+                  <?php echo esc_html( bx_field( 'cta_text', false, 'Real estate, school, D2C or healthcare brand ready to scale — BoostronixX is your creative branding and digital marketing partner in Jaipur, trusted as one of the best digital marketing agencies in Jaipur for ROI-driven, affordable growth. Book a free strategy call today.' ) ); ?>
                 </p>
                 <div class="flex flex-wrap items-center gap-3 mt-9">
                   <a
-                    href="/contact-us/"
+                    href="<?php echo esc_url( $bx_cta_btn_url ); ?>"
                     class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
                   >
                     <span class="relative z-10 sheen-text-light"
-                      >Book a Free Strategy Call</span
+                      ><?php echo esc_html( $bx_cta_btn_txt ); ?></span
                     >
                     <iconify-icon
                       icon="lucide:arrow-right"
@@ -2174,28 +1652,28 @@ get_header();
                     ></iconify-icon>
                   </a>
                   <a
-                    href="tel:+918058212202"
+                    href="tel:<?php echo esc_attr( $bx_cta_tel ); ?>"
                     class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"
                     ><iconify-icon
                       icon="lucide:phone"
                       class="relative z-10 shrink-0"
                     ></iconify-icon
-                    ><span class="relative z-10">+91 80582 12202</span></a
+                    ><span class="relative z-10"><?php echo esc_html( $bx_cta_phone ); ?></span></a
                   >
                 </div>
                 <p class="text-paper/50 text-sm mt-5">
                   Or email
                   <a
-                    href="mailto:boostronixx@gmail.com"
+                    href="mailto:<?php echo esc_attr( $bx_cta_email ); ?>"
                     class="text-paper underline underline-offset-4 decoration-accent"
-                    >boostronixx@gmail.com</a
+                    ><?php echo esc_html( $bx_cta_email ); ?></a
                   >
-                  · Mon–Fri, 9 AM–7 PM IST
+                  · <?php echo esc_html( bx_field( 'cta_hours', false, 'Mon–Fri, 9 AM–7 PM IST' ) ); ?>
                 </p>
               </div>
               <div class="relative overflow-hidden">
                 <img
-                  src="/wp-content/themes/boostronixx/assets/img/cta1.avif"
+                  src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/cta1.avif"
                   alt="BoostronixX strategy call"
                   class="md:h-full w-full object-contain object-center"
                 />

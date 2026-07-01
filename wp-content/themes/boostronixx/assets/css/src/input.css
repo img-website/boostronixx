@@ -3412,3 +3412,22 @@ body.bx-page-website-design ::selection{ background: #fa5539; color: #fff; }
    ============================================================= */
 #hpPop.hp-open, #bpModal.bp-open { display: flex; align-items: center; justify-content: center; padding: 0.75rem; }
 #hpPop .hp-card, #bpModal .bp-card { position: relative; left: auto; top: auto; right: auto; bottom: auto; margin: auto; width: 100%; }
+
+/* Inline content images in article prose — rounded + responsive, matching the
+   blog-post design (native WordPress image blocks land here). */
+.prose img { border-radius: 1rem; max-width: 100%; height: auto; }
+
+/* Key-takeaways box is dark (color:#fff); the heading is a <p>, so the
+   `.prose p{color:#2a2722}` rule would paint it dark-on-dark and hide it.
+   Keep everything inside the box readable. */
+.bx-page-blog-post .prose .takeaways p { color: #fff; }
+
+/* Takeaways items already show a check icon; the .prose ul bullet (accent dot)
+   leaks in with higher specificity and doubles up. Hide it on takeaways items. */
+.bx-page-blog-post .prose .takeaways li:before { display: none; }
+
+/* Tables in migrated article content — clean, readable, on-brand. */
+.bx-page-blog-post .prose table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: .95rem; }
+.bx-page-blog-post .prose th, .bx-page-blog-post .prose td { border: 1px solid var(--color-line); padding: .7rem .9rem; text-align: left; vertical-align: top; }
+.bx-page-blog-post .prose thead th { background: var(--color-surface); font-family: var(--brand-font); font-weight: 600; }
+.bx-page-blog-post .prose tbody tr:nth-child(even) { background: rgba(0,0,0,.02); }

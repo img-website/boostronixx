@@ -14,7 +14,7 @@ get_header();
 
 <main id="top">
       <!-- ===================== HERO ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-10 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-10 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
             <a href="/" class="hover:text-accent">Home</a>
@@ -107,8 +107,13 @@ get_header();
               <a href="/about-us/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="about us story team"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:users"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">About Us</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
               <a href="/faq/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="faq questions help"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:help-circle"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">FAQ</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
               <a href="/contact-us/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="contact us get in touch"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:message-square"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Contact Us</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
-              <a href="/blog/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="blog articles insights"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:newspaper"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Blog</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
-              <a href="/blog-post/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="article branding vs marketing blog post"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:file-text"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Article — Branding vs. Marketing</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
+              <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="blog articles insights"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:newspaper"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Blog</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
+              <?php
+              // Dynamic: every published blog post (capped for performance per CLAUDE.md §7).
+              foreach ( get_posts( array( 'numberposts' => 100, 'post_status' => 'publish', 'no_found_rows' => true ) ) as $bx_sp ) :
+                  ?>
+              <a href="<?php echo esc_url( get_permalink( $bx_sp ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="<?php echo esc_attr( 'article post ' . strtolower( $bx_sp->post_title ) ); ?>"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:file-text"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label"><?php echo esc_html( $bx_sp->post_title ); ?></span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
+              <?php endforeach; ?>
             </div>
           </div>
 
@@ -137,18 +142,6 @@ get_header();
               <a href="/contact-us/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="contact book strategy call"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:calendar-check"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Book a Strategy Call</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
             </div>
           </div>
-
-          <!-- UTILITY -->
-          <div class="catcard reveal rounded-xl2 border border-line p-6" data-cat>
-            <div class="flex items-center gap-3 mb-5">
-              <span class="grid place-items-center h-10 w-10 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:wrench"></iconify-icon></span>
-              <h2 class="font-display text-xl tt">Utility</h2>
-              <span class="ml-auto text-xs text-ink-soft rounded-full bg-surface px-2.5 py-1 cat-count"></span>
-            </div>
-            <div class="stagger space-y-2">
-              <a href="/sitemap/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="sitemap map pages"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:git-fork"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Sitemap</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
-            </div>
-          </div>
         </div>
 
         <!-- empty -->
@@ -162,7 +155,7 @@ get_header();
         <div class="mx-auto max-w-7xl px-4 sm:px-6 mt-12">
           <div class="reveal rounded-2xl bg-surface border border-line p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-sm text-ink-soft inline-flex items-center gap-2"><iconify-icon icon="lucide:code-2" class="text-accent text-lg"></iconify-icon> Looking for the machine-readable version for search engines?</p>
-            <a href="https://www.boostronixx.com/sitemap.xml" class="group btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium">
+            <a href="<?php echo esc_url( home_url( '/sitemap_index.xml' ) ); ?>" class="group btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium">
               <span class="relative z-10 sheen-text">View XML sitemap</span>
               <iconify-icon icon="lucide:arrow-up-right" class="relative z-10"></iconify-icon>
             </a>

@@ -55,3 +55,60 @@ function bx_field( $selector, $post_id = false, $default = '' ) {
 	}
 	return $default;
 }
+
+/**
+ * Resolve an ACF image field to a usable URL, with a fallback.
+ *
+ * Handles every ACF image return format (array, attachment ID, URL string).
+ * Falls back to $fallback when ACF is inactive or the field is empty — so a
+ * section image is fully CMS-editable but still degrades to its placeholder.
+ *
+ * @param string   $selector Image field name/key.
+ * @param string   $fallback URL used when no image is set.
+ * @param int|bool $post_id  Optional post ID.
+ * @return string
+ */
+function bx_img_url( $selector, $fallback = '', $post_id = false ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return $fallback;
+	}
+	$img = get_field( $selector, $post_id );
+	if ( is_array( $img ) && ! empty( $img['url'] ) ) {
+		return $img['url'];
+	}
+	if ( is_numeric( $img ) && (int) $img > 0 ) {
+		$url = wp_get_attachment_url( (int) $img );
+		if ( $url ) {
+			return $url;
+		}
+	}
+	if ( is_string( $img ) && '' !== $img ) {
+		return $img;
+	}
+	return $fallback;
+}
+
+/**
+ * Render the side image column for a CTA card (matches the home-page CTA).
+ *
+ * Outputs nothing when no image resolves, so the CTA gracefully falls back to
+ * a single-column text layout. On mobile the grid stacks and the image sits
+ * full-width below the copy (object-contain keeps the cut-out framed).
+ *
+ * @param string   $selector Image field name/key.
+ * @param string   $fallback Fallback image URL.
+ * @param int|bool $post_id  Optional post ID.
+ * @param string   $alt      Alt text.
+ * @return void
+ */
+function bx_cta_image( $selector, $fallback = '', $post_id = false, $alt = 'BoostronixX strategy call' ) {
+	$url = bx_img_url( $selector, $fallback, $post_id );
+	if ( ! $url ) {
+		return;
+	}
+	printf(
+		'<div class="relative overflow-hidden"><img src="%s" alt="%s" loading="lazy" class="md:h-full w-full object-contain object-center" /></div>',
+		esc_url( $url ),
+		esc_attr( $alt )
+	);
+}

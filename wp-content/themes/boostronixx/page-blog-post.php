@@ -15,7 +15,7 @@ get_header();
 <main id="article">
       <article>
         <!-- ARTICLE HERO -->
-        <header class="pt-28 sm:pt-36 pb-8 grid-lines">
+        <header class="pt-24 sm:pt-28 pb-8 grid-lines">
           <div class="mx-auto max-w-3xl px-4 sm:px-6">
             <nav class="flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
               <a href="/" class="hover:text-accent">Home</a>
@@ -31,7 +31,7 @@ get_header();
             <!-- byline -->
             <div class="flex flex-wrap items-center gap-x-4 gap-y-3 mt-7 pt-6 border-t border-line">
               <div class="flex items-center gap-3">
-                <img src="/wp-content/themes/boostronixx/assets/img/author-aarav.avif" alt="Aarav Sharma" class="h-11 w-11 rounded-full object-cover bg-surface-2" onerror="this.outerHTML='<span class=&quot;grid place-items-center h-11 w-11 rounded-full bg-ink text-paper font-display&quot; aria-hidden=&quot;true&quot;>A</span>'" />
+                <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/author-aarav.avif" alt="Aarav Sharma" class="h-11 w-11 rounded-full object-cover bg-surface-2" onerror="this.outerHTML='<span class=&quot;grid place-items-center h-11 w-11 rounded-full bg-ink text-paper font-display&quot; aria-hidden=&quot;true&quot;>A</span>'" />
                 <div class="text-sm leading-tight">
                   <p class="font-medium">By Aarav Sharma</p>
                   <p class="text-ink-soft text-xs">Brand Strategy Lead · BoostronixX</p>
@@ -57,7 +57,7 @@ get_header();
         <!-- FEATURED IMAGE 16:9 -->
         <div class="mx-auto max-w-5xl px-4 sm:px-6">
           <figure class="imgph rounded-xl2 aspect-video">
-            <img src="/wp-content/themes/boostronixx/assets/img/blog-branding-vs-marketing-hero.avif" alt="A brand logo on one side and a megaphone with charts on the other, illustrating branding versus marketing" loading="eager" onerror="this.remove()" />
+            <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/blog-branding-vs-marketing-hero.avif" alt="A brand logo on one side and a megaphone with charts on the other, illustrating branding versus marketing" loading="eager" onerror="this.remove()" />
             <figcaption class="lbl"><b>Hero 16:9 · 1600×900</b><span>Lead editorial image for the article — branding (identity) vs marketing (reach), bold and on-brand.</span></figcaption>
           </figure>
         </div>
@@ -127,7 +127,7 @@ get_header();
 
               <figure>
                 <div class="imgph rounded-xl2 aspect-video">
-                  <img src="/wp-content/themes/boostronixx/assets/img/blog-brand-system.avif" alt="A brand system showing logo, colour palette and typography laid out together" loading="lazy" onerror="this.remove()" />
+                  <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/blog-brand-system.avif" alt="A brand system showing logo, colour palette and typography laid out together" loading="lazy" onerror="this.remove()" />
                   <figcaption class="lbl" style="position:absolute"><b>Inline 16:9 · 1600×900</b><span>Brand system example — logo, palette and type working together.</span></figcaption>
                 </div>
                 <figcaption>A coherent brand system makes every touchpoint feel like it belongs to the same story.</figcaption>
@@ -214,7 +214,7 @@ get_header();
               <div>
                 <p class="font-display tt text-lg">Aarav Sharma</p>
                 <p class="text-accent text-sm">Brand Strategy Lead · BoostronixX</p>
-                <p class="text-ink-soft text-sm mt-2 leading-relaxed">Aarav has led brand strategy and identity projects for 50+ businesses across real estate, schools and D2C since 2021. He writes about positioning, identity and the unglamorous decisions that make brands stick.</p>
+                <p class="text-ink-soft text-sm mt-2 leading-relaxed">Aarav has led brand strategy and identity projects for 50+ businesses across real estate, schools and D2C. He writes about positioning, identity and the unglamorous decisions that make brands stick.</p>
                 <div class="flex items-center gap-3 mt-3 text-sm">
                   <a href="/about-us/" class="font-medium text-ink hover:text-accent inline-flex items-center gap-1.5">More about the team <iconify-icon icon="lucide:arrow-up-right" aria-hidden="true"></iconify-icon></a>
                 </div>
@@ -265,15 +265,15 @@ get_header();
             </div>
             <div class="grid sm:grid-cols-3 gap-6">
               <a href="/blog-post/" class="relpost group block">
-                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#fa5539,#2e1c16)" aria-hidden="true"></div><img src="/wp-content/themes/boostronixx/assets/img/blog-brand-refresh.avif" alt="Brand refresh before and after" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4</b></span></div>
+                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#fa5539,#2e1c16)" aria-hidden="true"></div><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/blog-brand-refresh.avif" alt="Brand refresh before and after" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4</b></span></div>
                 <div class="mt-3"><span class="text-xs rounded-full bg-surface px-2.5 py-1 font-medium">Branding</span><h3 class="font-display text-lg tt mt-2 leading-snug">7 signs your brand is overdue for a refresh</h3><p class="text-xs text-ink-soft mt-2"><time datetime="2026-05-20">May 20, 2026</time> · 6 min</p></div>
               </a>
               <a href="/blog-post/" class="relpost group block">
-                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#0a0a0a,#3a3a3a)" aria-hidden="true"></div><img src="/wp-content/themes/boostronixx/assets/img/blog-local-seo.avif" alt="Local SEO map pin" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4</b></span></div>
+                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#0a0a0a,#3a3a3a)" aria-hidden="true"></div><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/blog-local-seo.avif" alt="Local SEO map pin" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4</b></span></div>
                 <div class="mt-3"><span class="text-xs rounded-full bg-surface px-2.5 py-1 font-medium">SEO</span><h3 class="font-display text-lg tt mt-2 leading-snug">Local SEO for Jaipur businesses: the 2026 playbook</h3><p class="text-xs text-ink-soft mt-2"><time datetime="2026-05-28">May 28, 2026</time> · 7 min</p></div>
               </a>
               <a href="/blog-post/" class="relpost group block">
-                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#d6457a,#fa5539)" aria-hidden="true"></div><img src="/wp-content/themes/boostronixx/assets/img/blog-color.avif" alt="Colour palette swatches" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4</b></span></div>
+                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:linear-gradient(135deg,#d6457a,#fa5539)" aria-hidden="true"></div><img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/blog-color.avif" alt="Colour palette swatches" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>Thumb 3:4</b></span></div>
                 <div class="mt-3"><span class="text-xs rounded-full bg-surface px-2.5 py-1 font-medium">Branding</span><h3 class="font-display text-lg tt mt-2 leading-snug">Colour psychology in branding: choosing your palette</h3><p class="text-xs text-ink-soft mt-2"><time datetime="2026-04-18">Apr 18, 2026</time> · 5 min</p></div>
               </a>
             </div>

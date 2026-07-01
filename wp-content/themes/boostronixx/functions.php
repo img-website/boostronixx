@@ -19,6 +19,18 @@ define( 'BX_URI', get_template_directory_uri() );
 require_once BX_DIR . '/inc/theme-support.php';
 require_once BX_DIR . '/inc/enqueue.php';
 require_once BX_DIR . '/inc/dependency-guard.php';
+require_once BX_DIR . '/inc/blog.php';
+require_once BX_DIR . '/inc/acf-fields.php';
+require_once BX_DIR . '/inc/block-patterns.php';
+require_once BX_DIR . '/inc/site-options.php';
+require_once BX_DIR . '/inc/page-schema.php';
+require_once BX_DIR . '/inc/maintenance.php';
+require_once BX_DIR . '/inc/editor-icons.php';
+
+// Per-page ACF field groups (one file per page) for clean, scalable CMS editing.
+foreach ( glob( BX_DIR . '/inc/acf/*.php' ) as $bx_acf_file ) {
+	require_once $bx_acf_file;
+}
 
 /**
  * Is the given page slug the one currently being viewed?

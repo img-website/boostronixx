@@ -15,7 +15,7 @@ get_header();
 <main id="main">
       <article>
       <!-- ===================== HERO — the live storefront ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-12 grid-lines overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">
             <a href="/" class="hover:text-accent">Home</a><iconify-icon icon="lucide:chevron-right" class="text-sm" aria-hidden="true"></iconify-icon>
@@ -24,17 +24,23 @@ get_header();
           </nav>
           <div class="grid lg:grid-cols-12 gap-10 items-center">
             <div class="lg:col-span-6">
-              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:shopping-bag" class="text-accent text-sm" aria-hidden="true"></iconify-icon> Industry · D2C &amp; eCommerce</div>
-              <h1 class="reveal font-display text-[2.6rem] leading-[1.0] sm:text-6xl tt">Turn scrolls into <span class="text-accent">sales</span>, profitably</h1>
-              <p class="reveal text-ink-soft mt-6 max-w-lg leading-relaxed" data-delay="1">As an ecommerce marketing agency in Jaipur, we help D2C and online brands turn the scroll into a cart, the cart into checkout, and the first order into a loyal customer — with standout branding, ROAS-driven ads and retention that compounds.</p>
+              <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"><iconify-icon icon="lucide:shopping-bag" class="text-accent text-sm" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'd2c_ecommerce_hero_badge', false, 'Industry · D2C & eCommerce' ) ); ?></div>
+              <h1 class="reveal font-display text-[2.6rem] leading-[1.0] sm:text-6xl tt"><?php echo esc_html( bx_field( 'd2c_ecommerce_hero_heading_a', false, 'Turn scrolls into ' ) ); ?><span class="text-accent"><?php echo esc_html( bx_field( 'd2c_ecommerce_hero_heading_accent', false, 'sales' ) ); ?></span><?php echo esc_html( bx_field( 'd2c_ecommerce_hero_heading_b', false, ', profitably' ) ); ?></h1>
+              <p class="reveal text-ink-soft mt-6 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'd2c_ecommerce_hero_text', false, 'As an ecommerce marketing agency in Jaipur, we help D2C and online brands turn the scroll into a cart, the cart into checkout, and the first order into a loyal customer — with standout branding, ROAS-driven ads and retention that compounds.' ) ); ?></p>
+              <?php
+              $d2c_hero_cta1 = get_field( 'd2c_ecommerce_hero_cta_primary' );
+              $d2c_hero_cta1_url   = is_array( $d2c_hero_cta1 ) && ! empty( $d2c_hero_cta1['url'] ) ? $d2c_hero_cta1['url'] : '/contact-us/';
+              $d2c_hero_cta1_label = is_array( $d2c_hero_cta1 ) && ! empty( $d2c_hero_cta1['title'] ) ? $d2c_hero_cta1['title'] : 'Scale my store';
+              $d2c_hero_cta2 = get_field( 'd2c_ecommerce_hero_cta_secondary' );
+              $d2c_hero_cta2_url   = is_array( $d2c_hero_cta2 ) && ! empty( $d2c_hero_cta2['url'] ) ? $d2c_hero_cta2['url'] : '#journey';
+              $d2c_hero_cta2_label = is_array( $d2c_hero_cta2 ) && ! empty( $d2c_hero_cta2['title'] ) ? $d2c_hero_cta2['title'] : 'See the buyer journey';
+              ?>
               <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
-                <a href="/contact-us/" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Scale my store</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
-                <a href="#journey" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:shopping-cart" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10">See the buyer journey</span></a>
+                <a href="<?php echo esc_url( $d2c_hero_cta1_url ); ?>" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text"><?php echo esc_html( $d2c_hero_cta1_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+                <a href="<?php echo esc_url( $d2c_hero_cta2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:shopping-cart" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10"><?php echo esc_html( $d2c_hero_cta2_label ); ?></span></a>
               </div>
               <div class="reveal flex flex-wrap items-center gap-x-5 gap-y-2 mt-7 text-xs text-ink-soft" data-delay="3">
-                <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:trending-up" class="text-accent" aria-hidden="true"></iconify-icon> Profit-first growth</span>
-                <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:target" class="text-accent" aria-hidden="true"></iconify-icon> ROAS over spend</span>
-                <span class="inline-flex items-center gap-1.5"><iconify-icon icon="lucide:repeat" class="text-accent" aria-hidden="true"></iconify-icon> Built for repeat</span>
+                <?php bx_d2c_ecommerce_render_hero_pills(); ?>
               </div>
             </div>
 
@@ -84,9 +90,9 @@ get_header();
         <div class="absolute inset-0 grid-lines-d opacity-50" aria-hidden="true"></div>
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">The buyer journey</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Track every order, from scroll to repeat</h2>
-            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1">As an ecommerce marketing agency in Jaipur, we engineer the whole journey like an order you can track — and we don't stop at the first sale. The real profit is in the second, third and tenth order.</p>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'd2c_ecommerce_journey_eyebrow', false, 'The buyer journey' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'd2c_ecommerce_journey_heading', false, 'Track every order, from scroll to repeat' ) ); ?></h2>
+            <p class="reveal text-paper/60 mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'd2c_ecommerce_journey_text', false, "As an ecommerce marketing agency in Jaipur, we engineer the whole journey like an order you can track — and we don't stop at the first sale. The real profit is in the second, third and tenth order." ) ); ?></p>
           </div>
 
           <!-- order tracker -->
@@ -120,7 +126,7 @@ get_header();
               </div>
             </div>
           </div>
-          <p class="reveal text-xs text-paper/40 mt-6" data-delay="2">Lower CAC at the top, higher AOV in the middle, more repeat at the end — that's how ROAS holds as you scale.</p>
+          <p class="reveal text-xs text-paper/40 mt-6" data-delay="2"><?php echo esc_html( bx_field( 'd2c_ecommerce_journey_footnote', false, "Lower CAC at the top, higher AOV in the middle, more repeat at the end — that's how ROAS holds as you scale." ) ); ?></p>
         </div>
       </section>
 
@@ -128,16 +134,11 @@ get_header();
       <section class="py-20 sm:py-28" aria-label="Brands we help">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Shop by category</p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">An ecommerce marketing agency in Jaipur built for every kind of online brand</h2>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'd2c_ecommerce_categories_eyebrow', false, 'Shop by category' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'd2c_ecommerce_categories_heading', false, 'An ecommerce marketing agency in Jaipur built for every kind of online brand' ) ); ?></h2>
           </div>
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="cat reveal rounded-xl2 border border-line bg-paper p-6"><span class="cat-ic grid place-items-center h-14 w-14 rounded-2xl bg-surface text-accent text-3xl" aria-hidden="true"><iconify-icon icon="lucide:shirt"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Fashion &amp; apparel</h3><p class="text-ink-soft text-sm mt-1.5">Thumb-stopping creative &amp; a brand people want to wear.</p></div>
-            <div class="cat reveal rounded-xl2 border border-line bg-paper p-6" data-delay="1"><span class="cat-ic grid place-items-center h-14 w-14 rounded-2xl bg-surface text-accent text-3xl" aria-hidden="true"><iconify-icon icon="lucide:droplets"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Beauty &amp; skincare</h3><p class="text-ink-soft text-sm mt-1.5">UGC, reviews &amp; education that build trust fast.</p></div>
-            <div class="cat reveal rounded-xl2 border border-line bg-paper p-6" data-delay="2"><span class="cat-ic grid place-items-center h-14 w-14 rounded-2xl bg-surface text-accent text-3xl" aria-hidden="true"><iconify-icon icon="lucide:utensils"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Food &amp; beverage</h3><p class="text-ink-soft text-sm mt-1.5">Subscriptions, bundles &amp; loyalty that stick.</p></div>
-            <div class="cat reveal rounded-xl2 border border-line bg-paper p-6"><span class="cat-ic grid place-items-center h-14 w-14 rounded-2xl bg-surface text-accent text-3xl" aria-hidden="true"><iconify-icon icon="lucide:leaf"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Health &amp; nutrition</h3><p class="text-ink-soft text-sm mt-1.5">High-LTV brands with a strong repeat engine.</p></div>
-            <div class="cat reveal rounded-xl2 border border-line bg-paper p-6" data-delay="1"><span class="cat-ic grid place-items-center h-14 w-14 rounded-2xl bg-surface text-accent text-3xl" aria-hidden="true"><iconify-icon icon="lucide:armchair"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Home &amp; lifestyle</h3><p class="text-ink-soft text-sm mt-1.5">Bigger baskets via bundles &amp; rich PDPs.</p></div>
-            <div class="cat reveal rounded-xl2 border border-line bg-paper p-6" data-delay="2"><span class="cat-ic grid place-items-center h-14 w-14 rounded-2xl bg-surface text-accent text-3xl" aria-hidden="true"><iconify-icon icon="lucide:headphones"></iconify-icon></span><h3 class="font-display text-xl tt mt-4">Electronics &amp; gadgets</h3><p class="text-ink-soft text-sm mt-1.5">Specs, reviews &amp; retargeting that close.</p></div>
+            <?php bx_d2c_ecommerce_render_categories(); ?>
           </div>
         </div>
       </section>
@@ -146,10 +147,10 @@ get_header();
       <section class="py-20 sm:py-28 bg-surface border-y border-line" aria-label="What's in your growth cart">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-start">
           <div class="lg:col-span-4 lg:sticky lg:top-28">
-            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Your growth cart</p>
-            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight">Everything your store needs, in one cart</h2>
-            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1">As a D2C marketing agency in Jaipur, we let you add the capabilities that scale you profitably — tap any line for the service behind it. Checkout = a growth team that pays for itself.</p>
-            <div class="reveal mt-6 inline-flex items-center gap-2 rounded-full bg-paper border border-line px-4 py-2 text-sm" data-delay="2"><iconify-icon icon="lucide:badge-indian-rupee" class="text-accent" aria-hidden="true"></iconify-icon> Priced on profit, not vanity</div>
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'd2c_ecommerce_cart_eyebrow', false, 'Your growth cart' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-4xl tt leading-tight"><?php echo esc_html( bx_field( 'd2c_ecommerce_cart_heading', false, 'Everything your store needs, in one cart' ) ); ?></h2>
+            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'd2c_ecommerce_cart_text', false, 'As a D2C marketing agency in Jaipur, we let you add the capabilities that scale you profitably — tap any line for the service behind it. Checkout = a growth team that pays for itself.' ) ); ?></p>
+            <div class="reveal mt-6 inline-flex items-center gap-2 rounded-full bg-paper border border-line px-4 py-2 text-sm" data-delay="2"><iconify-icon icon="lucide:badge-indian-rupee" class="text-accent" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'd2c_ecommerce_cart_pill', false, 'Priced on profit, not vanity' ) ); ?></div>
           </div>
           <!-- the cart -->
           <div class="lg:col-span-8 reveal" data-delay="1">
@@ -159,16 +160,16 @@ get_header();
                 <span class="text-xs text-ink-soft">6 items</span>
               </div>
               <div class="divide-y divide-line">
-                <a href="/brand-consulting/" class="citem flex items-center gap-4 px-6 py-4"><span class="shrink-0 grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:palette"></iconify-icon></span><span class="flex-1 min-w-0"><span class="font-display tt block">Brand that stands out</span><span class="text-xs text-ink-soft">Identity, packaging &amp; story that earns the click.</span></span><span class="inline-flex items-center gap-1 text-xs text-accent font-medium shrink-0"><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Added</span><iconify-icon icon="lucide:arrow-up-right" class="citem-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon></a>
-                <a href="/seo-services/" class="citem flex items-center gap-4 px-6 py-4"><span class="shrink-0 grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:search"></iconify-icon></span><span class="flex-1 min-w-0"><span class="font-display tt block">SEO &amp; Google Shopping</span><span class="text-xs text-ink-soft">An ecommerce SEO company in Jaipur capturing "best [product]" &amp; category demand.</span></span><span class="inline-flex items-center gap-1 text-xs text-accent font-medium shrink-0"><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Added</span><iconify-icon icon="lucide:arrow-up-right" class="citem-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon></a>
-                <a href="/performance-marketing/" class="citem flex items-center gap-4 px-6 py-4"><span class="shrink-0 grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="flex-1 min-w-0"><span class="font-display tt block">ROAS-driven ads</span><span class="text-xs text-ink-soft">Meta, Google &amp; marketplaces, tuned for profit.</span></span><span class="inline-flex items-center gap-1 text-xs text-accent font-medium shrink-0"><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Added</span><iconify-icon icon="lucide:arrow-up-right" class="citem-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon></a>
-                <a href="/website-design/" class="citem flex items-center gap-4 px-6 py-4"><span class="shrink-0 grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span><span class="flex-1 min-w-0"><span class="font-display tt block">A store that converts</span><span class="text-xs text-ink-soft">Fast Shopify, rich PDPs &amp; checkout CRO.</span></span><span class="inline-flex items-center gap-1 text-xs text-accent font-medium shrink-0"><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Added</span><iconify-icon icon="lucide:arrow-up-right" class="citem-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon></a>
-                <a href="/social-media-marketing/" class="citem flex items-center gap-4 px-6 py-4"><span class="shrink-0 grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:clapperboard"></iconify-icon></span><span class="flex-1 min-w-0"><span class="font-display tt block">Content &amp; UGC that sells</span><span class="text-xs text-ink-soft">Reels &amp; creators that feed your ads.</span></span><span class="inline-flex items-center gap-1 text-xs text-accent font-medium shrink-0"><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Added</span><iconify-icon icon="lucide:arrow-up-right" class="citem-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon></a>
-                <a href="/digital-marketing/" class="citem flex items-center gap-4 px-6 py-4"><span class="shrink-0 grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:mail"></iconify-icon></span><span class="flex-1 min-w-0"><span class="font-display tt block">Retention &amp; LTV</span><span class="text-xs text-ink-soft">Email, WhatsApp &amp; loyalty that grow repeat.</span></span><span class="inline-flex items-center gap-1 text-xs text-accent font-medium shrink-0"><iconify-icon icon="lucide:check" aria-hidden="true"></iconify-icon> Added</span><iconify-icon icon="lucide:arrow-up-right" class="citem-arr text-ink-soft text-lg shrink-0" aria-hidden="true"></iconify-icon></a>
+                <?php bx_d2c_ecommerce_render_cart_items(); ?>
               </div>
+              <?php
+              $d2c_cart_checkout = get_field( 'd2c_ecommerce_cart_checkout' );
+              $d2c_cart_checkout_url   = is_array( $d2c_cart_checkout ) && ! empty( $d2c_cart_checkout['url'] ) ? $d2c_cart_checkout['url'] : '/contact-us/';
+              $d2c_cart_checkout_label = is_array( $d2c_cart_checkout ) && ! empty( $d2c_cart_checkout['title'] ) ? $d2c_cart_checkout['title'] : 'Checkout';
+              ?>
               <div class="flex items-center justify-between gap-4 px-6 py-5 bg-ink text-paper">
-                <div><p class="text-[11px] text-paper/50 uppercase tracking-wide">Subtotal</p><p class="font-display text-lg tt">Profitable, compounding growth</p></div>
-                <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium shrink-0"><span class="sheen-text-light">Checkout</span><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
+                <div><p class="text-[11px] text-paper/50 uppercase tracking-wide"><?php echo esc_html( bx_field( 'd2c_ecommerce_cart_subtotal_label', false, 'Subtotal' ) ); ?></p><p class="font-display text-lg tt"><?php echo esc_html( bx_field( 'd2c_ecommerce_cart_subtotal_value', false, 'Profitable, compounding growth' ) ); ?></p></div>
+                <a href="<?php echo esc_url( $d2c_cart_checkout_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium shrink-0"><span class="sheen-text-light"><?php echo esc_html( $d2c_cart_checkout_label ); ?></span><iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
               </div>
             </div>
           </div>
@@ -180,8 +181,8 @@ get_header();
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-12">
             <div>
-              <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">★ 4.8 average</p>
-              <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Reviews don't lie</h2>
+              <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'd2c_ecommerce_proof_eyebrow', false, '★ 4.8 average' ) ); ?></p>
+              <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'd2c_ecommerce_proof_heading', false, "Reviews don't lie" ) ); ?></h2>
             </div>
             <p class="reveal text-ink-soft max-w-sm text-sm" data-delay="1">Online store marketing in Jaipur done right: scroll-stopping creative and retention flows that lifted revenue <strong class="text-ink">+156%</strong> while holding ROAS — growth that actually compounds.</p>
           </div>
@@ -206,15 +207,22 @@ get_header();
       <section id="ai-search" class="py-20 sm:py-28 bg-surface border-y border-line" aria-labelledby="aiHeading">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-6">
-            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> AEO · GEO · AI Shopping</p>
-            <h2 id="aiHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Shoppers ask AI what to buy</h2>
+            <p class="reveal inline-flex items-center gap-2 text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> <?php echo esc_html( bx_field( 'd2c_ecommerce_ai_eyebrow', false, 'AEO · GEO · AI Shopping' ) ); ?></p>
+            <h2 id="aiHeading" class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'd2c_ecommerce_ai_heading', false, 'Shoppers ask AI what to buy' ) ); ?></h2>
             <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1">More shoppers ask ChatGPT, Perplexity or Google's AI Overview for the best brand in a category and budget. We make sure that when they do, <strong class="text-ink">your brand is recommended — named, cited and reviewed.</strong></p>
             <ul class="reveal space-y-2 mt-6 text-sm" data-delay="2">
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Answer-ready content for "best [product]" queries</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> Product schema &amp; reviews AI tools can cite</li>
-              <li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> A reputation that wins the comparison</li>
+              <?php
+              foreach ( bx_lines( bx_field( 'd2c_ecommerce_ai_points', false, "Answer-ready content for \"best [product]\" queries\nProduct schema & reviews AI tools can cite\nA reputation that wins the comparison" ) ) as $d2c_ai_point ) {
+                  echo '<li class="flex items-center gap-2"><iconify-icon icon="lucide:check" class="text-accent" aria-hidden="true"></iconify-icon> ' . esc_html( $d2c_ai_point ) . '</li>';
+              }
+              ?>
             </ul>
-            <a href="/seo-services/#aeo-geo" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="3"><span class="relative z-10 sheen-text">How AEO &amp; GEO works</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+            <?php
+            $d2c_ai_btn = get_field( 'd2c_ecommerce_ai_button' );
+            $d2c_ai_btn_url   = is_array( $d2c_ai_btn ) && ! empty( $d2c_ai_btn['url'] ) ? $d2c_ai_btn['url'] : '/seo-services/#aeo-geo';
+            $d2c_ai_btn_label = is_array( $d2c_ai_btn ) && ! empty( $d2c_ai_btn['title'] ) ? $d2c_ai_btn['title'] : 'How AEO & GEO works';
+            ?>
+            <a href="<?php echo esc_url( $d2c_ai_btn_url ); ?>" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="3"><span class="relative z-10 sheen-text"><?php echo esc_html( $d2c_ai_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
           </div>
           <!-- AI shopping assistant -->
           <div class="lg:col-span-6 reveal" data-delay="1">
@@ -247,14 +255,9 @@ get_header();
       <!-- ===================== FAQ (shared design) ===================== -->
       <section class="py-20 sm:py-28" aria-label="Frequently asked questions">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
-          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">D2C &amp; eCommerce FAQ</p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Your questions, answered</h2></div>
+          <div class="text-center mb-12"><p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'd2c_ecommerce_faq_eyebrow', false, 'D2C & eCommerce FAQ' ) ); ?></p><h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'd2c_ecommerce_faq_heading', false, 'Your questions, answered' ) ); ?></h2></div>
           <div class="space-y-3">
-            <div class="faq border border-line rounded-2xl px-6 group open"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="true">How do you market a D2C / eCommerce brand?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">As an ecommerce marketing agency in Jaipur, we grow a D2C brand across five moves: brand it to stand out (identity, packaging, story), win search and shopping (SEO, Google Shopping, AEO and GEO), scale ads profitably (Meta Ads, Google and marketplace campaigns tuned for ROAS and new-customer profit), make the store convert (fast Shopify, rich PDPs and checkout CRO), and retain (email, WhatsApp and loyalty) so first orders become repeat customers.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">How do you improve ROAS and lower CAC?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">We attack it from both sides: better creative and tighter targeting to lower acquisition cost, and conversion-rate, AOV and retention work to raise the value of every customer. Strong UGC, offer structure, checkout CRO and email/WhatsApp flows mean each rupee of ad spend earns more — which is how ROAS holds as you scale.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">Do you work with Shopify and other platforms?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. As a Shopify marketing agency in Jaipur, we build and optimise high-converting Shopify stores, and also work with WooCommerce and custom storefronts. Our website and UI/UX teams handle rich product pages, fast load times, shopping feed setup and checkout CRO so the traffic your campaigns drive actually converts.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">Do you handle marketplaces like Amazon &amp; Flipkart?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes. Marketplace marketing in Jaipur is part of the mix — we help with listings, A+ content, ads and ratings on Amazon and Flipkart, while building your own website and audience so you're not fully dependent on marketplaces. The right balance depends on your margins and category.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">How long until we see profitable growth?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Paid campaigns can drive orders within days, with ROAS improving over the first 30–60 days as creative and targeting are optimised. Retention and SEO compound over 3–6 months, lowering your blended acquisition cost and lifting lifetime value.</div></div></div>
-            <div class="faq border border-line rounded-2xl px-6 group"><button class="faq-head w-full flex items-center justify-between gap-4 py-5 text-left font-display text-lg" aria-expanded="false">Do you create the ad creative and UGC?<span class="plus text-accent text-2xl leading-none shrink-0 grid place-items-center"><iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></span></button><div class="faq-body"><div class="group-[.open]:pb-5 pb-0 transition-all text-ink-soft text-sm leading-relaxed">Yes — creative is where D2C is won. We produce scroll-stopping static and video ads, source and direct UGC creators, and continuously test hooks and angles so your best-performing creative keeps your performance ads efficient.</div></div></div>
+            <?php bx_d2c_ecommerce_render_faqs(); ?>
           </div>
         </div>
       </section>
@@ -262,20 +265,23 @@ get_header();
       <!-- ===================== RELATED + CTA (shared design) ===================== -->
       <section class="pb-20 sm:pb-28 pt-4" aria-label="Related and contact">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6">Explore more</p>
+          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-6"><?php echo esc_html( bx_field( 'd2c_ecommerce_related_eyebrow', false, 'Explore more' ) ); ?></p>
           <div class="grid sm:grid-cols-3 gap-4 mb-12">
-            <a href="/performance-marketing/" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:target"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Performance Marketing</span><span class="text-xs text-ink-soft">ROAS-driven ads</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
-            <a href="/social-media-marketing/" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="1"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">Social &amp; UGC</span><span class="text-xs text-ink-soft">Creative that sells</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
-            <a href="/industries/" class="reveal group rounded-2xl border border-line p-6 flex items-center gap-4 hover:border-accent transition" data-delay="2"><span class="grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl" aria-hidden="true"><iconify-icon icon="lucide:layers"></iconify-icon></span><span class="flex-1"><span class="font-display tt block">All Industries</span><span class="text-xs text-ink-soft">Other sectors</span></span><iconify-icon icon="lucide:arrow-right" class="text-ink-soft group-hover:text-accent transition" aria-hidden="true"></iconify-icon></a>
+            <?php bx_d2c_ecommerce_render_related(); ?>
           </div>
+          <?php
+          $d2c_cta_btn = get_field( 'd2c_ecommerce_cta_button' );
+          $d2c_cta_btn_url   = is_array( $d2c_cta_btn ) && ! empty( $d2c_cta_btn['url'] ) ? $d2c_cta_btn['url'] : '/contact-us/';
+          $d2c_cta_btn_label = is_array( $d2c_cta_btn ) && ! empty( $d2c_cta_btn['title'] ) ? $d2c_cta_btn['title'] : 'Scale my store';
+          ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
             <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
             <div class="relative max-w-2xl">
-              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">Let's scale your store profitably</h2>
-              <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us about your brand — we'll map a plan to grow orders, ROAS and repeat customers. Free, no obligation.</p>
+              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'd2c_ecommerce_cta_heading', false, "Let's scale your store profitably" ) ); ?></h2>
+              <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'd2c_ecommerce_cta_text', false, "Tell us about your brand — we'll map a plan to grow orders, ROAS and repeat customers. Free, no obligation." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Scale my store</span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
-                <a href="tel:+918058212202" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10">+91 80582 12202</span></a>
+                <a href="<?php echo esc_url( $d2c_cta_btn_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light"><?php echo esc_html( $d2c_cta_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon></a>
+                <a href="<?php echo esc_url( bx_field( 'd2c_ecommerce_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10"><?php echo esc_html( bx_field( 'd2c_ecommerce_cta_phone', false, '+91 80582 12202' ) ); ?></span></a>
               </div>
             </div>
           </div>

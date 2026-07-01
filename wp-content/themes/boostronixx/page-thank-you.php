@@ -9,8 +9,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-get_header();
+get_header( 'blank' );
 ?>
+
+<header class="absolute top-0 inset-x-0 z-50">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6">
+		<div class="mt-5 flex items-center justify-between">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2"><img src="<?php echo esc_url( bx_logo_url() ); ?>" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-sm font-medium text-ink-soft hover:text-accent inline-flex items-center gap-1.5"><iconify-icon icon="lucide:arrow-left"></iconify-icon> Back to home</a>
+		</div>
+	</div>
+</header>
+
+<div id="confetti" aria-hidden="true"></div>
 
 <main id="main" class="relative min-h-screen grid-lines flex items-center justify-center px-4 py-28 overflow-hidden">
       <div class="w-full max-w-2xl text-center">
@@ -76,4 +87,4 @@ get_header();
     </main>
 
 <?php
-get_footer();
+get_footer( 'blank' );

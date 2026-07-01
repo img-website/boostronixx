@@ -14,7 +14,7 @@ get_header();
 
 <main id="top">
       <!-- ===================== HERO ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-12 grid-lines overflow-hidden">
         <span class="orb orb-a" style="width:300px;height:300px;background:#fa5539;top:0;right:-40px"></span>
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
           <nav class="reveal flex items-center gap-2 text-xs text-ink-soft mb-6" aria-label="Breadcrumb">

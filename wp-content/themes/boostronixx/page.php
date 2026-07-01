@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="main" class="pt-28 sm:pt-36 pb-20">
+<main id="main" class="pt-24 sm:pt-28 pb-20">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<?php
 		while ( have_posts() ) :

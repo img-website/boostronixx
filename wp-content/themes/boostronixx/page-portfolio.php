@@ -14,7 +14,7 @@ get_header();
 
 <main id="top">
       <!-- ===================== HERO ===================== -->
-      <section class="relative pt-28 sm:pt-36 pb-12 grid-lines overflow-hidden">
+      <section class="relative pt-24 sm:pt-28 pb-12 grid-lines overflow-hidden">
         <span class="orb orb-a" style="width:300px;height:300px;background:#fa5539;top:-30px;left:-50px"></span>
         <span class="orb orb-b" style="width:260px;height:260px;background:#ffc59e;bottom:-50px;right:8%"></span>
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
@@ -328,13 +328,16 @@ get_header();
               <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="c2" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" /></defs><text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2"><textPath href="#c2">YOUR PROJECT NEXT · LET'S BUILD ·</textPath></text></svg>
               <span class="absolute inset-0 grid place-items-center text-accent text-lg"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
             </div>
-            <div class="relative max-w-2xl">
+            <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+            	<div class="relative max-w-2xl">
               <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">Want to be our next case study?</h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us what you're building. We'll bring the strategy, the design and the growth to make it impossible to ignore.</p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
                 <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Start your project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
                 <a href="/services/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See our services</span></a>
               </div>
+            </div>
+            	<?php bx_cta_image( 'portfolio_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/portfolio-cta-image.avif', false, 'BoostronixX portfolio and creative work' ); ?>
             </div>
           </div>
         </div>
