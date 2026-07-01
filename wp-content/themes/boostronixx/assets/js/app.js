@@ -1401,3 +1401,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", ready); } else { ready(); }
 })();
+
+/* Placeholder figures (.imgph): the <figcaption class="lbl"> is a design
+ * placeholder that should only show while there is no real image. Once the
+ * image loads, hide it so it can't bleed through a transparent/light image.
+ * If the image fails, onerror removes it and the caption stays (as intended). */
+(function () {
+  [].forEach.call(document.querySelectorAll(".imgph > img"), function (img) {
+    function hide() {
+      var lbl = img.parentElement && img.parentElement.querySelector(".lbl");
+      if (lbl) lbl.style.visibility = "hidden";
+    }
+    if (img.complete && img.naturalWidth > 0) hide();
+    else img.addEventListener("load", hide);
+  });
+})();

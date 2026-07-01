@@ -100,7 +100,7 @@ function bx_footer_links( $rows ) {
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
 			<div class="lg:col-span-5">
-				<img src="<?php echo esc_url( $bx_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-8" />
+				<img src="<?php echo esc_url( $bx_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-8 w-auto" />
 				<p class="text-ink-soft mt-5 max-w-sm text-sm leading-relaxed"><?php echo esc_html( $bx_tagline ); ?></p>
 				<div class="flex items-center gap-3 mt-6 text-xs font-medium">
 					<?php
