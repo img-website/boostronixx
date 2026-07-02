@@ -88,7 +88,7 @@ get_header();
           <div class="lg:col-span-5 reveal">
             <div class="relative">
               <figure class="imgph rounded-xl2 aspect-[4/5] bg-surface-2">
-                <img
+                <img width="490" height="613"
                   src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/about-studio.avif"
                   alt="<?php echo esc_attr( bx_field( 'about_us_story_image_alt', false, 'Inside the BoostronixX studio in Jaipur' ) ); ?>"
                   loading="lazy"
@@ -262,7 +262,7 @@ get_header();
                 >
               </div>
             </div>
-            	<?php bx_cta_image( 'about_us_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/about-us-cta-image.avif', false, 'BoostronixX team ready to build with you' ); ?>
+            	<?php bx_cta_image( 'about_us_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/about-us-cta-image.avif', false, 'BoostronixX team ready to build with you', 420, 525 ); ?>
             </div>
           </div>
         </div>

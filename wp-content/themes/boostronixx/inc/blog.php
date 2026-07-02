@@ -227,7 +227,7 @@ function bx_author_avatar( $wrap_classes = '', $size = 'thumbnail', $user_id = 0
 	$url     = $photo ? wp_get_attachment_image_url( (int) $photo, $size ) : '';
 
 	if ( $url ) {
-		return '<span class="' . esc_attr( $wrap_classes . ' overflow-hidden' ) . '" aria-hidden="true"><img src="' . esc_url( $url ) . '" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" /></span>';
+		return '<span class="' . esc_attr( $wrap_classes . ' overflow-hidden' ) . '" aria-hidden="true"><img width="48" height="48" src="' . esc_url( $url ) . '" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" /></span>';
 	}
 
 	$initial = $name ? mb_strtoupper( mb_substr( $name, 0, 1 ) ) : '?';

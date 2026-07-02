@@ -51,7 +51,7 @@ $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call
 <header class="fixed top-0 inset-x-0 z-50">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
-			<a href="<?php echo esc_url( $bx_brand ); ?>" class="flex items-center gap-2 shrink-0"><img src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX — creative branding and digital marketing agency" class="h-7 sm:h-8 w-auto" /></a>
+			<a href="<?php echo esc_url( $bx_brand ); ?>" class="flex items-center gap-2 shrink-0"><img width="127" height="32" src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX — creative branding and digital marketing agency" class="h-7 sm:h-8 w-auto" /></a>
 			<nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
 				<?php
 				foreach ( $bx_nav as $bx_item ) :
@@ -81,7 +81,7 @@ $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call
 	<div class="absolute inset-0 bg-ink/40 backdrop-blur-sm" data-close></div>
 	<div id="menuPanel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-paper p-6 flex flex-col translate-x-full transition-transform duration-300">
 		<div class="flex items-center justify-between">
-			<img src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX" class="h-7" />
+			<img width="111" height="28" src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX" class="h-7 w-auto" />
 			<button data-close aria-label="Close menu" class="grid place-items-center h-10 w-10 rounded-full border border-line text-xl">
 				<iconify-icon icon="lucide:x"></iconify-icon>
 			</button>

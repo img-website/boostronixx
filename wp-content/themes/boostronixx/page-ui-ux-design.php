@@ -128,7 +128,7 @@ get_header();
           </div>
           <!-- IMAGE PLACEHOLDER -->
           <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 border border-line mt-12 reveal">
-            <img src="<?php echo esc_url( bx_img_url( 'ui_ux_design_system_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ui-screens.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'ui_ux_design_system_image_alt', false, 'A set of polished BoostronixX UI/UX product screens and components' ) ); ?>" loading="lazy" onerror="this.remove()" />
+            <img width="1230" height="537" src="<?php echo esc_url( bx_img_url( 'ui_ux_design_system_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ui-screens.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'ui_ux_design_system_image_alt', false, 'A set of polished BoostronixX UI/UX product screens and components' ) ); ?>" loading="lazy" onerror="this.remove()" />
             <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'ui_ux_design_system_image_caption', false, 'UI screens · 1600×700' ) ); ?></b><span><?php echo esc_html( bx_field( 'ui_ux_design_system_image_caption2', false, 'Mockup of real product screens / a Figma design-system board — showing components, app screens and prototypes.' ) ); ?></span></figcaption>
           </figure>
         </div>
@@ -185,7 +185,7 @@ get_header();
                 <a href="<?php echo esc_url( $uiux_cta_btn2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $uiux_cta_btn2_label ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'ui_ux_design_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ui-ux-cta-image.avif', false, 'BoostronixX UI/UX design team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'ui_ux_design_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ui-ux-cta-image.avif', false, 'BoostronixX UI/UX design team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

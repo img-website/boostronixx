@@ -118,7 +118,7 @@ get_header();
             <p class="reveal text-paper/60 mt-5 max-w-md leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'digital_marketing_analytics_text', false, "As an online marketing agency in Jaipur, we give you a live view of what's working — traffic, leads, conversion rate and revenue impact — with clear attribution, so every rupee of marketing is accountable." ) ); ?></p>
             <!-- IMAGE PLACEHOLDER -->
             <figure class="imgph rounded-xl2 aspect-[16/9] bg-white/[0.04] border border-white/10 mt-10 reveal" data-delay="1">
-              <img src="<?php echo esc_url( bx_img_url( 'digital_marketing_analytics_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ga-dashboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'digital_marketing_analytics_image_alt', false, 'Google Analytics 4 dashboard showing traffic, leads and conversion trends' ) ); ?>" loading="lazy" onerror="this.remove()" />
+              <img width="590" height="332" src="<?php echo esc_url( bx_img_url( 'digital_marketing_analytics_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ga-dashboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'digital_marketing_analytics_image_alt', false, 'Google Analytics 4 dashboard showing traffic, leads and conversion trends' ) ); ?>" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'digital_marketing_analytics_image_caption_title', false, 'Analytics dashboard · 1280×720' ) ); ?></b><span><?php echo esc_html( bx_field( 'digital_marketing_analytics_image_caption_text', false, 'Screenshot of a GA4 / Looker Studio report with traffic, leads and conversion trends. Anonymise data.' ) ); ?></span></figcaption>
             </figure>
           </div>
@@ -175,7 +175,7 @@ get_header();
                 <a href="<?php echo esc_url( $dm_cta_btn2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $dm_cta_btn2_label ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'digital_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/digital-marketing-cta-image.avif', false, 'BoostronixX digital marketing team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'digital_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/digital-marketing-cta-image.avif', false, 'BoostronixX digital marketing team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

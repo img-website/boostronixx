@@ -337,7 +337,7 @@ get_header();
                 <a href="/services/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See our services</span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'portfolio_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/portfolio-cta-image.avif', false, 'BoostronixX portfolio and creative work' ); ?>
+            	<?php bx_cta_image( 'portfolio_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/portfolio-cta-image.avif', false, 'BoostronixX portfolio and creative work', 420, 525 ); ?>
             </div>
           </div>
         </div>

@@ -271,7 +271,7 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
                 <a href="<?php echo esc_url( $bx_ind_cta2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10"><?php echo esc_html( $bx_ind_cta2_txt ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'industries_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/industries-cta-image.avif', false, 'BoostronixX industry marketing specialists' ); ?>
+            	<?php bx_cta_image( 'industries_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/industries-cta-image.avif', false, 'BoostronixX industry marketing specialists', 420, 525 ); ?>
             </div>
           </div>
         </div>

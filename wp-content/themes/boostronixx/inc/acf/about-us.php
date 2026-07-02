@@ -612,7 +612,7 @@ function bx_about_us_render_team() {
 	foreach ( $items as $i => $m ) {
 		$delay = 0 === $i ? '' : ' data-delay="' . (int) $i . '"';
 		printf(
-			'<div class="reveal text-center"%s><div class="imgph rounded-xl2 aspect-square bg-surface-2 mb-4"><img src="%s" alt="%s" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>%s</b></span></div><p class="font-display text-lg tt">%s</p><p class="text-ink-soft text-sm">%s</p></div>',
+			'<div class="reveal text-center"%s><div class="imgph rounded-xl2 aspect-square bg-surface-2 mb-4"><img width="296" height="296" src="%s" alt="%s" loading="lazy" onerror="this.remove()" /><span class="lbl"><b>%s</b></span></div><p class="font-display text-lg tt">%s</p><p class="text-ink-soft text-sm">%s</p></div>',
 			$delay,
 			esc_url( $m['img'] ),
 			esc_attr( $m['image_alt'] ),

@@ -1402,6 +1402,21 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", ready); } else { ready(); }
 })();
 
+/* industries hero — rotating sector word (#rotind). Guarded; only runs on the
+ * Industries page. Ported from the original industries.html inline script that
+ * was missed during the JS consolidation. */
+(function () {
+  var rot = document.getElementById("rotind");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if (!rot || reduce) return;
+  var words = ["real estate", "schools", "D2C eCommerce", "hospitals"], wi = 0;
+  setInterval(function () {
+    wi = (wi + 1) % words.length;
+    rot.style.opacity = 0;
+    setTimeout(function () { rot.textContent = words[wi]; rot.style.opacity = 1; }, 240);
+  }, 2200);
+})();
+
 /* Placeholder figures (.imgph): the <figcaption class="lbl"> is a design
  * placeholder that should only show while there is no real image. Once the
  * image loads, hide it so it can't bleed through a transparent/light image.

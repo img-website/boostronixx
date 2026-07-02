@@ -225,7 +225,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
           <div class="lg:col-span-5">
             <!-- IMAGE PLACEHOLDER: team / studio -->
             <figure class="imgph rounded-xl2 aspect-[4/5] bg-surface-2 reveal">
-              <img src="<?php echo esc_url( $bx_services_whyus_img_url ); ?>" alt="<?php echo esc_attr( $bx_services_whyus_img_alt ); ?>" loading="lazy" onerror="this.remove()" />
+              <img width="490" height="613" src="<?php echo esc_url( $bx_services_whyus_img_url ); ?>" alt="<?php echo esc_attr( $bx_services_whyus_img_alt ); ?>" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b>Team photo · 880×1100</b><span>Real photo of the BoostronixX team / studio — builds E-E-A-T trust. Bright, candid, faces visible.</span></figcaption>
             </figure>
           </div>
@@ -284,7 +284,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
                 <a href="<?php echo esc_url( $bx_services_cta2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:briefcase" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $bx_services_cta2_txt ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'services_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/all-service-cta-image.avif', false, 'BoostronixX full-service digital marketing team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'services_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/all-service-cta-image.avif', false, 'BoostronixX full-service digital marketing team in Jaipur', 420, 525 ); ?>
             </div>
           </div>
         </div>

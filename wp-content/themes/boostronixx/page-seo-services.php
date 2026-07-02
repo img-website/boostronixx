@@ -112,7 +112,7 @@ get_header();
       <section class="pb-4">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 reveal border border-line">
-            <img src="<?php echo esc_url( bx_img_url( 'seo_services_dashboard_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/seo-dashboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'seo_services_dashboard_image_alt', false, 'BoostronixX SEO reporting dashboard showing keyword rankings and organic traffic growth' ) ); ?>" loading="lazy" onerror="this.remove()" />
+            <img width="1230" height="537" src="<?php echo esc_url( bx_img_url( 'seo_services_dashboard_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/seo-dashboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'seo_services_dashboard_image_alt', false, 'BoostronixX SEO reporting dashboard showing keyword rankings and organic traffic growth' ) ); ?>" loading="lazy" onerror="this.remove()" />
             <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'seo_services_dashboard_caption_title', false, 'SEO dashboard · 1600×700' ) ); ?></b><span><?php echo esc_html( bx_field( 'seo_services_dashboard_caption_text', false, 'Screenshot of a real ranking / traffic dashboard (Google Search Console or Analytics) with rising organic-traffic and keyword-position graphs. Anonymise client data.' ) ); ?></span></figcaption>
           </figure>
         </div>
@@ -149,7 +149,7 @@ get_header();
           <!-- IMAGE PLACEHOLDER: map pack / GBP -->
           <div class="lg:col-span-6 reveal" data-delay="1">
             <figure class="imgph rounded-xl2 aspect-[4/3] bg-surface-2 border border-line">
-              <img src="<?php echo esc_url( bx_img_url( 'seo_services_local_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/local-seo-map.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'seo_services_local_image_alt', false, 'Google local map pack showing BoostronixX ranking for SEO company in Jaipur' ) ); ?>" loading="lazy" onerror="this.remove()" />
+              <img width="590" height="442" src="<?php echo esc_url( bx_img_url( 'seo_services_local_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/local-seo-map.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'seo_services_local_image_alt', false, 'Google local map pack showing BoostronixX ranking for SEO company in Jaipur' ) ); ?>" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'seo_services_local_caption_title', false, 'Map pack · 1080×810' ) ); ?></b><span><?php echo esc_html( bx_field( 'seo_services_local_caption_text', false, 'Screenshot of the Google local 3-pack / Maps result for a Jaipur search, or a Google Business Profile with reviews. Shows local ranking proof.' ) ); ?></span></figcaption>
             </figure>
           </div>

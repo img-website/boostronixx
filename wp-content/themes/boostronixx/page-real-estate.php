@@ -322,7 +322,7 @@ get_header();
                 <a href="<?php echo esc_url( bx_field( 'real_estate_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0" aria-hidden="true"></iconify-icon><span class="relative z-10"><?php echo esc_html( bx_field( 'real_estate_cta_phone', false, '+91 80582 12202' ) ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'real_estate_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/real-estate-cta-image.avif', false, 'BoostronixX real estate marketing team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'real_estate_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/real-estate-cta-image.avif', false, 'BoostronixX real estate marketing team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

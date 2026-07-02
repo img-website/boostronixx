@@ -99,15 +99,20 @@ function bx_img_url( $selector, $fallback = '', $post_id = false ) {
  * @param string   $fallback Fallback image URL.
  * @param int|bool $post_id  Optional post ID.
  * @param string   $alt      Alt text.
+ * @param int      $width    Static width attribute (measured rendered size).
+ * @param int      $height   Static height attribute (measured rendered size).
  * @return void
  */
-function bx_cta_image( $selector, $fallback = '', $post_id = false, $alt = 'BoostronixX strategy call' ) {
+function bx_cta_image( $selector, $fallback = '', $post_id = false, $alt = 'BoostronixX strategy call', $width = 420, $height = 447 ) {
 	$url = bx_img_url( $selector, $fallback, $post_id );
 	if ( ! $url ) {
 		return;
 	}
+	// h-auto keeps mobile height intrinsic (the height attribute stays a hint only).
 	printf(
-		'<div class="relative overflow-hidden"><img src="%s" alt="%s" loading="lazy" class="md:h-full w-full object-contain object-center" /></div>',
+		'<div class="relative overflow-hidden"><img width="%d" height="%d" src="%s" alt="%s" loading="lazy" class="h-auto md:h-full w-full object-contain object-center" /></div>',
+		(int) $width,
+		(int) $height,
 		esc_url( $url ),
 		esc_attr( $alt )
 	);

@@ -714,7 +714,7 @@ function bx_home_render_testimonials() {
 	$stars = str_repeat( '<iconify-icon icon="material-symbols:star-rounded"></iconify-icon>', 5 );
 	foreach ( $items as $t ) {
 		printf(
-			'<div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars">%s</div><blockquote class="mt-5 text-lg leading-relaxed grow">%s</blockquote><figcaption class="flex items-center gap-3 mt-7"><img src="%s" alt="%s" class="h-12 w-12 rounded-full object-cover" /><span><span class="block font-display">%s</span><span class="block text-sm text-ink-soft">%s</span></span></figcaption></figure></div>',
+			'<div class="tslide pr-5"><figure class="h-full bg-surface border border-line rounded-xl2 p-7 flex flex-col"><div class="flex gap-0.5 text-accent text-lg" role="img" aria-label="5 out of 5 stars">%s</div><blockquote class="mt-5 text-lg leading-relaxed grow">%s</blockquote><figcaption class="flex items-center gap-3 mt-7"><img width="48" height="48" src="%s" alt="%s" class="h-12 w-12 rounded-full object-cover" /><span><span class="block font-display">%s</span><span class="block text-sm text-ink-soft">%s</span></span></figcaption></figure></div>',
 			$stars,
 			esc_html( $t['quote'] ),
 			esc_url( $t['avatar'] ),

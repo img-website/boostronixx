@@ -19,7 +19,7 @@ $bx_m_message = bx_option( 'maintenance_message', "Our site is getting a quick u
 
 <main id="main" class="relative min-h-screen grid-lines-d flex flex-col items-center justify-center text-center px-4 py-16 overflow-hidden">
 	<!-- logo -->
-	<img src="<?php echo esc_url( bx_logo_white_url() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="rise d1 h-8 sm:h-9 w-auto mb-10" />
+	<img width="143" height="36" src="<?php echo esc_url( bx_logo_white_url() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="rise d1 h-8 sm:h-9 w-auto mb-10" />
 
 	<!-- gears -->
 	<div class="rise d2 relative h-40 w-40 sm:h-48 sm:w-48 mb-9">

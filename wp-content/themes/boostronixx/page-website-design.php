@@ -127,7 +127,7 @@ get_header();
           </div>
           <!-- IMAGE PLACEHOLDER -->
           <figure class="imgph rounded-xl2 aspect-[16/7] bg-surface-2 border border-line mt-12 reveal">
-            <img src="<?php echo esc_url( bx_img_url( 'website_design_build_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/website-showcase.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'website_design_build_image_alt', false, 'Responsive BoostronixX website shown across desktop, tablet and mobile devices' ) ); ?>" loading="lazy" onerror="this.remove()" />
+            <img width="1230" height="537" src="<?php echo esc_url( bx_img_url( 'website_design_build_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/website-showcase.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'website_design_build_image_alt', false, 'Responsive BoostronixX website shown across desktop, tablet and mobile devices' ) ); ?>" loading="lazy" onerror="this.remove()" />
             <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'website_design_build_image_caption_a', false, 'Device showcase · 1600×700' ) ); ?></b><span><?php echo esc_html( bx_field( 'website_design_build_image_caption_b', false, 'A real client website displayed across desktop, tablet and phone frames — proves responsive, polished delivery.' ) ); ?></span></figcaption>
           </figure>
         </div>
@@ -183,7 +183,7 @@ get_header();
                 <a href="<?php echo esc_url( $wd_cta_btn2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:briefcase" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $wd_cta_btn2_label ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'website_design_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/website-design-cta-image.avif', false, 'BoostronixX website design team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'website_design_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/website-design-cta-image.avif', false, 'BoostronixX website design team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

@@ -131,7 +131,7 @@ get_header();
             <p class="reveal text-paper/60 mt-5 max-w-md leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'social_media_marketing_growth_text', false, "Our social media management in Jaipur runs on a content calendar, a recognisable style and a feedback loop on what's working — that's how followings turn into communities, and communities into customers." ) ); ?></p>
             <!-- IMAGE PLACEHOLDER -->
             <figure class="imgph rounded-xl2 aspect-[16/10] bg-white/[0.04] border border-white/10 mt-10 reveal" data-delay="1">
-              <img src="<?php echo esc_url( bx_img_url( 'social_media_marketing_growth_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/social-grid.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'social_media_marketing_growth_image_alt', false, 'A curated Instagram grid of BoostronixX client content' ) ); ?>" loading="lazy" onerror="this.remove()" />
+              <img width="590" height="369" src="<?php echo esc_url( bx_img_url( 'social_media_marketing_growth_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/social-grid.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'social_media_marketing_growth_image_alt', false, 'A curated Instagram grid of BoostronixX client content' ) ); ?>" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'social_media_marketing_growth_image_caption_a', false, 'Feed grid · 1280×800' ) ); ?></b><span><?php echo esc_html( bx_field( 'social_media_marketing_growth_image_caption_b', false, '9-tile Instagram grid mockup of real client content showing a cohesive, on-brand aesthetic.' ) ); ?></span></figcaption>
             </figure>
           </div>
@@ -189,7 +189,7 @@ get_header();
                 <a href="<?php echo esc_url( $smm_cta_btn2_url ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:images" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( $smm_cta_btn2_label ); ?></span></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'social_media_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/social-media-cta-image.avif', false, 'BoostronixX social media marketing team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'social_media_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/social-media-cta-image.avif', false, 'BoostronixX social media marketing team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

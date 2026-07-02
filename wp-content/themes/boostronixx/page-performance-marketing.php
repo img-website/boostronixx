@@ -112,7 +112,7 @@ get_header();
           </div>
           <!-- IMAGE PLACEHOLDER -->
           <figure class="imgph rounded-xl2 aspect-[16/6] bg-white/[0.04] border border-white/10 mt-12 reveal">
-            <img src="<?php echo esc_url( bx_img_url( 'performance_marketing_metrics_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ads-manager.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'performance_marketing_metrics_image_alt', false, 'Meta and Google Ads manager dashboard showing ROAS and campaign performance' ) ); ?>" loading="lazy" onerror="this.remove()" />
+            <img width="1230" height="460" src="<?php echo esc_url( bx_img_url( 'performance_marketing_metrics_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/ads-manager.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'performance_marketing_metrics_image_alt', false, 'Meta and Google Ads manager dashboard showing ROAS and campaign performance' ) ); ?>" loading="lazy" onerror="this.remove()" />
             <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'performance_marketing_metrics_image_caption_title', false, 'Ads dashboard · 1600×600' ) ); ?></b><span><?php echo esc_html( bx_field( 'performance_marketing_metrics_image_caption_sub', false, 'Screenshot of Meta Ads Manager / Google Ads with ROAS, CPL and conversion columns. Anonymise account data.' ) ); ?></span></figcaption>
           </figure>
         </div>
@@ -165,7 +165,7 @@ get_header();
                   <a href="<?php echo esc_url( bx_field( 'performance_marketing_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 font-medium hover:bg-white hover:text-ink transition"><iconify-icon icon="lucide:phone"></iconify-icon> <?php echo esc_html( bx_field( 'performance_marketing_cta_phone', false, '+91 80582 12202' ) ); ?></a>
                 </div>
               </div>
-              <?php bx_cta_image( 'performance_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/performancel-marketing-cta-image.avif', false, 'BoostronixX performance marketing team in Jaipur' ); ?>
+              <?php bx_cta_image( 'performance_marketing_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/performancel-marketing-cta-image.avif', false, 'BoostronixX performance marketing team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

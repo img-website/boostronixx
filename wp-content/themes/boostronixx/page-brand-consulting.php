@@ -86,7 +86,7 @@ get_header();
             <p class="reveal text-ink-soft mt-5 max-w-md leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'brand_consulting_palette_text', false, 'As a brand identity agency in Jaipur, we choose every palette and typeface for meaning and legibility — tested across screens, print and the real world before it ships.' ) ); ?></p>
             <!-- IMAGE PLACEHOLDER -->
             <figure class="imgph rounded-xl2 aspect-[16/10] bg-surface-2 border border-line mt-10 reveal" data-delay="1">
-              <img src="<?php echo esc_url( bx_img_url( 'brand_consulting_palette_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/brand-moodboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'brand_consulting_palette_image_alt', false, 'BoostronixX brand identity moodboard and collateral mockups' ) ); ?>" loading="lazy" onerror="this.remove()" />
+              <img width="590" height="368" src="<?php echo esc_url( bx_img_url( 'brand_consulting_palette_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/brand-moodboard.avif' ) ); ?>" alt="<?php echo esc_attr( bx_field( 'brand_consulting_palette_image_alt', false, 'BoostronixX brand identity moodboard and collateral mockups' ) ); ?>" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b><?php echo esc_html( bx_field( 'brand_consulting_palette_image_caption_title', false, 'Moodboard · 1280×800' ) ); ?></b><span><?php echo esc_html( bx_field( 'brand_consulting_palette_image_caption_text', false, 'Flat-lay of brand collateral — business cards, packaging, signage — or a moodboard grid. Shows identity applied in the real world.' ) ); ?></span></figcaption>
             </figure>
           </div>
@@ -183,7 +183,7 @@ get_header();
                 <a href="<?php echo esc_url( $bc_cta_btn2_url ); ?>" class="inline-flex items-center gap-2 rounded-full bg-paper/15 border border-paper/30 px-7 py-4 font-medium hover:bg-paper hover:text-ink transition"><iconify-icon icon="lucide:briefcase"></iconify-icon> <?php echo esc_html( $bc_cta_btn2_label ); ?></a>
               </div>
             </div>
-            	<?php bx_cta_image( 'brand_consulting_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/brand-consulting-cta-image.avif', false, 'BoostronixX brand consulting team in Jaipur' ); ?>
+            	<?php bx_cta_image( 'brand_consulting_cta_image', 'https://boostronixx.s3.ap-south-1.amazonaws.com/images/brand-consulting-cta-image.avif', false, 'BoostronixX brand consulting team in Jaipur', 420, 447 ); ?>
             </div>
           </div>
         </div>

@@ -123,7 +123,7 @@ get_header();
                   <div class="flex items-center gap-2 text-xs text-ink-soft">
                     <span
                       class="h-4 w-4 rounded overflow-hidden grid place-items-center bg-surface shrink-0"
-                      ><img
+                      ><img width="20" height="20"
                         id="serpFav2"
                         src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/souk-favicon.avif"
                         alt=""
@@ -197,7 +197,7 @@ get_header();
                   <span
                     class="h-9 w-9 rounded-full p-[1.5px] bg-gradient-to-tr from-accent via-[#ff8a5c] to-[#ffd0a8] shrink-0"
                   >
-                    <img
+                    <img width="33" height="33"
                       id="igAvatar"
                       src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/ashiana-favicon.avif"
                       alt=""
@@ -219,13 +219,13 @@ get_header();
                 <div
                   class="relative mt-3 rounded-xl overflow-hidden bg-surface flex-1 min-h-[150px]"
                 >
-                  <img
+                  <img width="262" height="154"
                     id="igPostA"
                     src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/ashiana-post.avif"
                     alt=""
                     class="absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500"
                   />
-                  <img
+                  <img width="262" height="154"
                     id="igPostB"
                     src=""
                     alt=""
@@ -485,7 +485,7 @@ get_header();
                   <div class="flex items-center gap-2 text-xs text-ink-soft">
                     <span
                       class="h-5 w-5 rounded overflow-hidden grid place-items-center bg-surface shrink-0"
-                      ><img
+                      ><img width="20" height="20"
                         id="serpFav"
                         src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/souk-favicon.avif"
                         alt=""
@@ -628,7 +628,7 @@ get_header();
                     <span
                       class="h-9 w-9 rounded-full p-[1.5px] bg-gradient-to-tr from-accent via-[#ff8a5c] to-[#ffd0a8] shrink-0"
                     >
-                      <img
+                      <img width="33" height="33"
                         id="igAvatarSocial"
                         src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/veeba-favicon.avif"
                         alt="BoostronixX"
@@ -652,13 +652,13 @@ get_header();
                   <div
                     class="relative mt-3 rounded-xl overflow-hidden bg-surface aspect-square"
                   >
-                    <img
+                    <img width="272" height="272"
                       id="igPostASocial"
                       src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/veeba-carousel-1.avif"
                       alt="BoostronixX social feed"
                       class="absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500"
                     />
-                    <img
+                    <img width="272" height="272"
                       id="igPostBSocial"
                       src=""
                       alt="BoostronixX social feed"
@@ -1135,7 +1135,7 @@ get_header();
               class="reveal relative overflow-hidden col-span-2 row-span-2 rounded-xl2 bg-ink text-paper p-7 flex flex-col justify-between"
             >
               <div class="md:absolute md:right-0 md:bottom-0 max-md:w-full max-md:order-last max-md:-mb-7">
-                <img src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/why-boostronixx.avif" alt="BoostronixX performance illustration" class="pointer-events-none z-0 md:max-w-[300px] md:w-[36vw] md:min-w-[160px] max-md:w-full rounded-[2rem] shadow-[0_25px_60px_-30px_rgba(0,0,0,.55)] object-cover" />
+                <img width="300" height="253" src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/why-boostronixx.avif" alt="BoostronixX performance illustration" class="pointer-events-none z-0 md:max-w-[300px] md:w-[36vw] md:min-w-[160px] max-md:w-full rounded-[2rem] shadow-[0_25px_60px_-30px_rgba(0,0,0,.55)] object-cover" />
               </div>
               <div class="flex items-center justify-between">
                 <span
@@ -1672,10 +1672,10 @@ get_header();
                 </p>
               </div>
               <div class="relative overflow-hidden">
-                <img
+                <img width="420" height="377"
                   src="https://boostronixx.s3.ap-south-1.amazonaws.com/images/cta1.avif"
                   alt="BoostronixX strategy call"
-                  class="md:h-full w-full object-contain object-center"
+                  class="h-auto md:h-full w-full object-contain object-center"
                 />
               </div>
             </div>
