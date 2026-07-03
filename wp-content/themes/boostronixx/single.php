@@ -26,6 +26,8 @@ while ( have_posts() ) :
 	?>
 
 <main id="article">
+      <!-- reading progress (fixed top bar) -->
+      <div id="progressWrap"><div id="progressBar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
       <article>
         <!-- ARTICLE HERO -->
         <header class="pt-24 sm:pt-28 pb-8 grid-lines">

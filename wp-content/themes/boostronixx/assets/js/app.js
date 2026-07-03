@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
           [].forEach.call(mm.querySelectorAll("[data-close]"), function (e) {
             e.addEventListener("click", closeMenu);
           });
+        // Escape closes the mobile menu (was present per-page in the original design).
+        if (mm)
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !mm.classList.contains("hidden")) closeMenu();
+          });
 
         // reveal
         var io = new IntersectionObserver(

@@ -214,7 +214,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'services_process_heading', false, 'A clear path from brief to results' ) ); ?></h2>
           </div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<?php bx_services_render_process(); ?>
+            <?php bx_services_render_process(); ?>
           </div>
         </div>
       </section>
@@ -224,7 +224,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
         <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div class="lg:col-span-5">
             <!-- IMAGE PLACEHOLDER: team / studio -->
-            <figure class="imgph rounded-xl2 aspect-[4/5] bg-surface-2 reveal">
+            <figure class="imgph rounded-xl2 aspect-4/5 reveal">
               <img width="490" height="613" src="<?php echo esc_url( $bx_services_whyus_img_url ); ?>" alt="<?php echo esc_attr( $bx_services_whyus_img_alt ); ?>" loading="lazy" onerror="this.remove()" />
               <figcaption class="lbl"><b>Team photo · 880×1100</b><span>Real photo of the BoostronixX team / studio — builds E-E-A-T trust. Bright, candid, faces visible.</span></figcaption>
             </figure>
@@ -269,14 +269,14 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
       <!-- ===================== CTA ===================== -->
       <section class="pb-20 sm:pb-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <div class="absolute right-6 top-6 sm:right-12 sm:top-12 h-24 w-24 spin hidden sm:block">
               <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="c2" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" /></defs><text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2"><textPath href="#c2">FREE STRATEGY CALL · NO OBLIGATION ·</textPath></text></svg>
               <span class="absolute inset-0 grid place-items-center text-accent text-lg"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
             </div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]"><?php echo esc_html( bx_field( 'services_cta_heading', false, 'Not sure which service you need?' ) ); ?></h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'services_cta_text', false, "Tell us your goal. We'll map the right services, share quick wins and a costed roadmap — free, and with no obligation." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">

@@ -1603,7 +1603,7 @@ get_header();
       <section id="contact" class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div
-            class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-24 overflow-hidden"
+            class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden"
           >
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <div
@@ -1631,7 +1631,7 @@ get_header();
               ></span>
             </div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-              <div class="max-w-2xl">
+              <div class="max-w-2xl py-16">
                 <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">
                   <?php echo esc_html( bx_field( 'cta_heading', false, 'Ready to build something great together?' ) ); ?>
                 </h2>
