@@ -322,14 +322,14 @@ get_header();
       <!-- ===================== CTA ===================== -->
       <section class="py-20 sm:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <div class="absolute right-6 top-6 sm:right-12 sm:top-12 h-24 w-24 spin hidden sm:block">
               <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="c2" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" /></defs><text font-size="10.5" font-family="Bricolage Grotesque" fill="#fff" letter-spacing="2"><textPath href="#c2">YOUR PROJECT NEXT · LET'S BUILD ·</textPath></text></svg>
               <span class="absolute inset-0 grid place-items-center text-accent text-lg"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
             </div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">Want to be our next case study?</h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us what you're building. We'll bring the strategy, the design and the growth to make it impossible to ignore.</p>
               <div class="flex flex-wrap items-center gap-3 mt-9">

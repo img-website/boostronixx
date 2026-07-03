@@ -311,10 +311,10 @@ get_header();
           $re_cta_btn_url   = is_array( $re_cta_btn ) && ! empty( $re_cta_btn['url'] ) ? $re_cta_btn['url'] : '/contact-us/';
           $re_cta_btn_label = is_array( $re_cta_btn ) && ! empty( $re_cta_btn['title'] ) ? $re_cta_btn['title'] : 'Get qualified leads';
           ?>
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'real_estate_cta_heading', false, "Let's fill your project with buyers" ) ); ?></h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'real_estate_cta_text', false, 'Tell us about your project and the real estate digital marketing agency in Jaipur behind these results will map a plan to bring qualified site visits and bookings. Free, no obligation.' ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">

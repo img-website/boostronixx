@@ -277,10 +277,10 @@ get_header();
           $schools_cta_btn_url   = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['url'] ) ? $schools_cta_btn['url'] : '/contact-us/';
           $schools_cta_btn_label = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['title'] ) ? $schools_cta_btn['title'] : 'Grow my admissions';
           ?>
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'schools_cta_heading', false, "Let's fill your next admission season" ) ); ?></h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'schools_cta_text', false, "Tell us about your school — we'll map a plan to bring more admission enquiries, school visits and confirmed seats. Free, no obligation." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">

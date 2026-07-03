@@ -230,7 +230,7 @@ get_header();
       <section class="pb-20 sm:pb-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div
-            class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden"
+            class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden"
           >
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <?php
@@ -239,7 +239,7 @@ get_header();
             $about_cta_btn_label = is_array( $about_cta_btn ) && ! empty( $about_cta_btn['title'] ) ? $about_cta_btn['title'] : 'Book a Free Strategy Call';
             ?>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]">
                 <?php echo esc_html( bx_field( 'about_us_cta_heading', false, "Like how we think? Let's build together." ) ); ?>
               </h2>

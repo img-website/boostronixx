@@ -149,7 +149,7 @@ get_header();
           <div class="grid sm:grid-cols-3 gap-4 mb-12">
             <?php bx_performance_marketing_render_related(); ?>
           </div>
-          <div class="relative rounded-xl2 bg-white/5 border border-white/10 px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-white/5 border border-white/10 px-6 sm:px-16 overflow-hidden">
             <span class="glow500 absolute -bottom-20 left-1/3 w-[420px] h-[420px]"></span>
             <?php
             $pm_cta_btn       = get_field( 'performance_marketing_cta_button' );
@@ -157,7 +157,7 @@ get_header();
             $pm_cta_btn_label = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['title'] ) ? $pm_cta_btn['title'] : 'Get my free ad audit';
             ?>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-              <div class="relative max-w-2xl">
+              <div class="relative max-w-2xl py-16">
                 <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'performance_marketing_cta_heading', false, 'See where your ad spend is leaking' ) ); ?></h2>
                 <p class="text-white/60 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'performance_marketing_cta_text', false, "Get a free audit from a performance marketing agency in Jaipur that lives in the numbers — we'll show you the quick wins and what scaling could look like." ) ); ?></p>
                 <div class="flex flex-wrap items-center gap-3 mt-9">

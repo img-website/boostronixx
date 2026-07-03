@@ -172,10 +172,10 @@ get_header();
           $wd_cta_btn2_url   = is_array( $wd_cta_btn2 ) && ! empty( $wd_cta_btn2['url'] ) ? $wd_cta_btn2['url'] : '/portfolio/';
           $wd_cta_btn2_label = is_array( $wd_cta_btn2 ) && ! empty( $wd_cta_btn2['title'] ) ? $wd_cta_btn2['title'] : "See sites we've built";
           ?>
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'website_design_cta_heading', false, "Let's build a site that works as hard as you do" ) ); ?></h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'website_design_cta_text', false, "Tell us about your project — we'll scope a fast, beautiful, SEO-ready website around your goals." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">

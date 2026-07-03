@@ -178,10 +178,10 @@ get_header();
           $smm_cta_btn2_url   = is_array( $smm_cta_btn2 ) && ! empty( $smm_cta_btn2['url'] ) ? $smm_cta_btn2['url'] : '/portfolio/';
           $smm_cta_btn2_label = is_array( $smm_cta_btn2 ) && ! empty( $smm_cta_btn2['title'] ) ? $smm_cta_btn2['title'] : 'See our content';
           ?>
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            	<div class="relative max-w-2xl">
+            	<div class="relative max-w-2xl py-16">
               <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'social_media_marketing_cta_heading', false, 'Make your brand impossible to scroll past' ) ); ?></h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'social_media_marketing_cta_text', false, "Let's plan a month of content and show you what consistent, on-brand social can do." ) ); ?></p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
