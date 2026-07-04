@@ -30,7 +30,7 @@ if ( ! $bx_nav ) {
 
 // Header CTA button.
 $bx_cta              = bx_option( 'header_cta', array() );
-$bx_cta_url          = ! empty( $bx_cta['url'] ) ? $bx_cta['url'] : home_url( '/contact-us/' );
+$bx_cta_url          = ! empty( $bx_cta['url'] ) ? $bx_cta['url'] : home_url( '/contact/' );
 $bx_cta_label        = ! empty( $bx_cta['title'] ) ? $bx_cta['title'] : "Let's Build Together";
 $bx_cta_tgt          = ! empty( $bx_cta['target'] ) ? ' target="' . esc_attr( $bx_cta['target'] ) . '"' : '';
 $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call' );

@@ -580,9 +580,9 @@ function bx_website_design_render_faqs() {
  */
 function bx_website_design_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:figma', 'title' => 'UI/UX Design', 'text' => 'Design the experience', 'url' => '/ui-ux-design/' ),
-		array( 'icon' => 'lucide:search', 'title' => 'SEO Services', 'text' => 'Get it ranking', 'url' => '/seo-services/' ),
-		array( 'icon' => 'lucide:palette', 'title' => 'Brand Consulting', 'text' => 'Look the part', 'url' => '/brand-consulting/' ),
+		array( 'icon' => 'lucide:figma', 'title' => 'UI/UX Design', 'text' => 'Design the experience', 'url' => '/services/ui-ux-design/' ),
+		array( 'icon' => 'lucide:search', 'title' => 'SEO Services', 'text' => 'Get it ranking', 'url' => '/services/seo-services/' ),
+		array( 'icon' => 'lucide:palette', 'title' => 'Brand Consulting', 'text' => 'Look the part', 'url' => '/services/brand-consulting/' ),
 	);
 
 	$items = array();

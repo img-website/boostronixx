@@ -743,7 +743,7 @@ function bx_home_marquee_row() {
  */
 function bx_home_render_work() {
 	$defaults = array(
-		array( 'title' => 'Edoovi — ERP SaaS', 'subtitle' => 'Product design · Branding · Web', 'url' => home_url( '/edoovi-erp/' ), 'img' => '' ),
+		array( 'title' => 'Edoovi — ERP SaaS', 'subtitle' => 'Product design · Branding · Web', 'url' => home_url( '/portfolio/edoovi-erp/' ), 'img' => '' ),
 		array( 'title' => 'Freshee — Quick Commerce', 'subtitle' => 'Mobile app · UI/UX · Brand', 'url' => home_url( '/portfolio/' ), 'img' => '' ),
 	);
 	$items = array();

@@ -615,9 +615,9 @@ function bx_digital_marketing_render_faqs() {
  */
 function bx_digital_marketing_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:search', 'title' => 'SEO Services', 'meta' => 'Top of funnel', 'url' => '/seo-services/' ),
-		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'meta' => 'Convert faster', 'url' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'meta' => 'Stay top of mind', 'url' => '/social-media-marketing/' ),
+		array( 'icon' => 'lucide:search', 'title' => 'SEO Services', 'meta' => 'Top of funnel', 'url' => '/services/seo-services/' ),
+		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'meta' => 'Convert faster', 'url' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'meta' => 'Stay top of mind', 'url' => '/services/social-media-marketing/' ),
 	);
 
 	$items = array();

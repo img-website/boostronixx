@@ -15,7 +15,7 @@ get_header( 'blank' );
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div class="mt-5 flex items-center justify-between">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2"><img width="127" height="32" src="<?php echo esc_url( bx_logo_url() ); ?>" alt="BoostronixX" class="h-7 sm:h-8 w-auto" /></a>
-			<a href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>" class="text-sm font-medium text-ink-soft hover:text-accent inline-flex items-center gap-1.5">Need help? <iconify-icon icon="lucide:life-buoy"></iconify-icon></a>
+			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="text-sm font-medium text-ink-soft hover:text-accent inline-flex items-center gap-1.5">Need help? <iconify-icon icon="lucide:life-buoy"></iconify-icon></a>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@ get_header( 'blank' );
             <span class="flex-1"><span class="font-display tt block">Services</span><span class="text-xs text-ink-soft">What we do</span></span>
             <iconify-icon icon="lucide:arrow-right" class="larr text-ink-soft"></iconify-icon>
           </a>
-          <a href="/contact-us/" class="lcard rounded-2xl border border-line bg-paper p-4 flex items-center gap-3">
+          <a href="/contact/" class="lcard rounded-2xl border border-line bg-paper p-4 flex items-center gap-3">
             <span class="grid place-items-center h-10 w-10 rounded-xl bg-surface text-accent text-lg shrink-0"><iconify-icon icon="lucide:message-square"></iconify-icon></span>
             <span class="flex-1"><span class="font-display tt block">Contact</span><span class="text-xs text-ink-soft">Talk to us</span></span>
             <iconify-icon icon="lucide:arrow-right" class="larr text-ink-soft"></iconify-icon>

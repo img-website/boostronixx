@@ -44,7 +44,7 @@ get_header();
               </p>
               <?php
               $about_hero_cta1 = get_field( 'about_us_hero_cta_primary' );
-              $about_hero_cta1_url   = is_array( $about_hero_cta1 ) && ! empty( $about_hero_cta1['url'] ) ? $about_hero_cta1['url'] : '/contact-us/';
+              $about_hero_cta1_url   = is_array( $about_hero_cta1 ) && ! empty( $about_hero_cta1['url'] ) ? $about_hero_cta1['url'] : '/contact/';
               $about_hero_cta1_label = is_array( $about_hero_cta1 ) && ! empty( $about_hero_cta1['title'] ) ? $about_hero_cta1['title'] : 'Work With Us';
               $about_hero_cta2 = get_field( 'about_us_hero_cta_secondary' );
               $about_hero_cta2_url   = is_array( $about_hero_cta2 ) && ! empty( $about_hero_cta2['url'] ) ? $about_hero_cta2['url'] : '/portfolio/';
@@ -235,7 +235,7 @@ get_header();
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
             <?php
             $about_cta_btn = get_field( 'about_us_cta_button' );
-            $about_cta_btn_url   = is_array( $about_cta_btn ) && ! empty( $about_cta_btn['url'] ) ? $about_cta_btn['url'] : '/contact-us/';
+            $about_cta_btn_url   = is_array( $about_cta_btn ) && ! empty( $about_cta_btn['url'] ) ? $about_cta_btn['url'] : '/contact/';
             $about_cta_btn_label = is_array( $about_cta_btn ) && ! empty( $about_cta_btn['title'] ) ? $about_cta_btn['title'] : 'Book a Free Strategy Call';
             ?>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">

@@ -33,7 +33,7 @@ get_header();
               <p class="reveal text-ink-soft mt-7 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'schools_hero_text', false, 'As a school marketing agency in Jaipur, we help pre-schools, K-12, CBSE, ICSE, boarding and international schools earn parent trust and turn "best school near me" into admission enquiries, campus visits and confirmed admissions.' ) ); ?></p>
               <?php
               $schools_hero_cta1       = get_field( 'schools_hero_cta_primary' );
-              $schools_hero_cta1_url   = is_array( $schools_hero_cta1 ) && ! empty( $schools_hero_cta1['url'] ) ? $schools_hero_cta1['url'] : '/contact-us/';
+              $schools_hero_cta1_url   = is_array( $schools_hero_cta1 ) && ! empty( $schools_hero_cta1['url'] ) ? $schools_hero_cta1['url'] : '/contact/';
               $schools_hero_cta1_label = is_array( $schools_hero_cta1 ) && ! empty( $schools_hero_cta1['title'] ) ? $schools_hero_cta1['title'] : 'Grow my admissions';
               $schools_hero_cta2       = get_field( 'schools_hero_cta_secondary' );
               $schools_hero_cta2_url   = is_array( $schools_hero_cta2 ) && ! empty( $schools_hero_cta2['url'] ) ? $schools_hero_cta2['url'] : '#journey';
@@ -246,7 +246,7 @@ get_header();
                 <div class="mt-4 rounded-2xl border border-line p-4">
                   <p class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-accent uppercase tracking-wide"><iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon> AI answer</p>
                   <p class="text-sm text-ink mt-2 leading-relaxed">A strong choice is <strong class="text-accent">Greenwood Public School</strong> — CBSE, great academics &amp; sports, safe transport and excellent parent reviews.</p>
-                  <a href="/contact-us/" class="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:link" class="text-[11px]" aria-hidden="true"></iconify-icon> your-school.com <span class="opacity-70">[1]</span></a>
+                  <a href="/contact/" class="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:link" class="text-[11px]" aria-hidden="true"></iconify-icon> your-school.com <span class="opacity-70">[1]</span></a>
                 </div>
                 <div class="mt-4 flex items-center justify-center gap-1.5 rounded-full bg-accent text-paper text-xs font-semibold px-3 py-2"><iconify-icon icon="lucide:badge-check" aria-hidden="true"></iconify-icon> Your school, cited as the answer</div>
               </div>
@@ -274,7 +274,7 @@ get_header();
           </div>
           <?php
           $schools_cta_btn       = get_field( 'schools_cta_button' );
-          $schools_cta_btn_url   = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['url'] ) ? $schools_cta_btn['url'] : '/contact-us/';
+          $schools_cta_btn_url   = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['url'] ) ? $schools_cta_btn['url'] : '/contact/';
           $schools_cta_btn_label = is_array( $schools_cta_btn ) && ! empty( $schools_cta_btn['title'] ) ? $schools_cta_btn['title'] : 'Grow my admissions';
           ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">

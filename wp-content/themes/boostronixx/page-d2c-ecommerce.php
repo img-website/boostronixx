@@ -29,7 +29,7 @@ get_header();
               <p class="reveal text-ink-soft mt-6 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'd2c_ecommerce_hero_text', false, 'As an ecommerce marketing agency in Jaipur, we help D2C and online brands turn the scroll into a cart, the cart into checkout, and the first order into a loyal customer — with standout branding, ROAS-driven ads and retention that compounds.' ) ); ?></p>
               <?php
               $d2c_hero_cta1 = get_field( 'd2c_ecommerce_hero_cta_primary' );
-              $d2c_hero_cta1_url   = is_array( $d2c_hero_cta1 ) && ! empty( $d2c_hero_cta1['url'] ) ? $d2c_hero_cta1['url'] : '/contact-us/';
+              $d2c_hero_cta1_url   = is_array( $d2c_hero_cta1 ) && ! empty( $d2c_hero_cta1['url'] ) ? $d2c_hero_cta1['url'] : '/contact/';
               $d2c_hero_cta1_label = is_array( $d2c_hero_cta1 ) && ! empty( $d2c_hero_cta1['title'] ) ? $d2c_hero_cta1['title'] : 'Scale my store';
               $d2c_hero_cta2 = get_field( 'd2c_ecommerce_hero_cta_secondary' );
               $d2c_hero_cta2_url   = is_array( $d2c_hero_cta2 ) && ! empty( $d2c_hero_cta2['url'] ) ? $d2c_hero_cta2['url'] : '#journey';
@@ -164,7 +164,7 @@ get_header();
               </div>
               <?php
               $d2c_cart_checkout = get_field( 'd2c_ecommerce_cart_checkout' );
-              $d2c_cart_checkout_url   = is_array( $d2c_cart_checkout ) && ! empty( $d2c_cart_checkout['url'] ) ? $d2c_cart_checkout['url'] : '/contact-us/';
+              $d2c_cart_checkout_url   = is_array( $d2c_cart_checkout ) && ! empty( $d2c_cart_checkout['url'] ) ? $d2c_cart_checkout['url'] : '/contact/';
               $d2c_cart_checkout_label = is_array( $d2c_cart_checkout ) && ! empty( $d2c_cart_checkout['title'] ) ? $d2c_cart_checkout['title'] : 'Checkout';
               ?>
               <div class="flex items-center justify-between gap-4 px-6 py-5 bg-ink text-paper">
@@ -241,9 +241,9 @@ get_header();
                   <div class="mt-3 rounded-xl bg-white/5 border border-white/10 p-3 flex items-center gap-3">
                     <span class="grid place-items-center h-12 w-12 rounded-lg bg-gradient-to-br from-accent/40 to-white/5 text-accent shrink-0" aria-hidden="true"><iconify-icon icon="lucide:shirt" class="text-xl"></iconify-icon></span>
                     <div class="flex-1 min-w-0"><p class="text-sm font-medium text-paper truncate">Folkstreet Oversized Tee</p><p class="text-[11px] text-paper/60"><span class="text-accent">★ 4.8</span> · ₹899 · Free returns</p></div>
-                    <a href="/contact-us/" class="rounded-full bg-accent text-paper text-[11px] font-semibold px-3 py-1.5 shrink-0">Shop</a>
+                    <a href="/contact/" class="rounded-full bg-accent text-paper text-[11px] font-semibold px-3 py-1.5 shrink-0">Shop</a>
                   </div>
-                  <a href="/contact-us/" class="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:link" class="text-[11px]" aria-hidden="true"></iconify-icon> your-store.com <span class="opacity-70">[1]</span></a>
+                  <a href="/contact/" class="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 hover:bg-accent hover:text-paper transition"><iconify-icon icon="lucide:link" class="text-[11px]" aria-hidden="true"></iconify-icon> your-store.com <span class="opacity-70">[1]</span></a>
                 </div>
               </div>
               <div class="mt-5 flex items-center justify-center gap-1.5 rounded-full bg-accent text-paper text-xs font-semibold py-2"><iconify-icon icon="lucide:badge-check" aria-hidden="true"></iconify-icon> Your brand, recommended by AI</div>
@@ -271,7 +271,7 @@ get_header();
           </div>
           <?php
           $d2c_cta_btn = get_field( 'd2c_ecommerce_cta_button' );
-          $d2c_cta_btn_url   = is_array( $d2c_cta_btn ) && ! empty( $d2c_cta_btn['url'] ) ? $d2c_cta_btn['url'] : '/contact-us/';
+          $d2c_cta_btn_url   = is_array( $d2c_cta_btn ) && ! empty( $d2c_cta_btn['url'] ) ? $d2c_cta_btn['url'] : '/contact/';
           $d2c_cta_btn_label = is_array( $d2c_cta_btn ) && ! empty( $d2c_cta_btn['title'] ) ? $d2c_cta_btn['title'] : 'Scale my store';
           ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">

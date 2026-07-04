@@ -27,7 +27,7 @@ get_header();
             <p class="reveal text-ink-soft mt-5 max-w-xl mx-auto leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'website_design_hero_text', false, 'As a website design company in Jaipur, we build everything from marketing sites to product front-ends — engineered for Core Web Vitals, built to convert, and easy for your team to manage.' ) ); ?></p>
             <?php
             $wd_hero_cta1 = get_field( 'website_design_hero_cta_primary' );
-            $wd_hero_cta1_url   = is_array( $wd_hero_cta1 ) && ! empty( $wd_hero_cta1['url'] ) ? $wd_hero_cta1['url'] : '/contact-us/';
+            $wd_hero_cta1_url   = is_array( $wd_hero_cta1 ) && ! empty( $wd_hero_cta1['url'] ) ? $wd_hero_cta1['url'] : '/contact/';
             $wd_hero_cta1_label = is_array( $wd_hero_cta1 ) && ! empty( $wd_hero_cta1['title'] ) ? $wd_hero_cta1['title'] : 'Build my website';
             $wd_hero_cta2 = get_field( 'website_design_hero_cta_secondary' );
             $wd_hero_cta2_url   = is_array( $wd_hero_cta2 ) && ! empty( $wd_hero_cta2['url'] ) ? $wd_hero_cta2['url'] : '#perf';
@@ -166,7 +166,7 @@ get_header();
           </div>
           <?php
           $wd_cta_btn1 = get_field( 'website_design_cta_button_primary' );
-          $wd_cta_btn1_url   = is_array( $wd_cta_btn1 ) && ! empty( $wd_cta_btn1['url'] ) ? $wd_cta_btn1['url'] : '/contact-us/';
+          $wd_cta_btn1_url   = is_array( $wd_cta_btn1 ) && ! empty( $wd_cta_btn1['url'] ) ? $wd_cta_btn1['url'] : '/contact/';
           $wd_cta_btn1_label = is_array( $wd_cta_btn1 ) && ! empty( $wd_cta_btn1['title'] ) ? $wd_cta_btn1['title'] : 'Get a website quote';
           $wd_cta_btn2 = get_field( 'website_design_cta_button_secondary' );
           $wd_cta_btn2_url   = is_array( $wd_cta_btn2 ) && ! empty( $wd_cta_btn2['url'] ) ? $wd_cta_btn2['url'] : '/portfolio/';

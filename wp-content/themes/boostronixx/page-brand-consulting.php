@@ -28,7 +28,7 @@ get_header();
               <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'brand_consulting_hero_text', false, "As a branding agency in Jaipur, we build positioning, strategy, naming, logo and a complete visual identity — researched, refined and designed to convert. We make sure you look like the leader you're becoming." ) ); ?></p>
               <?php
               $bc_hero_cta1 = get_field( 'brand_consulting_hero_cta_primary' );
-              $bc_hero_cta1_url   = is_array( $bc_hero_cta1 ) && ! empty( $bc_hero_cta1['url'] ) ? $bc_hero_cta1['url'] : '/contact-us/';
+              $bc_hero_cta1_url   = is_array( $bc_hero_cta1 ) && ! empty( $bc_hero_cta1['url'] ) ? $bc_hero_cta1['url'] : '/contact/';
               $bc_hero_cta1_label = is_array( $bc_hero_cta1 ) && ! empty( $bc_hero_cta1['title'] ) ? $bc_hero_cta1['title'] : 'Start your brand';
               $bc_hero_cta2 = get_field( 'brand_consulting_hero_cta_secondary' );
               $bc_hero_cta2_url   = is_array( $bc_hero_cta2 ) && ! empty( $bc_hero_cta2['url'] ) ? $bc_hero_cta2['url'] : '#blocks';
@@ -166,7 +166,7 @@ get_header();
           </div>
           <?php
           $bc_cta_btn1 = get_field( 'brand_consulting_cta_button_primary' );
-          $bc_cta_btn1_url   = is_array( $bc_cta_btn1 ) && ! empty( $bc_cta_btn1['url'] ) ? $bc_cta_btn1['url'] : '/contact-us/';
+          $bc_cta_btn1_url   = is_array( $bc_cta_btn1 ) && ! empty( $bc_cta_btn1['url'] ) ? $bc_cta_btn1['url'] : '/contact/';
           $bc_cta_btn1_label = is_array( $bc_cta_btn1 ) && ! empty( $bc_cta_btn1['title'] ) ? $bc_cta_btn1['title'] : 'Book a discovery call';
           $bc_cta_btn2 = get_field( 'brand_consulting_cta_button_secondary' );
           $bc_cta_btn2_url   = is_array( $bc_cta_btn2 ) && ! empty( $bc_cta_btn2['url'] ) ? $bc_cta_btn2['url'] : '/portfolio/';

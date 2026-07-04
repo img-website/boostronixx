@@ -590,12 +590,12 @@ function bx_hospitals_render_depts() {
  */
 function bx_hospitals_render_rx() {
 	$defaults = array(
-		array( 'url' => '/brand-consulting/', 'title' => 'Brand for trust', 'sub' => 'identity · doctor profiles · accreditation cues' ),
-		array( 'url' => '/seo-services/', 'title' => 'Win local &amp; the map pack', 'sub' => '"specialist near me" · GBP · AEO/GEO' ),
-		array( 'url' => '/performance-marketing/', 'title' => 'Fill the appointment book', 'sub' => 'Meta &amp; Google · enquiries by speciality' ),
-		array( 'url' => '/website-design/', 'title' => 'Website with online booking', 'sub' => 'doctor pages · departments · one-tap booking' ),
-		array( 'url' => '/social-media-marketing/', 'title' => 'Reputation &amp; reviews', 'sub' => 'review engine · patient stories · health content' ),
-		array( 'url' => '/digital-marketing/', 'title' => 'Nurture &amp; recall', 'sub' => 'follow-ups · health-checkup recalls · CRM' ),
+		array( 'url' => '/services/brand-consulting/', 'title' => 'Brand for trust', 'sub' => 'identity · doctor profiles · accreditation cues' ),
+		array( 'url' => '/services/seo-services/', 'title' => 'Win local &amp; the map pack', 'sub' => '"specialist near me" · GBP · AEO/GEO' ),
+		array( 'url' => '/services/performance-marketing/', 'title' => 'Fill the appointment book', 'sub' => 'Meta &amp; Google · enquiries by speciality' ),
+		array( 'url' => '/services/website-design/', 'title' => 'Website with online booking', 'sub' => 'doctor pages · departments · one-tap booking' ),
+		array( 'url' => '/services/social-media-marketing/', 'title' => 'Reputation &amp; reviews', 'sub' => 'review engine · patient stories · health content' ),
+		array( 'url' => '/services/digital-marketing/', 'title' => 'Nurture &amp; recall', 'sub' => 'follow-ups · health-checkup recalls · CRM' ),
 	);
 
 	$items = array();
@@ -703,8 +703,8 @@ function bx_hospitals_render_faqs() {
  */
 function bx_hospitals_render_related() {
 	$defaults = array(
-		array( 'url' => '/performance-marketing/', 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'Appointment campaigns' ),
-		array( 'url' => '/seo-services/', 'icon' => 'lucide:search', 'title' => 'SEO · AEO · GEO', 'text' => 'Win "near me" &amp; AI' ),
+		array( 'url' => '/services/performance-marketing/', 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'Appointment campaigns' ),
+		array( 'url' => '/services/seo-services/', 'icon' => 'lucide:search', 'title' => 'SEO · AEO · GEO', 'text' => 'Win "near me" &amp; AI' ),
 		array( 'url' => '/industries/', 'icon' => 'lucide:layers', 'title' => 'All Industries', 'text' => 'Other sectors' ),
 	);
 

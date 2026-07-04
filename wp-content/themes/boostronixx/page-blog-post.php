@@ -78,7 +78,7 @@ get_header();
                 <a href="#start" class="toc-link">Where to start today</a>
                 <a href="#faq" class="toc-link">FAQ</a>
               </nav>
-              <a href="/contact-us/" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-accent">Need help deciding? <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
+              <a href="/contact/" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-accent">Need help deciding? <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
             </div>
           </aside>
 

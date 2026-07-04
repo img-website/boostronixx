@@ -38,7 +38,7 @@ get_header();
               </p>
               <?php
               $seo_hero_cta1       = get_field( 'seo_services_hero_cta_primary' );
-              $seo_hero_cta1_url   = is_array( $seo_hero_cta1 ) && ! empty( $seo_hero_cta1['url'] ) ? $seo_hero_cta1['url'] : '/contact-us/';
+              $seo_hero_cta1_url   = is_array( $seo_hero_cta1 ) && ! empty( $seo_hero_cta1['url'] ) ? $seo_hero_cta1['url'] : '/contact/';
               $seo_hero_cta1_label = is_array( $seo_hero_cta1 ) && ! empty( $seo_hero_cta1['title'] ) ? $seo_hero_cta1['title'] : 'Get a free SEO audit';
               $seo_hero_cta2       = get_field( 'seo_services_hero_cta_secondary' );
               $seo_hero_cta2_url   = is_array( $seo_hero_cta2 ) && ! empty( $seo_hero_cta2['url'] ) ? $seo_hero_cta2['url'] : '#process';
@@ -94,7 +94,7 @@ get_header();
             <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'seo_services_overview_text', false, 'Our SEO services in Jaipur span on-page, off-page, technical and local SEO plus content marketing — with a focus on real estate, schools, healthcare and D2C brands across Jaipur and beyond. Every tactic is white-hat, built for long-term visibility, not short-lived spikes.' ) ); ?></p>
             <?php
             $seo_overview_btn       = get_field( 'seo_services_overview_button' );
-            $seo_overview_btn_url   = is_array( $seo_overview_btn ) && ! empty( $seo_overview_btn['url'] ) ? $seo_overview_btn['url'] : '/contact-us/';
+            $seo_overview_btn_url   = is_array( $seo_overview_btn ) && ! empty( $seo_overview_btn['url'] ) ? $seo_overview_btn['url'] : '/contact/';
             $seo_overview_btn_label = is_array( $seo_overview_btn ) && ! empty( $seo_overview_btn['title'] ) ? $seo_overview_btn['title'] : 'Talk to an SEO specialist';
             ?>
             <a href="<?php echo esc_url( $seo_overview_btn_url ); ?>" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-8 font-medium" data-delay="2"><span class="relative z-10 sheen-text"><?php echo esc_html( $seo_overview_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
@@ -296,7 +296,7 @@ get_header();
 
           <?php
           $seo_cta_btn       = get_field( 'seo_services_cta_button' );
-          $seo_cta_btn_url   = is_array( $seo_cta_btn ) && ! empty( $seo_cta_btn['url'] ) ? $seo_cta_btn['url'] : '/contact-us/';
+          $seo_cta_btn_url   = is_array( $seo_cta_btn ) && ! empty( $seo_cta_btn['url'] ) ? $seo_cta_btn['url'] : '/contact/';
           $seo_cta_btn_label = is_array( $seo_cta_btn ) && ! empty( $seo_cta_btn['title'] ) ? $seo_cta_btn['title'] : 'Get my free SEO audit';
           ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">

@@ -296,7 +296,7 @@ function bx_acf_ui_ux_design() {
 					'name'          => 'ui_ux_design_process_callout_link_url',
 					'label'         => 'Callout — link URL',
 					'type'          => 'text',
-					'default_value' => '/edoovi-erp/',
+					'default_value' => '/portfolio/edoovi-erp/',
 				),
 
 				// ---------------- FAQ TAB ----------------
@@ -563,8 +563,8 @@ function bx_ui_ux_design_render_faqs() {
  */
 function bx_ui_ux_design_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:monitor-smartphone', 'title' => 'Website Design', 'sub' => 'Design, built live', 'url' => '/website-design/' ),
-		array( 'icon' => 'lucide:palette', 'title' => 'Brand Consulting', 'sub' => 'Identity first', 'url' => '/brand-consulting/' ),
+		array( 'icon' => 'lucide:monitor-smartphone', 'title' => 'Website Design', 'sub' => 'Design, built live', 'url' => '/services/website-design/' ),
+		array( 'icon' => 'lucide:palette', 'title' => 'Brand Consulting', 'sub' => 'Identity first', 'url' => '/services/brand-consulting/' ),
 		array( 'icon' => 'lucide:layout-grid', 'title' => 'All Services', 'sub' => 'The full stack', 'url' => '/services/' ),
 	);
 

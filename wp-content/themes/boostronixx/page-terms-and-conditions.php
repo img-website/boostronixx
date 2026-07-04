@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 $tc_btn       = bx_field( 'tc_cta_button', false, array() );
-$tc_btn_url   = ! empty( $tc_btn['url'] ) ? $tc_btn['url'] : home_url( '/contact-us/' );
+$tc_btn_url   = ! empty( $tc_btn['url'] ) ? $tc_btn['url'] : home_url( '/contact/' );
 $tc_btn_label = ! empty( $tc_btn['title'] ) ? $tc_btn['title'] : 'Book a Free Strategy Call';
 $tc_btn_tgt   = ! empty( $tc_btn['target'] ) ? ' target="' . esc_attr( $tc_btn['target'] ) . '"' : '';
 ?>

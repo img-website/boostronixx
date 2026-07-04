@@ -442,7 +442,7 @@ function bx_industries_render_tailor() {
 function bx_industries_render_proof() {
 	$defaults = array(
 		array( 'icon' => 'lucide:building-2', 'sector' => 'Real Estate', 'title' => 'Ashiana — +128% leads', 'cta' => 'See the work', 'link' => '/portfolio/', 'arrow' => 'lucide:arrow-up-right' ),
-		array( 'icon' => 'lucide:graduation-cap', 'sector' => 'Schools', 'title' => 'Edoovi — Smart school ERP', 'cta' => 'Read case study', 'link' => '/edoovi-erp/', 'arrow' => 'lucide:arrow-up-right' ),
+		array( 'icon' => 'lucide:graduation-cap', 'sector' => 'Schools', 'title' => 'Edoovi — Smart school ERP', 'cta' => 'Read case study', 'link' => '/portfolio/edoovi-erp/', 'arrow' => 'lucide:arrow-up-right' ),
 		array( 'icon' => 'lucide:shopping-bag', 'sector' => 'D2C eCommerce', 'title' => 'Veeba — Social content', 'cta' => 'See the work', 'link' => '/portfolio/', 'arrow' => 'lucide:arrow-up-right' ),
 		array( 'icon' => 'lucide:heart-pulse', 'sector' => 'Hospitals', 'title' => 'CityCare — +142% enquiries', 'cta' => 'See the work', 'link' => '/portfolio/', 'arrow' => 'lucide:arrow-up-right' ),
 	);
@@ -486,13 +486,13 @@ function bx_industries_render_proof() {
  */
 function bx_industries_render_matrix() {
 	$defaults = array(
-		array( 'icon' => 'lucide:palette', 'label' => 'Brand Consulting', 'link' => '/brand-consulting/' ),
-		array( 'icon' => 'lucide:search', 'label' => 'SEO · AEO · GEO', 'link' => '/seo-services/' ),
-		array( 'icon' => 'lucide:target', 'label' => 'Performance Marketing', 'link' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:thumbs-up', 'label' => 'Social Media', 'link' => '/social-media-marketing/' ),
-		array( 'icon' => 'lucide:line-chart', 'label' => 'Digital Marketing', 'link' => '/digital-marketing/' ),
-		array( 'icon' => 'lucide:figma', 'label' => 'UI/UX Design', 'link' => '/ui-ux-design/' ),
-		array( 'icon' => 'lucide:monitor-smartphone', 'label' => 'Website Design', 'link' => '/website-design/' ),
+		array( 'icon' => 'lucide:palette', 'label' => 'Brand Consulting', 'link' => '/services/brand-consulting/' ),
+		array( 'icon' => 'lucide:search', 'label' => 'SEO · AEO · GEO', 'link' => '/services/seo-services/' ),
+		array( 'icon' => 'lucide:target', 'label' => 'Performance Marketing', 'link' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:thumbs-up', 'label' => 'Social Media', 'link' => '/services/social-media-marketing/' ),
+		array( 'icon' => 'lucide:line-chart', 'label' => 'Digital Marketing', 'link' => '/services/digital-marketing/' ),
+		array( 'icon' => 'lucide:figma', 'label' => 'UI/UX Design', 'link' => '/services/ui-ux-design/' ),
+		array( 'icon' => 'lucide:monitor-smartphone', 'label' => 'Website Design', 'link' => '/services/website-design/' ),
 	);
 
 	$items = array();

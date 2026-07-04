@@ -72,7 +72,7 @@ get_header();
       <section class="py-16 sm:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-8">Featured case study</p>
-          <a href="/edoovi-erp/" class="reveal pcard group block">
+          <a href="/portfolio/edoovi-erp/" class="reveal pcard group block">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <!-- animated dashboard mock -->
               <div class="screen rounded-xl2 bg-[#0e0e0e] border border-white/10 p-5 sm:p-7 overflow-hidden order-2 lg:order-1">
@@ -156,7 +156,7 @@ get_header();
           <div id="grid" class="grid md:grid-cols-2 gap-6 lg:gap-8">
 
             <!-- FRESHEE — mobile app -->
-            <a href="/contact-us/" class="pcard reveal group block" data-cat="mobile">
+            <a href="/contact/" class="pcard reveal group block" data-cat="mobile">
               <div class="screen rounded-xl2 bg-gradient-to-br from-[#0f1f17] to-[#0a0a0a] border border-white/10 p-6 overflow-hidden flex justify-center">
                 <div class="w-[230px] rounded-[2rem] bg-[#0a0a0a] border border-white/12 p-3">
                   <div class="flex justify-center"><span class="h-1.5 w-12 rounded-full bg-white/15"></span></div>
@@ -181,7 +181,7 @@ get_header();
             </a>
 
             <!-- AURUM — jewellery brand board -->
-            <a href="/contact-us/" class="pcard reveal group block md:mt-12" data-cat="branding" data-delay="1">
+            <a href="/contact/" class="pcard reveal group block md:mt-12" data-cat="branding" data-delay="1">
               <div class="screen rounded-xl2 bg-surface border border-line p-6 overflow-hidden">
                 <div class="flex items-center justify-between mb-4"><span class="text-[11px] tracking-[.2em] uppercase text-ink-soft">Brand Board</span><span class="text-[11px] text-ink-soft">v1.0</span></div>
                 <div class="grid grid-cols-3 gap-3">
@@ -200,7 +200,7 @@ get_header();
             </a>
 
             <!-- ASHIANA — real estate growth -->
-            <a href="/contact-us/" class="pcard reveal group block" data-cat="marketing">
+            <a href="/contact/" class="pcard reveal group block" data-cat="marketing">
               <div class="screen rounded-xl2 bg-paper border border-line p-6 overflow-hidden">
                 <div class="flex items-center justify-between mb-1"><span class="text-[11px] tracking-[.2em] uppercase text-ink-soft">Leads · 90 days</span><span class="inline-flex items-center gap-1 text-sm font-semibold text-accent">+<span class="count" data-to="128">0</span>% <iconify-icon icon="lucide:trending-up"></iconify-icon></span></div>
                 <p class="font-display text-4xl tt"><span class="count" data-to="3">0</span>.4k <span class="text-base text-ink-soft font-normal">qualified leads</span></p>
@@ -222,7 +222,7 @@ get_header();
             </a>
 
             <!-- VEEBA — social -->
-            <a href="/contact-us/" class="pcard reveal group block md:mt-12" data-cat="social" data-delay="1">
+            <a href="/contact/" class="pcard reveal group block md:mt-12" data-cat="social" data-delay="1">
               <div class="screen rounded-xl2 bg-[#0e0e0e] border border-white/10 p-6 overflow-hidden flex justify-center">
                 <div class="w-[250px] rounded-2xl bg-[#161616] border border-white/10 p-3">
                   <div class="flex items-center gap-2.5">
@@ -249,7 +249,7 @@ get_header();
             </a>
 
             <!-- SIMPLILEARN — SEO/web -->
-            <a href="/contact-us/" class="pcard reveal group block" data-cat="seo">
+            <a href="/contact/" class="pcard reveal group block" data-cat="seo">
               <div class="screen rounded-xl2 bg-paper border border-line p-6 overflow-hidden">
                 <div class="flex items-center gap-2 rounded-full border border-line px-4 py-2.5 text-sm text-ink-soft h-11"><iconify-icon icon="lucide:search"></iconify-icon> online learning platform<span class="caret"></span></div>
                 <div class="mt-4 rounded-2xl border border-line p-4">
@@ -274,7 +274,7 @@ get_header();
             </a>
 
             <!-- EDOOVI tile (in grid too, for SaaS filter) -->
-            <a href="/edoovi-erp/" class="pcard reveal group block md:mt-12" data-cat="saas branding" data-delay="1">
+            <a href="/portfolio/edoovi-erp/" class="pcard reveal group block md:mt-12" data-cat="saas branding" data-delay="1">
               <div class="screen rounded-xl2 bg-[#0e0e0e] border border-white/10 p-6 overflow-hidden">
                 <div class="flex items-center justify-between mb-3 text-paper">
                   <span class="font-display tt text-sm inline-flex items-center gap-2"><span class="grid place-items-center h-6 w-6 rounded-md bg-accent text-[10px] font-bold">E</span> Parent App</span>
@@ -333,7 +333,7 @@ get_header();
               <h2 class="font-display text-3xl sm:text-6xl tt leading-[1.02]">Want to be our next case study?</h2>
               <p class="text-paper/70 mt-5 text-lg max-w-xl">Tell us what you're building. We'll bring the strategy, the design and the growth to make it impossible to ignore.</p>
               <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Start your project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                <a href="/contact/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light">Start your project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
                 <a href="/services/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:layout-grid" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">See our services</span></a>
               </div>
             </div>

@@ -29,7 +29,7 @@ get_header();
               <p class="reveal text-ink-soft mt-6 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'real_estate_hero_text', false, 'As a real estate digital marketing agency in Jaipur, we help builders, developers and brokers turn "3 BHK near me" into serious site visits and bookings — with project branding, local SEO and RERA-ready performance campaigns.' ) ); ?></p>
               <?php
               $re_hero_cta1       = get_field( 'real_estate_hero_cta_primary' );
-              $re_hero_cta1_url   = is_array( $re_hero_cta1 ) && ! empty( $re_hero_cta1['url'] ) ? $re_hero_cta1['url'] : '/contact-us/';
+              $re_hero_cta1_url   = is_array( $re_hero_cta1 ) && ! empty( $re_hero_cta1['url'] ) ? $re_hero_cta1['url'] : '/contact/';
               $re_hero_cta1_label = is_array( $re_hero_cta1 ) && ! empty( $re_hero_cta1['title'] ) ? $re_hero_cta1['title'] : 'Get qualified leads';
               ?>
               <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
@@ -279,7 +279,7 @@ get_header();
                   </div>
                 </div>
                 <div class="flex items-center gap-2 mt-3">
-                  <a href="/contact-us/" class="flex-1 text-center rounded-full bg-ink text-paper text-xs font-medium py-2">Book a visit</a>
+                  <a href="/contact/" class="flex-1 text-center rounded-full bg-ink text-paper text-xs font-medium py-2">Book a visit</a>
                   <a href="tel:+918058212202" class="flex-1 text-center rounded-full border border-line text-xs font-medium py-2">Call</a>
                 </div>
               </div>
@@ -308,7 +308,7 @@ get_header();
           </div>
           <?php
           $re_cta_btn       = get_field( 'real_estate_cta_button' );
-          $re_cta_btn_url   = is_array( $re_cta_btn ) && ! empty( $re_cta_btn['url'] ) ? $re_cta_btn['url'] : '/contact-us/';
+          $re_cta_btn_url   = is_array( $re_cta_btn ) && ! empty( $re_cta_btn['url'] ) ? $re_cta_btn['url'] : '/contact/';
           $re_cta_btn_label = is_array( $re_cta_btn ) && ! empty( $re_cta_btn['title'] ) ? $re_cta_btn['title'] : 'Get qualified leads';
           ?>
           <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">

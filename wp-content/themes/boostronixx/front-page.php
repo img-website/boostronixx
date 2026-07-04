@@ -318,7 +318,7 @@ get_header();
                 >
               </div>
               <a
-                href="/digital-marketing/"
+                href="/services/digital-marketing/"
                 class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text"
@@ -426,7 +426,7 @@ get_header();
                 >
               </div>
               <a
-                href="/seo-services/"
+                href="/services/seo-services/"
                 class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text"
@@ -602,7 +602,7 @@ get_header();
                 >
               </div>
               <a
-                href="/social-media-marketing/"
+                href="/services/social-media-marketing/"
                 class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text"
@@ -727,7 +727,7 @@ get_header();
                 >
               </div>
               <a
-                href="/performance-marketing/"
+                href="/services/performance-marketing/"
                 class="group btn-glow-light mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text-dark"
@@ -843,7 +843,7 @@ get_header();
                 >
               </div>
               <a
-                href="/brand-consulting/"
+                href="/services/brand-consulting/"
                 class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text"
@@ -936,7 +936,7 @@ get_header();
                 >
               </div>
               <a
-                href="/ui-ux-design/"
+                href="/services/ui-ux-design/"
                 class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text"
@@ -1020,7 +1020,7 @@ get_header();
                 >
               </div>
               <a
-                href="/website-design/"
+                href="/services/website-design/"
                 class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
               >
                 <span class="relative z-10 sheen-text"
@@ -1397,7 +1397,7 @@ get_header();
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Real Estate — skyline + pulsing pin -->
-            <a href="/real-estate/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" aria-label="Real estate marketing">
+            <a href="/industries/real-estate/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" aria-label="Real estate marketing">
               <div class="relative aspect-[5/4] rounded-xl overflow-hidden bg-gradient-to-b from-[#243a55] via-[#162739] to-[#0b1521]">
                 <span class="ind-glow absolute top-4 right-5 h-9 w-9 rounded-full bg-[#ffe4bd]" aria-hidden="true"></span>
                 <div class="absolute left-1/2 -translate-x-1/2 top-[7%] z-10" aria-hidden="true"><span class="ind-bob grid place-items-center h-7 w-7 rounded-full bg-accent text-paper text-sm shadow-[0_6px_14px_-4px_rgba(250,85,57,.6)] ring-2 ring-[#0b1521]"><iconify-icon icon="lucide:map-pin"></iconify-icon></span></div>
@@ -1415,7 +1415,7 @@ get_header();
               </div>
             </a>
             <!-- Schools — graduation cap toss + sparkles -->
-            <a href="/schools/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" data-delay="1" aria-label="School marketing">
+            <a href="/industries/schools/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" data-delay="1" aria-label="School marketing">
               <div class="relative aspect-[5/4] rounded-xl overflow-hidden bg-[#26473a] ring-[5px] ring-inset ring-[#6e4a29]">
                 <span class="absolute inset-0 opacity-[0.05]" style="background:radial-gradient(circle at 72% 28%, #fff, transparent 55%)" aria-hidden="true"></span>
                 <span class="absolute top-4 left-5 font-display tt text-[40px] leading-none text-white/90" aria-hidden="true">A+</span>
@@ -1435,7 +1435,7 @@ get_header();
               </div>
             </a>
             <!-- D2C eCommerce — shopping bag + cart badge + sale tag -->
-            <a href="/d2c-ecommerce/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" data-delay="2" aria-label="D2C eCommerce marketing">
+            <a href="/industries/d2c-ecommerce/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" data-delay="2" aria-label="D2C eCommerce marketing">
               <div class="relative aspect-[5/4] rounded-xl overflow-hidden bg-paper border border-line flex flex-col">
                 <div class="relative flex-1 min-h-0 bg-gradient-to-br from-accent/25 via-[#ff8a5c]/15 to-surface-2 grid place-items-center overflow-hidden">
                   <span class="absolute -top-6 -left-6 h-20 w-20 rounded-full bg-white/30 blur-md" aria-hidden="true"></span>
@@ -1460,7 +1460,7 @@ get_header();
               </div>
             </a>
             <!-- Hospitals — beating heart + EKG trace -->
-            <a href="/hospitals/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" data-delay="3" aria-label="Hospital marketing">
+            <a href="/industries/hospitals/" class="reveal group rounded-2xl bg-paper border border-line p-5 hover:border-accent hover:-translate-y-1 transition-all duration-300" data-delay="3" aria-label="Hospital marketing">
               <div class="relative aspect-[5/4] rounded-xl overflow-hidden bg-[#0b1521]">
                 <span class="absolute inset-0" style="background-image:linear-gradient(rgba(250,85,57,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(250,85,57,.1) 1px,transparent 1px);background-size:18px 18px" aria-hidden="true"></span>
                 <div class="absolute top-3 left-4 flex items-center gap-1.5" aria-hidden="true"><iconify-icon icon="lucide:heart" class="ind-heart text-accent text-base"></iconify-icon><span class="font-display tt text-sm text-paper">72 <span class="text-[10px] text-paper/50">BPM</span></span></div>
@@ -1594,7 +1594,7 @@ get_header();
       <!-- ===================== CTA ===================== -->
       <?php
       $bx_cta_btn     = function_exists( 'get_field' ) ? get_field( 'cta_button' ) : false;
-      $bx_cta_btn_url = ( is_array( $bx_cta_btn ) && ! empty( $bx_cta_btn['url'] ) ) ? $bx_cta_btn['url'] : home_url( '/contact-us/' );
+      $bx_cta_btn_url = ( is_array( $bx_cta_btn ) && ! empty( $bx_cta_btn['url'] ) ) ? $bx_cta_btn['url'] : home_url( '/contact/' );
       $bx_cta_btn_txt = ( is_array( $bx_cta_btn ) && ! empty( $bx_cta_btn['title'] ) ) ? $bx_cta_btn['title'] : 'Book a Free Strategy Call';
       $bx_cta_phone   = bx_field( 'cta_phone', false, '+91 80582 12202' );
       $bx_cta_tel     = preg_replace( '/[^0-9+]/', '', $bx_cta_phone );

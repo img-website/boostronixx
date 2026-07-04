@@ -28,7 +28,7 @@ get_header();
               <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'social_media_marketing_hero_text', false, 'As a social media marketing agency in Jaipur, we craft platform-native content for Instagram, Facebook, LinkedIn and YouTube — designed to stop the scroll, build trust and drive real action, not just likes.' ) ); ?></p>
               <?php
               $smm_hero_cta1 = get_field( 'social_media_marketing_hero_cta_primary' );
-              $smm_hero_cta1_url   = is_array( $smm_hero_cta1 ) && ! empty( $smm_hero_cta1['url'] ) ? $smm_hero_cta1['url'] : '/contact-us/';
+              $smm_hero_cta1_url   = is_array( $smm_hero_cta1 ) && ! empty( $smm_hero_cta1['url'] ) ? $smm_hero_cta1['url'] : '/contact/';
               $smm_hero_cta1_label = is_array( $smm_hero_cta1 ) && ! empty( $smm_hero_cta1['title'] ) ? $smm_hero_cta1['title'] : 'Grow my socials';
               $smm_hero_cta2 = get_field( 'social_media_marketing_hero_cta_secondary' );
               $smm_hero_cta2_url   = is_array( $smm_hero_cta2 ) && ! empty( $smm_hero_cta2['url'] ) ? $smm_hero_cta2['url'] : '#formats';
@@ -172,7 +172,7 @@ get_header();
           </div>
           <?php
           $smm_cta_btn = get_field( 'social_media_marketing_cta_button' );
-          $smm_cta_btn_url   = is_array( $smm_cta_btn ) && ! empty( $smm_cta_btn['url'] ) ? $smm_cta_btn['url'] : '/contact-us/';
+          $smm_cta_btn_url   = is_array( $smm_cta_btn ) && ! empty( $smm_cta_btn['url'] ) ? $smm_cta_btn['url'] : '/contact/';
           $smm_cta_btn_label = is_array( $smm_cta_btn ) && ! empty( $smm_cta_btn['title'] ) ? $smm_cta_btn['title'] : 'Grow my socials';
           $smm_cta_btn2 = get_field( 'social_media_marketing_cta_button_secondary' );
           $smm_cta_btn2_url   = is_array( $smm_cta_btn2 ) && ! empty( $smm_cta_btn2['url'] ) ? $smm_cta_btn2['url'] : '/portfolio/';

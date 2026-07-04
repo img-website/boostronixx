@@ -16,7 +16,7 @@ $bx_services_hero_btn_url = ( is_array( $bx_services_hero_btn ) && ! empty( $bx_
 $bx_services_hero_btn_txt = ( is_array( $bx_services_hero_btn ) && ! empty( $bx_services_hero_btn['title'] ) ) ? $bx_services_hero_btn['title'] : 'See all services';
 
 $bx_services_cta1  = function_exists( 'get_field' ) ? get_field( 'services_cta_btn1' ) : false;
-$bx_services_cta1_url = ( is_array( $bx_services_cta1 ) && ! empty( $bx_services_cta1['url'] ) ) ? $bx_services_cta1['url'] : '/contact-us/';
+$bx_services_cta1_url = ( is_array( $bx_services_cta1 ) && ! empty( $bx_services_cta1['url'] ) ) ? $bx_services_cta1['url'] : '/contact/';
 $bx_services_cta1_txt = ( is_array( $bx_services_cta1 ) && ! empty( $bx_services_cta1['title'] ) ) ? $bx_services_cta1['title'] : 'Set up a discovery call';
 $bx_services_cta2  = function_exists( 'get_field' ) ? get_field( 'services_cta_btn2' ) : false;
 $bx_services_cta2_url = ( is_array( $bx_services_cta2 ) && ! empty( $bx_services_cta2['url'] ) ) ? $bx_services_cta2['url'] : '/portfolio/';
@@ -103,7 +103,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- 1 SEO (featured -> detail page) -->
-            <a href="/seo-services/" class="scard reveal group block rounded-xl2 border border-line p-7 relative">
+            <a href="/services/seo-services/" class="scard reveal group block rounded-xl2 border border-line p-7 relative">
               <span class="absolute right-5 top-5 text-[10px] font-semibold tracking-wide uppercase rounded-full bg-accent/10 text-accent px-2.5 py-1">Full details</span>
               <span class="num font-display text-sm text-ink-soft">01</span>
               <span class="sico mt-3 inline-grid place-items-center h-13 w-13 rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:search"></iconify-icon></span>
@@ -118,7 +118,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             </a>
 
             <!-- 2 Brand Consulting -->
-            <a href="/brand-consulting/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
+            <a href="/services/brand-consulting/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
               <span class="num font-display text-sm text-ink-soft">02</span>
               <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:palette"></iconify-icon></span>
               <h3 class="font-display text-2xl tt mt-4">Brand Consulting</h3>
@@ -132,7 +132,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             </a>
 
             <!-- 3 Digital Marketing -->
-            <a href="/digital-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="2">
+            <a href="/services/digital-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="2">
               <span class="num font-display text-sm text-ink-soft">03</span>
               <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:line-chart"></iconify-icon></span>
               <h3 class="font-display text-2xl tt mt-4">Digital Marketing</h3>
@@ -146,7 +146,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             </a>
 
             <!-- 4 Performance Marketing -->
-            <a href="/performance-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7">
+            <a href="/services/performance-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7">
               <span class="num font-display text-sm text-ink-soft">04</span>
               <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:target"></iconify-icon></span>
               <h3 class="font-display text-2xl tt mt-4">Performance Marketing</h3>
@@ -160,7 +160,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             </a>
 
             <!-- 5 Social Media -->
-            <a href="/social-media-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
+            <a href="/services/social-media-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
               <span class="num font-display text-sm text-ink-soft">05</span>
               <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span>
               <h3 class="font-display text-2xl tt mt-4">Social Media Marketing</h3>
@@ -174,7 +174,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             </a>
 
             <!-- 6 UI/UX Design -->
-            <a href="/ui-ux-design/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="2">
+            <a href="/services/ui-ux-design/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="2">
               <span class="num font-display text-sm text-ink-soft">06</span>
               <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:figma"></iconify-icon></span>
               <h3 class="font-display text-2xl tt mt-4">UI/UX Design</h3>
@@ -188,7 +188,7 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
             </a>
 
             <!-- 7 Website Design (full width feature row) -->
-            <a href="/website-design/" class="scard reveal group block rounded-xl2 border border-line p-7 md:col-span-2 lg:col-span-3 md:flex md:items-center md:gap-8">
+            <a href="/services/website-design/" class="scard reveal group block rounded-xl2 border border-line p-7 md:col-span-2 lg:col-span-3 md:flex md:items-center md:gap-8">
               <div class="md:flex-1">
                 <span class="num font-display text-sm text-ink-soft">07</span>
                 <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span>

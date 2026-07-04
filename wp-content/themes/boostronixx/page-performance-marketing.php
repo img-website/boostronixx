@@ -29,7 +29,7 @@ get_header();
               <p class="reveal text-white/60 mt-5 max-w-lg leading-relaxed" data-delay="1">As a performance marketing agency in Jaipur, we run Meta &amp; Google Ads on data — A/B tested, audience-segmented and optimised for the only metric that matters: return on ad spend.</p>
               <?php
               $pm_hero_cta1       = get_field( 'performance_marketing_hero_cta_primary' );
-              $pm_hero_cta1_url   = is_array( $pm_hero_cta1 ) && ! empty( $pm_hero_cta1['url'] ) ? $pm_hero_cta1['url'] : '/contact-us/';
+              $pm_hero_cta1_url   = is_array( $pm_hero_cta1 ) && ! empty( $pm_hero_cta1['url'] ) ? $pm_hero_cta1['url'] : '/contact/';
               $pm_hero_cta1_label = is_array( $pm_hero_cta1 ) && ! empty( $pm_hero_cta1['title'] ) ? $pm_hero_cta1['title'] : 'Get a free ad audit';
               $pm_hero_cta2       = get_field( 'performance_marketing_hero_cta_secondary' );
               $pm_hero_cta2_url   = is_array( $pm_hero_cta2 ) && ! empty( $pm_hero_cta2['url'] ) ? $pm_hero_cta2['url'] : '#metrics';
@@ -153,7 +153,7 @@ get_header();
             <span class="glow500 absolute -bottom-20 left-1/3 w-[420px] h-[420px]"></span>
             <?php
             $pm_cta_btn       = get_field( 'performance_marketing_cta_button' );
-            $pm_cta_btn_url   = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['url'] ) ? $pm_cta_btn['url'] : '/contact-us/';
+            $pm_cta_btn_url   = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['url'] ) ? $pm_cta_btn['url'] : '/contact/';
             $pm_cta_btn_label = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['title'] ) ? $pm_cta_btn['title'] : 'Get my free ad audit';
             ?>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">

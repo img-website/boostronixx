@@ -27,6 +27,7 @@ require_once BX_DIR . '/inc/page-schema.php';
 require_once BX_DIR . '/inc/maintenance.php';
 require_once BX_DIR . '/inc/editor-icons.php';
 require_once BX_DIR . '/inc/image-attributes.php';
+require_once BX_DIR . '/inc/redirects.php';
 
 // Per-page ACF field groups (one file per page) for clean, scalable CMS editing.
 foreach ( glob( BX_DIR . '/inc/acf/*.php' ) as $bx_acf_file ) {

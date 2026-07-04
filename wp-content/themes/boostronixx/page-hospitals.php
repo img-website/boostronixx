@@ -29,7 +29,7 @@ get_header();
               <p class="reveal text-ink-soft mt-6 max-w-lg leading-relaxed" data-delay="1"><?php bx_hospitals_text( 'hospitals_hero_text', 'As a healthcare marketing agency in Jaipur, we help hospitals, clinics and doctors earn patient trust and turn "near me" searches into real enquiries and booked appointments — with credible branding, local SEO and ethical, compliant campaigns.' ); ?></p>
               <?php
               $hosp_hero_cta1 = get_field( 'hospitals_hero_cta_primary' );
-              $hosp_hero_cta1_url   = is_array( $hosp_hero_cta1 ) && ! empty( $hosp_hero_cta1['url'] ) ? $hosp_hero_cta1['url'] : '/contact-us/';
+              $hosp_hero_cta1_url   = is_array( $hosp_hero_cta1 ) && ! empty( $hosp_hero_cta1['url'] ) ? $hosp_hero_cta1['url'] : '/contact/';
               $hosp_hero_cta1_label = is_array( $hosp_hero_cta1 ) && ! empty( $hosp_hero_cta1['title'] ) ? $hosp_hero_cta1['title'] : 'Get more patients';
               $hosp_hero_cta2 = get_field( 'hospitals_hero_cta_secondary' );
               $hosp_hero_cta2_url   = is_array( $hosp_hero_cta2 ) && ! empty( $hosp_hero_cta2['url'] ) ? $hosp_hero_cta2['url'] : '#pathway';
@@ -266,7 +266,7 @@ get_header();
                   </div>
                 </div>
                 <div class="flex items-center gap-2 mt-3">
-                  <a href="/contact-us/" class="flex-1 text-center rounded-full bg-ink text-paper text-xs font-medium py-2">Book</a>
+                  <a href="/contact/" class="flex-1 text-center rounded-full bg-ink text-paper text-xs font-medium py-2">Book</a>
                   <a href="tel:+918058212202" class="flex-1 text-center rounded-full border border-line text-xs font-medium py-2">Call</a>
                   <span class="flex-1 text-center rounded-full border border-line text-xs font-medium py-2 text-ink-soft">Directions</span>
                 </div>
@@ -296,7 +296,7 @@ get_header();
           </div>
           <?php
           $hosp_cta_btn = get_field( 'hospitals_cta_button' );
-          $hosp_cta_btn_url   = is_array( $hosp_cta_btn ) && ! empty( $hosp_cta_btn['url'] ) ? $hosp_cta_btn['url'] : '/contact-us/';
+          $hosp_cta_btn_url   = is_array( $hosp_cta_btn ) && ! empty( $hosp_cta_btn['url'] ) ? $hosp_cta_btn['url'] : '/contact/';
           $hosp_cta_btn_label = is_array( $hosp_cta_btn ) && ! empty( $hosp_cta_btn['title'] ) ? $hosp_cta_btn['title'] : 'Get more patients';
           ?><div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
             <div class="absolute inset-0 grid-lines-d opacity-60" aria-hidden="true"></div>

@@ -607,9 +607,9 @@ function bx_performance_marketing_render_faqs() {
  */
 function bx_performance_marketing_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:search', 'title' => 'SEO Services', 'meta' => 'Organic + paid', 'url' => '/seo-services/' ),
-		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'meta' => 'Creative fuel', 'url' => '/social-media-marketing/' ),
-		array( 'icon' => 'lucide:line-chart', 'title' => 'Digital Marketing', 'meta' => 'Full funnel', 'url' => '/digital-marketing/' ),
+		array( 'icon' => 'lucide:search', 'title' => 'SEO Services', 'meta' => 'Organic + paid', 'url' => '/services/seo-services/' ),
+		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'meta' => 'Creative fuel', 'url' => '/services/social-media-marketing/' ),
+		array( 'icon' => 'lucide:line-chart', 'title' => 'Digital Marketing', 'meta' => 'Full funnel', 'url' => '/services/digital-marketing/' ),
 	);
 
 	$items = array();

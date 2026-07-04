@@ -963,8 +963,8 @@ function bx_seo_services_render_faqs() {
  */
 function bx_seo_services_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'Paid ads that convert', 'url' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'text' => 'Content that engages', 'url' => '/social-media-marketing/' ),
+		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'Paid ads that convert', 'url' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'text' => 'Content that engages', 'url' => '/services/social-media-marketing/' ),
 		array( 'icon' => 'lucide:layout-grid', 'title' => 'All Services', 'text' => 'See the full stack', 'url' => '/services/' ),
 	);
 

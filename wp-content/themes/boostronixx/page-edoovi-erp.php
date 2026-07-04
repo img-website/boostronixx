@@ -43,7 +43,7 @@ get_header();
               </p>
               <div class="reveal flex flex-wrap items-center gap-3 mt-7" data-delay="2">
                 <a href="#overview" class="group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><span class="relative z-10 sheen-text">Explore the case study</span><iconify-icon icon="lucide:arrow-down" class="relative z-10"></iconify-icon></a>
-                <a href="/contact-us/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:rocket" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">Build something like this</span></a>
+                <a href="/contact/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium"><iconify-icon icon="lucide:rocket" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">Build something like this</span></a>
               </div>
             </div>
 
@@ -236,7 +236,7 @@ get_header();
             <div class="relative">
               <h3 class="font-display text-2xl sm:text-3xl tt">Have a product in mind?</h3>
               <p class="text-paper/60 mt-2 max-w-sm">Let's design it end to end — strategy, UI/UX and a system that scales.</p>
-              <a href="/contact-us/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-6 font-medium"><span class="relative z-10 sheen-text-light">Start your project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+              <a href="/contact/" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-6 font-medium"><span class="relative z-10 sheen-text-light">Start your project</span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
             </div>
           </div>
         </div>

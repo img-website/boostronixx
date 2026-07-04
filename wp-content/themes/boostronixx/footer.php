@@ -29,10 +29,10 @@ $bx_col1 = bx_option( 'footer_col1', array() );
 if ( ! $bx_col1 ) {
 	$bx_col1 = array(
 		array( 'link' => array( 'title' => 'All Services', 'url' => home_url( '/services/' ) ) ),
-		array( 'link' => array( 'title' => 'SEO Services', 'url' => home_url( '/seo-services/' ) ) ),
-		array( 'link' => array( 'title' => 'Social Media', 'url' => home_url( '/social-media-marketing/' ) ) ),
-		array( 'link' => array( 'title' => 'Performance Marketing', 'url' => home_url( '/performance-marketing/' ) ) ),
-		array( 'link' => array( 'title' => 'Website Design', 'url' => home_url( '/website-design/' ) ) ),
+		array( 'link' => array( 'title' => 'SEO Services', 'url' => home_url( '/services/seo-services/' ) ) ),
+		array( 'link' => array( 'title' => 'Social Media', 'url' => home_url( '/services/social-media-marketing/' ) ) ),
+		array( 'link' => array( 'title' => 'Performance Marketing', 'url' => home_url( '/services/performance-marketing/' ) ) ),
+		array( 'link' => array( 'title' => 'Website Design', 'url' => home_url( '/services/website-design/' ) ) ),
 	);
 }
 $bx_col2 = bx_option( 'footer_col2', array() );
@@ -42,8 +42,8 @@ if ( ! $bx_col2 ) {
 		array( 'link' => array( 'title' => 'Industries', 'url' => home_url( '/industries/' ) ) ),
 		array( 'link' => array( 'title' => 'Work', 'url' => home_url( '/portfolio/' ) ) ),
 		array( 'link' => array( 'title' => 'Insights', 'url' => home_url( '/blog/' ) ) ),
-		array( 'link' => array( 'title' => 'FAQ', 'url' => home_url( '/faq/' ) ) ),
-		array( 'link' => array( 'title' => 'Contact', 'url' => home_url( '/contact-us/' ) ) ),
+		array( 'link' => array( 'title' => 'FAQ', 'url' => home_url( '/faqs/' ) ) ),
+		array( 'link' => array( 'title' => 'Contact', 'url' => home_url( '/contact/' ) ) ),
 	);
 }
 $bx_legal = bx_option( 'footer_legal', array() );
@@ -68,7 +68,7 @@ if ( ! $bx_appnav ) {
 		array( 'icon' => 'lucide:house', 'label' => 'Home', 'link' => array( 'url' => home_url( '/' ) ) ),
 		array( 'icon' => 'lucide:layout-grid', 'label' => 'Services', 'link' => array( 'url' => home_url( '/services/' ) ) ),
 		array( 'icon' => 'lucide:briefcase', 'label' => 'Work', 'link' => array( 'url' => home_url( '/portfolio/' ) ) ),
-		array( 'icon' => 'lucide:message-square', 'label' => 'Contact', 'link' => array( 'url' => home_url( '/contact-us/' ) ) ),
+		array( 'icon' => 'lucide:message-square', 'label' => 'Contact', 'link' => array( 'url' => home_url( '/contact/' ) ) ),
 	);
 }
 

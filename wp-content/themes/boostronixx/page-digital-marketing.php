@@ -28,7 +28,7 @@ get_header();
               <p class="reveal text-ink-soft mt-5 max-w-lg leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'digital_marketing_hero_text', false, 'Full-funnel digital marketing in Jaipur: SEO, content, email, social and ads working together as one funnel, with dashboards that show exactly how a click becomes a customer.' ) ); ?></p>
               <?php
               $dm_hero_cta1       = get_field( 'digital_marketing_hero_cta_primary' );
-              $dm_hero_cta1_url   = is_array( $dm_hero_cta1 ) && ! empty( $dm_hero_cta1['url'] ) ? $dm_hero_cta1['url'] : '/contact-us/';
+              $dm_hero_cta1_url   = is_array( $dm_hero_cta1 ) && ! empty( $dm_hero_cta1['url'] ) ? $dm_hero_cta1['url'] : '/contact/';
               $dm_hero_cta1_label = is_array( $dm_hero_cta1 ) && ! empty( $dm_hero_cta1['title'] ) ? $dm_hero_cta1['title'] : 'Plan my growth';
               $dm_hero_cta2       = get_field( 'digital_marketing_hero_cta_secondary' );
               $dm_hero_cta2_url   = is_array( $dm_hero_cta2 ) && ! empty( $dm_hero_cta2['url'] ) ? $dm_hero_cta2['url'] : '#funnel';
@@ -158,7 +158,7 @@ get_header();
           </div>
           <?php
           $dm_cta_btn        = get_field( 'digital_marketing_cta_button' );
-          $dm_cta_btn_url    = is_array( $dm_cta_btn ) && ! empty( $dm_cta_btn['url'] ) ? $dm_cta_btn['url'] : '/contact-us/';
+          $dm_cta_btn_url    = is_array( $dm_cta_btn ) && ! empty( $dm_cta_btn['url'] ) ? $dm_cta_btn['url'] : '/contact/';
           $dm_cta_btn_label  = is_array( $dm_cta_btn ) && ! empty( $dm_cta_btn['title'] ) ? $dm_cta_btn['title'] : 'Plan my growth';
           $dm_cta_btn2       = get_field( 'digital_marketing_cta_button_secondary' );
           $dm_cta_btn2_url   = is_array( $dm_cta_btn2 ) && ! empty( $dm_cta_btn2['url'] ) ? $dm_cta_btn2['url'] : '/services/';

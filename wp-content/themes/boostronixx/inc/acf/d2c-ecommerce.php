@@ -596,12 +596,12 @@ function bx_d2c_ecommerce_render_categories() {
  */
 function bx_d2c_ecommerce_render_cart_items() {
 	$defaults = array(
-		array( 'icon' => 'lucide:palette', 'title' => 'Brand that stands out', 'text' => 'Identity, packaging &amp; story that earns the click.', 'link' => '/brand-consulting/' ),
-		array( 'icon' => 'lucide:search', 'title' => 'SEO &amp; Google Shopping', 'text' => 'An ecommerce SEO company in Jaipur capturing "best [product]" &amp; category demand.', 'link' => '/seo-services/' ),
-		array( 'icon' => 'lucide:target', 'title' => 'ROAS-driven ads', 'text' => 'Meta, Google &amp; marketplaces, tuned for profit.', 'link' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:monitor-smartphone', 'title' => 'A store that converts', 'text' => 'Fast Shopify, rich PDPs &amp; checkout CRO.', 'link' => '/website-design/' ),
-		array( 'icon' => 'lucide:clapperboard', 'title' => 'Content &amp; UGC that sells', 'text' => 'Reels &amp; creators that feed your ads.', 'link' => '/social-media-marketing/' ),
-		array( 'icon' => 'lucide:mail', 'title' => 'Retention &amp; LTV', 'text' => 'Email, WhatsApp &amp; loyalty that grow repeat.', 'link' => '/digital-marketing/' ),
+		array( 'icon' => 'lucide:palette', 'title' => 'Brand that stands out', 'text' => 'Identity, packaging &amp; story that earns the click.', 'link' => '/services/brand-consulting/' ),
+		array( 'icon' => 'lucide:search', 'title' => 'SEO &amp; Google Shopping', 'text' => 'An ecommerce SEO company in Jaipur capturing "best [product]" &amp; category demand.', 'link' => '/services/seo-services/' ),
+		array( 'icon' => 'lucide:target', 'title' => 'ROAS-driven ads', 'text' => 'Meta, Google &amp; marketplaces, tuned for profit.', 'link' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:monitor-smartphone', 'title' => 'A store that converts', 'text' => 'Fast Shopify, rich PDPs &amp; checkout CRO.', 'link' => '/services/website-design/' ),
+		array( 'icon' => 'lucide:clapperboard', 'title' => 'Content &amp; UGC that sells', 'text' => 'Reels &amp; creators that feed your ads.', 'link' => '/services/social-media-marketing/' ),
+		array( 'icon' => 'lucide:mail', 'title' => 'Retention &amp; LTV', 'text' => 'Email, WhatsApp &amp; loyalty that grow repeat.', 'link' => '/services/digital-marketing/' ),
 	);
 
 	$rows = array();
@@ -704,8 +704,8 @@ function bx_d2c_ecommerce_render_faqs() {
  */
 function bx_d2c_ecommerce_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'ROAS-driven ads', 'link' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social &amp; UGC', 'text' => 'Creative that sells', 'link' => '/social-media-marketing/' ),
+		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'ROAS-driven ads', 'link' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social &amp; UGC', 'text' => 'Creative that sells', 'link' => '/services/social-media-marketing/' ),
 		array( 'icon' => 'lucide:layers', 'title' => 'All Industries', 'text' => 'Other sectors', 'link' => '/industries/' ),
 	);
 

@@ -97,7 +97,7 @@ while ( have_posts() ) :
                 <a href="#<?php echo esc_attr( $bx_item['id'] ); ?>" class="toc-link"><?php echo esc_html( $bx_item['text'] ); ?></a>
                 <?php endforeach; ?>
               </nav>
-              <a href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-accent">Need help deciding? <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
+              <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-accent">Need help deciding? <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
             </div>
           </aside>
           <?php endif; ?>

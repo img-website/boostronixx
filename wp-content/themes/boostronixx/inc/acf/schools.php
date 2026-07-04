@@ -500,12 +500,12 @@ function bx_acf_schools() {
  */
 function bx_schools_render_periods() {
 	$defaults = array(
-		array( 'num' => 'P1', 'icon' => 'lucide:palette', 'title' => 'Brand & identity', 'text' => 'School branding in Jaipur parents instantly trust — name, crest, story & tone.', 'url' => '/brand-consulting/' ),
-		array( 'num' => 'P2', 'icon' => 'lucide:map-pin', 'title' => 'Local SEO & Maps', 'text' => 'School SEO in Jaipur that owns "best CBSE school near me" and the Google map pack.', 'url' => '/seo-services/' ),
-		array( 'num' => 'P3', 'icon' => 'lucide:target', 'title' => 'Admission campaigns', 'text' => 'Admission campaigns in Jaipur on Meta & Google ads, timed to the season, tuned for quality enquiries.', 'url' => '/performance-marketing/' ),
-		array( 'num' => 'P4', 'icon' => 'lucide:monitor-smartphone', 'title' => 'Website & enquiry', 'text' => 'A fast site with virtual tour, facilities & a one-tap enquiry form.', 'url' => '/website-design/' ),
-		array( 'num' => 'P5', 'icon' => 'lucide:star', 'title' => 'Reviews & social', 'text' => 'Events, achievements & reviews that make your reputation visible.', 'url' => '/social-media-marketing/' ),
-		array( 'num' => 'P6', 'icon' => 'lucide:repeat', 'title' => 'Nurture & recall', 'text' => 'WhatsApp follow-ups & reminders that turn enquiries into seats.', 'url' => '/digital-marketing/' ),
+		array( 'num' => 'P1', 'icon' => 'lucide:palette', 'title' => 'Brand & identity', 'text' => 'School branding in Jaipur parents instantly trust — name, crest, story & tone.', 'url' => '/services/brand-consulting/' ),
+		array( 'num' => 'P2', 'icon' => 'lucide:map-pin', 'title' => 'Local SEO & Maps', 'text' => 'School SEO in Jaipur that owns "best CBSE school near me" and the Google map pack.', 'url' => '/services/seo-services/' ),
+		array( 'num' => 'P3', 'icon' => 'lucide:target', 'title' => 'Admission campaigns', 'text' => 'Admission campaigns in Jaipur on Meta & Google ads, timed to the season, tuned for quality enquiries.', 'url' => '/services/performance-marketing/' ),
+		array( 'num' => 'P4', 'icon' => 'lucide:monitor-smartphone', 'title' => 'Website & enquiry', 'text' => 'A fast site with virtual tour, facilities & a one-tap enquiry form.', 'url' => '/services/website-design/' ),
+		array( 'num' => 'P5', 'icon' => 'lucide:star', 'title' => 'Reviews & social', 'text' => 'Events, achievements & reviews that make your reputation visible.', 'url' => '/services/social-media-marketing/' ),
+		array( 'num' => 'P6', 'icon' => 'lucide:repeat', 'title' => 'Nurture & recall', 'text' => 'WhatsApp follow-ups & reminders that turn enquiries into seats.', 'url' => '/services/digital-marketing/' ),
 	);
 
 	$items = array();
@@ -648,8 +648,8 @@ function bx_schools_render_faqs() {
  */
 function bx_schools_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'meta' => 'Admission campaigns', 'url' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:layout-dashboard', 'title' => 'Edoovi School ERP', 'meta' => 'Our case study', 'url' => '/edoovi-erp/' ),
+		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'meta' => 'Admission campaigns', 'url' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:layout-dashboard', 'title' => 'Edoovi School ERP', 'meta' => 'Our case study', 'url' => '/portfolio/edoovi-erp/' ),
 		array( 'icon' => 'lucide:layers', 'title' => 'All Industries', 'meta' => 'Other sectors', 'url' => '/industries/' ),
 	);
 

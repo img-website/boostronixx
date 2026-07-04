@@ -589,9 +589,9 @@ function bx_social_media_marketing_render_faqs() {
  */
 function bx_social_media_marketing_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'Boost the winners', 'url' => '/performance-marketing/' ),
-		array( 'icon' => 'lucide:palette', 'title' => 'Brand Consulting', 'text' => 'A look worth following', 'url' => '/brand-consulting/' ),
-		array( 'icon' => 'lucide:line-chart', 'title' => 'Digital Marketing', 'text' => 'The full funnel', 'url' => '/digital-marketing/' ),
+		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'text' => 'Boost the winners', 'url' => '/services/performance-marketing/' ),
+		array( 'icon' => 'lucide:palette', 'title' => 'Brand Consulting', 'text' => 'A look worth following', 'url' => '/services/brand-consulting/' ),
+		array( 'icon' => 'lucide:line-chart', 'title' => 'Digital Marketing', 'text' => 'The full funnel', 'url' => '/services/digital-marketing/' ),
 	);
 
 	$items = array();

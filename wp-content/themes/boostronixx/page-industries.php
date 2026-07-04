@@ -20,7 +20,7 @@ $bx_ind_proof_btn_url = ( is_array( $bx_ind_proof_btn ) && ! empty( $bx_ind_proo
 $bx_ind_proof_btn_txt = ( is_array( $bx_ind_proof_btn ) && ! empty( $bx_ind_proof_btn['title'] ) ) ? $bx_ind_proof_btn['title'] : 'View all work';
 
 $bx_ind_cta1 = function_exists( 'get_field' ) ? get_field( 'industries_cta_button_primary' ) : false;
-$bx_ind_cta1_url = ( is_array( $bx_ind_cta1 ) && ! empty( $bx_ind_cta1['url'] ) ) ? $bx_ind_cta1['url'] : '/contact-us/';
+$bx_ind_cta1_url = ( is_array( $bx_ind_cta1 ) && ! empty( $bx_ind_cta1['url'] ) ) ? $bx_ind_cta1['url'] : '/contact/';
 $bx_ind_cta1_txt = ( is_array( $bx_ind_cta1 ) && ! empty( $bx_ind_cta1['title'] ) ) ? $bx_ind_cta1['title'] : 'Get a sector strategy';
 
 $bx_ind_cta2 = function_exists( 'get_field' ) ? get_field( 'industries_cta_button_secondary' ) : false;
@@ -77,7 +77,7 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             <!-- ============ REAL ESTATE (wide) — skyline + leads ============ -->
-            <a href="/real-estate/" class="icard reveal group md:col-span-2 lg:col-span-3 rounded-xl2 border border-line bg-paper p-5 sm:p-6 grid sm:grid-cols-2 gap-6 items-center" aria-label="Real estate marketing">
+            <a href="/industries/real-estate/" class="icard reveal group md:col-span-2 lg:col-span-3 rounded-xl2 border border-line bg-paper p-5 sm:p-6 grid sm:grid-cols-2 gap-6 items-center" aria-label="Real estate marketing">
               <!-- visual: skyline + leads stat -->
               <div class="relative rounded-2xl bg-ink text-paper p-5 overflow-hidden min-h-[210px] flex flex-col">
                 <div class="absolute inset-0 grid-lines opacity-[0.08]" aria-hidden="true"></div>
@@ -111,7 +111,7 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
             </a>
 
             <!-- ============ SCHOOLS — admissions ring ============ -->
-            <a href="/schools/" class="icard reveal group rounded-xl2 border border-line bg-paper p-5 flex flex-col" aria-label="School and admissions marketing">
+            <a href="/industries/schools/" class="icard reveal group rounded-xl2 border border-line bg-paper p-5 flex flex-col" aria-label="School and admissions marketing">
               <div class="rounded-2xl bg-surface border border-line p-5 min-h-[200px] flex flex-col">
                 <div class="flex items-center gap-3">
                   <svg viewBox="0 0 80 80" class="h-16 w-16 -rotate-90 shrink-0" aria-hidden="true">
@@ -134,7 +134,7 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
             </a>
 
             <!-- ============ D2C — product card + cart ============ -->
-            <a href="/d2c-ecommerce/" class="icard reveal group rounded-xl2 border border-line bg-paper p-5 flex flex-col" data-delay="1" aria-label="D2C eCommerce marketing">
+            <a href="/industries/d2c-ecommerce/" class="icard reveal group rounded-xl2 border border-line bg-paper p-5 flex flex-col" data-delay="1" aria-label="D2C eCommerce marketing">
               <div class="rounded-2xl bg-surface border border-line p-5 min-h-[200px] flex flex-col">
                 <div class="rounded-xl bg-paper border border-line p-3">
                   <div class="pop2 s1 rounded-lg h-20 bg-gradient-to-br from-accent/30 via-[#ff8a5c]/20 to-surface-2 grid place-items-center" aria-hidden="true"><iconify-icon icon="lucide:package" class="text-3xl text-accent/70"></iconify-icon></div>
@@ -155,7 +155,7 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
             </a>
 
             <!-- ============ HOSPITALS — heartbeat + appointments ============ -->
-            <a href="/hospitals/" class="icard reveal group rounded-xl2 border border-line bg-paper p-5 flex flex-col" data-delay="2" aria-label="Hospital and healthcare marketing">
+            <a href="/industries/hospitals/" class="icard reveal group rounded-xl2 border border-line bg-paper p-5 flex flex-col" data-delay="2" aria-label="Hospital and healthcare marketing">
               <div class="relative rounded-2xl bg-ink text-paper p-5 overflow-hidden min-h-[200px] flex flex-col">
                 <div class="absolute inset-0 grid-lines opacity-[0.08]" aria-hidden="true"></div>
                 <div class="relative flex items-center justify-between">
@@ -182,7 +182,7 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
           if ( $bx_ind_sectors_footer ) {
             echo esc_html( $bx_ind_sectors_footer );
           } else {
-            echo 'Don\'t see your industry? Our industry-specific digital marketing in Jaipur spans 15+ sectors — <a href="/contact-us/" class="underline underline-offset-2 decoration-accent text-ink hover:text-accent">tell us about yours</a>.';
+            echo 'Don\'t see your industry? Our industry-specific digital marketing in Jaipur spans 15+ sectors — <a href="/contact/" class="underline underline-offset-2 decoration-accent text-ink hover:text-accent">tell us about yours</a>.';
           }
           ?></p>
         </div>

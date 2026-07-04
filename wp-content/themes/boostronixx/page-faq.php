@@ -79,7 +79,7 @@ get_header();
       <!-- ===================== STILL HAVE QUESTIONS ===================== -->
       <?php
       $bx_faq_cta   = function_exists( 'get_field' ) ? get_field( 'faq_cta_button' ) : false;
-      $bx_faq_cta_u = ( is_array( $bx_faq_cta ) && ! empty( $bx_faq_cta['url'] ) ) ? $bx_faq_cta['url'] : '/contact-us/';
+      $bx_faq_cta_u = ( is_array( $bx_faq_cta ) && ! empty( $bx_faq_cta['url'] ) ) ? $bx_faq_cta['url'] : '/contact/';
       $bx_faq_cta_t = ( is_array( $bx_faq_cta ) && ! empty( $bx_faq_cta['title'] ) ) ? $bx_faq_cta['title'] : 'Book a Free Strategy Call';
       $bx_faq_email = bx_field( 'faq_cta_email', false, 'boostronixx@gmail.com' );
       ?>

@@ -599,12 +599,12 @@ function bx_real_estate_render_ptypes() {
  */
 function bx_real_estate_render_floors() {
 	$defaults = array(
-		array( 'number' => '06', 'link' => '/digital-marketing/', 'title' => 'Nurture to booking', 'text' => 'Follow-ups, retargeting &amp; CRM flows that close long cycles.' ),
-		array( 'number' => '05', 'link' => '/social-media-marketing/', 'title' => 'Build reach &amp; proof', 'text' => 'Walkthroughs, locality content &amp; reviews that build desire.' ),
-		array( 'number' => '04', 'link' => '/website-design/', 'title' => 'Showcase the property', 'text' => 'Fast microsites with galleries, floor plans &amp; site-visit booking.' ),
-		array( 'number' => '03', 'link' => '/performance-marketing/', 'title' => 'Generate qualified leads', 'text' => 'Meta &amp; Google campaigns tuned for site visits, not junk.' ),
-		array( 'number' => '02', 'link' => '/seo-services/', 'title' => 'Win local search', 'text' => 'Local SEO, AEO &amp; GEO for locality, BHK &amp; budget queries.' ),
-		array( 'number' => '01', 'link' => '/brand-consulting/', 'title' => 'Brand the project for trust', 'text' => 'Identity, RERA credibility &amp; a story that makes buyers feel safe.' ),
+		array( 'number' => '06', 'link' => '/services/digital-marketing/', 'title' => 'Nurture to booking', 'text' => 'Follow-ups, retargeting &amp; CRM flows that close long cycles.' ),
+		array( 'number' => '05', 'link' => '/services/social-media-marketing/', 'title' => 'Build reach &amp; proof', 'text' => 'Walkthroughs, locality content &amp; reviews that build desire.' ),
+		array( 'number' => '04', 'link' => '/services/website-design/', 'title' => 'Showcase the property', 'text' => 'Fast microsites with galleries, floor plans &amp; site-visit booking.' ),
+		array( 'number' => '03', 'link' => '/services/performance-marketing/', 'title' => 'Generate qualified leads', 'text' => 'Meta &amp; Google campaigns tuned for site visits, not junk.' ),
+		array( 'number' => '02', 'link' => '/services/seo-services/', 'title' => 'Win local search', 'text' => 'Local SEO, AEO &amp; GEO for locality, BHK &amp; budget queries.' ),
+		array( 'number' => '01', 'link' => '/services/brand-consulting/', 'title' => 'Brand the project for trust', 'text' => 'Identity, RERA credibility &amp; a story that makes buyers feel safe.' ),
 	);
 
 	$items = array();
@@ -716,8 +716,8 @@ function bx_real_estate_render_faqs() {
  */
 function bx_real_estate_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:target', 'link' => '/performance-marketing/', 'title' => 'Performance Marketing', 'text' => 'Lead-gen that converts' ),
-		array( 'icon' => 'lucide:search', 'link' => '/seo-services/', 'title' => 'SEO · AEO · GEO', 'text' => 'Win local search &amp; AI' ),
+		array( 'icon' => 'lucide:target', 'link' => '/services/performance-marketing/', 'title' => 'Performance Marketing', 'text' => 'Lead-gen that converts' ),
+		array( 'icon' => 'lucide:search', 'link' => '/services/seo-services/', 'title' => 'SEO · AEO · GEO', 'text' => 'Win local search &amp; AI' ),
 		array( 'icon' => 'lucide:layers', 'link' => '/industries/', 'title' => 'All Industries', 'text' => 'Other sectors' ),
 	);
 

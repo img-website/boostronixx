@@ -632,9 +632,9 @@ function bx_brand_consulting_render_faqs() {
  */
 function bx_brand_consulting_render_related() {
 	$defaults = array(
-		array( 'icon' => 'lucide:figma', 'title' => 'UI/UX Design', 'meta' => 'Identity in product', 'url' => '/ui-ux-design/' ),
-		array( 'icon' => 'lucide:monitor-smartphone', 'title' => 'Website Design', 'meta' => 'Brand, live', 'url' => '/website-design/' ),
-		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'meta' => 'Brand in the feed', 'url' => '/social-media-marketing/' ),
+		array( 'icon' => 'lucide:figma', 'title' => 'UI/UX Design', 'meta' => 'Identity in product', 'url' => '/services/ui-ux-design/' ),
+		array( 'icon' => 'lucide:monitor-smartphone', 'title' => 'Website Design', 'meta' => 'Brand, live', 'url' => '/services/website-design/' ),
+		array( 'icon' => 'lucide:thumbs-up', 'title' => 'Social Media', 'meta' => 'Brand in the feed', 'url' => '/services/social-media-marketing/' ),
 	);
 
 	$items = array();
