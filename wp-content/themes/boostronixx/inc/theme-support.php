@@ -41,6 +41,22 @@ function bx_theme_support() {
 	);
 }
 
+add_filter( 'language_attributes', 'bx_html_lang_en_in' );
+/**
+ * Output <html lang="en-IN"> to match the site's audience (English, India / Jaipur).
+ *
+ * The WP locale stays en_US (so admin, date formats and translations are
+ * unaffected) — we only correct the public HTML lang attribute so it agrees
+ * with the page schema, which already declares `inLanguage: en-IN`. Applies to
+ * every template that calls language_attributes() (header.php + header-blank.php).
+ *
+ * @param string $output The language attributes string (e.g. lang="en-US").
+ * @return string
+ */
+function bx_html_lang_en_in( $output ) {
+	return str_replace( 'lang="en-US"', 'lang="en-IN"', $output );
+}
+
 add_filter( 'body_class', 'bx_body_class' );
 /**
  * Add a stable per-page body class so each converted page's own CSS can be
