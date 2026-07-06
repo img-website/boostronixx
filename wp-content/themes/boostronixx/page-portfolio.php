@@ -68,237 +68,58 @@ get_header();
         </div>
       </section>
 
-      <!-- ===================== FEATURED — EDOOVI ===================== -->
-      <section class="py-16 sm:py-24">
+      <!-- ===================== WORK GRID (3:4 cards, 2 per row) ===================== -->
+      <section id="projects" class="py-16 sm:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-8">Featured case study</p>
-          <a href="/portfolio/edoovi-erp/" class="reveal pcard group block">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <!-- animated dashboard mock -->
-              <div class="screen rounded-xl2 bg-[#0e0e0e] border border-white/10 p-5 sm:p-7 overflow-hidden order-2 lg:order-1">
-                <div class="flex items-center justify-between mb-4">
-                  <div class="flex items-center gap-2 text-paper">
-                    <span class="grid place-items-center h-7 w-7 rounded-lg bg-accent text-xs font-bold">E</span>
-                    <span class="font-display tt text-sm">Edoovi ERP</span>
-                  </div>
-                  <span class="inline-flex items-center gap-1.5 rounded-full bg-white/8 px-2.5 py-1 text-[10px] text-paper/60"><span class="live inline-block h-1.5 w-1.5 rounded-full bg-accent"></span> live</span>
-                </div>
-                <div class="grid grid-cols-[64px_1fr] gap-3">
-                  <!-- sidebar -->
-                  <div class="rounded-xl bg-white/5 p-2 space-y-2">
-                    <span class="pop p1 block h-8 rounded-lg bg-accent/80"></span>
-                    <span class="pop p2 block h-8 rounded-lg bg-white/10"></span>
-                    <span class="pop p3 block h-8 rounded-lg bg-white/10"></span>
-                    <span class="pop p4 block h-8 rounded-lg bg-white/10"></span>
-                  </div>
-                  <!-- main -->
-                  <div class="space-y-3">
-                    <div class="grid grid-cols-3 gap-2">
-                      <div class="pop p1 rounded-xl bg-white/5 p-2.5"><p class="text-[9px] text-paper/40">Students</p><p class="font-display tt text-paper text-lg"><span class="count" data-to="2480">0</span></p></div>
-                      <div class="pop p2 rounded-xl bg-white/5 p-2.5"><p class="text-[9px] text-paper/40">Attendance</p><p class="font-display tt text-accent text-lg"><span class="count" data-to="96">0</span>%</p></div>
-                      <div class="pop p3 rounded-xl bg-white/5 p-2.5"><p class="text-[9px] text-paper/40">Fees due</p><p class="font-display tt text-paper text-lg">₹<span class="count" data-to="42">0</span>k</p></div>
-                    </div>
-                    <div class="rounded-xl bg-white/5 p-3">
-                      <div class="flex items-end gap-2 h-20">
-                        <div class="bar" style="--h:45%;width:13%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
-                        <div class="bar" style="--h:62%;width:13%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
-                        <div class="bar" style="--h:38%;width:13%;background:linear-gradient(180deg,#ffffff,transparent);opacity:.3"></div>
-                        <div class="bar" style="--h:78%;width:13%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
-                        <div class="bar" style="--h:54%;width:13%;background:linear-gradient(180deg,#ffffff,transparent);opacity:.3"></div>
-                        <div class="bar" style="--h:92%;width:13%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- info -->
-              <div class="order-1 lg:order-2">
-                <div class="flex flex-wrap items-center gap-2 text-xs">
-                  <span class="rounded-full bg-accent/10 text-accent font-medium px-3 py-1">SaaS Product Design</span>
-                  <span class="rounded-full bg-surface px-3 py-1">EdTech</span>
-                  <span class="rounded-full bg-surface px-3 py-1">2025</span>
-                </div>
-                <h2 class="font-display text-3xl sm:text-5xl tt mt-5 leading-[1.04]">Edoovi — Smart ERP for modern schools</h2>
-                <p class="text-ink-soft mt-4 max-w-md leading-relaxed">An AI-powered ERP and mobile-app ecosystem that connects administration, teachers, parents and students on one platform — replacing fragmented, manual workflows.</p>
-                <div class="flex flex-wrap gap-2 mt-6 text-sm">
-                  <span class="rounded-full border border-line px-3 py-1.5">UI/UX Design</span>
-                  <span class="rounded-full border border-line px-3 py-1.5">Product Strategy</span>
-                  <span class="rounded-full border border-line px-3 py-1.5">Design System</span>
-                </div>
-                <span class="mt-8 inline-flex items-center gap-2 font-medium text-ink group-hover:text-accent transition">
-                  Read the case study
-                  <span class="parrow grid place-items-center h-10 w-10 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <!-- ===================== FILTER + GRID ===================== -->
-      <section id="projects" class="pb-20 sm:pb-28">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-10">
-            <div>
-              <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">More selected work</p>
-              <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Selected work from our Jaipur studio</h2>
-            </div>
-            <div id="chips" class="reveal flex flex-wrap gap-2" data-delay="1">
-              <button class="chip active rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="all">All</button>
-              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="branding">Branding</button>
-              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="mobile">Mobile App</button>
-              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="marketing">Marketing</button>
-              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="social">Social</button>
-              <button class="chip rounded-full border border-line px-4 py-2 text-sm font-medium" data-cat="seo">SEO / Web</button>
-            </div>
+          <div class="max-w-2xl mb-10 sm:mb-14">
+            <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Selected work</p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight">Case studies from our Jaipur studio</h2>
+            <p class="reveal text-ink-soft mt-4 leading-relaxed" data-delay="1">A closer look at the brands we&rsquo;ve shaped end to end &mdash; strategy, design and build, from first sketch to live.</p>
           </div>
-
-          <div id="grid" class="grid md:grid-cols-2 gap-6 lg:gap-8">
-
-            <!-- FRESHEE — mobile app -->
-            <a href="/contact/" class="pcard reveal group block" data-cat="mobile">
-              <div class="screen rounded-xl2 bg-gradient-to-br from-[#0f1f17] to-[#0a0a0a] border border-white/10 p-6 overflow-hidden flex justify-center">
-                <div class="w-[230px] rounded-[2rem] bg-[#0a0a0a] border border-white/12 p-3">
-                  <div class="flex justify-center"><span class="h-1.5 w-12 rounded-full bg-white/15"></span></div>
-                  <div class="mt-3 flex items-center justify-between text-paper">
-                    <span class="font-display tt text-sm">Freshee</span>
-                    <span class="relative grid place-items-center h-7 w-7 rounded-full bg-white/8 text-xs"><iconify-icon icon="lucide:shopping-cart"></iconify-icon><span class="absolute -top-1 -right-1 h-4 w-4 grid place-items-center rounded-full bg-accent text-[9px] font-bold"><span class="count" data-to="6">0</span></span></span>
-                  </div>
-                  <div class="mt-3 flex items-center gap-1.5 rounded-full bg-white/6 px-3 py-2 text-[11px] text-paper/50"><iconify-icon icon="lucide:search"></iconify-icon> Fresh fruits<span class="caret"></span></div>
-                  <div class="grid grid-cols-2 gap-2 mt-3">
-                    <div class="pop p1 rounded-xl bg-white/6 p-2"><span class="block h-12 rounded-lg bg-gradient-to-br from-emerald-400/40 to-emerald-600/30"></span><p class="text-[10px] text-paper/70 mt-1.5">Avocado</p><p class="text-[10px] text-accent font-semibold">₹120</p></div>
-                    <div class="pop p2 rounded-xl bg-white/6 p-2"><span class="block h-12 rounded-lg bg-gradient-to-br from-orange-300/40 to-orange-500/30"></span><p class="text-[10px] text-paper/70 mt-1.5">Oranges</p><p class="text-[10px] text-accent font-semibold">₹80</p></div>
-                    <div class="pop p3 rounded-xl bg-white/6 p-2"><span class="block h-12 rounded-lg bg-gradient-to-br from-red-300/40 to-red-500/30"></span><p class="text-[10px] text-paper/70 mt-1.5">Tomato</p><p class="text-[10px] text-accent font-semibold">₹40</p></div>
-                    <div class="pop p4 rounded-xl bg-white/6 p-2"><span class="block h-12 rounded-lg bg-gradient-to-br from-lime-300/40 to-lime-500/30"></span><p class="text-[10px] text-paper/70 mt-1.5">Spinach</p><p class="text-[10px] text-accent font-semibold">₹30</p></div>
-                  </div>
-                  <div class="mt-3 rounded-full bg-accent text-paper text-center text-xs font-medium py-2.5">Deliver in 10 min</div>
-                </div>
+          <?php
+          $bx_pf = array(
+            'freshee' => array(
+              'title' => 'Freshee',
+              'cat'   => 'D2C E-commerce',
+              'desc'  => 'Organic quick-commerce grocery &mdash; brand identity, app UI/UX and D2C storefront.',
+              'year'  => '2025',
+              'alt'   => 'Freshee organic quick-commerce grocery — case study cover',
+            ),
+            'mount-litera-zee-school' => array(
+              'title' => 'Mount Litera Zee School',
+              'cat'   => 'Education',
+              'desc'  => 'A warm, admissions-focused CBSE school website, branding and SEO.',
+              'year'  => '2025',
+              'alt'   => 'Mount Litera Zee School Alwar — school website case study cover',
+            ),
+          );
+          $bx_kids  = get_posts( array( 'post_type' => 'page', 'post_parent' => get_the_ID(), 'post_status' => 'publish', 'orderby' => 'menu_order title', 'order' => 'ASC', 'numberposts' => -1 ) );
+          $bx_cards = array();
+          foreach ( $bx_kids as $bx_kid ) {
+            if ( isset( $bx_pf[ $bx_kid->post_name ] ) ) {
+              $bx_cards[] = array( 'id' => $bx_kid->ID, 'url' => get_permalink( $bx_kid->ID ), 'm' => $bx_pf[ $bx_kid->post_name ] );
+            }
+          }
+          ?>
+          <div class="grid sm:grid-cols-2 gap-6 lg:gap-10">
+            <?php foreach ( $bx_cards as $bx_idx => $bx_c ) : $bx_m = $bx_c['m']; ?>
+            <a href="<?php echo esc_url( $bx_c['url'] ); ?>" class="pcard reveal group block"<?php echo $bx_idx ? ' data-delay="1"' : ''; ?>>
+              <div class="pf-media relative overflow-hidden rounded-xl2 border border-line">
+                <?php bx_ph_figure( 'portfolio_card_image', 'aspect-[3/4] bg-surface-2', $bx_m['cat'], $bx_m['alt'], 900, 1200, $bx_c['id'] ); ?>
+                <span class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-[3]"></span>
+                <span class="absolute top-4 left-4 z-[4] inline-flex items-center gap-1.5 rounded-full bg-paper/85 backdrop-blur-sm border border-line px-3 py-1.5 text-xs font-medium"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span> <?php echo esc_html( $bx_m['cat'] ); ?></span>
+                <span class="absolute top-4 right-4 z-[4] rounded-full bg-ink/65 text-paper backdrop-blur-sm px-3 py-1.5 text-xs font-medium"><?php echo esc_html( $bx_m['year'] ); ?></span>
               </div>
-              <div class="flex items-center justify-between mt-5">
-                <div><h3 class="font-display text-2xl tt">Freshee — Quick Commerce</h3><p class="text-sm text-ink-soft mt-1">Mobile App · UI/UX · Brand</p></div>
-                <span class="parrow grid place-items-center h-11 w-11 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
+              <div class="flex items-start justify-between gap-4 mt-6">
+                <div>
+                  <h3 class="font-display text-2xl sm:text-3xl tt group-hover:text-accent transition"><?php echo esc_html( $bx_m['title'] ); ?></h3>
+                  <p class="text-ink-soft mt-2 leading-relaxed max-w-sm"><?php echo wp_kses_post( $bx_m['desc'] ); ?></p>
+                  <span class="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-ink group-hover:text-accent transition">View case study <iconify-icon icon="lucide:arrow-right" class="transition-transform group-hover:translate-x-1"></iconify-icon></span>
+                </div>
+                <span class="parrow shrink-0 grid place-items-center h-12 w-12 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
               </div>
             </a>
-
-            <!-- AURUM — jewellery brand board -->
-            <a href="/contact/" class="pcard reveal group block md:mt-12" data-cat="branding" data-delay="1">
-              <div class="screen rounded-xl2 bg-surface border border-line p-6 overflow-hidden">
-                <div class="flex items-center justify-between mb-4"><span class="text-[11px] tracking-[.2em] uppercase text-ink-soft">Brand Board</span><span class="text-[11px] text-ink-soft">v1.0</span></div>
-                <div class="grid grid-cols-3 gap-3">
-                  <div class="pop p1 col-span-2 rounded-2xl bg-ink text-paper p-5 flex items-end min-h-[110px]"><span class="font-display text-3xl tt" style="letter-spacing:.02em">A<span class="text-accent">U</span>RUM</span></div>
-                  <div class="pop p2 rounded-2xl grid place-items-center min-h-[110px]" style="background:linear-gradient(135deg,#d9b24b,#a9812a)"><iconify-icon icon="lucide:gem" class="text-paper text-3xl"></iconify-icon></div>
-                  <div class="pop p3 rounded-xl h-12" style="background:#d9b24b"></div>
-                  <div class="pop p3 rounded-xl h-12" style="background:#2b2b2b"></div>
-                  <div class="pop p4 rounded-xl h-12 border border-line" style="background:#f3ead2"></div>
-                  <div class="pop p2 col-span-3 rounded-2xl bg-paper border border-line p-3"><p class="font-display tt text-lg">Timeless. Crafted. Yours.</p><p class="text-xs text-ink-soft">Aa Bb Cc · 0123456789</p></div>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-5">
-                <div><h3 class="font-display text-2xl tt">Aurum — Jewellery</h3><p class="text-sm text-ink-soft mt-1">Brand Identity · Visual System</p></div>
-                <span class="parrow grid place-items-center h-11 w-11 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
-              </div>
-            </a>
-
-            <!-- ASHIANA — real estate growth -->
-            <a href="/contact/" class="pcard reveal group block" data-cat="marketing">
-              <div class="screen rounded-xl2 bg-paper border border-line p-6 overflow-hidden">
-                <div class="flex items-center justify-between mb-1"><span class="text-[11px] tracking-[.2em] uppercase text-ink-soft">Leads · 90 days</span><span class="inline-flex items-center gap-1 text-sm font-semibold text-accent">+<span class="count" data-to="128">0</span>% <iconify-icon icon="lucide:trending-up"></iconify-icon></span></div>
-                <p class="font-display text-4xl tt"><span class="count" data-to="3">0</span>.4k <span class="text-base text-ink-soft font-normal">qualified leads</span></p>
-                <svg viewBox="0 0 320 120" class="w-full mt-3" fill="none">
-                  <polyline class="area" points="0,110 0,84 54,90 108,66 162,72 216,42 270,38 320,14 320,110" fill="#fa5539" fill-opacity="0.08" />
-                  <polyline class="draw" points="0,84 54,90 108,66 162,72 216,42 270,38 320,14" pathLength="1" stroke="#fa5539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                  <circle cx="320" cy="14" r="4" fill="#fa5539" />
-                </svg>
-                <div class="grid grid-cols-3 gap-2 mt-4">
-                  <div class="rounded-xl bg-surface p-2.5"><p class="text-[10px] text-ink-soft">CPL</p><p class="font-display tt">₹<span class="count" data-to="46">0</span></p></div>
-                  <div class="rounded-xl bg-surface p-2.5"><p class="text-[10px] text-ink-soft">Site visits</p><p class="font-display tt"><span class="count" data-to="610">0</span></p></div>
-                  <div class="rounded-xl bg-surface p-2.5"><p class="text-[10px] text-ink-soft">Bookings</p><p class="font-display tt text-accent"><span class="count" data-to="38">0</span></p></div>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-5">
-                <div><h3 class="font-display text-2xl tt">Ashiana — Real Estate</h3><p class="text-sm text-ink-soft mt-1">Performance Marketing · Lead Gen</p></div>
-                <span class="parrow grid place-items-center h-11 w-11 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
-              </div>
-            </a>
-
-            <!-- VEEBA — social -->
-            <a href="/contact/" class="pcard reveal group block md:mt-12" data-cat="social" data-delay="1">
-              <div class="screen rounded-xl2 bg-[#0e0e0e] border border-white/10 p-6 overflow-hidden flex justify-center">
-                <div class="w-[250px] rounded-2xl bg-[#161616] border border-white/10 p-3">
-                  <div class="flex items-center gap-2.5">
-                    <span class="h-8 w-8 rounded-full p-[1.5px] bg-gradient-to-tr from-accent via-[#ff8a5c] to-[#ffd0a8]"><span class="grid place-items-center h-full w-full rounded-full bg-[#161616] text-paper text-xs font-bold">V</span></span>
-                    <div class="leading-tight"><p class="text-paper text-xs font-semibold">veeba</p><p class="text-[10px] text-paper/40">Sponsored</p></div>
-                    <span class="ml-auto rounded-full bg-accent text-paper text-[10px] px-2.5 py-1">Follow</span>
-                  </div>
-                  <div class="pop p1 mt-3 rounded-xl h-36 bg-gradient-to-br from-[#fa5539]/40 via-[#ff8a5c]/30 to-[#1a1a1a] grid place-items-center">
-                    <span class="font-display tt text-paper text-xl">Dip into bold.</span>
-                  </div>
-                  <div class="flex items-center gap-3 mt-2.5 text-paper text-lg">
-                    <span class="beat text-accent inline-flex"><iconify-icon icon="mdi:heart"></iconify-icon></span>
-                    <iconify-icon icon="lucide:message-circle"></iconify-icon>
-                    <iconify-icon icon="lucide:send"></iconify-icon>
-                    <span class="ml-auto"><iconify-icon icon="lucide:bookmark"></iconify-icon></span>
-                  </div>
-                  <p class="text-paper text-xs font-semibold mt-2"><span class="count" data-to="14820">0</span> likes</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-5">
-                <div><h3 class="font-display text-2xl tt">Veeba — D2C Social</h3><p class="text-sm text-ink-soft mt-1">Content · Social Media · Creative</p></div>
-                <span class="parrow grid place-items-center h-11 w-11 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
-              </div>
-            </a>
-
-            <!-- SIMPLILEARN — SEO/web -->
-            <a href="/contact/" class="pcard reveal group block" data-cat="seo">
-              <div class="screen rounded-xl2 bg-paper border border-line p-6 overflow-hidden">
-                <div class="flex items-center gap-2 rounded-full border border-line px-4 py-2.5 text-sm text-ink-soft h-11"><iconify-icon icon="lucide:search"></iconify-icon> online learning platform<span class="caret"></span></div>
-                <div class="mt-4 rounded-2xl border border-line p-4">
-                  <div class="flex items-center gap-2 text-xs text-ink-soft"><span class="h-4 w-4 rounded grid place-items-center bg-accent/10 text-accent text-[9px]">S</span> www.simplilearn.com</div>
-                  <p class="font-display text-lg tt mt-1.5">Simplilearn — Online Courses & Certification</p>
-                  <span class="inline-flex items-center gap-1 mt-2 rounded-full bg-accent/10 text-accent text-xs font-semibold px-2.5 py-1">Rank #1 <iconify-icon icon="lucide:check"></iconify-icon></span>
-                </div>
-                <div class="flex items-end justify-between gap-2 h-20 mt-4">
-                  <div class="bar" style="--h:26%;width:11%;background:linear-gradient(180deg,#0a0a0a,transparent)"></div>
-                  <div class="bar" style="--h:38%;width:11%;background:linear-gradient(180deg,#0a0a0a,transparent)"></div>
-                  <div class="bar" style="--h:32%;width:11%;background:linear-gradient(180deg,#0a0a0a,transparent)"></div>
-                  <div class="bar" style="--h:50%;width:11%;background:linear-gradient(180deg,#0a0a0a,transparent)"></div>
-                  <div class="bar" style="--h:64%;width:11%;background:linear-gradient(180deg,#0a0a0a,transparent)"></div>
-                  <div class="bar" style="--h:80%;width:11%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
-                  <div class="bar" style="--h:96%;width:11%;background:linear-gradient(180deg,#fa5539,transparent)"></div>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-5">
-                <div><h3 class="font-display text-2xl tt">Simplilearn — EdTech</h3><p class="text-sm text-ink-soft mt-1">SEO · Content · Web</p></div>
-                <span class="parrow grid place-items-center h-11 w-11 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
-              </div>
-            </a>
-
-            <!-- EDOOVI tile (in grid too, for SaaS filter) -->
-            <a href="/portfolio/edoovi-erp/" class="pcard reveal group block md:mt-12" data-cat="saas branding" data-delay="1">
-              <div class="screen rounded-xl2 bg-[#0e0e0e] border border-white/10 p-6 overflow-hidden">
-                <div class="flex items-center justify-between mb-3 text-paper">
-                  <span class="font-display tt text-sm inline-flex items-center gap-2"><span class="grid place-items-center h-6 w-6 rounded-md bg-accent text-[10px] font-bold">E</span> Parent App</span>
-                  <iconify-icon icon="lucide:bell" class="text-paper/50"></iconify-icon>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="pop p1 rounded-xl bg-white/5 p-3"><iconify-icon icon="lucide:calendar-check" class="text-accent text-lg"></iconify-icon><p class="text-[10px] text-paper/50 mt-2">Attendance</p><p class="font-display tt text-paper">Present</p></div>
-                  <div class="pop p2 rounded-xl bg-white/5 p-3"><iconify-icon icon="lucide:book-open" class="text-accent text-lg"></iconify-icon><p class="text-[10px] text-paper/50 mt-2">Homework</p><p class="font-display tt text-paper"><span class="count" data-to="3">0</span> new</p></div>
-                  <div class="pop p3 rounded-xl bg-white/5 p-3"><iconify-icon icon="lucide:bus" class="text-accent text-lg"></iconify-icon><p class="text-[10px] text-paper/50 mt-2">Bus</p><p class="font-display tt text-paper">5 min</p></div>
-                  <div class="pop p4 rounded-xl bg-white/5 p-3"><iconify-icon icon="lucide:wallet" class="text-accent text-lg"></iconify-icon><p class="text-[10px] text-paper/50 mt-2">Fees</p><p class="font-display tt text-accent">Paid</p></div>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-5">
-                <div><h3 class="font-display text-2xl tt">Edoovi — Parent App</h3><p class="text-sm text-ink-soft mt-1">SaaS · App · Design System</p></div>
-                <span class="parrow grid place-items-center h-11 w-11 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span>
-              </div>
-            </a>
-          </div>
-
-          <!-- empty -->
-          <div id="gridEmpty" class="hidden text-center py-16">
-            <span class="text-4xl text-ink-soft"><iconify-icon icon="lucide:search-x"></iconify-icon></span>
-            <p class="font-display text-xl tt mt-4">No projects in this category yet</p>
-            <p class="text-ink-soft text-sm mt-1">Try another filter — or start your own.</p>
+            <?php endforeach; ?>
           </div>
         </div>
       </section>

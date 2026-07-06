@@ -144,7 +144,7 @@ get_header();
           <div class="reveal mt-8 rounded-2xl border border-line bg-surface p-6 flex flex-col sm:flex-row sm:items-center gap-5" data-delay="1">
             <span class="grid place-items-center h-14 w-14 rounded-full bg-ink text-paper shrink-0"><iconify-icon icon="lucide:badge-check" class="text-2xl text-accent"></iconify-icon></span>
             <div class="flex-1"><p class="font-display tt text-lg"><?php echo esc_html( bx_field( 'ui_ux_design_process_callout_heading', false, 'Designed by the BoostronixX product team' ) ); ?></p><p class="text-ink-soft text-sm mt-1"><?php echo esc_html( bx_field( 'ui_ux_design_process_callout_text', false, 'a senior team with deep SaaS product design experience in Jaipur, app design and D2C — the UI/UX design agency in Jaipur teams trust for accessibility-minded, developer-friendly handoff every time.' ) ); ?></p></div>
-            <a href="<?php echo esc_url( bx_field( 'ui_ux_design_process_callout_link_url', false, '/portfolio/edoovi-erp/' ) ); ?>" class="text-sm font-medium text-ink hover:text-accent inline-flex items-center gap-1.5 shrink-0"><?php echo esc_html( bx_field( 'ui_ux_design_process_callout_link_text', false, 'See the Edoovi case study' ) ); ?> <iconify-icon icon="lucide:arrow-up-right"></iconify-icon></a>
+            <a href="<?php echo esc_url( bx_field( 'ui_ux_design_process_callout_link_url', false, '/portfolio/freshee/' ) ); ?>" class="text-sm font-medium text-ink hover:text-accent inline-flex items-center gap-1.5 shrink-0"><?php echo esc_html( bx_field( 'ui_ux_design_process_callout_link_text', false, 'See the Freshee case study' ) ); ?> <iconify-icon icon="lucide:arrow-up-right"></iconify-icon></a>
           </div>
         </div>
       </section>

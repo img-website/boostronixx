@@ -37,13 +37,13 @@ function bx_legacy_url_redirects() {
 		'schools'                => '/industries/schools/',
 		'hospitals'              => '/industries/hospitals/',
 		'd2c-ecommerce'          => '/industries/d2c-ecommerce/',
-		'edoovi-erp'             => '/portfolio/edoovi-erp/',
-		'portfolio/freshee'      => '/portfolio/', // indexed case study not rebuilt yet
+		'edoovi-erp'             => '/portfolio/',
+		'portfolio/edoovi-erp'   => '/portfolio/', // case study removed (only Freshee + MLZ remain)
 		'contact-us'             => '/contact/',
 		'faq'                    => '/faqs/', // page renamed to the indexed /faqs/
 
 		// portfolio taxonomy archives (no portfolio CPT in the rebuild).
-		'portfolio/category/saas-product-design'    => '/portfolio/edoovi-erp/',
+		'portfolio/category/saas-product-design'    => '/portfolio/',
 		'portfolio/category/mobile-app-development'  => '/portfolio/',
 
 		// pruned blog tags → the most relevant surviving post / tag archive.

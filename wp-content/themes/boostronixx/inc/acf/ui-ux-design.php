@@ -289,14 +289,14 @@ function bx_acf_ui_ux_design() {
 					'name'          => 'ui_ux_design_process_callout_link_text',
 					'label'         => 'Callout — link text',
 					'type'          => 'text',
-					'default_value' => 'See the Edoovi case study',
+					'default_value' => 'See the Freshee case study',
 				),
 				array(
 					'key'           => 'f_ui_ux_design_process_callout_link_url',
 					'name'          => 'ui_ux_design_process_callout_link_url',
 					'label'         => 'Callout — link URL',
 					'type'          => 'text',
-					'default_value' => '/portfolio/edoovi-erp/',
+					'default_value' => '/portfolio/freshee/',
 				),
 
 				// ---------------- FAQ TAB ----------------

@@ -442,7 +442,7 @@ function bx_industries_render_tailor() {
 function bx_industries_render_proof() {
 	$defaults = array(
 		array( 'icon' => 'lucide:building-2', 'sector' => 'Real Estate', 'title' => 'Ashiana — +128% leads', 'cta' => 'See the work', 'link' => '/portfolio/', 'arrow' => 'lucide:arrow-up-right' ),
-		array( 'icon' => 'lucide:graduation-cap', 'sector' => 'Schools', 'title' => 'Edoovi — Smart school ERP', 'cta' => 'Read case study', 'link' => '/portfolio/edoovi-erp/', 'arrow' => 'lucide:arrow-up-right' ),
+		array( 'icon' => 'lucide:graduation-cap', 'sector' => 'Schools', 'title' => 'Mount Litera Zee School — CBSE school website', 'cta' => 'Read case study', 'link' => '/portfolio/mount-litera-zee-school/', 'arrow' => 'lucide:arrow-up-right' ),
 		array( 'icon' => 'lucide:shopping-bag', 'sector' => 'D2C eCommerce', 'title' => 'Veeba — Social content', 'cta' => 'See the work', 'link' => '/portfolio/', 'arrow' => 'lucide:arrow-up-right' ),
 		array( 'icon' => 'lucide:heart-pulse', 'sector' => 'Hospitals', 'title' => 'CityCare — +142% enquiries', 'cta' => 'See the work', 'link' => '/portfolio/', 'arrow' => 'lucide:arrow-up-right' ),
 	);

@@ -743,8 +743,8 @@ function bx_home_marquee_row() {
  */
 function bx_home_render_work() {
 	$defaults = array(
-		array( 'title' => 'Edoovi — ERP SaaS', 'subtitle' => 'Product design · Branding · Web', 'url' => home_url( '/portfolio/edoovi-erp/' ), 'img' => '' ),
-		array( 'title' => 'Freshee — Quick Commerce', 'subtitle' => 'Mobile app · UI/UX · Brand', 'url' => home_url( '/portfolio/' ), 'img' => '' ),
+		array( 'title' => 'Freshee — Quick Commerce', 'subtitle' => 'E-commerce · App · Brand', 'url' => home_url( '/portfolio/freshee/' ), 'img' => '' ),
+		array( 'title' => 'Mount Litera Zee School', 'subtitle' => 'School website · Branding · SEO', 'url' => home_url( '/portfolio/mount-litera-zee-school/' ), 'img' => '' ),
 	);
 	$items = array();
 	if ( function_exists( 'have_rows' ) && have_rows( 'work_projects' ) ) {
@@ -764,7 +764,7 @@ function bx_home_render_work() {
 	}
 
 	foreach ( $items as $i => $w ) {
-		$offset = 0 === $i ? '' : ' md:mt-16';
+		$offset = ( 1 === $i % 2 ) ? ' md:mt-16' : '';
 		$delay  = 0 === $i ? '' : ' data-delay="1"';
 		$imgtag = $w['img'] ? '<img src="' . esc_url( $w['img'] ) . '" alt="' . esc_attr( $w['title'] ) . '" width="1280" height="880" loading="lazy" />' : '<figcaption class="lbl"><b style="color:#7d7d7d">Project · 1280×880</b><span style="color:#6a6a6a">' . esc_html( $w['title'] ) . '</span></figcaption>';
 		printf(

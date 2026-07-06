@@ -74,7 +74,7 @@ function bx_appnav_is_active( $key ) {
 
 	$map = array(
 		'services'  => array( 'services', 'digital-marketing', 'seo-services', 'performance-marketing', 'social-media-marketing', 'brand-consulting', 'website-design', 'ui-ux-design' ),
-		'portfolio' => array( 'portfolio', 'edoovi-erp' ),
+		'portfolio' => array( 'portfolio' ),
 		'contact'   => array( 'contact-us' ),
 	);
 

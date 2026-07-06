@@ -611,7 +611,7 @@ function bx_schools_render_faqs() {
 		),
 		array(
 			'q' => 'Do you also help with school management software?',
-			'a' => 'Yes. Beyond marketing, we designed Edoovi — an AI-powered school ERP that connects administration, teachers, parents and students with attendance, fees, transport and communication in one platform. See the Edoovi case study to learn more.',
+			'a' => 'Yes. Beyond marketing, we designed Edoovi — an AI-powered school ERP that connects administration, teachers, parents and students with attendance, fees, transport and communication in one platform.',
 		),
 	);
 
@@ -649,7 +649,7 @@ function bx_schools_render_faqs() {
 function bx_schools_render_related() {
 	$defaults = array(
 		array( 'icon' => 'lucide:target', 'title' => 'Performance Marketing', 'meta' => 'Admission campaigns', 'url' => '/services/performance-marketing/' ),
-		array( 'icon' => 'lucide:layout-dashboard', 'title' => 'Edoovi School ERP', 'meta' => 'Our case study', 'url' => '/portfolio/edoovi-erp/' ),
+		array( 'icon' => 'lucide:layout-dashboard', 'title' => 'Mount Litera Zee School — website case study', 'meta' => 'Our case study', 'url' => '/portfolio/mount-litera-zee-school/' ),
 		array( 'icon' => 'lucide:layers', 'title' => 'All Industries', 'meta' => 'Other sectors', 'url' => '/industries/' ),
 	);
 

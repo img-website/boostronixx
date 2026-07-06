@@ -117,3 +117,45 @@ function bx_cta_image( $selector, $fallback = '', $post_id = false, $alt = 'Boos
 		esc_attr( $alt )
 	);
 }
+
+/**
+ * Render a placeholder-aware image figure (the `.imgph` pattern).
+ *
+ * When the ACF image is set it renders a covering <img> (with static
+ * width/height + alt/title); otherwise it shows the dashed "coming soon"
+ * caption so the layout is complete before the client supplies real photos.
+ * `$classes` carries the aspect-ratio + background utilities (e.g.
+ * "aspect-[16/10] bg-surface" or "aspect-[4/3] !bg-[#141414]").
+ *
+ * @param string   $selector ACF image field name.
+ * @param string   $classes  Extra figure utility classes (aspect + bg).
+ * @param string   $label    Small uppercase placeholder label.
+ * @param string   $alt      Alt/title text (and placeholder sub-line).
+ * @param int      $width    Static width attribute.
+ * @param int      $height   Static height attribute.
+ * @param int|bool $post_id  Optional post ID.
+ * @return void
+ */
+function bx_ph_figure( $selector, $classes, $label, $alt, $width = 1280, $height = 800, $post_id = false ) {
+	$url = bx_img_url( $selector, '', $post_id );
+	printf( '<figure class="imgph rounded-xl2 %s">', esc_attr( $classes ) );
+	if ( $url ) {
+		printf(
+			'<img src="%s" alt="%s" title="%s" width="%d" height="%d" loading="lazy" />',
+			esc_url( $url ),
+			esc_attr( $alt ),
+			esc_attr( $alt ),
+			(int) $width,
+			(int) $height
+		);
+	} else {
+		printf(
+			'<figcaption class="lbl"><b>%s · %d×%d</b><span>%s</span></figcaption>',
+			esc_html( $label ),
+			(int) $width,
+			(int) $height,
+			esc_html( $alt )
+		);
+	}
+	echo '</figure>';
+}
