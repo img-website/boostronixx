@@ -34,6 +34,7 @@ function bx_acf_cta_images() {
 		'performance-marketing'  => 'performance_marketing_cta_image',
 		'portfolio'              => 'portfolio_cta_image',
 		'schools'                => 'schools_cta_image',
+		'seo-services'           => 'seo_services_cta_image',
 		'real-estate'            => 'real_estate_cta_image',
 		'social-media-marketing' => 'social_media_marketing_cta_image',
 		'ui-ux-design'           => 'ui_ux_design_cta_image',

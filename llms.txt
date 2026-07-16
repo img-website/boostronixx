@@ -2,16 +2,16 @@
 
 The XML sitemap of this website can by found by following [this link](https://boostronixx.test/sitemap_index.xml).
 
-# BoostronixX
+# BoostronixX: Building Brands That Last
 
-> BoostronixX is Jaipur's top\-rated digital marketing agency offering SEO, Google Ads, social media, branding \& performance marketing\. ROI\-driven results\. Free consultation\.
+> BoostronixX is Jaipur's top\-rated digital marketing agency jaipur for SEO, Google Ads, social media, branding \& performance marketing\. ROI\-driven\. Free consultation\.
 
 ## Pages
-- [Sitemap](https://boostronixx.test/sitemap/)
-- [Disclaimer](https://boostronixx.test/disclaimer/)
-- [Terms and Conditions](https://boostronixx.test/terms-and-conditions/)
-- [Privacy Policy](https://boostronixx.test/privacy-policy/)
-- [FAQ](https://boostronixx.test/faq/)
+- [Mount Litera Zee School, Alwar](https://boostronixx.test/portfolio/mount-litera-zee-school/)
+- [Freshee](https://boostronixx.test/portfolio/freshee/)
+- [FAQ](https://boostronixx.test/faqs/)
+- [Contact Us](https://boostronixx.test/contact/)
+- [D2C Ecommerce](https://boostronixx.test/industries/d2c-ecommerce/)
 
 ## Posts
 - [Why Ads Alone Don’t Work: Funnel\-Based Performance Marketing Explained](https://boostronixx.test/blog/why-ads-alone-dont-work-funnel-based-performance-marketing/): Running ads without a funnel is just burning budget\. Here's why funnel\-based performance marketing outperforms standalone ads — plus a step\-by\-step guide to building a TOFU\-MOFU\-BOFU system that actually converts\.

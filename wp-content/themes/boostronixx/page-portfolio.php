@@ -105,7 +105,7 @@ get_header();
             <?php foreach ( $bx_cards as $bx_idx => $bx_c ) : $bx_m = $bx_c['m']; ?>
             <a href="<?php echo esc_url( $bx_c['url'] ); ?>" class="pcard reveal group block"<?php echo $bx_idx ? ' data-delay="1"' : ''; ?>>
               <div class="pf-media relative overflow-hidden rounded-xl2 border border-line">
-                <?php bx_ph_figure( 'portfolio_card_image', 'aspect-[3/4] bg-surface-2', $bx_m['cat'], $bx_m['alt'], 900, 1200, $bx_c['id'] ); ?>
+                <?php bx_ph_figure( 'portfolio_card_image', 'aspect-[1069/770] bg-surface-2 mb-0', $bx_m['cat'], $bx_m['alt'], 1069, 770, $bx_c['id'] ); ?>
                 <span class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-[3]"></span>
                 <span class="absolute top-4 left-4 z-[4] inline-flex items-center gap-1.5 rounded-full bg-paper/85 backdrop-blur-sm border border-line px-3 py-1.5 text-xs font-medium"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span> <?php echo esc_html( $bx_m['cat'] ); ?></span>
                 <span class="absolute top-4 right-4 z-[4] rounded-full bg-ink/65 text-paper backdrop-blur-sm px-3 py-1.5 text-xs font-medium"><?php echo esc_html( $bx_m['year'] ); ?></span>

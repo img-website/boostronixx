@@ -62,29 +62,7 @@ get_header();
                   <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
                   <span class="ml-3 flex-1 rounded-full bg-white/6 px-3 py-1 text-[10px] text-paper/40 flex items-center gap-1.5"><iconify-icon icon="lucide:lock" class="text-indigo-400"></iconify-icon> mlzsalwar.ac.in</span>
                 </div>
-                <div class="rounded-xl bg-[#12141d] overflow-hidden">
-                  <!-- site nav -->
-                  <div class="flex items-center justify-between px-4 py-2.5 border-b border-white/8 text-paper">
-                    <span class="font-display tt text-xs inline-flex items-center gap-1.5"><span class="grid place-items-center h-5 w-5 rounded-md bg-indigo-500 text-[9px] font-bold">M</span> Mount Litera</span>
-                    <span class="hidden sm:flex items-center gap-2.5 text-[9px] text-paper/50">Programs <span>Admissions</span> <span>Campus</span><span class="rounded-full bg-accent text-paper px-2.5 py-1">Enquire</span></span>
-                  </div>
-                  <!-- hero band -->
-                  <div class="grid grid-cols-[1.3fr_1fr] gap-3 items-center p-4">
-                    <div>
-                      <span class="inline-flex items-center gap-1 rounded-full bg-amber-400/15 text-amber-300 text-[9px] px-2 py-1"><span class="live inline-block h-1.5 w-1.5 rounded-full bg-amber-400"></span> Admissions Open · 2026–27</span>
-                      <p class="font-display tt text-paper text-lg leading-tight mt-2">A great school for a great future</p>
-                      <p class="text-[10px] text-paper/45 mt-1">CBSE · Nursery to Grade 12 · Alwar</p>
-                      <span class="inline-flex mt-2 rounded-full bg-accent text-paper text-[10px] px-3 py-1.5">Book a school tour</span>
-                    </div>
-                    <div class="pop p1 rounded-xl bg-gradient-to-br from-indigo-500/40 to-indigo-800/20 h-24 grid place-items-center text-indigo-100/70 text-3xl"><iconify-icon icon="lucide:graduation-cap"></iconify-icon></div>
-                  </div>
-                  <!-- stat strip -->
-                  <div class="grid grid-cols-3 gap-2 px-4 pb-4">
-                    <div class="pop p2 rounded-lg bg-white/5 p-2 text-center"><p class="font-display tt text-paper text-sm">CBSE</p><p class="text-[8px] text-paper/45">Affiliated</p></div>
-                    <div class="pop p3 rounded-lg bg-white/5 p-2 text-center"><p class="font-display tt text-amber-300 text-sm">12:1</p><p class="text-[8px] text-paper/45">Student-teacher</p></div>
-                    <div class="pop p4 rounded-lg bg-white/5 p-2 text-center"><p class="font-display tt text-paper text-sm">N–12</p><p class="text-[8px] text-paper/45">All grades</p></div>
-                  </div>
-                </div>
+                <?php bx_ph_figure( 'mlz_hero_image', 'aspect-[1280/635] !rounded-xl !bg-[#12141d]', 'Website homepage', 'Mount Litera Zee School Alwar website homepage designed by BoostronixX', 1280, 635 ); ?>
               </div>
             </div>
           </div>
@@ -153,23 +131,9 @@ get_header();
               <div class="reveal flex items-center gap-3 rounded-xl border border-line bg-paper p-4" data-delay="1"><span class="text-accent text-xl"><iconify-icon icon="lucide:gauge"></iconify-icon></span><span class="font-medium text-sm">Fast on mobile</span></div>
             </div>
           </div>
-          <!-- admissions enquiry mock -->
-          <div class="reveal flex justify-center" data-delay="1">
-            <div class="w-full max-w-sm rounded-xl2 bg-[#0e1016] border border-white/10 p-6 shadow-[0_50px_100px_-50px_rgba(10,12,22,.5)]">
-              <div class="flex items-center justify-between text-paper">
-                <span class="font-display tt text-sm inline-flex items-center gap-2"><span class="grid place-items-center h-6 w-6 rounded-md bg-indigo-500 text-[10px] font-bold">M</span> Admissions Enquiry</span>
-                <span class="rounded-full bg-amber-400/15 text-amber-300 text-[10px] px-2 py-1">2026–27</span>
-              </div>
-              <div class="mt-5 space-y-3">
-                <div class="pop p1 rounded-xl bg-white/5 px-3 py-2.5"><p class="text-[9px] text-paper/40">Child's name</p><p class="text-paper text-sm">Aarav Sharma<span class="caret"></span></p></div>
-                <div class="grid grid-cols-2 gap-3">
-                  <div class="pop p2 rounded-xl bg-white/5 px-3 py-2.5"><p class="text-[9px] text-paper/40">Grade</p><p class="text-paper text-sm">Class 3</p></div>
-                  <div class="pop p3 rounded-xl bg-white/5 px-3 py-2.5"><p class="text-[9px] text-paper/40">Parent mobile</p><p class="text-paper text-sm">+91 96727…</p></div>
-                </div>
-                <div class="pop p4 rounded-full bg-accent text-paper text-center text-xs font-medium py-3 flex items-center justify-center gap-1.5"><iconify-icon icon="lucide:send"></iconify-icon> Submit enquiry</div>
-                <div class="pop p5 flex items-center gap-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 px-3 py-2.5 text-[11px] text-emerald-300"><iconify-icon icon="lucide:check-circle-2"></iconify-icon> Thanks! Our admissions team will call you shortly.</div>
-              </div>
-            </div>
+                    <!-- admissions experience image -->
+          <div class="reveal" data-delay="1">
+            <?php bx_ph_figure( 'mlz_features_image', 'aspect-[1076/869] bg-surface-2', 'Admissions experience', 'A family exploring the Mount Litera Zee School Alwar website on a phone', 1076, 869 ); ?>
           </div>
         </div>
       </section>
@@ -236,7 +200,7 @@ get_header();
                   <a href="/industries/schools/" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:school" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10">Schools we serve</span></a>
                 </div>
               </div>
-              <?php bx_cta_image( 'mlz_cta_image', '', false, 'Start a school website project with BoostronixX — Mount Litera Zee School case study', 420, 525 ); ?>
+              <?php bx_cta_image( 'mlz_cta_image', '', false, 'Start a school website project with BoostronixX — Mount Litera Zee School case study', 420, 464 ); ?>
             </div>
           </div>
         </div>

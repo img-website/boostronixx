@@ -43,6 +43,8 @@ function bx_acf_mlz_images() {
 			'key'            => 'group_bx_mlz_images',
 			'title'          => 'Mount Litera Zee School — case-study images',
 			'fields'         => array(
+				$img( 'field_bx_mlz_hero', 'mlz_hero_image', 'Hero — website homepage', 'Shown inside the browser frame in the hero. Wide ~1280×635 (the browser chrome around it is built in code).' ),
+				$img( 'field_bx_mlz_features', 'mlz_features_image', 'Features — admissions experience', 'Shown in “Everything a parent needs, nothing in the way”. ~1076×869.' ),
 				$img( 'field_bx_mlz_website', 'mlz_website_image', 'Website homepage', 'Showcase — desktop screenshot of the school website homepage. Landscape ~16:10.' ),
 				$img( 'field_bx_mlz_mobile', 'mlz_mobile_image', 'Mobile view', 'Showcase — responsive mobile screenshot / admissions enquiry. Portrait ~4:5.' ),
 				$img( 'field_bx_mlz_campus', 'mlz_campus_image', 'Campus gallery', 'Showcase — wide campus-life photo (classrooms, sports, arts). Landscape ~16:7.' ),

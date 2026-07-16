@@ -55,32 +55,9 @@ get_header();
               </div>
             </div>
 
-            <!-- hero grocery app mock -->
+                        <!-- hero art (transparent cut-out render) -->
             <div class="lg:col-span-6 reveal flex justify-center" data-delay="1">
-              <div class="w-[300px] rounded-[2.4rem] bg-[#0c130f] border border-white/12 p-4 shadow-[0_50px_100px_-50px_rgba(10,20,12,.6)]">
-                <div class="flex justify-center"><span class="h-1.5 w-14 rounded-full bg-white/15"></span></div>
-                <div class="mt-4 flex items-center justify-between text-paper">
-                  <div class="flex items-center gap-2">
-                    <span class="grid place-items-center h-8 w-8 rounded-xl bg-emerald-500 text-xs font-bold"><iconify-icon icon="lucide:sprout"></iconify-icon></span>
-                    <div class="leading-tight"><p class="font-display tt text-sm">Freshee</p><p class="text-[10px] text-paper/40 flex items-center gap-1"><iconify-icon icon="lucide:map-pin" class="text-emerald-400"></iconify-icon> Jabalpur · 10 min</p></div>
-                  </div>
-                  <span class="relative grid place-items-center h-8 w-8 rounded-full bg-white/8 text-paper"><iconify-icon icon="lucide:shopping-cart"></iconify-icon><span class="absolute -top-1 -right-1 h-4 w-4 grid place-items-center rounded-full bg-accent text-[9px] font-bold"><span class="count" data-to="6">0</span></span></span>
-                </div>
-                <div class="mt-3 flex items-center gap-1.5 rounded-full bg-white/6 px-3 py-2.5 text-[11px] text-paper/50"><iconify-icon icon="lucide:search"></iconify-icon> Fresh fruits<span class="caret"></span></div>
-                <div class="mt-3 flex items-center gap-2 overflow-hidden text-[10px]">
-                  <span class="shrink-0 rounded-full bg-emerald-500/15 text-emerald-300 px-2.5 py-1 font-medium">All</span>
-                  <span class="shrink-0 rounded-full bg-white/6 text-paper/60 px-2.5 py-1">Vegetables</span>
-                  <span class="shrink-0 rounded-full bg-white/6 text-paper/60 px-2.5 py-1">Fruits</span>
-                  <span class="shrink-0 rounded-full bg-white/6 text-paper/60 px-2.5 py-1">Juices</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2 mt-3">
-                  <div class="pop p1 rounded-2xl bg-white/6 p-2.5"><span class="block h-14 rounded-xl bg-gradient-to-br from-emerald-400/50 to-emerald-700/30 grid place-items-center text-emerald-100/70 text-xl"><iconify-icon icon="lucide:apple"></iconify-icon></span><p class="text-[10px] text-paper/70 mt-1.5 flex items-center gap-1"><iconify-icon icon="lucide:badge-check" class="text-emerald-400"></iconify-icon> Avocado</p><div class="flex items-center justify-between mt-0.5"><p class="text-[10px] text-paper font-semibold">₹120</p><span class="grid place-items-center h-5 w-5 rounded-md bg-accent text-paper text-[10px]">+</span></div></div>
-                  <div class="pop p2 rounded-2xl bg-white/6 p-2.5"><span class="block h-14 rounded-xl bg-gradient-to-br from-orange-300/50 to-orange-500/30 grid place-items-center text-orange-100/70 text-xl"><iconify-icon icon="lucide:citrus"></iconify-icon></span><p class="text-[10px] text-paper/70 mt-1.5 flex items-center gap-1"><iconify-icon icon="lucide:badge-check" class="text-emerald-400"></iconify-icon> Oranges</p><div class="flex items-center justify-between mt-0.5"><p class="text-[10px] text-paper font-semibold">₹80</p><span class="grid place-items-center h-5 w-5 rounded-md bg-accent text-paper text-[10px]">+</span></div></div>
-                  <div class="pop p3 rounded-2xl bg-white/6 p-2.5"><span class="block h-14 rounded-xl bg-gradient-to-br from-red-300/50 to-red-500/30 grid place-items-center text-red-100/70 text-xl"><iconify-icon icon="lucide:cherry"></iconify-icon></span><p class="text-[10px] text-paper/70 mt-1.5 flex items-center gap-1"><iconify-icon icon="lucide:badge-check" class="text-emerald-400"></iconify-icon> Tomato</p><div class="flex items-center justify-between mt-0.5"><p class="text-[10px] text-paper font-semibold">₹40</p><span class="grid place-items-center h-5 w-5 rounded-md bg-accent text-paper text-[10px]">+</span></div></div>
-                  <div class="pop p4 rounded-2xl bg-white/6 p-2.5"><span class="block h-14 rounded-xl bg-gradient-to-br from-lime-300/50 to-lime-600/30 grid place-items-center text-lime-100/70 text-xl"><iconify-icon icon="lucide:leaf"></iconify-icon></span><p class="text-[10px] text-paper/70 mt-1.5 flex items-center gap-1"><iconify-icon icon="lucide:badge-check" class="text-emerald-400"></iconify-icon> Spinach</p><div class="flex items-center justify-between mt-0.5"><p class="text-[10px] text-paper font-semibold">₹30</p><span class="grid place-items-center h-5 w-5 rounded-md bg-accent text-paper text-[10px]">+</span></div></div>
-                </div>
-                <div class="mt-3 rounded-2xl bg-accent text-paper flex items-center justify-between px-4 py-3 text-xs font-medium"><span class="flex items-center gap-1.5"><iconify-icon icon="lucide:bike"></iconify-icon> Deliver in 10 min</span><span class="font-display tt">₹270</span></div>
-              </div>
+              <?php bx_ph_image( 'freshee_hero_image', 'w-full max-w-[420px] h-auto object-contain', 'Hero render', 'Freshee organic grocery app on a smartphone beside a shopper carrying fresh produce', 795, 1175 ); ?>
             </div>
           </div>
         </div>
@@ -155,26 +132,7 @@ get_header();
                 <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
                 <span class="ml-3 flex-1 rounded-full bg-white/6 px-3 py-1 text-[10px] text-paper/40 flex items-center gap-1.5"><iconify-icon icon="lucide:lock" class="text-emerald-400"></iconify-icon> freshee.shop</span>
               </div>
-              <div class="rounded-xl bg-[#0f1712] p-4">
-                <div class="flex items-center justify-between text-paper">
-                  <span class="font-display tt text-sm inline-flex items-center gap-1.5"><iconify-icon icon="lucide:sprout" class="text-emerald-400"></iconify-icon> Freshee</span>
-                  <span class="hidden sm:flex items-center gap-3 text-[10px] text-paper/50">Shop <span>Organic</span> <span>About</span> <span class="rounded-full bg-accent text-paper px-2.5 py-1">Order now</span></span>
-                </div>
-                <div class="mt-4 grid grid-cols-[1.3fr_1fr] gap-3 items-center">
-                  <div>
-                    <p class="font-display tt text-paper text-lg leading-tight">Freshness at your doorstep</p>
-                    <p class="text-[10px] text-paper/45 mt-1">100% organic · delivered in minutes</p>
-                    <span class="inline-flex mt-2 rounded-full bg-emerald-500 text-paper text-[10px] px-3 py-1.5">Start shopping</span>
-                  </div>
-                  <div class="rounded-xl bg-gradient-to-br from-emerald-400/40 to-emerald-700/20 h-20 grid place-items-center text-emerald-100/70 text-2xl"><iconify-icon icon="lucide:shopping-basket"></iconify-icon></div>
-                </div>
-                <div class="grid grid-cols-4 gap-2 mt-3">
-                  <div class="pop p1 rounded-lg bg-white/6 h-12 grid place-items-center text-emerald-300"><iconify-icon icon="lucide:carrot"></iconify-icon></div>
-                  <div class="pop p2 rounded-lg bg-white/6 h-12 grid place-items-center text-orange-300"><iconify-icon icon="lucide:citrus"></iconify-icon></div>
-                  <div class="pop p3 rounded-lg bg-white/6 h-12 grid place-items-center text-lime-300"><iconify-icon icon="lucide:leaf"></iconify-icon></div>
-                  <div class="pop p4 rounded-lg bg-white/6 h-12 grid place-items-center text-red-300"><iconify-icon icon="lucide:cherry"></iconify-icon></div>
-                </div>
-              </div>
+              <?php bx_ph_figure( 'freshee_features_image', 'aspect-[1340/630] !rounded-xl !bg-[#0f1712]', 'Storefront render', 'Freshee app and D2C storefront — 3D render of the shopping journey', 1340, 630 ); ?>
             </div>
           </div>
         </div>
@@ -199,7 +157,7 @@ get_header();
             </div>
           </div>
           <div class="reveal mt-5" data-delay="1">
-            <?php bx_ph_figure( 'freshee_storefront_image', 'aspect-[16/7] bg-surface-2', 'D2C storefront', 'Freshee D2C e-commerce storefront shown responsively on desktop and mobile', 1600, 700 ); ?>
+            <?php bx_ph_figure( 'freshee_storefront_image', 'aspect-[1800/620] bg-surface-2', 'D2C storefront', 'Freshee D2C e-commerce storefront shown responsively on desktop and mobile', 1800, 620 ); ?>
             <p class="text-sm text-ink-soft mt-3">D2C storefront · responsive freshee.shop layout that mirrors the app</p>
           </div>
         </div>

@@ -119,6 +119,48 @@ function bx_cta_image( $selector, $fallback = '', $post_id = false, $alt = 'Boos
 }
 
 /**
+ * Render a placeholder-aware image at its NATURAL ratio (no crop, no backdrop).
+ *
+ * For transparent cut-out renders (hero art) that must sit directly on the page
+ * background — unlike bx_ph_figure(), which cover-crops inside a tinted box.
+ * Loads eagerly since these are above-the-fold LCP art.
+ *
+ * @param string   $selector ACF image field name.
+ * @param string   $classes  Utility classes for the <img> (sizing + object-fit).
+ * @param string   $label    Small uppercase placeholder label.
+ * @param string   $alt      Alt/title text.
+ * @param int      $width    Static width attribute (native).
+ * @param int      $height   Static height attribute (native).
+ * @param int|bool $post_id  Optional post ID.
+ * @return void
+ */
+function bx_ph_image( $selector, $classes, $label, $alt, $width, $height, $post_id = false ) {
+	$url = bx_img_url( $selector, '', $post_id );
+	if ( $url ) {
+		printf(
+			'<img width="%d" height="%d" src="%s" alt="%s" title="%s" loading="eager" fetchpriority="high" class="%s" />',
+			(int) $width,
+			(int) $height,
+			esc_url( $url ),
+			esc_attr( $alt ),
+			esc_attr( $alt ),
+			esc_attr( $classes )
+		);
+		return;
+	}
+	printf(
+		'<figure class="imgph rounded-xl2 bg-surface-2 %s" style="aspect-ratio:%d/%d"><figcaption class="lbl"><b>%s · %d×%d</b><span>%s</span></figcaption></figure>',
+		esc_attr( $classes ),
+		(int) $width,
+		(int) $height,
+		esc_html( $label ),
+		(int) $width,
+		(int) $height,
+		esc_html( $alt )
+	);
+}
+
+/**
  * Render a placeholder-aware image figure (the `.imgph` pattern).
  *
  * When the ACF image is set it renders a covering <img> (with static

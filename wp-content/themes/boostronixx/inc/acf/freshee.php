@@ -43,6 +43,8 @@ function bx_acf_freshee_images() {
 			'key'            => 'group_bx_freshee_images',
 			'title'          => 'Freshee — case-study images',
 			'fields'         => array(
+				$img( 'field_bx_freshee_hero', 'freshee_hero_image', 'Hero art (cut-out)', 'Hero — transparent cut-out render (app + shopper). Portrait ~795×1175. Shown at natural size on the page background, so use a PNG/WebP with transparency.' ),
+				$img( 'field_bx_freshee_features', 'freshee_features_image', 'Features — storefront render', 'Shown inside the browser frame in “An app and storefront made to reorder”. Wide ~1340×630 (the browser chrome around it is built in code).' ),
 				$img( 'field_bx_freshee_app', 'freshee_app_image', 'App UI screens', 'Showcase — Freshee app screens (home, category, product, cart). Landscape ~16:10.' ),
 				$img( 'field_bx_freshee_brandboard', 'freshee_brandboard_image', 'Brand board', 'Showcase — logo, colour palette and typography. Portrait ~4:5.' ),
 				$img( 'field_bx_freshee_storefront', 'freshee_storefront_image', 'D2C storefront', 'Showcase — freshee.shop responsive storefront (wide). Landscape ~16:7.' ),

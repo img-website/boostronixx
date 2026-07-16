@@ -29,13 +29,13 @@ function bx_acf_portfolio_cards() {
 				array(
 					'key'           => 'field_bx_portfolio_card_image',
 					'name'          => 'portfolio_card_image',
-					'label'         => 'Portfolio cover (3:4)',
+					'label'         => 'Portfolio cover (1069×770)',
 					'type'          => 'image',
 					'return_format' => 'array',
 					'preview_size'  => 'medium',
 					'library'       => 'all',
 					'mime_types'    => 'jpg,jpeg,png,webp,avif',
-					'instructions'  => 'Portrait 3:4 cover shown for this project on the Portfolio listing (two per row). Leave empty to show a placeholder.',
+					'instructions'  => 'Landscape cover shown for this project on the Portfolio listing (two per row). Use 1069×770 to match the grid exactly — other ratios will be cropped to fit. Leave empty to show a placeholder.',
 				),
 			),
 			'location'        => array(

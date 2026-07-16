@@ -3581,3 +3581,14 @@ figure.mt-10{margin-top:calc(var(--spacing)*10)}
 figure.mt-12{margin-top:calc(var(--spacing)*12)}
 figure.mt-14{margin-top:calc(var(--spacing)*14)}
 figure.mt-16{margin-top:calc(var(--spacing)*16)}
+
+/* Same unlayered-preflight problem as the mt-* case above: `:where(figure)`
+   ships `margin:0 0 1em`, and being UNLAYERED it beats the layered `mb-*`
+   utilities — so `mb-0` on a <figure> silently computed to 16px and left a gap
+   under image cards. Restore the mb-* utilities for <figure> explicitly. */
+figure.mb-0{margin-bottom:0}
+figure.mb-2{margin-bottom:calc(var(--spacing)*2)}
+figure.mb-3{margin-bottom:calc(var(--spacing)*3)}
+figure.mb-4{margin-bottom:calc(var(--spacing)*4)}
+figure.mb-6{margin-bottom:calc(var(--spacing)*6)}
+figure.mb-8{margin-bottom:calc(var(--spacing)*8)}

@@ -299,15 +299,18 @@ get_header();
           $seo_cta_btn_url   = is_array( $seo_cta_btn ) && ! empty( $seo_cta_btn['url'] ) ? $seo_cta_btn['url'] : '/contact/';
           $seo_cta_btn_label = is_array( $seo_cta_btn ) && ! empty( $seo_cta_btn['title'] ) ? $seo_cta_btn['title'] : 'Get my free SEO audit';
           ?>
-          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 py-16 sm:py-20 overflow-hidden">
+          <div class="relative rounded-xl2 bg-ink text-paper px-6 sm:px-16 overflow-hidden">
             <div class="absolute inset-0 grid-lines opacity-[0.06]"></div>
-            <div class="relative max-w-2xl">
-              <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'seo_services_cta_heading', false, 'Ready to rank on page one?' ) ); ?></h2>
-              <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'seo_services_cta_text', false, "Get a free SEO audit of your site — we'll show you the quick wins and a clear path to more organic leads." ) ); ?></p>
-              <div class="flex flex-wrap items-center gap-3 mt-9">
-                <a href="<?php echo esc_url( $seo_cta_btn_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light"><?php echo esc_html( $seo_cta_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
-                <a href="<?php echo esc_url( bx_field( 'seo_services_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( bx_field( 'seo_services_cta_phone', false, '+91 80582 12202' ) ); ?></span></a>
+            <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+              <div class="relative max-w-2xl py-16">
+                <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'seo_services_cta_heading', false, 'Ready to rank on page one?' ) ); ?></h2>
+                <p class="text-paper/70 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'seo_services_cta_text', false, "Get a free SEO audit of your site — we'll show you the quick wins and a clear path to more organic leads." ) ); ?></p>
+                <div class="flex flex-wrap items-center gap-3 mt-9">
+                  <a href="<?php echo esc_url( $seo_cta_btn_url ); ?>" class="group btn-glow-accent inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><span class="relative z-10 sheen-text-light"><?php echo esc_html( $seo_cta_btn_label ); ?></span><iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon></a>
+                  <a href="<?php echo esc_url( bx_field( 'seo_services_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="group btn-glow-light inline-flex items-center gap-2 rounded-full px-7 py-4 font-medium"><iconify-icon icon="lucide:phone" class="relative z-10 shrink-0"></iconify-icon><span class="relative z-10"><?php echo esc_html( bx_field( 'seo_services_cta_phone', false, '+91 80582 12202' ) ); ?></span></a>
+                </div>
               </div>
+              <?php bx_cta_image( 'seo_services_cta_image', '', false, 'SEO expert reviewing rankings growth on a tablet — BoostronixX SEO services', 420, 447 ); ?>
             </div>
           </div>
         </div>
