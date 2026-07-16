@@ -111,7 +111,28 @@ get_header();
               <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="blog articles insights"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:newspaper"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Blog</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
               <?php
               // Dynamic: every published blog post (capped for performance per CLAUDE.md §7).
-              foreach ( get_posts( array( 'numberposts' => 100, 'post_status' => 'publish', 'no_found_rows' => true ) ) as $bx_sp ) :
+              // Yoast's per-post "noindex" is honoured here too: a post we're telling
+              // Google to skip shouldn't be advertised on the human sitemap either.
+              // Yoast stores 1 = noindex, 2 = index, missing = follow the site default.
+              foreach ( get_posts(
+                  array(
+                      'numberposts'  => 100,
+                      'post_status'  => 'publish',
+                      'no_found_rows' => true,
+                      'meta_query'   => array(
+                          'relation' => 'OR',
+                          array(
+                              'key'     => '_yoast_wpseo_meta-robots-noindex',
+                              'compare' => 'NOT EXISTS',
+                          ),
+                          array(
+                              'key'     => '_yoast_wpseo_meta-robots-noindex',
+                              'value'   => '1',
+                              'compare' => '!=',
+                          ),
+                      ),
+                  )
+              ) as $bx_sp ) :
                   ?>
               <a href="<?php echo esc_url( get_permalink( $bx_sp ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="<?php echo esc_attr( 'article post ' . strtolower( $bx_sp->post_title ) ); ?>"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:file-text"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label"><?php echo esc_html( $bx_sp->post_title ); ?></span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
               <?php endforeach; ?>
