@@ -229,7 +229,7 @@ while ( have_posts() ) :
                     $bx_rpc = bx_primary_category();
                     ?>
               <a href="<?php the_permalink(); ?>" class="relpost group block">
-                <div class="relimg imgph rounded-xl2 aspect-[3/4]"><div class="ph-zoom absolute inset-0 z-0" style="background:<?php echo esc_attr( $bx_relgrads[ $bx_ri % 3 ] ); ?>" aria-hidden="true"></div><?php if ( has_post_thumbnail() ) : ?><img width="395" height="526" src="<?php echo esc_url( get_the_post_thumbnail_url( null, 'bx-blog-cover' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy" /><?php endif; ?></div>
+                <div class="relimg imgph rounded-xl2 aspect-[3/3.7]"><div class="ph-zoom absolute inset-0 z-0" style="background:<?php echo esc_attr( $bx_relgrads[ $bx_ri % 3 ] ); ?>" aria-hidden="true"></div><?php if ( has_post_thumbnail() ) : ?><img width="395" height="526" src="<?php echo esc_url( get_the_post_thumbnail_url( null, 'bx-blog-cover' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy" /><?php endif; ?></div>
                 <div class="mt-3"><?php if ( $bx_rpc ) : ?><span class="text-xs rounded-full bg-surface px-2.5 py-1 font-medium"><?php echo esc_html( $bx_rpc->name ); ?></span><?php endif; ?><h3 class="font-display text-lg tt mt-2 leading-snug"><?php the_title(); ?></h3><p class="text-xs text-ink-soft mt-2"><time datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"><?php echo esc_html( get_the_date( 'M j, Y' ) ); ?></time> · <?php echo (int) bx_reading_time(); ?> min</p></div>
               </a>
                     <?php

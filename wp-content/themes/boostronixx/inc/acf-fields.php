@@ -660,7 +660,7 @@ function bx_home_render_insights() {
 		$img = has_post_thumbnail() ? '<img src="' . esc_url( get_the_post_thumbnail_url( null, 'bx-blog-cover' ) ) . '" alt="' . esc_attr( get_the_title() ) . '" width="600" height="800" loading="lazy" class="relative" />' : '';
 		$cat = $pc ? '<span class="rounded-full bg-paper border border-line px-3 py-1 font-medium">' . esc_html( $pc->name ) . '</span>' : '';
 		printf(
-			'<article class="reveal group"%s><a href="%s" class="block"><figure class="imgph rounded-xl2 aspect-[3/4] shadow-lg mb-5"><div class="ph-zoom absolute inset-0 z-0" style="background:%s" aria-hidden="true"></div>%s</figure><div class="flex flex-wrap items-center gap-3 text-xs text-ink-soft">%s<time datetime="%s">%s</time><span>· %d min read</span></div><h3 class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors">%s</h3><p class="text-xs text-ink-soft mt-2">By <span class="font-medium text-ink">%s</span></p></a></article>',
+			'<article class="reveal group"%s><a href="%s" class="block"><figure class="imgph rounded-xl2 aspect-[3/3.7] shadow-lg mb-5"><div class="ph-zoom absolute inset-0 z-0" style="background:%s" aria-hidden="true"></div>%s</figure><div class="flex flex-wrap items-center gap-3 text-xs text-ink-soft">%s<time datetime="%s">%s</time><span>· %d min read</span></div><h3 class="font-display text-xl tt mt-3 group-hover:text-accent transition-colors">%s</h3><p class="text-xs text-ink-soft mt-2">By <span class="font-medium text-ink">%s</span></p></a></article>',
 			$i > 0 ? ' data-delay="' . (int) $i . '"' : '',
 			esc_url( get_permalink() ),
 			esc_attr( $grads[ $i % 3 ] ),

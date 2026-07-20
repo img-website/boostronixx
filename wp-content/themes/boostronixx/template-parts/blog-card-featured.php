@@ -16,7 +16,7 @@ $bx_pc   = bx_primary_category();
 ?>
 <a href="<?php the_permalink(); ?>" class="post reveal group grid lg:grid-cols-12 gap-6 lg:gap-10 items-center rounded-xl2 border border-line p-4 sm:p-6 hover:border-accent transition">
   <div class="lg:col-span-5">
-    <div class="thumb imgph rounded-xl2 aspect-[3/4]">
+    <div class="thumb imgph rounded-xl2 aspect-[3/3.7]">
       <div class="ph-zoom absolute inset-0 z-0" style="background:<?php echo esc_attr( $bx_grad ); ?>" aria-hidden="true"></div>
       <?php if ( has_post_thumbnail() ) : ?><img width="469" height="626" src="<?php echo esc_url( get_the_post_thumbnail_url( null, 'bx-blog-cover' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy" /><?php endif; ?>
     </div>
