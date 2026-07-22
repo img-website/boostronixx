@@ -310,6 +310,27 @@ function bx_register_site_settings() {
 				array( 'key' => 'f_ss_address', 'label' => 'Address', 'name' => 'contact_address', 'type' => 'textarea', 'rows' => 2, 'default_value' => "880, Rani Sati Nagar, Gautam Marg,\nNirman Nagar, Jaipur, Rajasthan 302019, India" ),
 				array( 'key' => 'f_ss_hours', 'label' => 'Hours', 'name' => 'contact_hours', 'type' => 'text', 'default_value' => 'Mon–Fri · 9 AM–7 PM IST' ),
 
+				// ---------------- BLOG CTA ----------------
+				array( 'key' => 'tab_ss_blogcta', 'label' => 'Blog CTA', 'type' => 'tab' ),
+				array( 'key' => 'f_ss_bcta_note', 'label' => 'About', 'type' => 'message', 'message' => 'The contact section shown at the bottom of every blog post.' ),
+				array( 'key' => 'f_ss_bcta_eyebrow', 'label' => 'Eyebrow', 'name' => 'blog_cta_eyebrow', 'type' => 'text', 'default_value' => 'Still deciding?' ),
+				array( 'key' => 'f_ss_bcta_heading', 'label' => 'Heading', 'name' => 'blog_cta_heading', 'type' => 'text', 'default_value' => 'Tell us your goal — we’ll point you the right way' ),
+				array( 'key' => 'f_ss_bcta_text', 'label' => 'Intro text', 'name' => 'blog_cta_text', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'No pitch, no pressure. Share where you’re stuck and we’ll reply with a clear next step.' ),
+				array(
+					'key'          => 'f_ss_bcta_points',
+					'label'        => 'Trust points',
+					'name'         => 'blog_cta_points',
+					'type'         => 'repeater',
+					'layout'       => 'table',
+					'button_label' => 'Add point',
+					'instructions' => 'Leave empty to keep the current defaults. Basic HTML like <strong> is allowed in the text.',
+					'sub_fields'   => array(
+						array( 'key' => 'f_ss_bcta_pt_icon', 'label' => 'Icon', 'name' => 'icon', 'type' => 'text', 'default_value' => 'lucide:check', 'instructions' => 'Iconify name, e.g. lucide:clock', 'wrapper' => array( 'width' => '30' ) ),
+						array( 'key' => 'f_ss_bcta_pt_text', 'label' => 'Text', 'name' => 'text', 'type' => 'text', 'wrapper' => array( 'width' => '70' ) ),
+					),
+				),
+				array( 'key' => 'f_ss_bcta_btn', 'label' => 'Button label', 'name' => 'blog_cta_button', 'type' => 'text', 'default_value' => 'Send message' ),
+
 				// ---------------- SOCIAL ----------------
 				array( 'key' => 'tab_ss_social', 'label' => 'Social', 'type' => 'tab' ),
 				array(

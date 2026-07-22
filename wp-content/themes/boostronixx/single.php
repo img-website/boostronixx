@@ -86,10 +86,10 @@ while ( have_posts() ) :
         <?php endif; ?>
 
         <!-- BODY -->
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 mt-12 pb-16 sm:pb-20 grid lg:grid-cols-12 gap-10 lg:gap-14">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 mt-12 pb-16 sm:pb-20 grid gap-10 lg:gap-14 lg:justify-center <?php echo $bx_toc ? 'lg:grid-cols-[240px_minmax(0,68ch)]' : 'lg:grid-cols-[minmax(0,68ch)]'; ?>">
           <!-- TOC (desktop) -->
           <?php if ( $bx_toc ) : ?>
-          <aside class="hidden lg:block lg:col-span-3">
+          <aside class="hidden lg:block">
             <div class="sticky top-28">
               <p class="text-xs font-medium tracking-[.2em] uppercase text-ink-soft mb-3">On this page</p>
               <nav id="toc" aria-label="Table of contents" class="flex flex-col">
@@ -103,7 +103,7 @@ while ( have_posts() ) :
           <?php endif; ?>
 
           <!-- CONTENT -->
-          <div class="<?php echo $bx_toc ? 'lg:col-span-9' : 'lg:col-span-12'; ?>">
+          <div class="min-w-0">
             <div class="prose max-w-[68ch]">
               <?php echo $bx_body_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- the_content already filtered/sanitised ?>
             </div>
@@ -180,23 +180,49 @@ while ( have_posts() ) :
         <?php endif; ?>
 
         <!-- CONTACT FORM -->
-        <section class="py-16 sm:py-20 bg-surface border-y border-line" aria-label="Contact us">
-          <div class="mx-auto max-w-3xl px-4 sm:px-6">
-            <div class="text-center mb-8">
-              <p class="text-xs font-medium tracking-[.2em] uppercase text-accent mb-3">Still deciding?</p>
-              <h2 class="font-display text-3xl sm:text-4xl tt leading-tight">Tell us your goal — we'll point you the right way</h2>
-              <p class="text-ink-soft mt-3 max-w-md mx-auto">No pitch, no pressure. Share where you're stuck and we'll reply within 24 hours with a clear next step.</p>
-            </div>
-            <form id="blogContact" class="grid sm:grid-cols-2 gap-4" novalidate>
-              <div class="field"><label for="bcName">Name <span class="text-accent">*</span></label><input id="bcName" name="name" type="text" required autocomplete="name" /></div>
-              <div class="field"><label for="bcEmail">Email <span class="text-accent">*</span></label><input id="bcEmail" name="email" type="email" required autocomplete="email" /></div>
-              <div class="field sm:col-span-2"><label for="bcMsg">What are you working on? <span class="text-accent">*</span></label><textarea id="bcMsg" name="message" rows="4" required></textarea></div>
-              <div class="sm:col-span-2 flex flex-wrap items-center gap-4">
-                <button id="bcSubmit" type="submit" class="group btn-glow inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 font-medium min-w-[180px]"><span id="bcLabel" class="relative z-10 sheen-text inline-flex items-center gap-2">Send message <iconify-icon icon="lucide:send" class="relative z-10" aria-hidden="true"></iconify-icon></span><span id="bcSpinner" class="spinner hidden" aria-hidden="true"></span></button>
-                <p class="text-xs text-ink-soft inline-flex items-center gap-1.5"><iconify-icon icon="lucide:shield-check" class="text-accent" aria-hidden="true"></iconify-icon> By submitting you agree to our <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="underline underline-offset-2 decoration-accent text-ink">privacy policy</a>.</p>
+        <section class="bc-sec py-16 sm:py-24 bg-surface border-y border-line relative overflow-hidden" aria-label="Contact us">
+          <span class="bc-orb" aria-hidden="true"></span>
+          <div class="mx-auto max-w-5xl px-4 sm:px-6 relative">
+            <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] gap-10 lg:gap-14 lg:items-center">
+
+              <!-- value prop -->
+              <div class="reveal">
+                <p class="text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_option( 'blog_cta_eyebrow', 'Still deciding?' ) ); ?></p>
+                <h2 class="bc-head font-display text-3xl sm:text-4xl tt leading-tight"><?php echo esc_html( bx_option( 'blog_cta_heading', 'Tell us your goal — we’ll point you the right way' ) ); ?></h2>
+                <p class="text-ink-soft mt-4 leading-relaxed max-w-md"><?php echo esc_html( bx_option( 'blog_cta_text', 'No pitch, no pressure. Share where you’re stuck and we’ll reply with a clear next step.' ) ); ?></p>
+                <ul class="bc-trust mt-7 space-y-3.5 text-sm">
+                  <?php
+                  $bx_pts = bx_option( 'blog_cta_points', array() );
+                  if ( ! $bx_pts ) {
+                      $bx_pts = array(
+                          array( 'icon' => 'lucide:clock', 'text' => 'A reply within <strong>24 hours</strong>, from a real strategist.' ),
+                          array( 'icon' => 'lucide:route', 'text' => 'A clear next step tailored to your goal — not a sales pitch.' ),
+                          array( 'icon' => 'lucide:lock', 'text' => 'Your details stay private. No spam, ever.' ),
+                      );
+                  }
+                  foreach ( $bx_pts as $bx_pt ) :
+                      if ( empty( $bx_pt['text'] ) ) { continue; }
+                      ?>
+                  <li class="flex items-start gap-3"><span class="bc-ic grid place-items-center h-7 w-7 rounded-full bg-accent/10 text-accent shrink-0"><iconify-icon icon="<?php echo esc_attr( ! empty( $bx_pt['icon'] ) ? $bx_pt['icon'] : 'lucide:check' ); ?>" aria-hidden="true"></iconify-icon></span><span><?php echo wp_kses_post( $bx_pt['text'] ); ?></span></li>
+                  <?php endforeach; ?>
+                </ul>
               </div>
-              <p id="bcError" class="sm:col-span-2 hidden text-sm text-accent font-medium" role="alert"><iconify-icon icon="lucide:alert-circle" aria-hidden="true"></iconify-icon> Please fill in all required fields correctly.</p>
-            </form>
+
+              <!-- form card -->
+              <div class="bc-card-wrap reveal" data-delay="1">
+                <div class="bc-card rounded-xl2 bg-paper border border-line p-6 sm:p-8 shadow-[0_40px_80px_-50px_rgba(10,10,10,.45)]">
+                <form id="blogContact" class="grid gap-4" novalidate>
+                  <div class="field"><input id="bcName" name="name" type="text" placeholder=" " required autocomplete="name" /><label for="bcName">Name <span class="text-accent">*</span></label></div>
+                  <div class="field"><input id="bcEmail" name="email" type="email" placeholder=" " required autocomplete="email" /><label for="bcEmail">Email <span class="text-accent">*</span></label></div>
+                  <div class="field"><textarea id="bcMsg" name="message" rows="4" placeholder=" " required></textarea><label for="bcMsg">What are you working on? <span class="text-accent">*</span></label></div>
+                  <button id="bcSubmit" type="submit" class="group btn-glow inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 font-medium w-full mt-1"><span id="bcLabel" class="relative z-10 sheen-text inline-flex items-center gap-2"><?php echo esc_html( bx_option( 'blog_cta_button', 'Send message' ) ); ?> <iconify-icon icon="lucide:send" class="relative z-10" aria-hidden="true"></iconify-icon></span><span id="bcSpinner" class="spinner hidden" aria-hidden="true"></span></button>
+                  <p class="text-xs text-ink-soft flex items-start gap-1.5"><iconify-icon icon="lucide:shield-check" class="text-accent mt-0.5 shrink-0" aria-hidden="true"></iconify-icon><span>By submitting you agree to our <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="underline underline-offset-2 decoration-accent text-ink">privacy policy</a>.</span></p>
+                  <p id="bcError" class="hidden text-sm text-accent font-medium" role="alert"><iconify-icon icon="lucide:alert-circle" aria-hidden="true"></iconify-icon> Please fill in all required fields correctly.</p>
+                  </form>
+                </div>
+              </div>
+
+            </div>
           </div>
         </section>
 
