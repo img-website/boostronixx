@@ -104,8 +104,14 @@ function bxcore_handle_lead() {
 	update_post_meta( $lead_id, '_bx_source', $source );
 	update_post_meta( $lead_id, '_bx_page', $page );
 
-	// Notify (best-effort; production needs SMTP).
-	$to      = get_option( 'admin_email' );
+	// Notify (best-effort; production needs SMTP). Recipient is CMS-editable via
+	// Site Settings → Contact → "Leads notification email" (bx_option 'leads_email'),
+	// which supports comma-separated inboxes and falls back to the admin email.
+	$to_raw = function_exists( 'bx_option' ) ? (string) bx_option( 'leads_email', '' ) : '';
+	$to     = array_values( array_filter( array_map( 'trim', explode( ',', $to_raw ) ), 'is_email' ) );
+	if ( empty( $to ) ) {
+		$to = get_option( 'admin_email' );
+	}
 	$subject = sprintf( '[%s] New enquiry — %s', get_bloginfo( 'name' ), $source );
 	$body    = '';
 	foreach ( array_merge( $fields, array( 'source' => $source, 'page' => $page ) ) as $k => $v ) {

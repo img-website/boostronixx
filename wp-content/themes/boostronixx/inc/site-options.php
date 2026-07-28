@@ -306,7 +306,8 @@ function bx_register_site_settings() {
 				array( 'key' => 'f_ss_col3_head', 'label' => 'Contact heading', 'name' => 'footer_col3_heading', 'type' => 'text', 'default_value' => 'Get in touch' ),
 				array( 'key' => 'f_ss_phone', 'label' => 'Phone (display)', 'name' => 'contact_phone', 'type' => 'text', 'default_value' => '+91 80582 12202', 'wrapper' => array( 'width' => '50' ) ),
 				array( 'key' => 'f_ss_phone_link', 'label' => 'Phone (dial)', 'name' => 'contact_phone_link', 'type' => 'text', 'default_value' => '+918058212202', 'wrapper' => array( 'width' => '50' ), 'instructions' => 'Digits only, with country code.' ),
-				array( 'key' => 'f_ss_email', 'label' => 'Email', 'name' => 'contact_email', 'type' => 'email', 'default_value' => 'boostronixx@gmail.com' ),
+				array( 'key' => 'f_ss_email', 'label' => 'Email (display)', 'name' => 'contact_email', 'type' => 'email', 'default_value' => 'boostronixx@gmail.com', 'instructions' => 'Public contact address shown on the site.' ),
+				array( 'key' => 'f_ss_leads_email', 'label' => 'Leads notification email', 'name' => 'leads_email', 'type' => 'text', 'default_value' => 'boostronixx@gmail.com', 'instructions' => 'Where every form/lead submission is emailed. Separate multiple inboxes with commas. Leave blank to fall back to the WordPress admin email.' ),
 				array( 'key' => 'f_ss_address', 'label' => 'Address', 'name' => 'contact_address', 'type' => 'textarea', 'rows' => 2, 'default_value' => "880, Rani Sati Nagar, Gautam Marg,\nNirman Nagar, Jaipur, Rajasthan 302019, India" ),
 				array( 'key' => 'f_ss_hours', 'label' => 'Hours', 'name' => 'contact_hours', 'type' => 'text', 'default_value' => 'Mon–Fri · 9 AM–7 PM IST' ),
 
