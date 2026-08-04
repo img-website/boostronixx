@@ -50,8 +50,14 @@
 
 /* Popup + blog modal: pin the label to the same floated state the theme uses
  * for a filled .bxfld. (On .field the JS reuses the theme's own `float`
- * class, so no equivalent block is needed there.) */
-.bxfld.bx-iti-field > label {
+ * class, so no equivalent block is needed there.)
+ *
+ * The #hpPop / #bpModal prefixes are REQUIRED, not decoration: the theme's
+ * resting rule is `#hpPop .bxfld label` — an ID, so specificity (1,1,1). A
+ * plain `.bxfld.bx-iti-field > label` is only (0,2,1) and loses, which left
+ * the label sitting on top of the flag and dial code. */
+#hpPop .bxfld.bx-iti-field > label,
+#bpModal .bxfld.bx-iti-field > label {
 	top: .32rem;
 	font-size: .62rem;
 	letter-spacing: .05em;
