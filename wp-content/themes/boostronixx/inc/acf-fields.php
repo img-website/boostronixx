@@ -743,8 +743,8 @@ function bx_home_marquee_row() {
  */
 function bx_home_render_work() {
 	$defaults = array(
-		array( 'title' => 'Freshee — Quick Commerce', 'subtitle' => 'E-commerce · App · Brand', 'url' => home_url( '/portfolio/freshee/' ), 'img' => '' ),
-		array( 'title' => 'Mount Litera Zee School', 'subtitle' => 'School website · Branding · SEO', 'url' => home_url( '/portfolio/mount-litera-zee-school/' ), 'img' => '' ),
+		array( 'title' => 'Freshee — Quick Commerce', 'subtitle' => 'E-commerce · App · Brand', 'url' => home_url( '/portfolio/freshee/' ), 'img' => '', 'alt' => '' ),
+		array( 'title' => 'Mount Litera Zee School', 'subtitle' => 'School website · Branding · SEO', 'url' => home_url( '/portfolio/mount-litera-zee-school/' ), 'img' => '', 'alt' => '' ),
 	);
 	$items = array();
 	if ( function_exists( 'have_rows' ) && have_rows( 'work_projects' ) ) {
@@ -756,6 +756,7 @@ function bx_home_render_work() {
 				'subtitle' => (string) get_sub_field( 'subtitle' ),
 				'url'      => (string) get_sub_field( 'link' ),
 				'img'      => ( is_array( $img ) && ! empty( $img['url'] ) ) ? $img['url'] : '',
+				'alt'      => ( is_array( $img ) && ! empty( $img['alt'] ) ) ? $img['alt'] : '',
 			);
 		}
 	}
@@ -766,9 +767,10 @@ function bx_home_render_work() {
 	foreach ( $items as $i => $w ) {
 		$offset = ( 1 === $i % 2 ) ? ' md:mt-16' : '';
 		$delay  = 0 === $i ? '' : ' data-delay="1"';
-		$imgtag = $w['img'] ? '<img src="' . esc_url( $w['img'] ) . '" alt="' . esc_attr( $w['title'] ) . '" width="1280" height="880" loading="lazy" />' : '<figcaption class="lbl"><b style="color:#7d7d7d">Project · 1280×880</b><span style="color:#6a6a6a">' . esc_html( $w['title'] ) . '</span></figcaption>';
+		$alt    = ! empty( $w['alt'] ) ? $w['alt'] : $w['title'];
+		$imgtag = $w['img'] ? '<img src="' . esc_url( $w['img'] ) . '" alt="' . esc_attr( $alt ) . '" width="604" height="435" loading="lazy" />' : '<figcaption class="lbl"><b style="color:#7d7d7d">Project · 1069×770</b><span style="color:#6a6a6a">' . esc_html( $w['title'] ) . '</span></figcaption>';
 		printf(
-			'<a href="%s" class="reveal group block%s"%s><figure class="imgph rounded-xl2 aspect-[16/11] !bg-[#161616]">%s</figure><div class="flex items-center justify-between mt-5"><div><h3 class="font-display text-2xl tt">%s</h3><p class="text-sm text-paper/50 mt-1">%s</p></div><span class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span></div></a>',
+			'<a href="%s" class="reveal group block%s"%s><figure class="imgph rounded-xl2 aspect-[1069/770] !bg-[#161616]">%s</figure><div class="flex items-center justify-between mt-5"><div><h3 class="font-display text-2xl tt">%s</h3><p class="text-sm text-paper/50 mt-1">%s</p></div><span class="grid place-items-center h-11 w-11 rounded-full border border-paper/20 group-hover:bg-accent group-hover:border-accent transition"><iconify-icon icon="lucide:arrow-up-right" class="text-lg"></iconify-icon></span></div></a>',
 			esc_url( $w['url'] ? $w['url'] : home_url( '/portfolio/' ) ),
 			$offset,
 			$delay,
