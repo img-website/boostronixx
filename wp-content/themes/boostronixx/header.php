@@ -52,6 +52,27 @@ $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
 			<a href="<?php echo esc_url( $bx_brand ); ?>" class="flex items-center gap-2 shrink-0"><img width="127" height="32" src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX — creative branding and digital marketing agency" class="h-7 sm:h-8 w-auto" /></a>
+			<?php
+			// Services and Industries get dropdowns: reaching a specific one used
+			// to take two hops (header -> /services/ -> the service), which mobile
+			// visitors were giving up on. Keyed by the path segment in the nav URL.
+			$bx_dropdowns = array();
+			if ( function_exists( 'bx_service_pages' ) ) {
+				$bx_dropdowns['services']   = bx_service_pages();
+				$bx_dropdowns['industries'] = bx_industry_pages();
+			}
+
+			/**
+			 * Child pages for a nav item, or an empty array when it has none.
+			 *
+			 * @param string $url Nav item URL.
+			 * @return array
+			 */
+			$bx_children_for = function ( $url ) use ( $bx_dropdowns ) {
+				$path = trim( (string) wp_parse_url( $url, PHP_URL_PATH ), '/' );
+				return isset( $bx_dropdowns[ $path ] ) ? $bx_dropdowns[ $path ] : array();
+			};
+			?>
 			<nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-soft">
 				<?php
 				foreach ( $bx_nav as $bx_item ) :
@@ -59,13 +80,32 @@ $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call
 					if ( empty( $bx_l['url'] ) ) {
 						continue;
 					}
-					$bx_active = bx_link_is_current( $bx_l['url'] ) ? ' active text-ink' : '';
-					?>
+					$bx_active   = bx_link_is_current( $bx_l['url'] ) ? ' active text-ink' : '';
+					$bx_kids     = $bx_children_for( $bx_l['url'] );
+
+					if ( $bx_kids ) :
+						?>
+				<div class="bx-navdrop relative">
+					<a href="<?php echo esc_url( $bx_l['url'] ); ?>" class="nav-link inline-flex items-center gap-1<?php echo esc_attr( $bx_active ); ?>" aria-haspopup="true" aria-expanded="false"><?php echo esc_html( $bx_l['title'] ); ?><iconify-icon icon="lucide:chevron-down" class="text-xs bx-navdrop-chev" aria-hidden="true"></iconify-icon></a>
+					<div class="bx-navdrop-menu" role="menu">
+						<?php foreach ( $bx_kids as $bx_s ) : ?>
+						<a href="<?php echo esc_url( $bx_s['url'] ); ?>" role="menuitem" class="bx-navdrop-item<?php echo bx_link_is_current( $bx_s['url'] ) ? ' is-current' : ''; ?>"><?php echo esc_html( $bx_s['title'] ); ?></a>
+						<?php endforeach; ?>
+						<a href="<?php echo esc_url( $bx_l['url'] ); ?>" role="menuitem" class="bx-navdrop-item bx-navdrop-all">All <?php echo esc_html( strtolower( $bx_l['title'] ) ); ?> <iconify-icon icon="lucide:arrow-right" aria-hidden="true"></iconify-icon></a>
+					</div>
+				</div>
+						<?php
+					else :
+						?>
 				<a href="<?php echo esc_url( $bx_l['url'] ); ?>"<?php echo ! empty( $bx_l['target'] ) ? ' target="' . esc_attr( $bx_l['target'] ) . '"' : ''; ?> class="nav-link<?php echo esc_attr( $bx_active ); ?>"><?php echo esc_html( $bx_l['title'] ); ?></a>
-				<?php endforeach; ?>
+						<?php
+					endif;
+				endforeach;
+				?>
 			</nav>
 			<div class="flex items-center gap-2">
-				<a href="<?php echo esc_url( $bx_cta_url ); ?>"<?php echo $bx_cta_tgt; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_attr above. ?> class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
+				<?php // data-bx-nolead: the header CTA stays a real link to the full contact page (see inc/lead-cta.php). ?>
+				<a href="<?php echo esc_url( $bx_cta_url ); ?>"<?php echo $bx_cta_tgt; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_attr above. ?> data-bx-nolead class="group btn-glow hidden sm:inline-flex items-center gap-2 rounded-full pl-4 pr-5 py-2.5 text-sm font-medium">
 					<iconify-icon icon="lucide:sparkles" class="relative z-10 text-base"></iconify-icon>
 					<span class="relative z-10 sheen-text"><?php echo esc_html( $bx_cta_label ); ?></span>
 				</a>
@@ -94,10 +134,28 @@ $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call
 					continue;
 				}
 				?>
+				<?php
+				$bx_mkids = $bx_children_for( $bx_l['url'] );
+				if ( $bx_mkids ) :
+					?>
+			<div class="bx-macc border-b border-line">
+				<button type="button" class="bx-macc-btn w-full py-3 flex items-center justify-between text-left" aria-expanded="false"><?php echo esc_html( $bx_l['title'] ); ?><span class="text-accent"><iconify-icon icon="lucide:chevron-down" class="bx-macc-chev"></iconify-icon></span></button>
+				<?php // The 0fr -> 1fr collapse only works with a SINGLE grid child, hence this inner wrapper. ?>
+				<div class="bx-macc-panel">
+					<div class="bx-macc-inner">
+						<?php foreach ( $bx_mkids as $bx_s ) : ?>
+						<a href="<?php echo esc_url( $bx_s['url'] ); ?>" data-close class="bx-macc-item"><?php echo esc_html( $bx_s['title'] ); ?></a>
+						<?php endforeach; ?>
+						<a href="<?php echo esc_url( $bx_l['url'] ); ?>" data-close class="bx-macc-item bx-macc-all">All <?php echo esc_html( strtolower( $bx_l['title'] ) ); ?></a>
+					</div>
+				</div>
+			</div>
+				<?php else : ?>
 			<a href="<?php echo esc_url( $bx_l['url'] ); ?>"<?php echo ! empty( $bx_l['target'] ) ? ' target="' . esc_attr( $bx_l['target'] ) . '"' : ''; ?> data-close class="py-3 border-b border-line flex items-center justify-between"><?php echo esc_html( $bx_l['title'] ); ?><span class="text-accent"><iconify-icon icon="lucide:arrow-right"></iconify-icon></span></a>
+				<?php endif; ?>
 			<?php endforeach; ?>
 		</nav>
-		<a href="<?php echo esc_url( $bx_cta_url ); ?>"<?php echo $bx_cta_tgt; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_attr above. ?> data-close class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
+		<a href="<?php echo esc_url( $bx_cta_url ); ?>"<?php echo $bx_cta_tgt; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_attr above. ?> data-close data-bx-nolead class="group btn-glow-accent mt-auto inline-flex justify-center items-center gap-2 rounded-full px-6 py-4 font-medium">
 			<span class="relative z-10 sheen-text-light"><?php echo esc_html( $bx_mobile_cta_label ); ?></span>
 			<iconify-icon icon="lucide:arrow-right" class="relative z-10"></iconify-icon>
 		</a>

@@ -14,17 +14,17 @@ The XML sitemap of this website can by found by following [this link](https://bo
 - [D2C Ecommerce](https://boostronixx.test/industries/d2c-ecommerce/)
 
 ## Posts
+- [How to Optimize for AI Search: The Ultimate AEO Guide](https://boostronixx.test/blog/how-to-optimize-for-ai-search-aeo-guide/): Answer Engine Optimization is how you get cited by ChatGPT, Google AI Overviews and Perplexity instead of just ranked\. Here is what AEO is, how AI search engines pick sources, and 10 strategies to win those citations\.
 - [What Are Core Web Vitals? How They Impact Your Website's SEO Performance](https://boostronixx.test/blog/what-are-core-web-vitals-seo-performance/): Core Web Vitals — LCP, INP and CLS — shape both your Google rankings and real user experience\. Here is what they are, how to measure your score, and how to improve them\.
 - [Why Your Landing Pages Are Not Converting Visitors](https://boostronixx.test/blog/why-your-landing-pages-are-not-converting-visitors/): Traffic but no conversions? Learn the most common reasons landing pages fail to convert visitors — and the proven fixes, from a clear CTA to A/B testing\.
 - [Benefits of Hiring a Digital Marketing Company in Jaipur to Grow Business Fast](https://boostronixx.test/blog/benefits-of-hiring-digital-marketing-company-jaipur/): The key benefits of hiring a digital marketing company in Jaipur — from cost\-effective expertise and targeted campaigns to lead generation, transparent reporting and faster growth\.
 - [Why Ads Alone Don’t Work: Funnel\-Based Performance Marketing Explained](https://boostronixx.test/blog/why-ads-alone-dont-work-funnel-based-performance-marketing/): Running ads without a funnel is just burning budget\. Here's why funnel\-based performance marketing outperforms standalone ads — plus a step\-by\-step guide to building a TOFU\-MOFU\-BOFU system that actually converts\.
-- [How to Build a Strong Brand Strategy from Scratch in 2026](https://boostronixx.test/blog/how-to-build-a-brand-strategy-from-scratch/): A clear, 8\-step framework to build a powerful brand strategy from scratch in 2026 — from purpose and audience research to positioning, identity, and measuring growth\.
 
 ## Categories
 - [Branding \& Strategy](https://boostronixx.test/blog/category/branding-and-strategy/)
 - [Digital Marketing](https://boostronixx.test/blog/category/digital-marketing/)
-- [Performance Marketing](https://boostronixx.test/blog/category/performance-marketing/)
 - [SEO](https://boostronixx.test/blog/category/seo/)
+- [Performance Marketing](https://boostronixx.test/blog/category/performance-marketing/)
 - [Web \& UI/UX Design](https://boostronixx.test/blog/category/web-ui-ux-design/)
 
 ## Tags

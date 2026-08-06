@@ -29,12 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
           requestAnimationFrame(function () {
             panel.classList.remove("translate-x-full");
           });
+          // <html> too: locking only <body> still let the page behind scroll
+          // on mobile when the touch started inside the overlay.
           document.body.style.overflow = "hidden";
+          document.documentElement.style.overflow = "hidden";
         }
         function closeMenu() {
           if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
           panel.classList.add("translate-x-full");
           document.body.style.overflow = "";
+          document.documentElement.style.overflow = "";
           setTimeout(function () {
             mm.classList.add("hidden");
           }, 300);
@@ -751,13 +755,73 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
+/* header services dropdown (desktop) + services accordion (mobile menu) */
+(function(){
+  // Desktop: CSS handles hover/focus. This adds tap + keyboard support, which
+  // hover alone does not give on touch laptops or for keyboard users.
+  [].forEach.call(document.querySelectorAll('.bx-navdrop'), function(drop){
+    var trigger=drop.querySelector('.nav-link');
+    if(!trigger) return;
+    function setOpen(on){ drop.classList.toggle('is-open', on); trigger.setAttribute('aria-expanded', on?'true':'false'); }
+    trigger.addEventListener('click', function(e){
+      // Fine pointers already have hover; let the click through to /services/.
+      if(window.matchMedia && window.matchMedia('(hover: hover)').matches) return;
+      e.preventDefault();
+      setOpen(!drop.classList.contains('is-open'));
+    });
+    document.addEventListener('click', function(e){ if(!drop.contains(e.target)) setOpen(false); });
+    drop.addEventListener('keydown', function(e){ if(e.key==='Escape'){ setOpen(false); trigger.focus(); } });
+  });
+
+  // Mobile: accordion inside the slide-in menu.
+  [].forEach.call(document.querySelectorAll('.bx-macc'), function(acc){
+    var btn=acc.querySelector('.bx-macc-btn'); if(!btn) return;
+    btn.addEventListener('click', function(){
+      var on=!acc.classList.contains('is-open');
+      acc.classList.toggle('is-open', on);
+      btn.setAttribute('aria-expanded', on?'true':'false');
+    });
+    // Open it by default when the visitor is already on a service page.
+    if(acc.querySelector('.bx-macc-item[href="'+location.pathname+'"]')){
+      acc.classList.add('is-open'); btn.setAttribute('aria-expanded','true');
+    }
+  });
+})();
+
 (function(){
         var pop=document.getElementById('hpPop'); if(!pop) return;
         var KEY='hp_lead_seen';
         function open(){ pop.classList.add('hp-open'); requestAnimationFrame(function(){ pop.classList.add('hp-show'); }); document.body.style.overflow='hidden'; try{ sessionStorage.setItem(KEY,'1'); }catch(e){} }
         function close(){ pop.classList.remove('hp-show'); document.body.style.overflow=''; setTimeout(function(){ pop.classList.remove('hp-open'); },430); }
         var seen=false; try{ seen=sessionStorage.getItem(KEY)==='1'; }catch(e){}
-        if(!seen){ setTimeout(open, 10000); }
+        // The popup now renders site-wide so CTAs can open it, but the timed
+        // auto-open stays a FRONT PAGE behaviour — firing it on every page
+        // would be hostile. data-autoopen is set by template-parts/lead-popup.php.
+        if(!seen && pop.dataset.autoopen==='1'){ setTimeout(open, 10000); }
+
+        // Any CTA can open the popup with data-bx-lead. Optional
+        // data-bx-service="<service-slug>" pre-selects that service; otherwise
+        // the page's own service (if it is a service page) is used.
+        function openWith(serviceSlug){
+          var sel=document.getElementById('hpService');
+          if(sel){
+            var want=serviceSlug || pop.dataset.service || '';
+            if(want){
+              var opt=sel.querySelector('option[data-slug="'+want.replace(/"/g,'')+'"]');
+              if(opt) sel.value=opt.value;
+            }
+            var fld=sel.closest('.bxfld'); if(fld) fld.classList.toggle('has-value', !!sel.value);
+          }
+          open();
+          var first=document.getElementById('hpName'); if(first) setTimeout(function(){ first.focus(); }, 450);
+        }
+        window.bxOpenLeadPopup=openWith;
+        document.addEventListener('click', function(e){
+          var t=e.target.closest('[data-bx-lead]'); if(!t) return;
+          e.preventDefault();
+          openWith(t.getAttribute('data-bx-service')||'');
+        });
+
         pop.querySelectorAll('[data-hpclose]').forEach(function(el){ el.addEventListener('click', close); });
         document.addEventListener('keydown', function(e){ if(e.key==='Escape' && pop.classList.contains('hp-open')) close(); });
         var form=document.getElementById('hpForm');

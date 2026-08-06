@@ -677,7 +677,7 @@ function bx_acf_seo_services() {
 					'label'         => 'CTA — text',
 					'type'          => 'textarea',
 					'rows'          => 3,
-					'default_value' => "Get a free SEO audit of your site — we'll show you the quick wins and a clear path to more organic leads.",
+					'default_value' => "Tell us about your site and we'll come back with a clear SEO proposal — the quick wins, the plan, and what it costs.",
 				),
 				array(
 					'key'           => 'f_seo_services_cta_button',

@@ -1,0 +1,177 @@
+/* Header services dropdown (desktop) + services accordion (mobile menu).
+ *
+ * Plain CSS in its own file rather than in assets/css/src/input.css, because
+ * that file is regenerated from the design HTML by build_css.py and hand edits
+ * there are lost on the next rebuild. Nothing here needs Tailwind to compile,
+ * so it can be enqueued as-is.
+ *
+ * Why this exists: the header only linked to /services/, so reaching a single
+ * service took two hops. Mobile visitors reported giving up at that point.
+ */
+
+/* ---------------- desktop dropdown ---------------- */
+.bx-navdrop {
+	position: relative;
+}
+
+.bx-navdrop-chev {
+	transition: transform .18s ease;
+}
+
+.bx-navdrop.is-open > .nav-link .bx-navdrop-chev,
+.bx-navdrop:hover > .nav-link .bx-navdrop-chev {
+	transform: rotate(180deg);
+}
+
+.bx-navdrop-menu {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 6px);
+	min-width: 15rem;
+	padding: .5rem;
+	margin-top: .65rem;
+	background: var(--color-paper, #fff);
+	border: 1px solid var(--color-line, #e6e1da);
+	border-radius: 1rem;
+	box-shadow: 0 24px 48px -24px rgba(10, 10, 10, .35);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity .18s ease, transform .18s ease, visibility .18s;
+	z-index: 60;
+}
+
+/* A gap between the trigger and the panel would drop the hover, so bridge it. */
+.bx-navdrop::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: 1rem;
+}
+
+.bx-navdrop:hover .bx-navdrop-menu,
+.bx-navdrop:focus-within .bx-navdrop-menu,
+.bx-navdrop.is-open .bx-navdrop-menu {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transform: translate(-50%, 0);
+}
+
+.bx-navdrop-item {
+	display: block;
+	padding: .6rem .75rem;
+	border-radius: .65rem;
+	font-size: .875rem;
+	line-height: 1.3;
+	color: var(--ink, #0a0a0a);
+	white-space: nowrap;
+	transition: background-color .15s ease, color .15s ease;
+}
+
+.bx-navdrop-item:hover,
+.bx-navdrop-item:focus-visible {
+	background: var(--color-surface, #f6f3ee);
+	color: var(--accent, #fa5539);
+}
+
+.bx-navdrop-item.is-current {
+	color: var(--accent, #fa5539);
+	font-weight: 600;
+}
+
+.bx-navdrop-all {
+	margin-top: .35rem;
+	padding-top: .7rem;
+	border-top: 1px solid var(--color-line, #e6e1da);
+	border-radius: 0 0 .65rem .65rem;
+	font-weight: 600;
+	color: var(--accent, #fa5539);
+	display: flex;
+	align-items: center;
+	gap: .4rem;
+}
+
+/* ---------------- mobile menu panel scrolling ----------------
+ * The panel is h-full with no overflow rule, so once the accordions expand the
+ * list ran past the bottom with nothing to scroll — the touch fell through and
+ * the page behind moved instead. overscroll-behavior stops the scroll chaining
+ * to the document when the panel hits its end.
+ */
+#menuPanel {
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Keeps the nav from being squeezed by the flex column and lets it scroll. */
+#menuPanel > nav {
+	flex: 1 1 auto;
+}
+
+/* ---------------- mobile accordion ---------------- */
+.bx-macc-btn {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.bx-macc-chev {
+	display: inline-block;
+	transition: transform .2s ease;
+}
+
+.bx-macc.is-open .bx-macc-chev {
+	transform: rotate(180deg);
+}
+
+/* The 0fr -> 1fr trick collapses only the FIRST grid row, so the panel must
+ * contain exactly one child (.bx-macc-inner). With the links as direct
+ * children the accordion could never close: row 1 collapsed and the other
+ * seven stayed at auto height, which also made the first two items overlap. */
+.bx-macc-panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows .25s ease;
+	overflow: hidden;
+}
+
+.bx-macc.is-open .bx-macc-panel {
+	grid-template-rows: 1fr;
+}
+
+.bx-macc-inner {
+	min-height: 0;
+	overflow: hidden;
+}
+
+.bx-macc-item {
+	display: block;
+	padding: .6rem 0 .6rem .9rem;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1.35;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--ink-soft, #57534e);
+	border-left: 2px solid var(--color-line, #e6e1da);
+	margin-left: .15rem;
+}
+
+.bx-macc-item:active,
+.bx-macc-item:hover {
+	color: var(--accent, #fa5539);
+	border-left-color: var(--accent, #fa5539);
+}
+
+.bx-macc-all {
+	font-weight: 600;
+	color: var(--accent, #fa5539);
+	border-left-color: var(--accent, #fa5539);
+	margin-bottom: .4rem;
+}

@@ -1,6 +1,11 @@
 <?php
 /**
- * Lead-capture popup (home page only, as in the original design).
+ * Lead-capture popup.
+ *
+ * Rendered site-wide so any CTA can open it with `data-bx-lead` instead of
+ * sending the visitor off to /contact/ (mobile users were dropping out at that
+ * jump). It still auto-opens after 10s on the FRONT PAGE ONLY — that was the
+ * original design's behaviour and firing it on every page would be hostile.
  *
  * Styles live in the compiled CSS (#hpPop rules) and the open/close + submit
  * behaviour lives in app.js (both guarded by the presence of #hpPop).
@@ -12,11 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! is_front_page() ) {
+// Nothing to capture on the contact page — the full form is already there.
+if ( is_page( 'contact' ) || is_page( 'thank-you' ) ) {
 	return;
 }
+
+// When opened from a service page, that service is pre-selected.
+$bx_pop_service = bx_current_service_slug();
 ?>
-<div id="hpPop" role="dialog" aria-modal="true" aria-labelledby="hpTitle">
+<div id="hpPop" role="dialog" aria-modal="true" aria-labelledby="hpTitle" data-autoopen="<?php echo is_front_page() ? '1' : '0'; ?>" data-service="<?php echo esc_attr( $bx_pop_service ); ?>">
 	<div class="hp-bd" data-hpclose></div>
 	<div class="hp-card">
 		<button type="button" data-hpclose aria-label="Close" class="absolute right-3.5 top-3.5 z-20 h-9 w-9 inline-flex items-center justify-center rounded-full bg-white/85 text-ink hover:bg-white shadow transition"><iconify-icon icon="lucide:x" class="text-lg" aria-hidden="true"></iconify-icon></button>
@@ -26,7 +35,7 @@ if ( ! is_front_page() ) {
 				<div>
 					<p class="text-[11px] font-semibold tracking-[.18em] uppercase text-accent">Before you go</p>
 					<h3 id="hpTitle" class="font-display text-2xl sm:text-[28px] tt leading-tight mt-2">Get a free <span class="text-accent">growth plan</span> for your brand.</h3>
-					<p class="text-ink-soft text-sm mt-2 leading-relaxed">Drop your details and we'll send 2-3 quick, practical wins tailored to your business. No spam, no obligation.</p>
+					<?php // The supporting line lives in the right-hand panel — see below. Keeping it here made the card taller than the viewport once the service field was added, so the whole modal scrolled. ?>
 					<form id="hpForm" class="mt-5 grid gap-4" novalidate>
 						<div class="bxfld">
 							<input id="hpName" name="name" type="text" placeholder=" " required />
@@ -40,6 +49,16 @@ if ( ! is_front_page() ) {
 							<input id="hpPhone" name="phone" type="tel" placeholder=" " />
 							<label for="hpPhone">Phone</label>
 						</div>
+						<?php if ( '' !== $bx_pop_service ) : ?>
+						<?php // Only shown on a service page, where it arrives already answered and just needs confirming. Elsewhere it would be one more thing to fill in. ?>
+						<div class="bxfld float">
+							<select id="hpService" name="service">
+								<?php bx_service_select_options( $bx_pop_service ); ?>
+							</select>
+							<label for="hpService">Service needed</label>
+							<span class="chev"><iconify-icon icon="lucide:chevron-down" aria-hidden="true"></iconify-icon></span>
+						</div>
+						<?php endif; ?>
 						<div class="bxfld">
 							<textarea id="hpMsg" name="message" placeholder=" "></textarea>
 							<label for="hpMsg">What do you want to grow?</label>
@@ -63,6 +82,7 @@ if ( ! is_front_page() ) {
 					</div>
 					<h4 class="font-display text-2xl sm:text-3xl tt leading-tight mt-4">Brands we touch don't stay invisible.</h4>
 					<p class="text-white/75 text-sm mt-2 leading-relaxed">A Jaipur studio that pairs sharp design with performance marketing - and reports on every rupee.</p>
+					<p class="text-white/75 text-sm mt-3 leading-relaxed">Drop your details and we'll send 2-3 quick, practical wins tailored to your business. No spam, no obligation.</p>
 				</div>
 				<div class="relative z-10 hidden md:block">
 					<div class="hp-float bg-white/12 border border-white/20 rounded-2xl p-4 backdrop-blur-sm max-w-[262px]">

@@ -105,6 +105,54 @@
 }
 
 /* ---------------------------------------------------------------
+ * 1b. "Service needed" select in the lead popup
+ *
+ * The theme only styles `#hpPop .bxfld input, #hpPop .bxfld textarea` — there
+ * was no select in the popup until the service field was added — so the box,
+ * the floated label and the chevron are set up here to match the popup's other
+ * fields exactly. Same ID-specificity caveat as above: the theme's resting
+ * label rule is `#hpPop .bxfld label` at (1,1,1), so the floated override
+ * needs the ID too.
+ * ------------------------------------------------------------- */
+#hpPop .bxfld select {
+	width: 100%;
+	border: 1px solid var(--color-line, #e6e1da);
+	border-radius: .85rem;
+	padding: 1.1rem 2.2rem .4rem .9rem;
+	background: #fff;
+	outline: none;
+	font-family: inherit;
+	font-size: .9rem;
+	color: var(--ink, #0a0a0a);
+	transition: border-color .2s ease, box-shadow .2s ease;
+	appearance: none;
+}
+
+#hpPop .bxfld select:focus {
+	border-color: var(--accent, #fa5539);
+	box-shadow: 0 0 0 4px rgba(250, 85, 57, .12);
+}
+
+/* Permanently floated label, matching a filled .bxfld. */
+#hpPop .bxfld.float > label {
+	top: .32rem;
+	font-size: .62rem;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: var(--accent, #fa5539);
+	font-weight: 600;
+}
+
+#hpPop .bxfld .chev {
+	position: absolute;
+	right: .9rem;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: #8a8276;
+}
+
+/* ---------------------------------------------------------------
  * 2. Inline per-field validation messages
  * ------------------------------------------------------------- */
 .bx-field-error {

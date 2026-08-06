@@ -65,6 +65,16 @@ function bx_enqueue_assets() {
 		file_exists( $css_path ) ? filemtime( $css_path ) : BX_VER
 	);
 
+	// Header services dropdown + mobile accordion. Kept out of app.min.css
+	// because that file is rebuilt from the design HTML by build_css.py.
+	$nav_css_path = BX_DIR . '/assets/css/nav.css';
+	wp_enqueue_style(
+		'bx-nav',
+		BX_URI . '/assets/css/nav.css',
+		array( 'bx-app' ),
+		file_exists( $nav_css_path ) ? filemtime( $nav_css_path ) : BX_VER
+	);
+
 	// Iconify web component (icons) — deferred.
 	wp_enqueue_script(
 		'bx-iconify',

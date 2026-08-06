@@ -106,13 +106,12 @@ get_header();
                   </div>
                   <div class="field float">
                     <select id="service" name="service" required>
-                      <option value="" selected disabled hidden></option>
-                      <option>Branding & Identity</option>
-                      <option>SEO Services</option>
-                      <option>Social Media Marketing</option>
-                      <option>Performance Marketing</option>
-                      <option>UI/UX & Website Design</option>
-                      <option>Not sure yet</option>
+                      <?php
+                      // Built from the published service pages — see inc/services.php.
+                      // The old hardcoded list had drifted (5 options for 7 pages,
+                      // Digital Marketing missing entirely).
+                      bx_service_select_options( isset( $_GET['service'] ) ? sanitize_title( wp_unslash( $_GET['service'] ) ) : '' );
+                      ?>
                     </select>
                     <label for="service">Service needed *</label>
                     <span class="chev"><iconify-icon icon="lucide:chevron-down"></iconify-icon></span>

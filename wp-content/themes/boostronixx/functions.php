@@ -23,6 +23,8 @@ require_once BX_DIR . '/inc/blog.php';
 require_once BX_DIR . '/inc/acf-fields.php';
 require_once BX_DIR . '/inc/block-patterns.php';
 require_once BX_DIR . '/inc/site-options.php';
+require_once BX_DIR . '/inc/services.php';
+require_once BX_DIR . '/inc/lead-cta.php';
 require_once BX_DIR . '/inc/page-schema.php';
 require_once BX_DIR . '/inc/maintenance.php';
 require_once BX_DIR . '/inc/editor-icons.php';
