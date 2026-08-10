@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       BoostronixX Core
  * Description:       Site-specific logic that must survive theme switches — Leads (enquiries) CPT and secure form handling for all lead-capture forms.
- * Version:           1.1.5
+ * Version:           1.1.6
  * Requires PHP:      8.1
  * Author:            IMG Global Infotech
  * Text Domain:       project-core
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BXCORE_VER', '1.1.5' );
+define( 'BXCORE_VER', '1.1.6' );
 define( 'BXCORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BXCORE_URL', plugin_dir_url( __FILE__ ) );
 

@@ -299,12 +299,12 @@ get_header();
 					<label for="bpName">Full name *</label>
 				</div>
 				<div class="bxfld">
-					<input id="bpEmail" name="email" type="email" placeholder=" " required />
-					<label for="bpEmail">Email *</label>
+					<input id="bpEmail" name="email" type="email" placeholder=" " />
+					<label for="bpEmail">Email</label>
 				</div>
 				<div class="bxfld">
-					<input id="bpPhone" name="phone" type="tel" placeholder=" " />
-					<label for="bpPhone">Phone</label>
+					<input id="bpPhone" name="phone" type="tel" placeholder=" " required />
+					<label for="bpPhone">Phone *</label>
 				</div>
 				<div class="bxfld">
 					<textarea id="bpMsg" name="message" placeholder=" " required></textarea>

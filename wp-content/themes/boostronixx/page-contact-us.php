@@ -26,8 +26,13 @@ get_header();
           </nav>
 
           <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-            <!-- LEFT: intro + methods -->
-            <div class="lg:col-span-5">
+            <!-- LEFT (desktop) / FIRST (mobile): intro.
+                 The left column is split into two grid children — heading and
+                 contact methods — so that on mobile the form can sit between
+                 them. Before this, mobile visitors had to scroll past the
+                 heading, the blurb, four contact cards and the social row
+                 before the form appeared. Order is set in assets/css/contact.css. -->
+            <div class="bx-contact-head lg:col-span-5">
               <div class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5">
                 <span class="live-dot inline-block h-2 w-2 rounded-full bg-accent"></span> Currently replying within 24 hours
               </div>
@@ -39,8 +44,11 @@ get_header();
                 digital marketing agency in Jaipur, we'll come back with quick wins
                 and a clear next step — no fluff, no obligation.
               </p>
+            </div>
 
-              <div class="grid sm:grid-cols-2 gap-3 mt-8">
+            <!-- LEFT lower (desktop) / LAST (mobile): contact methods + socials -->
+            <div class="bx-contact-methods lg:col-span-5">
+              <div class="grid sm:grid-cols-2 gap-3">
                 <a href="tel:+918058212202" class="cmethod reveal rounded-2xl border border-line bg-paper p-5" data-delay="1">
                   <span class="cmethod-ico inline-grid place-items-center h-11 w-11 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:phone"></iconify-icon></span>
                   <p class="text-xs text-ink-soft mt-3">Call us</p>
@@ -73,15 +81,27 @@ get_header();
               </div>
             </div>
 
-            <!-- RIGHT: form -->
-            <div class="lg:col-span-7">
+            <!-- RIGHT (desktop) / SECOND (mobile): the form -->
+            <div class="bx-contact-form lg:col-span-7">
               <div class="reveal bg-paper border border-line rounded-xl2 shadow-[0_40px_80px_-50px_rgba(10,10,10,0.45)] p-6 sm:p-9 relative" data-delay="1">
-                <div class="absolute right-5 top-5 sm:right-7 sm:top-7 h-16 w-16 spin hidden sm:block">
-                  <svg viewBox="0 0 100 100" class="w-full h-full">
+                <?php
+                // `spin` sits on the <svg>, not the wrapper, so only the text
+                // ring turns — a rotating logo would look broken. The mark is
+                // the site icon (Settings → General → Site Icon).
+                $bx_mark = function_exists( 'get_site_icon_url' ) ? get_site_icon_url( 96 ) : '';
+                ?>
+                <div class="absolute right-5 top-5 sm:right-7 sm:top-7 h-16 w-16 hidden sm:block">
+                  <svg viewBox="0 0 100 100" class="w-full h-full spin" aria-hidden="true">
                     <defs><path id="cir" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" /></defs>
-                    <text font-size="9.5" font-family="Bricolage Grotesque" fill="#0a0a0a" letter-spacing="2"><textPath href="#cir">FREE AUDIT · NO OBLIGATION ·</textPath></text>
+                    <text font-size="9.5" font-family="Bricolage Grotesque" fill="#0a0a0a" letter-spacing="2"><textPath href="#cir">FREE CALL · NO OBLIGATION ·</textPath></text>
                   </svg>
-                  <span class="absolute inset-0 grid place-items-center text-accent text-base"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
+                  <span class="absolute inset-0 grid place-items-center">
+                    <?php if ( $bx_mark ) : ?>
+                    <img src="<?php echo esc_url( $bx_mark ); ?>" alt="" width="24" height="24" class="h-6 w-6 rounded-md" loading="lazy" />
+                    <?php else : ?>
+                    <span class="text-accent text-base"><iconify-icon icon="lucide:sparkles"></iconify-icon></span>
+                    <?php endif; ?>
+                  </span>
                 </div>
 
                 <h2 class="font-display text-2xl sm:text-3xl tt">Tell us about your project</h2>
@@ -93,12 +113,12 @@ get_header();
                     <label for="name">Full name *</label>
                   </div>
                   <div class="field">
-                    <input id="email" name="email" type="email" placeholder=" " required />
-                    <label for="email">Email *</label>
+                    <input id="email" name="email" type="email" placeholder=" " />
+                    <label for="email">Email</label>
                   </div>
                   <div class="field">
-                    <input id="phone" name="phone" type="tel" placeholder=" " />
-                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder=" " required />
+                    <label for="phone">Phone *</label>
                   </div>
                   <div class="field">
                     <input id="company" name="company" type="text" placeholder=" " />
@@ -123,6 +143,7 @@ get_header();
                       <option>₹50k – ₹1.5L</option>
                       <option>₹1.5L – ₹5L</option>
                       <option>₹5L+</option>
+                      <option>Not decided yet</option>
                     </select>
                     <label for="budget">Monthly budget</label>
                     <span class="chev"><iconify-icon icon="lucide:chevron-down"></iconify-icon></span>

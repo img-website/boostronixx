@@ -42,12 +42,12 @@ $bx_pop_service = bx_current_service_slug();
 							<label for="hpName">Full name *</label>
 						</div>
 						<div class="bxfld">
-							<input id="hpEmail" name="email" type="email" placeholder=" " required />
-							<label for="hpEmail">Email *</label>
+							<input id="hpEmail" name="email" type="email" placeholder=" " />
+							<label for="hpEmail">Email</label>
 						</div>
 						<div class="bxfld">
-							<input id="hpPhone" name="phone" type="tel" placeholder=" " />
-							<label for="hpPhone">Phone</label>
+							<input id="hpPhone" name="phone" type="tel" placeholder=" " required />
+							<label for="hpPhone">Phone *</label>
 						</div>
 						<?php if ( '' !== $bx_pop_service ) : ?>
 						<?php // Only shown on a service page, where it arrives already answered and just needs confirming. Elsewhere it would be one more thing to fill in. ?>

@@ -30,7 +30,7 @@ get_header();
               <?php
               $pm_hero_cta1       = get_field( 'performance_marketing_hero_cta_primary' );
               $pm_hero_cta1_url   = is_array( $pm_hero_cta1 ) && ! empty( $pm_hero_cta1['url'] ) ? $pm_hero_cta1['url'] : '/contact/';
-              $pm_hero_cta1_label = is_array( $pm_hero_cta1 ) && ! empty( $pm_hero_cta1['title'] ) ? $pm_hero_cta1['title'] : 'Get a free ad audit';
+              $pm_hero_cta1_label = is_array( $pm_hero_cta1 ) && ! empty( $pm_hero_cta1['title'] ) ? $pm_hero_cta1['title'] : 'Get my ads proposal';
               $pm_hero_cta2       = get_field( 'performance_marketing_hero_cta_secondary' );
               $pm_hero_cta2_url   = is_array( $pm_hero_cta2 ) && ! empty( $pm_hero_cta2['url'] ) ? $pm_hero_cta2['url'] : '#metrics';
               $pm_hero_cta2_label = is_array( $pm_hero_cta2 ) && ! empty( $pm_hero_cta2['title'] ) ? $pm_hero_cta2['title'] : 'See the metrics';
@@ -154,12 +154,12 @@ get_header();
             <?php
             $pm_cta_btn       = get_field( 'performance_marketing_cta_button' );
             $pm_cta_btn_url   = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['url'] ) ? $pm_cta_btn['url'] : '/contact/';
-            $pm_cta_btn_label = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['title'] ) ? $pm_cta_btn['title'] : 'Get my free ad audit';
+            $pm_cta_btn_label = is_array( $pm_cta_btn ) && ! empty( $pm_cta_btn['title'] ) ? $pm_cta_btn['title'] : 'Get my ads proposal';
             ?>
             <div class="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
               <div class="relative max-w-2xl py-16">
                 <h2 class="font-display text-3xl sm:text-5xl tt leading-[1.04]"><?php echo esc_html( bx_field( 'performance_marketing_cta_heading', false, 'See where your ad spend is leaking' ) ); ?></h2>
-                <p class="text-white/60 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'performance_marketing_cta_text', false, "Get a free audit from a performance marketing agency in Jaipur that lives in the numbers — we'll show you the quick wins and what scaling could look like." ) ); ?></p>
+                <p class="text-white/60 mt-5 text-lg max-w-xl"><?php echo esc_html( bx_field( 'performance_marketing_cta_text', false, "Tell us where your ad spend is going and we'll come back with a clear plan — what to cut, what to scale, and the numbers behind it." ) ); ?></p>
                 <div class="flex flex-wrap items-center gap-3 mt-9">
                   <a href="<?php echo esc_url( $pm_cta_btn_url ); ?>" class="inline-flex items-center gap-2 rounded-full bg-accent text-white px-7 py-4 font-medium hover:bg-white hover:text-ink transition"><?php echo esc_html( $pm_cta_btn_label ); ?> <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
                   <a href="<?php echo esc_url( bx_field( 'performance_marketing_cta_phone_href', false, 'tel:+918058212202' ) ); ?>" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-4 font-medium hover:bg-white hover:text-ink transition"><iconify-icon icon="lucide:phone"></iconify-icon> <?php echo esc_html( bx_field( 'performance_marketing_cta_phone', false, '+91 80582 12202' ) ); ?></a>

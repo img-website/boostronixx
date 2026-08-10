@@ -1622,7 +1622,7 @@ get_header();
                   fill="#fff"
                   letter-spacing="2"
                 >
-                  <textPath href="#cir2">BOOK A CALL · FREE AUDIT ·</textPath>
+                  <textPath href="#cir2">BOOK A CALL · FREE PLAN ·</textPath>
                 </text>
               </svg>
               <span

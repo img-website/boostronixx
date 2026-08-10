@@ -404,7 +404,7 @@ function bx_acf_performance_marketing() {
 					'label'         => 'CTA — text',
 					'type'          => 'textarea',
 					'rows'          => 3,
-					'default_value' => "Get a free audit from a performance marketing agency in Jaipur that lives in the numbers — we'll show you the quick wins and what scaling could look like.",
+					'default_value' => "Tell us where your ad spend is going and we'll come back with a clear plan — what to cut, what to scale, and the numbers behind it.",
 				),
 				array(
 					'key'           => 'f_performance_marketing_cta_button',

@@ -128,16 +128,43 @@ function bxcore_handle_lead() {
 		'budget'  => isset( $_POST['budget'] ) ? mb_substr( sanitize_text_field( wp_unslash( $_POST['budget'] ) ), 0, 80 ) : '',
 		'message' => isset( $_POST['message'] ) ? mb_substr( sanitize_textarea_field( wp_unslash( $_POST['message'] ) ), 0, 5000 ) : '',
 	);
+	// sanitize_email() blanks anything malformed, so "abc@gmail" arrives as ''.
+	// Keep the raw value to tell "left it empty" apart from "typed a bad
+	// address" — otherwise, now that email is optional, a typo would sail
+	// through as no-email-given instead of being flagged.
+	$email_raw = isset( $_POST['email'] ) ? trim( (string) wp_unslash( $_POST['email'] ) ) : '';
+
 	$source = isset( $_POST['source'] ) ? mb_substr( sanitize_text_field( wp_unslash( $_POST['source'] ) ), 0, 40 ) : 'form';
 	$page   = isset( $_POST['page'] ) ? mb_substr( esc_url_raw( wp_unslash( $_POST['page'] ) ), 0, 300 ) : '';
 
 	// Validation.
-	if ( ! bxcore_is_valid_email( $fields['email'] ) ) {
-		wp_send_json_error( array( 'message' => __( 'Please enter a complete email address, e.g. name@example.com', 'project-core' ) ), 422 );
-	}
+	//
+	// On the forms that collect BOTH a phone number and an email, phone is the
+	// required contact detail and email is optional. Two forms only collect an
+	// email — the newsletter and the blog-post contact box — so those still
+	// require it; asking them for a phone number they have no field for would
+	// reject every submission.
+	$email_only = in_array( $source, array( 'newsletter', 'blog-contact' ), true );
+
 	if ( 'newsletter' !== $source && '' === $fields['name'] ) {
 		wp_send_json_error( array( 'message' => __( 'Please enter your name.', 'project-core' ) ), 422 );
 	}
+
+	if ( $email_only ) {
+		if ( ! bxcore_is_valid_email( $fields['email'] ) ) {
+			wp_send_json_error( array( 'message' => __( 'Please enter a complete email address, e.g. name@example.com', 'project-core' ) ), 422 );
+		}
+	} else {
+		if ( '' === $fields['phone'] ) {
+			wp_send_json_error( array( 'message' => __( 'Please enter your phone number.', 'project-core' ) ), 422 );
+		}
+		// Optional, but must still be a real address when supplied — otherwise
+		// a typo silently costs us a reply route the visitor meant to give.
+		if ( '' !== $email_raw && ! bxcore_is_valid_email( $fields['email'] ) ) {
+			wp_send_json_error( array( 'message' => __( 'Please enter a complete email address, e.g. name@example.com', 'project-core' ) ), 422 );
+		}
+	}
+
 	// forms.js submits E.164 (+911234567890) via intl-tel-input. Accept a plain
 	// international-looking number too, in case JS-side enhancement is missing.
 	if ( '' !== $fields['phone'] && ! preg_match( '/^\+?[0-9][0-9 ().-]{5,29}$/', $fields['phone'] ) ) {

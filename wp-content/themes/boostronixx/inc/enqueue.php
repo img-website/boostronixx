@@ -75,6 +75,17 @@ function bx_enqueue_assets() {
 		file_exists( $nav_css_path ) ? filemtime( $nav_css_path ) : BX_VER
 	);
 
+	// Contact page mobile source order (form right after the heading).
+	if ( is_page( 'contact' ) ) {
+		$contact_css_path = BX_DIR . '/assets/css/contact.css';
+		wp_enqueue_style(
+			'bx-contact',
+			BX_URI . '/assets/css/contact.css',
+			array( 'bx-app' ),
+			file_exists( $contact_css_path ) ? filemtime( $contact_css_path ) : BX_VER
+		);
+	}
+
 	// Iconify web component (icons) — deferred.
 	wp_enqueue_script(
 		'bx-iconify',
