@@ -54,7 +54,8 @@ get_header();
 
       <!-- ===================== CATEGORY GRID ===================== -->
       <section class="pb-20 sm:pb-28">
-        <div id="mapGrid" class="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <?php // items-start: the cards hold 1-11 links each, so stretching a short one to match the tallest in its row just makes an empty box. ?>
+        <div id="mapGrid" class="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 xl:grid-cols-3 gap-5 items-start">
 
           <!-- MAIN -->
           <div class="catcard reveal rounded-xl2 border border-line p-6" data-cat>
@@ -109,33 +110,6 @@ get_header();
               <a href="/faqs/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="faq questions help"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:help-circle"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">FAQ</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
               <a href="/contact/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="contact us get in touch"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:message-square"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Contact Us</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
               <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="blog articles insights"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:newspaper"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Blog</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
-              <?php
-              // Dynamic: every published blog post (capped for performance per CLAUDE.md §7).
-              // Yoast's per-post "noindex" is honoured here too: a post we're telling
-              // Google to skip shouldn't be advertised on the human sitemap either.
-              // Yoast stores 1 = noindex, 2 = index, missing = follow the site default.
-              foreach ( get_posts(
-                  array(
-                      'numberposts'  => 100,
-                      'post_status'  => 'publish',
-                      'no_found_rows' => true,
-                      'meta_query'   => array(
-                          'relation' => 'OR',
-                          array(
-                              'key'     => '_yoast_wpseo_meta-robots-noindex',
-                              'compare' => 'NOT EXISTS',
-                          ),
-                          array(
-                              'key'     => '_yoast_wpseo_meta-robots-noindex',
-                              'value'   => '1',
-                              'compare' => '!=',
-                          ),
-                      ),
-                  )
-              ) as $bx_sp ) :
-                  ?>
-              <a href="<?php echo esc_url( get_permalink( $bx_sp ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="<?php echo esc_attr( 'article post ' . strtolower( $bx_sp->post_title ) ); ?>"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:file-text"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label"><?php echo esc_html( $bx_sp->post_title ); ?></span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
-              <?php endforeach; ?>
             </div>
           </div>
 
@@ -162,6 +136,51 @@ get_header();
             </div>
             <div class="stagger space-y-2">
               <a href="/contact/" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="contact book strategy call"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent"><iconify-icon icon="lucide:calendar-check"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label">Book a Strategy Call</span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft"></iconify-icon></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARTICLES — full width.
+             The post list used to live inside the Company card, so as posts
+             piled up that one card grew to several screens tall while the
+             cards beside it stayed short, leaving a column of dead space.
+             Given as its own row it can spread across all three columns, so
+             adding posts widens the block instead of stretching one card. -->
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 mt-5">
+          <div class="catcard reveal rounded-xl2 border border-line p-6" data-cat>
+            <div class="flex items-center gap-3 mb-5">
+              <span class="grid place-items-center h-10 w-10 rounded-xl bg-surface text-accent text-xl"><iconify-icon icon="lucide:newspaper"></iconify-icon></span>
+              <h2 class="font-display text-xl tt">Articles</h2>
+              <span class="ml-auto text-xs text-ink-soft rounded-full bg-surface px-2.5 py-1 cat-count"></span>
+            </div>
+            <div class="stagger grid sm:grid-cols-2 xl:grid-cols-3 gap-2">
+              <?php
+              // Dynamic: every published blog post (capped for performance per CLAUDE.md §7).
+              // Yoast's per-post "noindex" is honoured here too: a post we're telling
+              // Google to skip shouldn't be advertised on the human sitemap either.
+              // Yoast stores 1 = noindex, 2 = index, missing = follow the site default.
+              foreach ( get_posts(
+                  array(
+                      'numberposts'  => 100,
+                      'post_status'  => 'publish',
+                      'no_found_rows' => true,
+                      'meta_query'   => array(
+                          'relation' => 'OR',
+                          array(
+                              'key'     => '_yoast_wpseo_meta-robots-noindex',
+                              'compare' => 'NOT EXISTS',
+                          ),
+                          array(
+                              'key'     => '_yoast_wpseo_meta-robots-noindex',
+                              'value'   => '1',
+                              'compare' => '!=',
+                          ),
+                      ),
+                  )
+              ) as $bx_sp ) :
+                  ?>
+              <a href="<?php echo esc_url( get_permalink( $bx_sp ) ); ?>" class="node sm-link flex items-center gap-3 rounded-xl border border-line p-3" data-name="<?php echo esc_attr( 'article post ' . strtolower( $bx_sp->post_title ) ); ?>"><span class="node-ico grid place-items-center h-9 w-9 rounded-lg bg-surface text-accent shrink-0"><iconify-icon icon="lucide:file-text"></iconify-icon></span><span class="flex-1 font-medium text-sm sm-label"><?php echo esc_html( $bx_sp->post_title ); ?></span><iconify-icon icon="lucide:arrow-right" class="node-arr text-ink-soft shrink-0"></iconify-icon></a>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
