@@ -7,11 +7,11 @@ The XML sitemap of this website can by found by following [this link](https://bo
 > BoostronixX is Jaipur's top\-rated digital marketing agency jaipur for SEO, Google Ads, social media, branding \& performance marketing\. ROI\-driven\. Free consultation\.
 
 ## Pages
+- [Digital Marketing](https://boostronixx.test/services/digital-marketing/)
 - [SEO Services](https://boostronixx.test/services/seo-services/)
 - [Mount Litera Zee School, Alwar](https://boostronixx.test/portfolio/mount-litera-zee-school/)
 - [Freshee](https://boostronixx.test/portfolio/freshee/)
 - [FAQ](https://boostronixx.test/faqs/)
-- [Contact Us](https://boostronixx.test/contact/)
 
 ## Posts
 - [How to Choose the Best Digital Marketing Agency in Jaipur](https://boostronixx.test/blog/how-to-choose-digital-marketing-agency-jaipur/): A practical guide to choosing the best digital marketing agency in Jaipur — the factors that actually predict results, realistic INR pricing, and freelancer vs agency compared\.
