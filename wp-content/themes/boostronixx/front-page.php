@@ -1328,7 +1328,7 @@ get_header();
                   $bx_about_stats = array(
                       array( 'Founded', '2026' ),
                       array( 'Based in', 'Jaipur' ),
-                      array( 'Brands served', '50+' ),
+                      array( 'Brands served', '35+' ),
                       array( 'Avg. reply', '<24h' ),
                   );
               }

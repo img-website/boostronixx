@@ -48,8 +48,8 @@ get_header();
 
           <!-- stat band -->
           <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-px mt-12 rounded-2xl overflow-hidden border border-line bg-line" data-delay="2">
-            <div class="bg-paper p-6"><p class="font-display text-4xl sm:text-5xl tt"><span class="count" data-to="50">0</span>+</p><p class="text-ink-soft text-sm mt-1">Brands transformed</p></div>
-            <div class="bg-paper p-6"><p class="font-display text-4xl sm:text-5xl tt"><span class="count" data-to="100">0</span>+</p><p class="text-ink-soft text-sm mt-1">Projects delivered</p></div>
+            <div class="bg-paper p-6"><p class="font-display text-4xl sm:text-5xl tt"><span class="count" data-to="35">0</span>+</p><p class="text-ink-soft text-sm mt-1">Brands transformed</p></div>
+            <div class="bg-paper p-6"><p class="font-display text-4xl sm:text-5xl tt"><span class="count" data-to="65">0</span>+</p><p class="text-ink-soft text-sm mt-1">Projects delivered</p></div>
             <div class="bg-paper p-6"><p class="font-display text-4xl sm:text-5xl tt"><span class="count" data-to="15">0</span>+</p><p class="text-ink-soft text-sm mt-1">Industries served</p></div>
             <div class="bg-paper p-6"><p class="font-display text-4xl sm:text-5xl tt"><span class="count" data-to="98">0</span>%</p><p class="text-ink-soft text-sm mt-1">Client satisfaction</p></div>
           </div>
