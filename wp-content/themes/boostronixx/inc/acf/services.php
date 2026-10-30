@@ -353,8 +353,8 @@ function bx_acf_services() {
 function bx_services_render_stats() {
 	$defaults = array(
 		array( 'number' => 100, 'suffix' => '%', 'label' => 'In-house team' ),
-		array( 'number' => 50, 'suffix' => '+', 'label' => 'Brands served' ),
-		array( 'number' => 100, 'suffix' => '+', 'label' => 'Projects delivered' ),
+		array( 'number' => 35, 'suffix' => '+', 'label' => 'Brands served' ),
+		array( 'number' => 65, 'suffix' => '+', 'label' => 'Projects delivered' ),
 		array( 'number' => 4, 'suffix' => '.9★', 'label' => 'Average rating' ),
 	);
 

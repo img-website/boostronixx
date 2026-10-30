@@ -163,6 +163,8 @@ get_header();
         </div>
       </section>
 
+      <?php bx_industries_links_section(); ?>
+
       <!-- RELATED + CTA -->
       <section class="pb-20 sm:pb-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">

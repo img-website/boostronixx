@@ -19,7 +19,7 @@ $bx_social = bx_option( 'social_links', array() );
 if ( ! $bx_social ) {
 	$bx_social = array(
 		array( 'platform' => 'linkedin', 'url' => 'https://www.linkedin.com/company/boostronixx' ),
-		array( 'platform' => 'instagram', 'url' => 'https://www.instagram.com/boostronixx/' ),
+		array( 'platform' => 'instagram', 'url' => 'https://www.instagram.com/boostronixx_/' ),
 		array( 'platform' => 'youtube', 'url' => 'https://www.youtube.com/@boostronixx' ),
 		array( 'platform' => 'facebook', 'url' => 'https://www.facebook.com/boostronixx' ),
 	);

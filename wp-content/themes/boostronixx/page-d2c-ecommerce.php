@@ -262,6 +262,8 @@ get_header();
         </div>
       </section>
 
+      <?php bx_industries_links_section( 'd2c-ecommerce' ); ?>
+
       <!-- ===================== RELATED + CTA (shared design) ===================== -->
       <section class="pb-20 sm:pb-28 pt-4" aria-label="Related and contact">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">

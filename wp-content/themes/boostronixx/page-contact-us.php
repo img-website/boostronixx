@@ -75,7 +75,7 @@ get_header();
                 <p class="text-xs text-ink-soft">Follow along</p>
                 <div class="flex items-center gap-2">
                   <a href="https://www.linkedin.com/company/boostronixx" aria-label="LinkedIn" class="grid place-items-center h-9 w-9 rounded-full border border-line hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
-                  <a href="https://www.instagram.com/boostronixx/" aria-label="Instagram" class="grid place-items-center h-9 w-9 rounded-full border border-line hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+                  <a href="https://www.instagram.com/boostronixx_/" aria-label="Instagram" class="grid place-items-center h-9 w-9 rounded-full border border-line hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
                   <a href="https://www.youtube.com/@boostronixx" aria-label="YouTube" class="grid place-items-center h-9 w-9 rounded-full border border-line hover:bg-ink hover:text-paper transition"><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
                 </div>
               </div>

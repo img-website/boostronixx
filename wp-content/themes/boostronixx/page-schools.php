@@ -255,6 +255,35 @@ get_header();
         </div>
       </section>
 
+      <!-- ===================== FEATURED WORK — MOUNT LITERA ZEE SCHOOL ===================== -->
+      <?php
+      $schools_cs = get_page_by_path( 'portfolio/mount-litera-zee-school' );
+      if ( $schools_cs instanceof WP_Post ) :
+        $schools_cs_url = get_permalink( $schools_cs->ID );
+        ?>
+      <section class="py-20 sm:py-28 bg-surface border-y border-line" aria-label="Featured school project">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <a href="<?php echo esc_url( $schools_cs_url ); ?>" class="reveal group block">
+              <div class="relative overflow-hidden rounded-xl2 border border-line">
+                <?php bx_ph_figure( 'portfolio_card_image', 'aspect-[1069/770] bg-surface-2 mb-0', 'Education', 'Mount Litera Zee School — school website, branding and SEO case study by BoostronixX', 1069, 770, $schools_cs->ID ); ?>
+                <span class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></span>
+              </div>
+            </a>
+            <div>
+              <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'schools_case_eyebrow', false, 'Featured school project' ) ); ?></p>
+              <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight" data-delay="1"><?php echo esc_html( bx_field( 'schools_case_heading', false, 'Mount Litera Zee School' ) ); ?></h2>
+              <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="2"><?php echo esc_html( bx_field( 'schools_case_text', false, 'A warm, admissions-focused website, branding and SEO for a CBSE school — built to turn parent searches into campus visits and confirmed admissions.' ) ); ?></p>
+              <a href="<?php echo esc_url( $schools_cs_url ); ?>" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-7 font-medium" data-delay="3">
+                <span class="relative z-10 sheen-text"><?php echo esc_html( bx_field( 'schools_case_button', false, 'View the case study' ) ); ?></span>
+                <iconify-icon icon="lucide:arrow-right" class="relative z-10" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <?php endif; ?>
+
       <!-- ===================== FAQ (shared design) ===================== -->
       <section class="py-20 sm:py-28" aria-label="Frequently asked questions">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
@@ -264,6 +293,8 @@ get_header();
           </div>
         </div>
       </section>
+
+      <?php bx_industries_links_section( 'schools' ); ?>
 
       <!-- ===================== RELATED + CTA (shared design) ===================== -->
       <section class="pb-20 sm:pb-28 pt-4" aria-label="Related and contact">

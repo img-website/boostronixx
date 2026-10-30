@@ -266,6 +266,9 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
         </div>
       </section>
 
+      <!-- ===================== INDUSTRIES WE SERVE (internal links) ===================== -->
+      <?php bx_industries_links_section(); ?>
+
       <!-- ===================== CTA ===================== -->
       <section class="pb-20 sm:pb-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">

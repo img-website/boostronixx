@@ -81,7 +81,7 @@ $bx_m_message = bx_option( 'maintenance_message', "Our site is getting a quick u
 			if ( ! $bx_m_social ) {
 				$bx_m_social = array(
 					array( 'platform' => 'linkedin', 'url' => 'https://www.linkedin.com/company/boostronixx' ),
-					array( 'platform' => 'instagram', 'url' => 'https://www.instagram.com/boostronixx/' ),
+					array( 'platform' => 'instagram', 'url' => 'https://www.instagram.com/boostronixx_/' ),
 				);
 			}
 			foreach ( $bx_m_social as $bx_m_s ) :
