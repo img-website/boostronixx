@@ -33,6 +33,13 @@ function bx_output_page_schema() {
 		untrailingslashit( home_url() ),
 		$schema
 	);
+	// The Instagram handle changed to @boostronixx_; keep the stored schema's
+	// sameAs in sync at output time (mirrors the domain swap above).
+	$schema = str_replace(
+		'https://www.instagram.com/boostronixx/',
+		'https://www.instagram.com/boostronixx_/',
+		$schema
+	);
 	echo "\n" . '<script type="application/ld+json" class="bx-schema">' . $schema . '</script>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- trusted first-party JSON-LD.
 }
 
