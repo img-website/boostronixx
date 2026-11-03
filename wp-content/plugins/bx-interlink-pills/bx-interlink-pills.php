@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       BX Industry Links Band
- * Description:       Restyles the cross-industry internal-link sections ("Other industries we serve" on industry pages, "Industries we serve" on service pages) as one dark "sectors" feature band — a deliberately distinct module from the light "Pairs well with" / "Explore more" related cards, which share the same card markup and otherwise made the two sections read as one design stacked twice. The band differs on three axes: a dark panel with a warm accent glow (vs light cards), one unified container (vs separate bordered cards), and a vertical icon-over-name-over-descriptor layout (vs the horizontal icon-beside-name cards). It also normalises the band's vertical rhythm — the section's own padding varied per template (the following related/CTA section ranged from pt-4 to py-28), so a consistent ~5rem gap is forced above the eyebrow and below the band. Presentational CSS only, scoped by aria-label and targeting just the layout grid via a child combinator (the icon wrapper also uses the .grid class, so the combinator avoids touching it). The related cards and CTA are untouched. Lives in a plugin because theme-file editing is disabled on the live host; can be folded into the theme CSS on a future deploy and this plugin removed.
- * Version:           1.2.1
+ * Description:       Restyles the cross-industry internal-link sections ("Other industries we serve" on industry pages, "Industries we serve" on service pages) as one dark "sectors" feature band — a deliberately distinct module from the light "Pairs well with" / "Explore more" related cards, which share the same card markup and otherwise made the two sections read as one design stacked twice. The band differs on three axes: a dark panel with a warm accent glow (vs light cards), one unified container (vs separate bordered cards), and a vertical icon-over-name-over-descriptor layout (vs the horizontal icon-beside-name cards). It also normalises the band's vertical rhythm — the section's own padding varied per template (the following related/CTA section ranged from pt-4 to py-28), so a consistent ~5rem gap is forced above the eyebrow and below the band. Presentational CSS only, scoped by aria-label and targeting just the layout grid via a child combinator (the icon wrapper also uses the .grid class, so the combinator avoids touching it). The related cards and CTA are untouched. It also centers the Website Design page's hero breadcrumb (scoped by the theme's bx-page-website-design body class) so it lines up with that page's centered hero, which is the only centered service/industry hero. Lives in a plugin because theme-file editing is disabled on the live host; can be folded into the theme CSS on a future deploy and this plugin removed.
+ * Version:           1.3.0
  * Author:            BoostronixX
  * License:           GPL-2.0-or-later
  *
@@ -67,6 +67,9 @@ section[aria-label="Other industries we serve"] > div > .grid > a:not(:last-chil
 section[aria-label="Industries we serve"] > div > .grid > a > iconify-icon,
 section[aria-label="Other industries we serve"] > div > .grid > a > iconify-icon{position:static;margin-left:auto;}
 }
+</style>
+<style id="bx-breadcrumb-center">
+body.bx-page-website-design nav[aria-label="Breadcrumb"]{justify-content:center !important;}
 </style>
 
 CSS;
