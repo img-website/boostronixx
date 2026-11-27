@@ -52,28 +52,28 @@ function bx_acf_about_us() {
 					'name'          => 'about_us_hero_badge',
 					'label'         => 'Badge text',
 					'type'          => 'text',
-					'default_value' => 'Creative branding & growth studio · since 2026',
+					'default_value' => 'Digital marketing agency · since 2026',
 				),
 				array(
 					'key'           => 'f_about_us_hero_heading_a',
 					'name'          => 'about_us_hero_heading_a',
 					'label'         => 'Heading — line 1',
 					'type'          => 'text',
-					'default_value' => "We're the team behind",
+					'default_value' => "We're the team that",
 				),
 				array(
 					'key'           => 'f_about_us_hero_heading_b',
 					'name'          => 'about_us_hero_heading_b',
 					'label'         => 'Heading — line 2 (before accent)',
 					'type'          => 'text',
-					'default_value' => 'brands that ',
+					'default_value' => 'gets Jaipur businesses ',
 				),
 				array(
 					'key'           => 'f_about_us_hero_heading_accent',
 					'name'          => 'about_us_hero_heading_accent',
 					'label'         => 'Heading — accent word',
 					'type'          => 'text',
-					'default_value' => 'get noticed',
+					'default_value' => 'found',
 				),
 				array(
 					'key'           => 'f_about_us_hero_text',
@@ -191,7 +191,7 @@ function bx_acf_about_us() {
 					'instructions'  => 'The second paragraph contains inline emphasis markup and is left in the template.',
 					'type'          => 'textarea',
 					'rows'          => 3,
-					'default_value' => '50+ brands later, that belief still runs everything we do — across real estate, schools, D2C and healthcare.',
+					'default_value' => '50+ brands later, that belief in a better way still runs everything we do — across real estate, schools, D2C and healthcare.',
 				),
 				array(
 					'key'           => 'f_about_us_story_tags',
@@ -222,7 +222,7 @@ function bx_acf_about_us() {
 					'label'         => 'Mission — text',
 					'type'          => 'textarea',
 					'rows'          => 3,
-					'default_value' => 'To help ambitious businesses become brands people remember — by pairing sharp strategy with creative that actually performs, and proving every rupee of it.',
+					'default_value' => 'To help ambitious businesses turn online attention into customers — by pairing sharp strategy with creative that actually performs, and proving every rupee of it.',
 				),
 				array(
 					'key'           => 'f_about_us_vision_heading',
@@ -460,7 +460,7 @@ function bx_acf_about_us() {
  */
 function bx_about_us_render_stats() {
 	$defaults = array(
-		array( 'prefix' => '', 'number' => '50', 'suffix' => '+', 'label' => 'Brands grown' ),
+		array( 'prefix' => '', 'number' => '50', 'suffix' => '+', 'label' => 'Businesses grown' ),
 		array( 'prefix' => '', 'number' => '100', 'suffix' => '%', 'label' => 'In-house team' ),
 		array( 'prefix' => '', 'number' => '4', 'suffix' => '.9', 'label' => 'Average client rating' ),
 		array( 'prefix' => '&lt;', 'number' => '24', 'suffix' => 'h', 'label' => 'Average reply time' ),

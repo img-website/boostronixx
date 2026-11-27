@@ -364,7 +364,7 @@ function bx_acf_industries() {
 function bx_industries_render_stats() {
 	$defaults = array(
 		array( 'number' => 15, 'suffix' => '+', 'label' => 'Industries served' ),
-		array( 'number' => 50, 'suffix' => '+', 'label' => 'Brands grown' ),
+		array( 'number' => 50, 'suffix' => '+', 'label' => 'Businesses grown' ),
 		array( 'number' => 100, 'suffix' => '+', 'label' => 'Projects shipped' ),
 		array( 'number' => 4, 'suffix' => '', 'label' => 'Core sectors' ),
 	);

@@ -233,3 +233,34 @@ function bx_author_avatar( $wrap_classes = '', $size = 'thumbnail', $user_id = 0
 	$initial = $name ? mb_strtoupper( mb_substr( $name, 0, 1 ) ) : '?';
 	return '<span class="' . esc_attr( $wrap_classes ) . '" aria-hidden="true">' . esc_html( $initial ) . '</span>';
 }
+
+/**
+ * Order blog category chips by the site's service priority
+ * (digital marketing first, branding last). Categories not in the list
+ * follow, sorted by name.
+ *
+ * @param array $terms Category term objects (need ->slug and ->name).
+ * @return array
+ */
+function bx_sort_categories_by_priority( array $terms ) {
+	$priority = array( 'digital-marketing', 'seo', 'social-media-marketing', 'performance-marketing', 'web-ui-ux-design', 'content-marketing', 'growth-case-studies', 'trends-insights', 'branding-and-strategy' );
+	$rank     = array_flip( $priority );
+	usort(
+		$terms,
+		function ( $a, $b ) use ( $rank ) {
+			$ra = isset( $rank[ $a->slug ] ) ? $rank[ $a->slug ] : PHP_INT_MAX;
+			$rb = isset( $rank[ $b->slug ] ) ? $rank[ $b->slug ] : PHP_INT_MAX;
+			return $ra === $rb ? strcasecmp( $a->name, $b->name ) : $ra <=> $rb;
+		}
+	);
+	return $terms;
+}
+
+/**
+ * Non-empty blog categories in service-priority order (for the chip filters).
+ *
+ * @return WP_Term[]
+ */
+function bx_ordered_blog_categories() {
+	return bx_sort_categories_by_priority( get_categories( array( 'hide_empty' => true ) ) );
+}

@@ -51,23 +51,23 @@ function bx_register_acf_fields() {
 					'name'          => 'hero_badge',
 					'label'         => 'Badge text',
 					'type'          => 'text',
-					'default_value' => 'Creative branding & growth studio · Jaipur, India',
+					'default_value' => 'Digital marketing agency · Jaipur, India',
 				),
 				array(
 					'key'           => 'f_hero_heading',
 					'name'          => 'hero_heading',
 					'label'         => 'Heading (line before the animated word)',
 					'type'          => 'text',
-					'default_value' => 'We build brands that',
+					'default_value' => 'Digital marketing in Jaipur that',
 				),
 				array(
 					'key'           => 'f_hero_words',
 					'name'          => 'hero_rotating_words',
 					'label'         => 'Rotating words',
-					'instructions'  => 'One per line. These cycle in the heading after "' . 'We build brands that".',
+					'instructions'  => 'One per line. These cycle in the heading after "' . 'Digital marketing in Jaipur that".',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => "get noticed\nconvert\nstand out\nscale fast",
+					'default_value' => "gets you found\nbrings leads\nconverts\nscales",
 				),
 				array(
 					'key'           => 'f_hero_sub',
@@ -75,7 +75,7 @@ function bx_register_acf_fields() {
 					'label'         => 'Subheading',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => 'BoostronixX is a digital marketing company in Jaipur — branding, SEO, social media and performance marketing in one creative team, turning ambitious businesses into brands people remember with ROI-driven, affordable growth.',
+					'default_value' => 'BoostronixX is a digital marketing agency in Jaipur — SEO, social media, performance ads and websites from one team, built to bring you customers, not vanity metrics.',
 				),
 				array(
 					'key'           => 'f_hero_cta1',
@@ -96,7 +96,7 @@ function bx_register_acf_fields() {
 					'name'          => 'hero_stat_eyebrow',
 					'label'         => 'Stat card — label',
 					'type'          => 'text',
-					'default_value' => 'Brands grown',
+					'default_value' => 'Businesses grown',
 				),
 				array(
 					'key'           => 'f_stat_number',
@@ -126,7 +126,7 @@ function bx_register_acf_fields() {
 					'instructions'  => 'One per line.',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => "Branding\nSEO\nSocial\nAds",
+					'default_value' => "SEO\nSocial\nAds\nWeb",
 				),
 
 				// ---------------- FAQ TAB ----------------
@@ -193,7 +193,7 @@ function bx_register_acf_fields() {
 					'label'         => 'Text',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => 'Real estate, school, D2C or healthcare brand ready to scale — BoostronixX is your creative branding and digital marketing partner in Jaipur, trusted as one of the best digital marketing agencies in Jaipur for ROI-driven, affordable growth. Book a free strategy call today.',
+					'default_value' => 'Real estate, school, D2C or healthcare brand ready to scale — BoostronixX is your digital marketing partner in Jaipur, trusted as one of the best digital marketing agencies in Jaipur for ROI-driven, affordable growth. Book a free strategy call today.',
 				),
 				array(
 					'key'           => 'f_cta_button',
@@ -242,7 +242,7 @@ function bx_register_acf_fields() {
 					'name'          => 'insights_heading',
 					'label'         => 'Heading',
 					'type'          => 'text',
-					'default_value' => 'Ideas on branding & growth',
+					'default_value' => 'Ideas on digital marketing & growth',
 				),
 				array(
 					'key'     => 'f_ins_note',
@@ -269,7 +269,7 @@ function bx_register_acf_fields() {
 					'name'          => 'testimonials_heading',
 					'label'         => 'Heading',
 					'type'          => 'text',
-					'default_value' => 'Brands that grew with us',
+					'default_value' => 'Businesses that grew with us',
 				),
 				array(
 					'key'          => 'f_testi_items',
@@ -328,7 +328,7 @@ function bx_register_acf_fields() {
 					'name'          => 'about_heading',
 					'label'         => 'Heading',
 					'type'          => 'text',
-					'default_value' => 'A creative studio that thinks like a growth team',
+					'default_value' => 'A digital marketing team that thinks like your growth partner',
 				),
 				array(
 					'key'           => 'f_ab_text',
@@ -336,7 +336,7 @@ function bx_register_acf_fields() {
 					'label'         => 'Text',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => "BoostronixX turns ideas into scalable brands. We combine strategy, creativity and performance marketing to deliver consistent results — whether you're a start-up finding your footing or an established business ready to scale.",
+					'default_value' => "BoostronixX turns search, social and ads into steady enquiries. We combine strategy, creativity and performance marketing to deliver consistent results — whether you're a start-up finding your footing or an established business ready to scale.",
 				),
 				array(
 					'key'           => 'f_ab_points',
@@ -565,9 +565,11 @@ function bx_register_acf_fields() {
 				array( 'key' => 'f_svc2', 'name' => 'svc2_title', 'label' => '02 · SEO — headline', 'type' => 'text', 'default_value' => 'Rank on Google — and get cited by AI' ),
 				array( 'key' => 'f_svc3', 'name' => 'svc3_title', 'label' => '03 · Social — headline', 'type' => 'text', 'default_value' => 'Feeds that turn followers into customers' ),
 				array( 'key' => 'f_svc4', 'name' => 'svc4_title', 'label' => '04 · Performance — headline', 'type' => 'text', 'default_value' => 'Every rupee tracked, optimised and accountable' ),
-				array( 'key' => 'f_svc5', 'name' => 'svc5_title', 'label' => '05 · Branding — headline', 'type' => 'text', 'default_value' => 'A brand identity people instantly recognise' ),
+				// Showcase order: Website is shown 5th and Branding last (07). Field
+				// names stay with their blocks, so saved headlines follow the move.
+				array( 'key' => 'f_svc7', 'name' => 'svc7_title', 'label' => '05 · Website — headline', 'type' => 'text', 'default_value' => 'Fast, responsive sites that load and convert' ),
 				array( 'key' => 'f_svc6', 'name' => 'svc6_title', 'label' => '06 · UI/UX — headline', 'type' => 'text', 'default_value' => 'From rough wireframe to interface that converts' ),
-				array( 'key' => 'f_svc7', 'name' => 'svc7_title', 'label' => '07 · Website — headline', 'type' => 'text', 'default_value' => 'Fast, responsive sites that load and convert' ),
+				array( 'key' => 'f_svc5', 'name' => 'svc5_title', 'label' => '07 · Branding — headline', 'type' => 'text', 'default_value' => 'A brand identity people instantly recognise' ),
 			),
 		)
 	);
@@ -592,7 +594,7 @@ function bx_home_render_faqs() {
 	$defaults = array(
 		array(
 			'q' => 'Which services does BoostronixX offer?',
-			'a' => 'Brand consulting, digital marketing, SEO, social media marketing, performance marketing, UI/UX design and website design — strategy through execution, all in-house.',
+			'a' => 'Digital marketing, SEO, social media marketing, performance marketing, website design, UI/UX design and brand consulting — strategy through execution, all in-house.',
 		),
 		array(
 			'q' => 'Where is BoostronixX located?',

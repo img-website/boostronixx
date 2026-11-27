@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $bx_title  = isset( $bx_title ) ? $bx_title : 'Blog';
 $bx_desc   = isset( $bx_desc ) ? $bx_desc : '';
 $bx_active = isset( $bx_active ) ? $bx_active : '';
-$bx_cats   = get_categories( array( 'hide_empty' => true ) );
+$bx_cats   = bx_ordered_blog_categories();
 $bx_all    = get_permalink( get_option( 'page_for_posts' ) );
 $bx_all    = $bx_all ? $bx_all : home_url( '/blog/' );
 ?>
@@ -105,7 +105,7 @@ $bx_all    = $bx_all ? $bx_all : home_url( '/blog/' );
             <div class="relative grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 class="font-display text-3xl sm:text-4xl tt leading-tight">Get one useful idea, every week</h2>
-                <p class="text-paper/70 mt-4 max-w-md">No spam, no fluff — just practical branding and growth tips you can actually use. Unsubscribe anytime.</p>
+                <p class="text-paper/70 mt-4 max-w-md">No spam, no fluff — just practical digital marketing and growth tips you can actually use. Unsubscribe anytime.</p>
               </div>
               <form id="newsForm" class="lg:justify-self-end w-full max-w-md">
                 <label for="newsEmail" class="sr-only">Email address</label>

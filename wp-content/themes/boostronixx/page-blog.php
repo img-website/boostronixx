@@ -27,7 +27,7 @@ $bx_query = new WP_Query(
 );
 $bx_posts = $bx_query->posts;
 $bx_featured = ( 1 === $bx_paged && $bx_posts ) ? array_shift( $bx_posts ) : null;
-$bx_cats     = get_categories( array( 'hide_empty' => true ) );
+$bx_cats     = bx_ordered_blog_categories();
 ?>
 
 <main id="main">
@@ -118,7 +118,7 @@ $bx_cats     = get_categories( array( 'hide_empty' => true ) );
             <div class="relative grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 class="font-display text-3xl sm:text-4xl tt leading-tight">Get one useful idea, every week</h2>
-                <p class="text-paper/70 mt-4 max-w-md">No spam, no fluff — just practical branding and growth tips you can actually use. Unsubscribe anytime.</p>
+                <p class="text-paper/70 mt-4 max-w-md">No spam, no fluff — just practical digital marketing and growth tips you can actually use. Unsubscribe anytime.</p>
               </div>
               <form id="newsForm" class="lg:justify-self-end w-full max-w-md">
                 <label for="newsEmail" class="sr-only">Email address</label>

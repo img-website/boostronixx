@@ -147,6 +147,8 @@ get_header();
         </div>
       </section>
 
+      <?php get_template_part( 'template-parts/service-guide' ); ?>
+
       <!-- FAQ -->
       <section class="py-20 sm:py-28 bg-surface border-y border-line">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">

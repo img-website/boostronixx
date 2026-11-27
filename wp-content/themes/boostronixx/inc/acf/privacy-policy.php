@@ -140,7 +140,7 @@ function bx_pp_default_sections() {
 			'heading' => 'Who we are',
 			'toc'     => 'Who we are',
 			'body'    => <<<'HTML'
-<p>BoostronixX ("we", "us", "our") is a creative branding and digital marketing agency based at 880, Rani Sati Nagar, Gautam Marg, Nirman Nagar, Jaipur, Rajasthan 302019, India. We are responsible for the personal data collected through our website and services and are committed to protecting it.</p>
+<p>BoostronixX ("we", "us", "our") is a digital marketing agency based at 880, Rani Sati Nagar, Gautam Marg, Nirman Nagar, Jaipur, Rajasthan 302019, India. We are responsible for the personal data collected through our website and services and are committed to protecting it.</p>
 HTML,
 		),
 		array(

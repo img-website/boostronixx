@@ -44,13 +44,13 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
                 <span class="h-2 w-2 rounded-full bg-accent"></span> <?php echo esc_html( bx_field( 'services_hero_badge', false, 'Strategy · Creative · Performance — under one roof' ) ); ?>
               </div>
               <h1 class="reveal font-display text-[2.6rem] leading-[0.96] sm:text-7xl lg:text-[4.8rem] tt">
-                <?php echo esc_html( bx_field( 'services_hero_heading_a', false, 'Services that build' ) ); ?><br class="hidden sm:block" />
-                <?php echo esc_html( bx_field( 'services_hero_heading_b', false, 'brands &' ) ); ?> <span class="text-accent"><?php echo esc_html( bx_field( 'services_hero_heading_accent', false, 'drive growth' ) ); ?></span>
+                <?php echo esc_html( bx_field( 'services_hero_heading_a', false, 'Services that' ) ); ?><br class="hidden sm:block" />
+                <?php echo esc_html( bx_field( 'services_hero_heading_b', false, 'grow your business' ) ); ?> <span class="text-accent"><?php echo esc_html( bx_field( 'services_hero_heading_accent', false, 'online' ) ); ?></span>
               </h1>
             </div>
             <div class="lg:col-span-4">
               <p class="reveal text-ink-soft leading-relaxed" data-delay="1">
-                <?php echo esc_html( bx_field( 'services_hero_sub', false, 'Digital marketing services in Jaipur done right — from brand identity to SEO, ads and product design. Seven core services, one accountable team, and dashboards that prove the work.' ) ); ?>
+                <?php echo esc_html( bx_field( 'services_hero_sub', false, 'Seven services, one accountable team — digital marketing, SEO, social media, performance ads, websites, UI/UX and brand consulting, with dashboards that prove the work.' ) ); ?>
               </p>
               <a href="<?php echo esc_url( $bx_services_hero_btn_url ); ?>" class="reveal group btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3.5 mt-6 font-medium" data-delay="2">
                 <span class="relative z-10 sheen-text"><?php echo esc_html( $bx_services_hero_btn_txt ); ?></span>
@@ -97,15 +97,29 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="max-w-2xl mb-12">
             <p class="reveal text-xs font-medium tracking-[.2em] uppercase text-accent mb-3"><?php echo esc_html( bx_field( 'services_list_eyebrow', false, 'What we do' ) ); ?></p>
-            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'services_list_heading', false, 'Digital marketing services in Jaipur, built as one growth engine' ) ); ?></h2>
-            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'services_list_intro', false, 'Pick one or combine them. As a digital marketing company in Jaipur, every engagement is strategy-led, creatively crafted and measured against outcomes that matter to your business — SEO, social media, PPC, branding and web design under one roof.' ) ); ?></p>
+            <h2 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"><?php echo esc_html( bx_field( 'services_list_heading', false, 'SEO, social, ads & websites — one growth engine' ) ); ?></h2>
+            <p class="reveal text-ink-soft mt-5 leading-relaxed" data-delay="1"><?php echo esc_html( bx_field( 'services_list_intro', false, 'Pick one or combine them. As a digital marketing company in Jaipur, every engagement is strategy-led, creatively crafted and measured against outcomes that matter to your business — digital marketing, SEO, social media, PPC, web design and branding under one roof.' ) ); ?></p>
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <!-- 1 SEO (featured -> detail page) -->
-            <a href="/services/seo-services/" class="scard reveal group block rounded-xl2 border border-line p-7 relative">
-              <span class="absolute right-5 top-5 text-[10px] font-semibold tracking-wide uppercase rounded-full bg-accent/10 text-accent px-2.5 py-1">Full details</span>
+            <!-- 1 Digital Marketing -->
+            <a href="/services/digital-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7">
               <span class="num font-display text-sm text-ink-soft">01</span>
+              <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:line-chart"></iconify-icon></span>
+              <h3 class="font-display text-2xl tt mt-4">Digital Marketing</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Full-funnel campaigns across content, email and channels — connected to dashboards that show how traffic becomes customers.</p>
+              <div class="flex flex-wrap gap-2 mt-5 text-xs">
+                <span class="rounded-full border border-line px-2.5 py-1">Content</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Email</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Analytics</span>
+              </div>
+              <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
+            </a>
+
+            <!-- 2 SEO Services (featured, full details) -->
+            <a href="/services/seo-services/" class="scard reveal group block rounded-xl2 border border-line p-7 relative" data-delay="1">
+              <span class="absolute right-5 top-5 text-[10px] font-semibold tracking-wide uppercase rounded-full bg-accent/10 text-accent px-2.5 py-1">Full details</span>
+              <span class="num font-display text-sm text-ink-soft">02</span>
               <span class="sico mt-3 inline-grid place-items-center h-13 w-13 rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:search"></iconify-icon></span>
               <h3 class="font-display text-2xl tt mt-4">SEO Services</h3>
               <p class="text-ink-soft text-sm mt-2 leading-relaxed">Rank on page one of Google with white-hat on-page, technical and local SEO that earns durable organic traffic.</p>
@@ -117,30 +131,16 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
               <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
             </a>
 
-            <!-- 2 Brand Consulting -->
-            <a href="/services/brand-consulting/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
-              <span class="num font-display text-sm text-ink-soft">02</span>
-              <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:palette"></iconify-icon></span>
-              <h3 class="font-display text-2xl tt mt-4">Brand Consulting</h3>
-              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Positioning, strategy, logo and a complete visual identity — built from research, designed to be instantly recognised.</p>
-              <div class="flex flex-wrap gap-2 mt-5 text-xs">
-                <span class="rounded-full border border-line px-2.5 py-1">Strategy</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Identity</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Guidelines</span>
-              </div>
-              <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
-            </a>
-
-            <!-- 3 Digital Marketing -->
-            <a href="/services/digital-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="2">
+            <!-- 3 Social Media Marketing -->
+            <a href="/services/social-media-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="2">
               <span class="num font-display text-sm text-ink-soft">03</span>
-              <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:line-chart"></iconify-icon></span>
-              <h3 class="font-display text-2xl tt mt-4">Digital Marketing</h3>
-              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Full-funnel campaigns across content, email and channels — connected to dashboards that show how traffic becomes customers.</p>
+              <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span>
+              <h3 class="font-display text-2xl tt mt-4">Social Media Marketing</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Platform-native content for Instagram, Facebook, LinkedIn and YouTube — built to stop the scroll and drive action.</p>
               <div class="flex flex-wrap gap-2 mt-5 text-xs">
-                <span class="rounded-full border border-line px-2.5 py-1">Content</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Email</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Analytics</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Content &amp; Design</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Paid Social</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Community</span>
               </div>
               <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
             </a>
@@ -159,16 +159,16 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
               <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
             </a>
 
-            <!-- 5 Social Media -->
-            <a href="/services/social-media-marketing/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
+            <!-- 5 Website Design -->
+            <a href="/services/website-design/" class="scard reveal group block rounded-xl2 border border-line p-7" data-delay="1">
               <span class="num font-display text-sm text-ink-soft">05</span>
-              <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:thumbs-up"></iconify-icon></span>
-              <h3 class="font-display text-2xl tt mt-4">Social Media Marketing</h3>
-              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Platform-native content for Instagram, Facebook, LinkedIn and YouTube — built to stop the scroll and drive action.</p>
+              <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span>
+              <h3 class="font-display text-2xl tt mt-4">Website Design &amp; Development</h3>
+              <p class="text-ink-soft text-sm mt-2 leading-relaxed">Fast, responsive, SEO-ready websites — from marketing sites to product front-ends, engineered to convert and easy to manage.</p>
               <div class="flex flex-wrap gap-2 mt-5 text-xs">
-                <span class="rounded-full border border-line px-2.5 py-1">Content &amp; Design</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Paid Social</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Community</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Responsive</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Core Web Vitals</span>
+                <span class="rounded-full border border-line px-2.5 py-1">CMS</span>
               </div>
               <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
             </a>
@@ -187,18 +187,18 @@ $bx_services_whyus_img_alt = ( is_array( $bx_services_whyus_img ) && ! empty( $b
               <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium">View details <iconify-icon icon="lucide:arrow-right" class="sarr"></iconify-icon></span>
             </a>
 
-            <!-- 7 Website Design (full width feature row) -->
-            <a href="/services/website-design/" class="scard reveal group block rounded-xl2 border border-line p-7 md:col-span-2 lg:col-span-3 md:flex md:items-center md:gap-8">
+            <!-- 7 Brand Consulting (full width row, last) -->
+            <a href="/services/brand-consulting/" class="scard reveal group block rounded-xl2 border border-line p-7 md:col-span-2 lg:col-span-3 md:flex md:items-center md:gap-8">
               <div class="md:flex-1">
                 <span class="num font-display text-sm text-ink-soft">07</span>
-                <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:monitor-smartphone"></iconify-icon></span>
-                <h3 class="font-display text-2xl tt mt-4">Website Design &amp; Development</h3>
-                <p class="text-ink-soft text-sm mt-2 leading-relaxed max-w-xl">Fast, responsive, SEO-ready websites — from marketing sites to product front-ends, engineered to convert and easy to manage.</p>
+                <span class="sico mt-3 inline-grid place-items-center rounded-2xl bg-surface text-accent text-2xl" style="height:3.25rem;width:3.25rem"><iconify-icon icon="lucide:palette"></iconify-icon></span>
+                <h3 class="font-display text-2xl tt mt-4">Brand Consulting</h3>
+                <p class="text-ink-soft text-sm mt-2 leading-relaxed max-w-xl">Positioning, strategy, logo and a complete visual identity — built from research, designed to be instantly recognised.</p>
               </div>
               <div class="flex flex-wrap gap-2 mt-5 md:mt-0 text-xs">
-                <span class="rounded-full border border-line px-2.5 py-1">Responsive</span>
-                <span class="rounded-full border border-line px-2.5 py-1">Core Web Vitals</span>
-                <span class="rounded-full border border-line px-2.5 py-1">CMS</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Strategy</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Identity</span>
+                <span class="rounded-full border border-line px-2.5 py-1">Guidelines</span>
               </div>
               <span class="mt-6 md:mt-0 md:ml-6 inline-grid place-items-center h-12 w-12 rounded-full border border-line shrink-0 group-hover:bg-accent group-hover:border-accent group-hover:text-paper transition"><iconify-icon icon="lucide:arrow-up-right" class="text-xl"></iconify-icon></span>
             </a>

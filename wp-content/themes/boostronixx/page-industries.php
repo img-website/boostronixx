@@ -103,8 +103,8 @@ $bx_ind_cta2_txt = ( is_array( $bx_ind_cta2 ) && ! empty( $bx_ind_cta2['title'] 
                 <p class="text-ink-soft text-sm mt-2 max-w-md">Digital marketing for real estate in Jaipur that brings serious buyers, not tyre-kickers — site-visit campaigns, RERA-ready brand trust and follow-up that closes.</p>
                 <div class="flex flex-wrap gap-2 mt-4 text-xs">
                   <span class="rounded-full border border-line px-2.5 py-1">Lead Gen</span>
-                  <span class="rounded-full border border-line px-2.5 py-1">Project Branding</span>
                   <span class="rounded-full border border-line px-2.5 py-1">Performance Ads</span>
+                  <span class="rounded-full border border-line px-2.5 py-1">Project Branding</span>
                 </div>
                 <span class="mt-5 inline-flex items-center gap-2 text-sm font-medium">Explore real estate <span class="iarr grid place-items-center h-8 w-8 rounded-full border border-line"><iconify-icon icon="lucide:arrow-up-right" aria-hidden="true"></iconify-icon></span></span>
               </div>
