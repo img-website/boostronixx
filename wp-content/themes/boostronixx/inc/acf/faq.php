@@ -193,7 +193,7 @@ function bx_acf_faq() {
  */
 function bx_faq_render_items() {
 	$defaults = array(
-		array( 'cat' => 'services', 'q' => 'Which services does BoostronixX offer?', 'a' => 'Brand consulting, digital marketing, SEO, social media marketing, performance marketing, UI/UX design and website design — strategy through execution, all in-house.' ),
+		array( 'cat' => 'services', 'q' => 'Which services does BoostronixX offer?', 'a' => 'Digital marketing, SEO, social media marketing, performance marketing, website design, UI/UX design and brand consulting — strategy through execution, all in-house.' ),
 		array( 'cat' => 'services', 'q' => 'Do you work with businesses outside Jaipur?', 'a' => "Absolutely. We're based in Jaipur but work with clients across India and internationally — most collaboration happens over calls, shared docs and live dashboards." ),
 		array( 'cat' => 'services', 'q' => 'Which industries do you specialise in?', 'a' => 'Real estate, schools, D2C eCommerce and healthcare — though our strategy-first framework adapts to most growth-stage businesses.' ),
 		array( 'cat' => 'pricing', 'q' => 'How much does a project cost?', 'a' => "Every engagement is scoped to your goals, so there's no one-size price. After a free strategy call we send a clear proposal with deliverables and pricing — no hidden costs, no surprises." ),

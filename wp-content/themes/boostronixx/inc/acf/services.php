@@ -66,21 +66,21 @@ function bx_acf_services() {
 					'name'          => 'services_hero_heading_a',
 					'label'         => 'Heading — line 1',
 					'type'          => 'text',
-					'default_value' => 'Services that build',
+					'default_value' => 'Services that',
 				),
 				array(
 					'key'           => 'f_services_hero_heading_b',
 					'name'          => 'services_hero_heading_b',
 					'label'         => 'Heading — line 2 (plain part)',
 					'type'          => 'text',
-					'default_value' => 'brands &',
+					'default_value' => 'grow your business',
 				),
 				array(
 					'key'           => 'f_services_hero_heading_accent',
 					'name'          => 'services_hero_heading_accent',
 					'label'         => 'Heading — line 2 (accent part)',
 					'type'          => 'text',
-					'default_value' => 'drive growth',
+					'default_value' => 'online',
 				),
 				array(
 					'key'           => 'f_services_hero_sub',
@@ -88,7 +88,7 @@ function bx_acf_services() {
 					'label'         => 'Subheading',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => 'Digital marketing services in Jaipur done right — from brand identity to SEO, ads and product design. Seven core services, one accountable team, and dashboards that prove the work.',
+					'default_value' => 'Seven services, one accountable team — digital marketing, SEO, social media, performance ads, websites, UI/UX and brand consulting, with dashboards that prove the work.',
 				),
 				array(
 					'key'           => 'f_services_hero_btn',
@@ -131,7 +131,7 @@ function bx_acf_services() {
 					'name'          => 'services_list_heading',
 					'label'         => 'Heading',
 					'type'          => 'text',
-					'default_value' => 'Digital marketing services in Jaipur, built as one growth engine',
+					'default_value' => 'SEO, social, ads & websites — one growth engine',
 				),
 				array(
 					'key'           => 'f_services_list_intro',
@@ -139,7 +139,7 @@ function bx_acf_services() {
 					'label'         => 'Intro paragraph',
 					'type'          => 'textarea',
 					'rows'          => 4,
-					'default_value' => 'Pick one or combine them. As a digital marketing company in Jaipur, every engagement is strategy-led, creatively crafted and measured against outcomes that matter to your business — SEO, social media, PPC, branding and web design under one roof.',
+					'default_value' => 'Pick one or combine them. As a digital marketing company in Jaipur, every engagement is strategy-led, creatively crafted and measured against outcomes that matter to your business — digital marketing, SEO, social media, PPC, web design and branding under one roof.',
 				),
 				array(
 					'key'     => 'f_services_list_note',
@@ -519,11 +519,11 @@ function bx_services_render_faqs() {
 	$defaults = array(
 		array(
 			'q' => 'Which services should I start with?',
-			'a' => "It depends on your goal. New brand? Start with brand consulting and a website. Need leads now? SEO and performance marketing. On a free strategy call we'll recommend the right mix of digital marketing services in Jaipur for your stage and budget — including 360 degree digital marketing Jaipur growth plans when you want every channel pulling together.",
+			'a' => "It depends on your goal. Most businesses start with digital marketing or SEO; brand consulting comes later if you need it. On a free strategy call we'll recommend the right mix of services for your stage and budget — including 360 degree digital marketing Jaipur growth plans when you want every channel pulling together.",
 		),
 		array(
 			'q' => 'Do you offer affordable packages, retainers or one-off projects?',
-			'a' => 'All three. One-offs suit branding or a website build; retainers work best for SEO, social and ads where momentum compounds. We also offer affordable digital marketing services in Jaipur and tiered digital marketing packages in Jaipur scoped to your budget — every price agreed in writing up front, no surprises.',
+			'a' => 'All three. One-offs suit branding or a website build; retainers work best for SEO, social and ads where momentum compounds. We also offer affordable, tiered digital marketing packages in Jaipur scoped to your budget — every price agreed in writing up front, no surprises.',
 		),
 		array(
 			'q' => 'Will I get regular reporting?',

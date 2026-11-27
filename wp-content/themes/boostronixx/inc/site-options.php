@@ -198,7 +198,7 @@ function bx_register_site_settings() {
 					'name'          => 'footer_tagline',
 					'type'          => 'textarea',
 					'rows'          => 3,
-					'default_value' => 'A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.',
+					'default_value' => 'A digital marketing agency in Jaipur, India — SEO, social media, performance ads and websites that bring you customers.',
 				),
 
 				// ---------------- MAINTENANCE ----------------

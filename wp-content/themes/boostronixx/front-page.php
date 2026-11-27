@@ -14,7 +14,7 @@ get_header();
 <main id="top">
       <!-- ===================== HERO ===================== -->
       <?php
-      $bx_hero_words = bx_lines( bx_field( 'hero_rotating_words', false, "get noticed\nconvert\nstand out\nscale fast" ) );
+      $bx_hero_words = bx_lines( bx_field( 'hero_rotating_words', false, "gets you found\nbrings leads\nconverts\nscales" ) );
       $bx_hero_first = $bx_hero_words ? $bx_hero_words[0] : 'get noticed';
       $bx_cta1       = function_exists( 'get_field' ) ? get_field( 'hero_cta_primary' ) : false;
       $bx_cta2       = function_exists( 'get_field' ) ? get_field( 'hero_cta_secondary' ) : false;
@@ -28,7 +28,7 @@ get_header();
           <div
             class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft"
           >
-            <span class="h-2 w-2 rounded-full bg-accent"></span> <?php echo esc_html( bx_field( 'hero_badge', false, 'Creative branding & growth studio · Jaipur, India' ) ); ?>
+            <span class="h-2 w-2 rounded-full bg-accent"></span> <?php echo esc_html( bx_field( 'hero_badge', false, 'Digital marketing agency · Jaipur, India' ) ); ?>
           </div>
 
           <div class="grid lg:grid-cols-12 gap-8 items-end mt-6">
@@ -36,14 +36,14 @@ get_header();
               <h1
                 class="reveal font-display text-[2.9rem] leading-[0.95] sm:text-7xl lg:text-[5.4rem] tt"
               >
-                <?php echo esc_html( bx_field( 'hero_heading', false, 'We build brands that' ) ); ?><br class="hidden sm:block" />
+                <?php echo esc_html( bx_field( 'hero_heading', false, 'Digital marketing in Jaipur that' ) ); ?><br class="hidden sm:block" />
                 <span id="rotator" class="text-accent" data-words="<?php echo esc_attr( implode( '|', $bx_hero_words ) ); ?>"><?php echo esc_html( $bx_hero_first ); ?></span
                 ><span class="caret"></span>
               </h1>
             </div>
             <div class="lg:col-span-4">
               <p class="reveal text-ink-soft leading-relaxed" data-delay="1">
-                <?php echo esc_html( bx_field( 'hero_subheading', false, 'BoostronixX is a digital marketing company in Jaipur — branding, SEO, social media and performance marketing in one creative team, turning ambitious businesses into brands people remember with ROI-driven, affordable growth.' ) ); ?>
+                <?php echo esc_html( bx_field( 'hero_subheading', false, 'BoostronixX is a digital marketing agency in Jaipur — SEO, social media, performance ads and websites from one team, built to bring you customers, not vanity metrics.' ) ); ?>
               </p>
               <div
                 class="reveal flex flex-wrap items-center gap-3 mt-6"
@@ -87,7 +87,7 @@ get_header();
                 <div class="flex items-center justify-between">
                   <span
                     class="text-xs font-medium tracking-[.2em] uppercase text-ink-soft"
-                    ><?php echo esc_html( bx_field( 'hero_stat_eyebrow', false, 'Brands grown' ) ); ?></span
+                    ><?php echo esc_html( bx_field( 'hero_stat_eyebrow', false, 'Businesses grown' ) ); ?></span
                   >
                   <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
                 </div>
@@ -100,7 +100,7 @@ get_header();
                   </p>
                 </div>
                 <div class="flex flex-wrap gap-2 mt-4 text-xs">
-                  <?php foreach ( bx_lines( bx_field( 'hero_stat_tags', false, "Branding\nSEO\nSocial\nAds" ) ) as $bx_tag ) : ?>
+                  <?php foreach ( bx_lines( bx_field( 'hero_stat_tags', false, "SEO\nSocial\nAds\nWeb" ) ) as $bx_tag ) : ?>
                   <span class="rounded-full bg-surface px-3 py-1"><?php echo esc_html( $bx_tag ); ?></span>
                   <?php endforeach; ?>
                 </div>
@@ -814,7 +814,7 @@ get_header();
           </div>
         </div>
 
-        <!-- 05 BRANDING -->
+        <!-- 05 WEBSITE -->
         <div class="border-t border-line">
           <div
             class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
@@ -822,183 +822,6 @@ get_header();
             <div class="reveal">
               <div class="flex items-center gap-3 text-sm text-ink-soft">
                 <span class="font-display text-accent">05</span
-                ><span class="h-px w-8 bg-line"></span> Brand Consulting
-              </div>
-              <h3
-                class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              ><?php echo esc_html( bx_field( 'svc5_title', false, 'A brand identity people instantly recognise' ) ); ?></h3>
-              <p class="text-ink-soft mt-4 max-w-md">
-                Positioning, strategy, logo and a complete visual system — built
-                from research, designed to convert.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-6 text-sm">
-                <span class="rounded-full border border-line px-3 py-1.5"
-                  >Brand Strategy</span
-                >
-                <span class="rounded-full border border-line px-3 py-1.5"
-                  >Positioning</span
-                >
-                <span class="rounded-full border border-line px-3 py-1.5"
-                  >Visual Identity</span
-                >
-              </div>
-              <a
-                href="/services/brand-consulting/"
-                class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
-              >
-                <span class="relative z-10 sheen-text"
-                  >Explore Brand Consulting</span
-                >
-                <iconify-icon
-                  icon="lucide:arrow-right"
-                  class="relative z-10"
-                ></iconify-icon>
-              </a>
-            </div>
-            <!-- mock: brand board -->
-            <div class="reveal" data-delay="1">
-              <div
-                id="brandBoard"
-                class="bg-paper border border-line rounded-xl2 shadow-[0_40px_80px_-50px_rgba(10,10,10,0.45)] p-6 sm:p-8 relative overflow-hidden"
-              >
-                <span
-                  id="bbSweep"
-                  class="pointer-events-none absolute inset-y-0 left-0 w-1/4 z-20 bg-gradient-to-r from-transparent via-white/60 to-transparent"
-                  style="opacity: 0"
-                ></span>
-                <div class="flex items-center justify-between mb-5">
-                  <span class="text-xs tracking-[.2em] uppercase text-ink-soft"
-                    >Brand Board</span
-                  ><span class="text-xs text-ink-soft">v1.0</span>
-                </div>
-                <div class="grid grid-cols-3 gap-3">
-                  <div
-                    class="bb-tile col-span-2 rounded-2xl bg-ink text-paper p-5 flex items-end min-h-[120px]"
-                  >
-                    <span class="font-display text-3xl tt"
-                      >Boostronix<span class="text-accent">X</span></span
-                    >
-                  </div>
-                  <div
-                    class="bb-tile rounded-2xl bg-surface grid place-items-center min-h-[120px]"
-                  >
-                    <span class="font-display text-5xl tt">Aa</span>
-                  </div>
-                  <div class="bb-tile rounded-xl h-14 bg-ink"></div>
-                  <div
-                    class="bb-tile bb-accent rounded-xl h-14 bg-accent"
-                  ></div>
-                  <div
-                    class="bb-tile rounded-xl h-14 bg-surface-2 border border-line"
-                  ></div>
-                </div>
-                <div
-                  class="flex items-center justify-between mt-4 text-[11px] text-ink-soft font-medium"
-                >
-                  <span class="bb-hex" data-hex="#0A0A0A">#0A0A0A</span
-                  ><span class="bb-hex" data-hex="#FA5539">#FA5539</span
-                  ><span class="bb-hex" data-hex="#F6F4F1">#F6F4F1</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 06 UI/UX -->
-        <div class="border-t border-line bg-surface">
-          <div
-            class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
-          >
-            <div class="reveal lg:order-2">
-              <div class="flex items-center gap-3 text-sm text-ink-soft">
-                <span class="font-display text-accent">06</span
-                ><span class="h-px w-8 bg-line"></span> UI/UX Design
-              </div>
-              <h3
-                class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
-              ><?php echo esc_html( bx_field( 'svc6_title', false, 'From rough wireframe to interface that converts' ) ); ?></h3>
-              <p class="text-ink-soft mt-4 max-w-md">
-                UX research and product design for apps and websites — every
-                screen built for clarity, usability and brand feel.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-6 text-sm">
-                <span
-                  class="rounded-full border border-line bg-paper px-3 py-1.5"
-                  >UX Research</span
-                >
-                <span
-                  class="rounded-full border border-line bg-paper px-3 py-1.5"
-                  >Product Design</span
-                >
-                <span
-                  class="rounded-full border border-line bg-paper px-3 py-1.5"
-                  >Prototyping</span
-                >
-              </div>
-              <a
-                href="/services/ui-ux-design/"
-                class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
-              >
-                <span class="relative z-10 sheen-text"
-                  >Explore UI/UX Design</span
-                >
-                <iconify-icon
-                  icon="lucide:arrow-right"
-                  class="relative z-10"
-                ></iconify-icon>
-              </a>
-            </div>
-            <!-- mock: wireframe -> hi-fi -->
-            <div class="reveal lg:order-1" data-delay="1">
-              <div class="bg-paper border border-line rounded-xl2 shadow-[0_40px_80px_-50px_rgba(10,10,10,0.45)] p-4 relative">
-                <span
-                  class="absolute top-6 right-6 z-10 text-[11px] font-medium rounded-full bg-ink text-paper px-3 py-1 inline-flex items-center gap-1"
-                  >wireframe
-                  <iconify-icon icon="lucide:arrow-right"></iconify-icon>
-                  design</span
-                >
-                <div class="relative h-[300px]">
-                  <!-- wireframe layer -->
-                  <div class="wf absolute inset-0 p-5">
-                    <div class="h-6 w-1/2 rounded bg-surface-2"></div>
-                    <div class="h-3 w-3/4 rounded bg-surface-2 mt-3"></div>
-                    <div class="h-3 w-2/3 rounded bg-surface-2 mt-2"></div>
-                    <div class="h-28 w-full rounded-xl bg-surface-2 mt-4"></div>
-                    <div class="h-9 w-32 rounded-full bg-surface-2 mt-4"></div>
-                  </div>
-                  <!-- hi-fi layer -->
-                  <div class="hf absolute inset-0 p-5">
-                    <p class="font-display text-2xl tt">
-                      Grow your <span class="text-accent">brand</span>
-                    </p>
-                    <p class="text-sm text-ink-soft mt-2">
-                      A clean, conversion-first interface designed around your
-                      customer's journey.
-                    </p>
-                    <div
-                      class="h-28 w-full rounded-xl bg-ink text-paper grid place-items-center mt-4 font-display tt"
-                    >
-                      App Preview
-                    </div>
-                    <span
-                      class="inline-flex mt-4 rounded-full bg-accent text-paper text-sm font-medium px-5 py-2.5"
-                      >Get started</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 07 WEBSITE -->
-        <div class="border-t border-b border-line">
-          <div
-            class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
-          >
-            <div class="reveal">
-              <div class="flex items-center gap-3 text-sm text-ink-soft">
-                <span class="font-display text-accent">07</span
                 ><span class="h-px w-8 bg-line"></span> Website Design
               </div>
               <h3
@@ -1108,6 +931,183 @@ get_header();
                       <p class="text-[11px] text-ink-soft">PageSpeed</p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 UI/UX -->
+        <div class="border-t border-line bg-surface">
+          <div
+            class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+          >
+            <div class="reveal lg:order-2">
+              <div class="flex items-center gap-3 text-sm text-ink-soft">
+                <span class="font-display text-accent">06</span
+                ><span class="h-px w-8 bg-line"></span> UI/UX Design
+              </div>
+              <h3
+                class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
+              ><?php echo esc_html( bx_field( 'svc6_title', false, 'From rough wireframe to interface that converts' ) ); ?></h3>
+              <p class="text-ink-soft mt-4 max-w-md">
+                UX research and product design for apps and websites — every
+                screen built for clarity, usability and brand feel.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-6 text-sm">
+                <span
+                  class="rounded-full border border-line bg-paper px-3 py-1.5"
+                  >UX Research</span
+                >
+                <span
+                  class="rounded-full border border-line bg-paper px-3 py-1.5"
+                  >Product Design</span
+                >
+                <span
+                  class="rounded-full border border-line bg-paper px-3 py-1.5"
+                  >Prototyping</span
+                >
+              </div>
+              <a
+                href="/services/ui-ux-design/"
+                class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
+              >
+                <span class="relative z-10 sheen-text"
+                  >Explore UI/UX Design</span
+                >
+                <iconify-icon
+                  icon="lucide:arrow-right"
+                  class="relative z-10"
+                ></iconify-icon>
+              </a>
+            </div>
+            <!-- mock: wireframe -> hi-fi -->
+            <div class="reveal lg:order-1" data-delay="1">
+              <div class="bg-paper border border-line rounded-xl2 shadow-[0_40px_80px_-50px_rgba(10,10,10,0.45)] p-4 relative">
+                <span
+                  class="absolute top-6 right-6 z-10 text-[11px] font-medium rounded-full bg-ink text-paper px-3 py-1 inline-flex items-center gap-1"
+                  >wireframe
+                  <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                  design</span
+                >
+                <div class="relative h-[300px]">
+                  <!-- wireframe layer -->
+                  <div class="wf absolute inset-0 p-5">
+                    <div class="h-6 w-1/2 rounded bg-surface-2"></div>
+                    <div class="h-3 w-3/4 rounded bg-surface-2 mt-3"></div>
+                    <div class="h-3 w-2/3 rounded bg-surface-2 mt-2"></div>
+                    <div class="h-28 w-full rounded-xl bg-surface-2 mt-4"></div>
+                    <div class="h-9 w-32 rounded-full bg-surface-2 mt-4"></div>
+                  </div>
+                  <!-- hi-fi layer -->
+                  <div class="hf absolute inset-0 p-5">
+                    <p class="font-display text-2xl tt">
+                      Grow your <span class="text-accent">brand</span>
+                    </p>
+                    <p class="text-sm text-ink-soft mt-2">
+                      A clean, conversion-first interface designed around your
+                      customer's journey.
+                    </p>
+                    <div
+                      class="h-28 w-full rounded-xl bg-ink text-paper grid place-items-center mt-4 font-display tt"
+                    >
+                      App Preview
+                    </div>
+                    <span
+                      class="inline-flex mt-4 rounded-full bg-accent text-paper text-sm font-medium px-5 py-2.5"
+                      >Get started</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 BRANDING -->
+        <div class="border-t border-b border-line">
+          <div
+            class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+          >
+            <div class="reveal">
+              <div class="flex items-center gap-3 text-sm text-ink-soft">
+                <span class="font-display text-accent">07</span
+                ><span class="h-px w-8 bg-line"></span> Brand Consulting
+              </div>
+              <h3
+                class="font-display text-3xl sm:text-4xl tt mt-4 leading-tight"
+              ><?php echo esc_html( bx_field( 'svc5_title', false, 'A brand identity people instantly recognise' ) ); ?></h3>
+              <p class="text-ink-soft mt-4 max-w-md">
+                Positioning, strategy, logo and a complete visual system — built
+                from research, designed to convert.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-6 text-sm">
+                <span class="rounded-full border border-line px-3 py-1.5"
+                  >Brand Strategy</span
+                >
+                <span class="rounded-full border border-line px-3 py-1.5"
+                  >Positioning</span
+                >
+                <span class="rounded-full border border-line px-3 py-1.5"
+                  >Visual Identity</span
+                >
+              </div>
+              <a
+                href="/services/brand-consulting/"
+                class="group btn-glow mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
+              >
+                <span class="relative z-10 sheen-text"
+                  >Explore Brand Consulting</span
+                >
+                <iconify-icon
+                  icon="lucide:arrow-right"
+                  class="relative z-10"
+                ></iconify-icon>
+              </a>
+            </div>
+            <!-- mock: brand board -->
+            <div class="reveal" data-delay="1">
+              <div
+                id="brandBoard"
+                class="bg-paper border border-line rounded-xl2 shadow-[0_40px_80px_-50px_rgba(10,10,10,0.45)] p-6 sm:p-8 relative overflow-hidden"
+              >
+                <span
+                  id="bbSweep"
+                  class="pointer-events-none absolute inset-y-0 left-0 w-1/4 z-20 bg-gradient-to-r from-transparent via-white/60 to-transparent"
+                  style="opacity: 0"
+                ></span>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="text-xs tracking-[.2em] uppercase text-ink-soft"
+                    >Brand Board</span
+                  ><span class="text-xs text-ink-soft">v1.0</span>
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                  <div
+                    class="bb-tile col-span-2 rounded-2xl bg-ink text-paper p-5 flex items-end min-h-[120px]"
+                  >
+                    <span class="font-display text-3xl tt"
+                      >Boostronix<span class="text-accent">X</span></span
+                    >
+                  </div>
+                  <div
+                    class="bb-tile rounded-2xl bg-surface grid place-items-center min-h-[120px]"
+                  >
+                    <span class="font-display text-5xl tt">Aa</span>
+                  </div>
+                  <div class="bb-tile rounded-xl h-14 bg-ink"></div>
+                  <div
+                    class="bb-tile bb-accent rounded-xl h-14 bg-accent"
+                  ></div>
+                  <div
+                    class="bb-tile rounded-xl h-14 bg-surface-2 border border-line"
+                  ></div>
+                </div>
+                <div
+                  class="flex items-center justify-between mt-4 text-[11px] text-ink-soft font-medium"
+                >
+                  <span class="bb-hex" data-hex="#0A0A0A">#0A0A0A</span
+                  ><span class="bb-hex" data-hex="#FA5539">#FA5539</span
+                  ><span class="bb-hex" data-hex="#F6F4F1">#F6F4F1</span>
                 </div>
               </div>
             </div>
@@ -1293,13 +1293,13 @@ get_header();
             <h2
               class="reveal font-display text-3xl sm:text-5xl tt leading-tight max-w-xl"
             >
-              <?php echo esc_html( bx_field( 'about_heading', false, 'A creative studio that thinks like a growth team' ) ); ?>
+              <?php echo esc_html( bx_field( 'about_heading', false, 'A digital marketing team that thinks like your growth partner' ) ); ?>
             </h2>
             <p
               class="reveal text-ink-soft mt-6 max-w-xl leading-relaxed"
               data-delay="1"
             >
-              <?php echo esc_html( bx_field( 'about_text', false, "BoostronixX turns ideas into scalable brands. We combine strategy, creativity and performance marketing to deliver consistent results — whether you're a start-up finding your footing or an established business ready to scale." ) ); ?>
+              <?php echo esc_html( bx_field( 'about_text', false, "BoostronixX turns search, social and ads into steady enquiries. We combine strategy, creativity and performance marketing to deliver consistent results — whether you're a start-up finding your footing or an established business ready to scale." ) ); ?>
             </p>
             <ul
               class="reveal grid sm:grid-cols-2 gap-3 mt-8 text-sm"
@@ -1492,7 +1492,7 @@ get_header();
               <h2
                 class="reveal font-display text-3xl sm:text-5xl tt leading-tight"
               >
-                <?php echo esc_html( bx_field( 'testimonials_heading', false, 'Brands that grew with us' ) ); ?>
+                <?php echo esc_html( bx_field( 'testimonials_heading', false, 'Businesses that grew with us' ) ); ?>
               </h2>
             </div>
             <div class="reveal flex items-center gap-3" data-delay="1">
@@ -1550,7 +1550,7 @@ get_header();
               <h2
                 class="reveal font-display text-3xl sm:text-5xl tt max-w-xl leading-tight"
               >
-                <?php echo esc_html( bx_field( 'insights_heading', false, 'Ideas on branding & growth' ) ); ?>
+                <?php echo esc_html( bx_field( 'insights_heading', false, 'Ideas on digital marketing & growth' ) ); ?>
               </h2>
             </div>
             <a
@@ -1636,7 +1636,7 @@ get_header();
                   <?php echo esc_html( bx_field( 'cta_heading', false, 'Ready to build something great together?' ) ); ?>
                 </h2>
                 <p class="text-paper/70 mt-6 text-lg max-w-xl">
-                  <?php echo esc_html( bx_field( 'cta_text', false, 'Real estate, school, D2C or healthcare brand ready to scale — BoostronixX is your creative branding and digital marketing partner in Jaipur, trusted as one of the best digital marketing agencies in Jaipur for ROI-driven, affordable growth. Book a free strategy call today.' ) ); ?>
+                  <?php echo esc_html( bx_field( 'cta_text', false, 'Real estate, school, D2C or healthcare brand ready to scale — BoostronixX is your digital marketing partner in Jaipur, trusted as one of the best digital marketing agencies in Jaipur for ROI-driven, affordable growth. Book a free strategy call today.' ) ); ?>
                 </p>
                 <div class="flex flex-wrap items-center gap-3 mt-9">
                   <a

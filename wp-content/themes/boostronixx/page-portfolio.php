@@ -35,7 +35,7 @@ get_header();
             </div>
             <div class="lg:col-span-4">
               <p class="reveal text-ink-soft leading-relaxed" data-delay="1">
-                Branding and digital marketing work, SaaS product design, apps and
+                Digital marketing, web and design work, SaaS product design, apps and
                 growth campaigns — a look at what we've built from our Jaipur studio
                 for ambitious brands across India and beyond.
               </p>

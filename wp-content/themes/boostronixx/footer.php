@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $bx_logo    = bx_logo_url();
-$bx_tagline = bx_option( 'footer_tagline', 'A creative branding & digital marketing agency in Jaipur, India — helping ambitious businesses build brands that grow.' );
+$bx_tagline = bx_option( 'footer_tagline', 'A digital marketing agency in Jaipur, India — SEO, social media, performance ads and websites that bring you customers.' );
 
 $bx_social = bx_option( 'social_links', array() );
 if ( ! $bx_social ) {
@@ -29,10 +29,13 @@ $bx_col1 = bx_option( 'footer_col1', array() );
 if ( ! $bx_col1 ) {
 	$bx_col1 = array(
 		array( 'link' => array( 'title' => 'All Services', 'url' => home_url( '/services/' ) ) ),
+		array( 'link' => array( 'title' => 'Digital Marketing', 'url' => home_url( '/services/digital-marketing/' ) ) ),
 		array( 'link' => array( 'title' => 'SEO Services', 'url' => home_url( '/services/seo-services/' ) ) ),
-		array( 'link' => array( 'title' => 'Social Media', 'url' => home_url( '/services/social-media-marketing/' ) ) ),
+		array( 'link' => array( 'title' => 'Social Media Marketing', 'url' => home_url( '/services/social-media-marketing/' ) ) ),
 		array( 'link' => array( 'title' => 'Performance Marketing', 'url' => home_url( '/services/performance-marketing/' ) ) ),
 		array( 'link' => array( 'title' => 'Website Design', 'url' => home_url( '/services/website-design/' ) ) ),
+		array( 'link' => array( 'title' => 'UI/UX Design', 'url' => home_url( '/services/ui-ux-design/' ) ) ),
+		array( 'link' => array( 'title' => 'Brand Consulting', 'url' => home_url( '/services/brand-consulting/' ) ) ),
 	);
 }
 $bx_col2 = bx_option( 'footer_col2', array() );

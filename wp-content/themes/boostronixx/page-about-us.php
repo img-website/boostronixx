@@ -29,13 +29,13 @@ get_header();
               <div
                 class="reveal inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-medium text-ink-soft mb-5"
               >
-                <span class="h-2 w-2 rounded-full bg-accent"></span> <?php echo esc_html( bx_field( 'about_us_hero_badge', false, 'Creative branding & growth studio · since 2026' ) ); ?>
+                <span class="h-2 w-2 rounded-full bg-accent"></span> <?php echo esc_html( bx_field( 'about_us_hero_badge', false, 'Digital marketing agency · since 2026' ) ); ?>
               </div>
               <h1
                 class="reveal font-display text-[2.7rem] leading-[0.97] sm:text-7xl lg:text-[5rem] tt"
               >
-                <?php echo esc_html( bx_field( 'about_us_hero_heading_a', false, "We're the team behind" ) ); ?><br class="hidden sm:block" />
-                <?php echo esc_html( bx_field( 'about_us_hero_heading_b', false, 'brands that ' ) ); ?><span class="text-accent"><?php echo esc_html( bx_field( 'about_us_hero_heading_accent', false, 'get noticed' ) ); ?></span>.
+                <?php echo esc_html( bx_field( 'about_us_hero_heading_a', false, "We're the team that" ) ); ?><br class="hidden sm:block" />
+                <?php echo esc_html( bx_field( 'about_us_hero_heading_b', false, 'gets Jaipur businesses ' ) ); ?><span class="text-accent"><?php echo esc_html( bx_field( 'about_us_hero_heading_accent', false, 'found' ) ); ?></span>.
               </h1>
             </div>
             <div class="lg:col-span-4">
@@ -124,15 +124,13 @@ get_header();
                 <?php echo esc_html( bx_field( 'about_us_story_p1', false, 'Too many good businesses were invisible — great products, terrible reach. Agencies sold either pretty design with no results, or results with no soul. We thought there had to be a better way.' ) ); ?>
               </p>
               <p>
-                Based in Jaipur since 2026, BoostronixX began as a creative
-                branding &amp; growth studio in Jaipur with one belief:
-                <span class="text-ink font-medium"
-                  >creativity and performance aren't opposites — they're partners</span
-                >. A logo that converts. A campaign that's also art. A funnel that
-                feels like a brand.
+                BoostronixX began as a creative branding studio. Today we're
+                <span class="text-ink font-medium">a digital marketing agency in Jaipur</span>
+                — SEO, social media, performance ads and websites run by one team,
+                with branding as the finishing layer rather than the starting point.
               </p>
               <p>
-                <?php echo esc_html( bx_field( 'about_us_story_p3', false, '50+ brands later, that belief still runs everything we do — across real estate, schools, D2C and healthcare.' ) ); ?>
+                <?php echo esc_html( bx_field( 'about_us_story_p3', false, '50+ brands later, that belief in a better way still runs everything we do — across real estate, schools, D2C and healthcare.' ) ); ?>
               </p>
             </div>
             <div class="reveal flex flex-wrap gap-2 mt-7 text-sm" data-delay="2">
@@ -158,7 +156,7 @@ get_header();
               ></span>
               <h3 class="font-display text-2xl sm:text-3xl tt mt-6"><?php echo esc_html( bx_field( 'about_us_mission_heading', false, 'Our mission' ) ); ?></h3>
               <p class="text-paper/70 mt-3 leading-relaxed">
-                <?php echo esc_html( bx_field( 'about_us_mission_text', false, 'To help ambitious businesses become brands people remember — by pairing sharp strategy with creative that actually performs, and proving every rupee of it.' ) ); ?>
+                <?php echo esc_html( bx_field( 'about_us_mission_text', false, 'To help ambitious businesses turn online attention into customers — by pairing sharp strategy with creative that actually performs, and proving every rupee of it.' ) ); ?>
               </p>
             </div>
           </div>

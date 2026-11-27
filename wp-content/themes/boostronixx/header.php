@@ -51,7 +51,7 @@ $bx_mobile_cta_label = bx_option( 'mobile_cta_label', 'Book a Free Strategy Call
 <header class="fixed top-0 inset-x-0 z-50">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<div id="hdrbar" class="mt-3 flex items-center justify-between rounded-full border border-line bg-paper/80 backdrop-blur-md px-3 sm:px-5 h-14 sm:h-16 transition-all duration-300">
-			<a href="<?php echo esc_url( $bx_brand ); ?>" class="flex items-center gap-2 shrink-0"><img width="127" height="32" src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX — creative branding and digital marketing agency" class="h-7 sm:h-8 w-auto" /></a>
+			<a href="<?php echo esc_url( $bx_brand ); ?>" class="flex items-center gap-2 shrink-0"><img width="127" height="32" src="<?php echo esc_url( $bx_logo ); ?>" alt="BoostronixX — digital marketing agency in Jaipur" class="h-7 sm:h-8 w-auto" /></a>
 			<?php
 			// Services and Industries get dropdowns: reaching a specific one used
 			// to take two hops (header -> /services/ -> the service), which mobile

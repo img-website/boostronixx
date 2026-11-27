@@ -34,7 +34,7 @@ $bx_pop_service = bx_current_service_slug();
 			<div class="p-7 sm:p-9 order-2 md:order-1">
 				<div>
 					<p class="text-[11px] font-semibold tracking-[.18em] uppercase text-accent">Before you go</p>
-					<h3 id="hpTitle" class="font-display text-2xl sm:text-[28px] tt leading-tight mt-2">Get a free <span class="text-accent">growth plan</span> for your brand.</h3>
+					<h3 id="hpTitle" class="font-display text-2xl sm:text-[28px] tt leading-tight mt-2">Get a free <span class="text-accent">growth plan</span> for your business.</h3>
 					<?php // The supporting line lives in the right-hand panel — see below. Keeping it here made the card taller than the viewport once the service field was added, so the whole modal scrolled. ?>
 					<form id="hpForm" class="mt-5 grid gap-4" novalidate>
 						<div class="bxfld">
@@ -80,8 +80,8 @@ $bx_pop_service = bx_current_service_slug();
 						<span class="hp-chip"><iconify-icon icon="lucide:zap" aria-hidden="true"></iconify-icon> Free 20-min call</span>
 						<span class="hp-chip"><iconify-icon icon="lucide:trending-up" aria-hidden="true"></iconify-icon> ROI-driven</span>
 					</div>
-					<h4 class="font-display text-2xl sm:text-3xl tt leading-tight mt-4">Brands we touch don't stay invisible.</h4>
-					<p class="text-white/75 text-sm mt-2 leading-relaxed">A Jaipur studio that pairs sharp design with performance marketing - and reports on every rupee.</p>
+					<h4 class="font-display text-2xl sm:text-3xl tt leading-tight mt-4">Businesses we market don't stay invisible.</h4>
+					<p class="text-white/75 text-sm mt-2 leading-relaxed">A Jaipur studio that pairs SEO, ads and social with sharp design - and reports on every rupee.</p>
 					<p class="text-white/75 text-sm mt-3 leading-relaxed">Drop your details and we'll send 2-3 quick, practical wins tailored to your business. No spam, no obligation.</p>
 				</div>
 				<div class="relative z-10 hidden md:block">
